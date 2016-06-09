@@ -1,0 +1,109 @@
+\documentclass[12pt,twoside]{book}
+\usepackage{layout}
+%\usepackage{makeidx}
+\RequirePackage{verbatim}
+%\RequirePackage{alltt}
+\usepackage{ifpdf}
+\usepackage{etoolbox}
+\usepackage{multicol}
+\usepackage{dsfont}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{array}
+
+
+\newtoggle{solutions}
+\toggletrue{solutions}
+\togglefalse{solutions}
+
+\ifpdf 
+   \pdfcompresslevel=9
+   \pdfoutput=1
+                                                                                            
+                       
+   \usepackage[pdftex]{graphicx}
+   \usepackage[pdftex]{geometry}
+   \usepackage[pdftex]{color}
+   \usepackage{hyperref}
+   \hypersetup{
+     pdftitle={Recitation Activities for Math 1113, precalculus},
+     pdfsubject={precalculus},
+     pdfauthor={UGA Mathematics Department},
+     pdfkeywords={classroom activities, precalculus},
+     anchorcolor = {red},
+     colorlinks = {true},
+     %pdfpagemode={FullScreen}
+   }
+\else
+   \usepackage{epsfig}
+   \usepackage{color}
+\fi
+
+\usepackage{pgf}
+%\usepackage{pstricks} 
+
+
+\pagestyle{myheadings}
+
+%\setlength{\basicoddside}{\oddsidemargin}
+%\setlength{\basicevenside}{\evensidemargin}
+%\setlength{\basicwidth}{\textwidth}
+%\setlength{\basictop}{\topmargin}
+%\setlength{\basicheight}{\textheight}
+
+
+\input{header}
+\setcounter{activity}{0}
+
+\input{latexDefinitions}
+
+\begin{document}
+
+
+\title{Classroom Activities \\ 
+  Math 1113 - Precalculus
+  \iftoggle{solutions}{%
+    \\\textit{Solution Manual}
+  }
+}
+\author{University of Georgia\\Department of Mathematics}
+
+\maketitle
+
+\noindent
+Copyright (C)  2016 Kelly Black University of Georgia Department of Mathematics
+
+\noindent
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU
+Free Documentation License".
+
+
+
+\tableofcontents
+
+%\clearpage
+
+\chapter{Functions and Preliminaries}
+
+\input{functions/functions}
+
+\chapter{Exponential and Logarithmic Functions}
+
+\input{exponentials/exponentials}
+
+\chapter{Angle Measurement}
+
+\include{angles/angles}
+
+\chapter{Trigonometric Functions}
+
+\include{trig/trig}
+
+\chapter{GNU Free Documentation License}
+\include{fdl-1.3}
+
+\end{document}
