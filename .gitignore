@@ -1,0 +1,8 @@
+auto
+*.log
+*.aux
+*.toc
+*.nav
+*.snm
+*.dvi
+*.out
