@@ -20,10 +20,10 @@ plotter.clearPlot()
 
 x = np.arange(0,5,0.02)
 plotter.setupGrid(0.3,'--',
-                  0.0,1.0,4.1,
-                  -1.0,1.0,4.1)
-plotter.setAxesBounds(-0.1,4.1,-0.5,4.2)
-plotter.axesDecorations('Sketch of a Function','x','f (x)')
+                  -5.0,1.0,5.1,
+                  -5.0,1.0,5.1)
+plotter.setAxesBounds(-5.1,5.1,-5.1,5.1)
+plotter.axesDecorations('Coordinate System','x','y')
 
 axes = plotter.getAxes()
 axes.spines['right'].set_color('none')
