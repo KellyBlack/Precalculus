@@ -23,5 +23,5 @@ view:	labManual.pdf
 
 
 clean:
-	rm -f *.aux *.nav *.snm *.toc *.log *.dvi *.out *~
+	rm -f *.aux *.nav *.snm *.toc *.log *.dvi *.out *~ functions/*.aux functions/*~
 
