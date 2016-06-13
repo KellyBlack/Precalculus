@@ -23,7 +23,7 @@ plotter.setupGrid(0.3,'--',
                   -5.0,1.0,5.1,
                   -5.0,1.0,5.1)
 plotter.setAxesBounds(-5.1,5.1,-5.1,5.1)
-plotter.axesDecorations('Coordinate System','x','y')
+plotter.axesDecorations('Comparing Shifted Functions','x','y')
 
 axes = plotter.getAxes()
 axes.spines['right'].set_color('none')
@@ -34,27 +34,6 @@ axes.yaxis.set_ticks_position('left')
 axes.spines['left'].set_position(('data',0))
 
 #plt.show()
-plt.savefig('emptyAxes.pgf',format='pgf')
+plt.savefig('emptyAxesShifted.pgf',format='pgf')
 
-###############################
-plotter.clearPlot()
-#plt.xkcd(scale=.6) #randomness=1,length=1,scale=0)
-
-x = np.arange(0,5,0.02)
-plotter.setupGrid(0.3,'--',
-                  -5.0,1.0,5.1,
-                  -5.0,1.0,5.1)
-plotter.setAxesBounds(-5.1,5.1,-5.1,5.1)
-plotter.axesDecorations('Hare vs. Tortoise','Hare','Tortoise')
-
-axes = plotter.getAxes()
-axes.spines['right'].set_color('none')
-axes.spines['top'].set_color('none')
-axes.xaxis.set_ticks_position('bottom')
-axes.spines['bottom'].set_position(('data',0))
-axes.yaxis.set_ticks_position('left')
-axes.spines['left'].set_position(('data',0))
-
-#plt.show()
-plt.savefig('emptyAxesHareTortoise.pgf',format='pgf')
 
