@@ -467,7 +467,7 @@
 \pgftext[x=7.139216in,y=2.944444in,,top]{\sffamily\fontsize{12.000000}{14.400000}\selectfont 5}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=4.100000in,y=2.713705in,,top]{\sffamily\fontsize{12.000000}{14.400000}\selectfont Hare}%
+\pgftext[x=6.890000in,y=2.760000in,,top]{\sffamily\fontsize{12.000000}{14.400000}\selectfont Hare}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfsetbuttcap%
@@ -833,7 +833,7 @@
 \pgftext[x=4.044444in,y=5.352941in,right,]{\sffamily\fontsize{12.000000}{14.400000}\selectfont 5}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=3.808822in,y=3.000000in,,bottom,rotate=90.000000]{\sffamily\fontsize{12.000000}{14.400000}\selectfont Tortoise}%
+\pgftext[x=3.790000in,y=4.920000in,,bottom,rotate=90.000000]{\sffamily\fontsize{12.000000}{14.400000}\selectfont Tortoise}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgftext[x=4.100000in,y=5.469444in,,base]{\sffamily\fontsize{14.400000}{17.280000}\selectfont Hare vs. Tortoise}%

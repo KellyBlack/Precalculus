@@ -32,6 +32,9 @@ axes.xaxis.set_ticks_position('bottom')
 axes.spines['bottom'].set_position(('data',0))
 axes.yaxis.set_ticks_position('left')
 axes.spines['left'].set_position(('data',0))
+axes.xaxis.set_label_coords(0.95, 0.45)
+axes.yaxis.set_label_coords(0.45, 0.95)
+
 
 #plt.show()
 plt.savefig('emptyAxesShifted.pgf',format='pgf')
