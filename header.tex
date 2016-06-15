@@ -40,6 +40,14 @@
 \newlength{\basictop}
 \newlength{\basicheight}
 
+\setlength{\oddsidemargin}{-0.3in}
+\setlength{\evensidemargin}{-0.1in}
+\setlength{\textwidth}{6.25in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9in}
+\setlength{\marginparwidth}{52pt}
+
+
 \newcommand{\activityParams}{
   %\setlength{\hoffset}{0in}
   %\setlength{\oddsidemargin}{-0.5in}
@@ -57,13 +65,6 @@
   \setlength{\textheight}{\basicheight}
 }
 
-
-  \setlength{\oddsidemargin}{-0.25in}
-  \setlength{\evensidemargin}{0.25in}
-  \setlength{\textwidth}{6.25in}
-  \setlength{\topmargin}{-0.5in}
-  \setlength{\textheight}{9in}
-  \setlength{\marginparwidth}{56pt}
 
 
 \newcommand{\sideNote}[1]{\marginpar{\tenit \raggedright #1}}
@@ -85,9 +86,9 @@
   \markboth
   {Name: \hspace*{2.5in} \hfil  Activity: \theactivity}
   {Name: \hspace*{2.5in} \hfil  Activity: \theactivity}
-  \stepcounter{subsection}
-  \addcontentsline{toc}{subsection}{
-    \protect\numberline{\thesubsection}{#1}}
+  \stepcounter{section}
+  \addcontentsline{toc}{section}{
+    \protect\numberline{\thesection}{#1}}
 }
 
 \newcounter{hw}
