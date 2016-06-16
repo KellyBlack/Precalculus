@@ -1,19 +1,118 @@
 %=========================================================================
 % Start of 
 %=========================================================================
-\preClass{Title}
+\preClass{Algebra With Exponentials}
 
 \begin{problem}
-\item
+\item Determine an approximation for the value of each expression
+  below. Your approximation should be to the nearest 0.01.
+  \begin{subproblem}
+  \item $2^{3}$
+    \vfill
+  \item $2.5^{2}$
+    \vfill
+  \item $2.7^{1.5}$
+    \vfill
+  \item $2.718^{2.1}$
+    \vfill
+  \item $2.7183^{2.44}$
+    \vfill
+  \end{subproblem}
 \end{problem}
 
 
-\actTitle{title}
+\actTitle{The Natural Exponential}
 \begin{problem}
-\item 
+\item A bank manager is considering the impact of different terms for
+  an account that offers compounded interest. She assumes that the
+  interest rate is a constant annual one percent rate and then checks
+  to see what happens for different lengths of time between
+  compounding. Assume that one dollar is initially deposited.
   \begin{subproblem}
-    \item
+  \item Determine the amount of money in the account after one hundred
+    years, if the interest is compounded yearly.  \vfill
+  \item Determine the amount of money in the account after 100 years,
+    if the interest is compounded once every six months.  \vfill
+  \item Determine the amount of money in the account after 100 years,
+    if the interest is compounded once a month.
+    \vfill
+  \item Determine the amount of money in the account after 100 years,
+    if the interest is compounded once a day.
+    \vfill
+  \item Determine the amount of money in the account after 100 years,
+    if the interest is compounded twice  a day.
+    \vfill    
+  \item What is happening to the balance as the number of terms
+    increases?
+    \vfill
   \end{subproblem}
+  \clearpage
+
+\item Generalize the value found on the previous page.
+  \begin{subproblem}
+  \item Determine a formula for the balance for 1\% annual interest
+    after 100 years if the interest is compounded $n$ times per year.
+    \vfill
+  \item Make a substitution, $u=100n$, in the previous
+    expression. Write out the expression for the balance as a function
+    of $u$.
+    \vfill
+  \item Determine the values of the balance for the following values
+    of $u$.
+
+    \begin{tabular}{l|l}
+      $u$ & balance \\ \hline
+      1    &  \\ \hline
+      2    &  \\ \hline
+      12   &  \\ \hline
+      365  &  \\ \hline
+      1000 &  \\ \hline
+    \end{tabular}
+
+  \item What is the value approaching as $u$ gets large? This is a
+    number that occurs in many situations, and we do not want to write
+    it out every time we use it, so we use the symbol $e$ as a form of
+    short hand notation.
+    \begin{eqnarray*}
+      e & = & 
+    \end{eqnarray*}
+    
+  \end{subproblem}
+
+  \clearpage
+
+\item When interest is compounded continuously, the balance is
+  determined using the function
+  \begin{eqnarray*}
+    \mathrm{Balance}(t) & = & P e^{rt},
+  \end{eqnarray*}
+  where $P$ is the initial balance, $r$ is the annual interest rate,
+  and $t$ is the time in years.
+
+  Sketch a plot of the balance over time if 1\$ is deposited with a
+  rate of 1\%.
+
+  \vfill
+
+\clearpage
+
+\item As radioactive isotopes decay, the amount of isotope in a sample
+  decreases. If the decay rate of an isotope is $r$ then the amount of
+  an isotope in a sample is expressed using the function
+  \begin{eqnarray*}
+    \mathrm{Amount}(t) & = & A e^{-rt},
+  \end{eqnarray*}
+  where $t$ is measured in years.
+
+  \begin{subproblem}
+  \item What is the physical interpretation of the constant $A$?
+    \vspace{3em}
+
+  \item If a sample of a radioactive substance initially contains 3
+    grams, and the radioactive decay is 0.00004, sketch a plot of the
+    amount of the substance in the sample over time.
+  \end{subproblem}
+
 \end{problem}
 
 \postClass
