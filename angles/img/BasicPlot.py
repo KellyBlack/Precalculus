@@ -107,6 +107,15 @@ class BasicPlot:
         else:
             plt.axis('off')
 
+    def setAxesValue(self,value):
+        plt.axis(value)
+
+    def filledCircle(self,xcenter,ycenter,radius,color='k'):
+        figure = plt.gcf()
+        circle = plt.Circle((xcenter,ycenter),radius,color=color)
+        figure.gca().add_artist(circle)
+
+
 if (__name__ =='__main__') :
     plotter = BasicPlot()
 
