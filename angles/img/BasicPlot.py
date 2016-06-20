@@ -3,11 +3,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+
 class BasicPlot:
 
     def __init__(self):
         plt.rcParams['axes.unicode_minus']=False
         #plt.figure(num=1,frameon=False)
+        plt.rcParams['text.usetex'] = True
+        plt.rcParams['text.latex.unicode'] = True
         self.clearPlot()
 
 
@@ -51,12 +54,14 @@ class BasicPlot:
         ax.yaxis.grid(linewidth=thickness)
         plt.grid(True)
 
-    def xAxisTicks(self,positions,labels,rot="horizontal",margins=0.2):
-        plt.xticks(positions,labels,rotation=rot)
+    def yAxisLabels(self,positions,labels,rot="horizontal",margins=0.2):
+        plt.yticks(positions,labels,rotation=rot)
         plt.margins(margins)
 
-    def yAxisTicks(self,positions,labels,rot="horizontal",margins=0.2):
-        plt.yticks(positions,labels,rotation=rot)
+    def xAxisLabels(self,positions,labels,rot="horizontal",margins=0.2):
+        ax = self.getAxes()
+        ax.set_xticks(positions)
+        ax.set_xticklabels(labels,rotation=rot)
         plt.margins(margins)
 
 
