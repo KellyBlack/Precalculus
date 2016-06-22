@@ -18,9 +18,10 @@ class BasicPlot:
         plt.clf()
 
     def setFigure(self,number=None,aspectRatio=(1,1),
-                  dotsPerInch=80,face='w',edge='k'):
+                  dotsPerInch=80,face='w',edge='k',frameon=False):
         return(plt.figure(num=number, figsize=aspectRatio,
-                          dpi=dotsPerInch, facecolor=face, edgecolor=edge))
+                          dpi=dotsPerInch, facecolor=face,
+                          edgecolor=edge,frameon=frameon))
 
     def addFunction(self,domain,range,format,width=2.0):
         plt.plot(domain,range,format,linewidth=width)
@@ -115,6 +116,15 @@ class BasicPlot:
         circle = plt.Circle((xcenter,ycenter),radius,color=color)
         figure.gca().add_artist(circle)
 
+    def setAspectRation(self,aspect):
+        #plt.axes().set_aspect(ratio,limits)
+        # Found this at
+        #http://stackoverflow.com/questions/7965743/how-can-i-set-the-aspect-ratio-in-matplotlib
+        ax = self.getAxes()
+        #im = ax.get_images()
+        #print(im[0])
+        #extent =  im[0].get_extent()
+        ax.set_aspect(aspect)
 
 if (__name__ =='__main__') :
     plotter = BasicPlot()
