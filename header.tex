@@ -143,6 +143,20 @@
     \protect\numberline{\thesubsubsection}{#1}}
 }
 
+\newcounter{properties}
+\setcounter{properties}{1}
+\newcommand{\propertiesTitle}[1]{
+  \cleardoublepage
+  \activityParams
+  \stepcounter{properties}
+  \markboth
+  {Name: \hspace*{2.5in} \hfil  #1 Properties: \theproperties}
+  {Name: \hspace*{2.5in} \hfil  #1 Properties: \theproperties}
+  \stepcounter{subsubsection}
+  \addcontentsline{toc}{subsubsection}{
+    \protect\numberline{\thesubsubsection}{#1}}
+}
+
 
 \newcommand{\stateSummary}{\item State and summarize two ideas from today's
   class. 
