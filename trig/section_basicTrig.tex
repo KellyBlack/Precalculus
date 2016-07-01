@@ -103,6 +103,178 @@
 \end{problem}
 
 
+\propertiesTitle{The Unit Circle}
+
+\begin{minipage}{0.5\linewidth}
+  \begin{tikzpicture}[scale=3]
+    \draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
+    \draw (-1.1,0) -- (1.1,0); \draw (0,-1.1) -- (0,1.1); 
+    \draw (0,0) circle [radius=1cm];
+
+    \draw[black!80,thin] (.1cm,0cm) arc [start angle=0, end angle=30,radius=.1cm]; 
+    \draw[red!80,thin] (30:1cm) -- ++(0,-0.5cm); 
+    \draw[blue!80,thin] (0,0) -- (30:1cm); 
+    \draw (10:0.35cm) node {$\pi/6$};
+    \draw (0,1.2cm) node {$y$};
+    \draw (1.2cm,0) node {$x$};
+
+    \foreach \x in {-1,-0.5,0.5,1} 
+       \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$}; 
+    \foreach \y in {-1,-0.5,0.5,1} 
+       \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
+  \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{tikzpicture}[scale=3]
+\draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
+\draw (-1.1,0) -- (1.1,0);
+\draw (0,-1.1) -- (0,1.1);
+\draw (0,0) circle [radius=1cm];
+
+\draw[black!80,thin] (.1cm,0cm) arc [start angle=0, end angle=60,radius=.1cm];
+\draw[red!80,thin] (0.5,0) -- (60:1cm);
+\draw[blue!80,thin] (0,0) -- (60:1cm);
+\draw (15:0.25cm) node {$\pi/3$};
+\draw (0,1.2cm) node {$y$};
+\draw (1.2cm,0) node {$x$};
+
+\foreach \x in {-1,-0.5,0.5,1}
+   \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$};
+\foreach \y in {-1,-0.5,0.5,1}
+   \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
+\end{tikzpicture}
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+  \begin{tikzpicture}[scale=3]
+    \draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
+    \draw (-1.1,0) -- (1.1,0); 
+    \draw (0,-1.1) -- (0,1.1); \draw (0,0) circle [radius=1cm];
+
+    \draw[black!80,thin] (.1cm,0cm) arc [start angle=0, end angle=150,radius=.1cm]; 
+    \draw[red!80,thin] (150:1cm) -- ++(0,-0.5cm); 
+    \draw[blue!80,thin] (0,0) -- (150:1cm); 
+    \draw (25:0.25cm) node {$5\pi/6$};
+    \draw (0,1.2cm) node {$y$};
+    \draw (1.2cm,0) node {$x$};
+
+    \foreach \x in {-1,-0.5,0.5,1} 
+       \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$}; 
+    \foreach \y in {-1,-0.5,0.5,1} 
+    \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
+  \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{tikzpicture}[scale=3]
+\draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
+\draw (-1.1,0) -- (1.1,0);
+\draw (0,-1.1) -- (0,1.1);
+\draw (0,0) circle [radius=1cm];
+
+\draw[black!80,thin] (.1cm,0cm) arc [start angle=0, end angle=120,radius=.1cm];
+\draw[red!80,thin] (-0.5,0) -- (120:1cm);
+\draw[blue!80,thin] (0,0) -- (120:1cm);
+\draw (15:0.25cm) node {$2\pi/3$};
+\draw (0,1.2cm) node {$y$};
+\draw (1.2cm,0) node {$x$};
+
+\foreach \x in {-1,-0.5,0.5,1}
+   \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$};
+\foreach \y in {-1,-0.5,0.5,1}{
+   \draw (-1pt,\y cm) -- (1pt,\y cm);
+   \draw (12pt,\y cm) node[anchor=east,fill=white] {$\y$};
+ }
+\end{tikzpicture}
+\end{minipage}
+
+\clearpage
+
+\begin{minipage}{0.5\linewidth}
+  \begin{tikzpicture}[scale=3]
+    \draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
+    \draw (-1.1,0) -- (1.1,0); 
+    \draw (0,-1.1) -- (0,1.1); \draw (0,0) circle [radius=1cm];
+
+    \draw[black!80,thin] (.1cm,0cm) arc [start angle=0, end angle=210,radius=.1cm]; 
+    \draw[red!80,thin] (210:1cm) -- ++(0,0.5cm); 
+    \draw[blue!80,thin] (0,0) -- (210:1cm); 
+    \draw (25:0.25cm) node {$7\pi/6$};
+    \draw (0,1.2cm) node {$y$};
+    \draw (1.2cm,0) node {$x$};
+
+    \foreach \x in {-1,-0.5,0.5,1} 
+       \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$}; 
+    \foreach \y in {-1,-0.5,0.5,1} 
+    \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
+  \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{tikzpicture}[scale=3]
+\draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
+\draw (-1.1,0) -- (1.1,0);
+\draw (0,-1.1) -- (0,1.1);
+\draw (0,0) circle [radius=1cm];
+
+\draw[black!80,thin] (.1cm,0cm) arc [start angle=0, end angle=240,radius=.1cm];
+\draw[red!80,thin] (-0.5,0) -- (240:1cm);
+\draw[blue!80,thin] (0,0) -- (240:1cm);
+\draw (15:0.25cm) node {$4\pi/3$};
+\draw (0,1.2cm) node {$y$};
+\draw (1.2cm,0) node {$x$};
+
+\foreach \x in {-1,-0.5,0.5,1}
+   \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$};
+\foreach \y in {-1,-0.5,0.5,1}{
+   \draw (-1pt,\y cm) -- (1pt,\y cm);
+   \draw (12pt,\y cm) node[anchor=east,fill=white] {$\y$};
+ }
+\end{tikzpicture}
+\end{minipage}
+
+
+\begin{minipage}{0.5\linewidth}
+  \begin{tikzpicture}[scale=3]
+    \draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
+    \draw (-1.1,0) -- (1.1,0); 
+    \draw (0,-1.1) -- (0,1.1); \draw (0,0) circle [radius=1cm];
+
+    \draw[black!80,thin] (.1cm,0cm) arc [start angle=0, end angle=330,radius=.1cm]; 
+    \draw[red!80,thin] (330:1cm) -- ++(0,0.5cm); 
+    \draw[blue!80,thin] (0,0) -- (330:1cm); 
+    \draw (25:0.25cm) node {$11\pi/6$};
+    \draw (0,1.2cm) node {$y$};
+    \draw (1.2cm,0) node {$x$};
+
+    \foreach \x in {-1,-0.5,0.5,1} 
+       \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$}; 
+    \foreach \y in {-1,-0.5,0.5,1} 
+    \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
+  \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{tikzpicture}[scale=3]
+  \draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
+  \draw (-1.1,0) -- (1.1,0);
+  \draw (0,-1.1) -- (0,1.1);
+  \draw (0,0) circle [radius=1cm];
+
+  \draw[black!80,thin] (.1cm,0cm) arc [start angle=0, end angle=300,radius=.1cm];
+  \draw[red!80,thin] (0.5,0) -- (300:1cm);
+  \draw[blue!80,thin] (0,0) -- (300:1cm);
+  \draw (15:0.25cm) node {$4\pi/3$};
+  \draw (0,1.2cm) node {$y$};
+  \draw (1.2cm,0) node {$x$};
+
+  \foreach \x in {-1,-0.5,0.5,1}
+    \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$};
+  \foreach \y in {-1,-0.5,0.5,1}{
+      \draw (-1pt,\y cm) -- (1pt,\y cm);
+      \draw (12pt,\y cm) node[anchor=east,fill=white] {$\y$};
+  }
+\end{tikzpicture}
+\end{minipage}
+
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../labManual"
