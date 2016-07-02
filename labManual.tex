@@ -1,5 +1,5 @@
-\documentclass[12pt,twoside]{book}
-\usepackage{layout}
+\documentclass[12pt,twoside,letterpaper]{book}
+%\usepackage{layout}
 %\usepackage{makeidx}
 \RequirePackage{verbatim}
 %\RequirePackage{alltt}
@@ -22,7 +22,7 @@
                                                                                             
                        
    \usepackage[pdftex]{graphicx}
-   \usepackage[pdftex]{geometry}
+   \usepackage[pass,pdftex]{geometry}
    \usepackage[pdftex]{color}
    \usepackage{hyperref}
    \hypersetup{
@@ -37,6 +37,7 @@
 \else
    \usepackage{epsfig}
    \usepackage{color}
+   \usepackage[pass]{geometry}
 \fi
 
 \usepackage{tikz}

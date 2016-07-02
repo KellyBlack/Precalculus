@@ -115,7 +115,87 @@
 \end{problem}
 
 
-\propertiesTitle{Properties of Exponentials}
+\propertiesTitle{Properties of Exponential Functions}
+
+Exponential functions are used whenever some quantity has a
+proportional increase over fixed time spans. The simplest example is a
+bacteria population that increases by 100\% every six hours. That
+means that every six hours the population doubles. In the diagram
+below, a single bacteria starts in a sample. After the first time
+period, six hours, there are two bacteria. After another six hours,
+for a total of 12 hours, each bacteria splits, and there are four
+bacteria. In each subsequent six hour time period the population
+doubles. 
+
+\begin{minipage}{\linewidth}
+\begin{tikzpicture}[
+  scale=0.65,
+  grow=down, 
+  level 1/.style={sibling distance=28em},
+  level 2/.style={sibling distance=14em},
+  level 3/.style={sibling distance=7em},
+  level 4/.style={sibling distance=3em},
+  level distance = 4em
+]
+  \draw (-2,0) node [red] {\scriptsize Time 0};
+  \draw (-7,-1.6) node [red] {\scriptsize Time 1};
+  \draw [->,red!10] (-6,-1.6) -- (5,-1.6);
+  \draw (-10,-3.1) node [red] {\scriptsize Time 2};
+  \draw [->,red!10] (-9,-3.3) -- (8,-3.3);
+  \draw (-10.5,-4.5) node [red] {\scriptsize Time 3};
+  \draw [->,red!10] (-10.0,-4.9) -- (9.5,-4.9);
+  \draw (-10.5,-7.0) node [red] {\scriptsize Time 4};
+  \draw [->,red!10] (-9.0,-7.0) -- (10.5,-7.0);
+
+\node{Eve} %
+   child{ node {1} 
+     child{ node {1}
+       child{ node {1}
+         child{ node {1}}
+         child{ node {9}}
+       }
+       child{ node {5}
+         child{ node {5}}
+         child{ node {10}}
+       }
+     }
+     child{ node {3}
+       child{ node {3}
+         child{ node {3}}
+         child{ node {11}}
+       }
+       child{ node {6}
+         child{ node {6}}
+         child{ node {12}}
+       }
+     }
+   }
+   child{ node {2} 
+     child{ node {2}
+       child{ node {2}
+         child{ node {2}}
+         child{ node {13}}
+       }
+       child{ node {7}
+         child{ node {7}}
+         child{ node {14}}
+       }
+     }
+     child{ node {4}
+       child{ node {4}
+         child{ node {4}}
+         child{ node {15}}
+       }
+       child{ node {8}
+         child{ node {8}}
+         child{ node {16}}
+       }
+     }
+   };
+\end{tikzpicture}
+\end{minipage}
+
+\clearpage
 
 Exponential functions satisfy the algebraic properties given below. In
 each example it is assumed that $a$, $b$, and $c$ are constants, and
@@ -139,6 +219,7 @@ above:
   \frac{e^b}{e^c} & = & e^{b-c} \\  [10pt]
   \left( e^b \right)^c & = & e^{b\cdot c}
 \end{eqnarray}
+
 
 
 %%% Local Variables:
