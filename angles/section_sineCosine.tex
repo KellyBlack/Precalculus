@@ -106,6 +106,14 @@
   \draw (0,-1.1) -- (0,1.1); 
   \draw (0,0) circle [radius=1cm];
   \filldraw [black] ({#1}:1cm) circle [radius=0.015cm];
+  \draw (0,1.2cm) node {$y$};
+  \draw (1.2cm,0) node {$x$};
+}
+
+\newcommand{\triangleUnitCircle}[2]{
+    \draw[green,thick] (.2cm,0cm) arc [start angle=0, end angle={#1},radius=.2cm]; 
+    \draw[red!80,thick] ({#1}:1cm) -- ++(0,{#2}); 
+    \draw[blue!80,thick] (0,0) -- ({#1}:1cm); 
 }
 
 \begin{minipage}{0.5\linewidth}
@@ -115,14 +123,8 @@
        \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$}; 
     \foreach \y in {-1,-0.5,0.5,1} 
        \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
-
-    \draw[green,thick] (.2cm,0cm) arc [start angle=0, end angle=30,radius=.2cm]; 
-    \draw[red!80,thick] (30:1cm) -- ++(0,-0.5cm); 
-    \draw[blue!80,thick] (0,0) -- (30:1cm); 
+    \triangleUnitCircle{30}{-0.5}
     \draw (10:0.36cm) node {$\pi/6$};
-    \draw (0,1.2cm) node {$y$};
-    \draw (1.2cm,0) node {$x$};
-
   \end{tikzpicture}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
@@ -132,17 +134,13 @@
        \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$}; 
     \foreach \y in {-1,-0.5,0.5,1} 
     \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
-
-    \draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=150,radius=.1cm]; 
-    \draw[red!80,thick] (150:1cm) -- ++(0,-0.5cm); 
-    \draw[blue!80,thick] (0,0) -- (150:1cm); 
-    \draw (25:0.25cm) node {$5\pi/6$};
-    \draw (0,1.2cm) node {$y$};
-    \draw (1.2cm,0) node {$x$};
-
+    \triangleUnitCircle{150}{-0.5}
+    \draw (45:0.35cm) node {$5\pi/6$};
   \end{tikzpicture}
 \end{minipage}
 
+
+\vspace{3em}
 
 \begin{minipage}{0.5\linewidth}
   \begin{tikzpicture}[scale=3]
@@ -152,13 +150,8 @@
     \foreach \y in {-1,-0.5,0.5,1} 
        \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
 
-    \draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=210,radius=.1cm]; 
-    \draw[red!80,thick] (210:1cm) -- ++(0,0.5cm); 
-    \draw[blue!80,thick] (0,0) -- (210:1cm); 
-    \draw (25:0.25cm) node {$7\pi/6$};
-    \draw (0,1.2cm) node {$y$};
-    \draw (1.2cm,0) node {$x$};
-
+    \triangleUnitCircle{210}{0.5}
+    \draw (45:0.35cm) node {$7\pi/6$};
   \end{tikzpicture}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
@@ -169,16 +162,12 @@
     \foreach \y in {-1,-0.5,0.5,1} 
        \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
 
-    \draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=330,radius=.1cm]; 
-    \draw[red!80,thick] (330:1cm) -- ++(0,0.5cm); 
-    \draw[blue!80,thick] (0,0) -- (330:1cm); 
-    \draw (25:0.25cm) node {$11\pi/6$};
-    \draw (0,1.2cm) node {$y$};
-    \draw (1.2cm,0) node {$x$};
-
+    \triangleUnitCircle{330}{0.5}
+    \draw (45:0.35cm) node {$11\pi/6$};
   \end{tikzpicture}
 \end{minipage}
 
+\vfill
 
 \clearpage
 
@@ -190,13 +179,8 @@
     \foreach \y in {-1,-0.5,0.5,1}
        \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
 
-    \draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=60,radius=.1cm];
-    \draw[red!80,thick] (0.5,0) -- (60:1cm);
-    \draw[blue!80,thick] (0,0) -- (60:1cm);
-    \draw (15:0.25cm) node {$\pi/3$};
-    \draw (0,1.2cm) node {$y$};
-    \draw (1.2cm,0) node {$x$};
-
+    \triangleUnitCircle{60}{-sqrt(3)/2}
+    \draw (20:0.35cm) node {$\pi/3$};
 \end{tikzpicture}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
@@ -207,16 +191,12 @@
     \foreach \y in {-1,-0.5,0.5,1}
        \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
 
-    \draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=120,radius=.1cm];
-    \draw[red!80,thick] (-0.5,0) -- (120:1cm);
-    \draw[blue!80,thick] (0,0) -- (120:1cm);
-    \draw (15:0.25cm) node {$2\pi/3$};
-    \draw (0,1.2cm) node {$y$};
-    \draw (1.2cm,0) node {$x$};
-
+    \triangleUnitCircle{120}{-sqrt(3)/2}
+    \draw (45:0.35cm) node {$2\pi/3$};
 \end{tikzpicture}
 \end{minipage}
 
+\vspace{3em}
 
 \begin{minipage}{0.5\linewidth}
 \begin{tikzpicture}[scale=3]
@@ -230,25 +210,15 @@
       \draw (12pt,\y cm) node[anchor=east,fill=white] {$\y$};
     }
 
-    \draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=240,radius=.1cm];
-    \draw[red!80,thick] (-0.5,0) -- (240:1cm);
-    \draw[blue!80,thin] (0,0) -- (240:1cm);
-    \draw (135:0.25cm) node {$4\pi/3$};
-    \draw (0,1.2cm) node {$y$};
-    \draw (1.2cm,0) node {$x$};
-
+    \triangleUnitCircle{240}{sqrt(3)/2}
+    \draw (210:0.35cm) node {$4\pi/3$};
 \end{tikzpicture}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
 \begin{tikzpicture}[scale=3]
     \unitcircleAxes{300}
-
-    \draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=300,radius=.1cm];
-    \draw[red!80,thick] (0.5,0) -- (300:1cm);
-    \draw[blue!80,thick] (0,0) -- (300:1cm);
-    \draw (135:0.25cm) node {$5\pi/3$};
-    \draw (0,1.2cm) node {$y$};
-    \draw (1.2cm,0) node {$x$};
+    \triangleUnitCircle{300}{sqrt(3)/2}
+    \draw (210:0.35cm) node {$5\pi/3$};
 
     \foreach \x in {-1,-0.5,0.5,1} {
       \draw (\x cm,1pt) -- (\x cm,-1pt);
@@ -260,7 +230,7 @@
 \end{tikzpicture}
 \end{minipage}
 
-
+\vfill
 
 %%% Local Variables:
 %%% mode: latex
