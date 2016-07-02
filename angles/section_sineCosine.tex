@@ -100,14 +100,17 @@
 
 \propertiesTitle{The Unit Circle}
 
+\newcommand{\unitcircleAxes}[1]{
+  \draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
+  \draw (-1.1,0) -- (1.1,0);
+  \draw (0,-1.1) -- (0,1.1); 
+  \draw (0,0) circle [radius=1cm];
+  \filldraw [black] ({#1}:1cm) circle [radius=0.015cm];
+}
+
 \begin{minipage}{0.5\linewidth}
   \begin{tikzpicture}[scale=3]
-    \draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
-    \draw (-1.1,0) -- (1.1,0);
-    \draw (0,-1.1) -- (0,1.1); 
-    \draw (0,0) circle [radius=1cm];
-    \filldraw [black] (30:1cm) circle [radius=0.015cm];
-
+    \unitcircleAxes{30}
     \foreach \x in {-1,-0.5,0.5,1} 
        \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$}; 
     \foreach \y in {-1,-0.5,0.5,1} 
@@ -124,12 +127,7 @@
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
   \begin{tikzpicture}[scale=3]
-    \draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
-    \draw (-1.1,0) -- (1.1,0); 
-    \draw (0,-1.1) -- (0,1.1); 
-    \draw (0,0) circle [radius=1cm];
-    \filldraw [black] (150:1cm) circle [radius=0.015cm];
-
+    \unitcircleAxes{150}
     \foreach \x in {-1,-0.5,0.5,1} 
        \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$}; 
     \foreach \y in {-1,-0.5,0.5,1} 
@@ -148,12 +146,7 @@
 
 \begin{minipage}{0.5\linewidth}
   \begin{tikzpicture}[scale=3]
-    \draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
-    \draw (-1.1,0) -- (1.1,0); 
-    \draw (0,-1.1) -- (0,1.1); 
-    \draw (0,0) circle [radius=1cm];
-    \filldraw [black] (210:1cm) circle [radius=0.015cm];
-
+    \unitcircleAxes{210}
     \foreach \x in {-1,-0.5,0.5,1} 
        \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$}; 
     \foreach \y in {-1,-0.5,0.5,1} 
@@ -170,12 +163,7 @@
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
   \begin{tikzpicture}[scale=3]
-    \draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
-    \draw (-1.1,0) -- (1.1,0); 
-    \draw (0,-1.1) -- (0,1.1); 
-    \draw (0,0) circle [radius=1cm];
-    \filldraw [black] (330:1cm) circle [radius=0.015cm];
-
+    \unitcircleAxes{330}
     \foreach \x in {-1,-0.5,0.5,1} 
        \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$}; 
     \foreach \y in {-1,-0.5,0.5,1} 
@@ -196,43 +184,35 @@
 
 \begin{minipage}{0.5\linewidth}
 \begin{tikzpicture}[scale=3]
-\draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
-\draw (-1.1,0) -- (1.1,0);
-\draw (0,-1.1) -- (0,1.1);
-\draw (0,0) circle [radius=1cm];
+    \unitcircleAxes{60}
+    \foreach \x in {-1,-0.5,0.5,1}
+       \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$};
+    \foreach \y in {-1,-0.5,0.5,1}
+       \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
 
-\foreach \x in {-1,-0.5,0.5,1}
-   \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$};
-\foreach \y in {-1,-0.5,0.5,1}
-   \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
-
-\draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=60,radius=.1cm];
-\draw[red!80,thick] (0.5,0) -- (60:1cm);
-\draw[blue!80,thick] (0,0) -- (60:1cm);
-\draw (15:0.25cm) node {$\pi/3$};
-\draw (0,1.2cm) node {$y$};
-\draw (1.2cm,0) node {$x$};
+    \draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=60,radius=.1cm];
+    \draw[red!80,thick] (0.5,0) -- (60:1cm);
+    \draw[blue!80,thick] (0,0) -- (60:1cm);
+    \draw (15:0.25cm) node {$\pi/3$};
+    \draw (0,1.2cm) node {$y$};
+    \draw (1.2cm,0) node {$x$};
 
 \end{tikzpicture}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
 \begin{tikzpicture}[scale=3]
-\draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
-\draw (-1.1,0) -- (1.1,0);
-\draw (0,-1.1) -- (0,1.1);
-\draw (0,0) circle [radius=1cm];
+    \unitcircleAxes{120}
+    \foreach \x in {-1,-0.5,0.5,1}
+       \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$};
+    \foreach \y in {-1,-0.5,0.5,1}
+       \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
 
-\foreach \x in {-1,-0.5,0.5,1}
-   \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\x$};
-\foreach \y in {-1,-0.5,0.5,1}
-   \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
-
-\draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=120,radius=.1cm];
-\draw[red!80,thick] (-0.5,0) -- (120:1cm);
-\draw[blue!80,thick] (0,0) -- (120:1cm);
-\draw (15:0.25cm) node {$2\pi/3$};
-\draw (0,1.2cm) node {$y$};
-\draw (1.2cm,0) node {$x$};
+    \draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=120,radius=.1cm];
+    \draw[red!80,thick] (-0.5,0) -- (120:1cm);
+    \draw[blue!80,thick] (0,0) -- (120:1cm);
+    \draw (15:0.25cm) node {$2\pi/3$};
+    \draw (0,1.2cm) node {$y$};
+    \draw (1.2cm,0) node {$x$};
 
 \end{tikzpicture}
 \end{minipage}
@@ -240,49 +220,42 @@
 
 \begin{minipage}{0.5\linewidth}
 \begin{tikzpicture}[scale=3]
-\draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
-\draw (-1.1,0) -- (1.1,0);
-\draw (0,-1.1) -- (0,1.1);
-\draw (0,0) circle [radius=1cm];
+    \unitcircleAxes{240}
+    \foreach \x in {-1,-0.5,0.5,1} {
+      \draw (\x cm,1pt) -- (\x cm,-1pt);
+      \draw (\x cm,6pt) node[anchor=north,fill=white] {$\x$};
+    }
+    \foreach \y in {-1,-0.5,0.5,1}{
+      \draw (-1pt,\y cm) -- (1pt,\y cm);
+      \draw (12pt,\y cm) node[anchor=east,fill=white] {$\y$};
+    }
 
-\foreach \x in {-1,-0.5,0.5,1} {
-   \draw (\x cm,1pt) -- (\x cm,-1pt);
-   \draw (\x cm,6pt) node[anchor=north,fill=white] {$\x$};
-}
-\foreach \y in {-1,-0.5,0.5,1}{
-   \draw (-1pt,\y cm) -- (1pt,\y cm);
-   \draw (12pt,\y cm) node[anchor=east,fill=white] {$\y$};
- }
-
-\draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=240,radius=.1cm];
-\draw[red!80,thick] (-0.5,0) -- (240:1cm);
-\draw[blue!80,thin] (0,0) -- (240:1cm);
-\draw (135:0.25cm) node {$4\pi/3$};
-\draw (0,1.2cm) node {$y$};
-\draw (1.2cm,0) node {$x$};
+    \draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=240,radius=.1cm];
+    \draw[red!80,thick] (-0.5,0) -- (240:1cm);
+    \draw[blue!80,thin] (0,0) -- (240:1cm);
+    \draw (135:0.25cm) node {$4\pi/3$};
+    \draw (0,1.2cm) node {$y$};
+    \draw (1.2cm,0) node {$x$};
 
 \end{tikzpicture}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
 \begin{tikzpicture}[scale=3]
-  \draw[step=0.5cm,gray!30,very thin] (-1.1,-1.1) grid (1.1,1.1);
-  \draw (-1.1,0) -- (1.1,0);
-  \draw (0,-1.1) -- (0,1.1);
-  \draw (0,0) circle [radius=1cm];
+    \unitcircleAxes{300}
 
-  \draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=300,radius=.1cm];
-  \draw[red!80,thick] (0.5,0) -- (300:1cm);
-  \draw[blue!80,thick] (0,0) -- (300:1cm);
-  \draw (135:0.25cm) node {$5\pi/3$};
-  \draw (0,1.2cm) node {$y$};
-  \draw (1.2cm,0) node {$x$};
+    \draw[green,thick] (.1cm,0cm) arc [start angle=0, end angle=300,radius=.1cm];
+    \draw[red!80,thick] (0.5,0) -- (300:1cm);
+    \draw[blue!80,thick] (0,0) -- (300:1cm);
+    \draw (135:0.25cm) node {$5\pi/3$};
+    \draw (0,1.2cm) node {$y$};
+    \draw (1.2cm,0) node {$x$};
 
-\foreach \x in {-1,-0.5,0.5,1} {
-   \draw (\x cm,1pt) -- (\x cm,-1pt);
-   \draw (\x cm,6pt) node[anchor=north,fill=white] {$\x$};
-}
-\foreach \y in {-1,-0.5,0.5,1}
-   \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
+    \foreach \x in {-1,-0.5,0.5,1} {
+      \draw (\x cm,1pt) -- (\x cm,-1pt);
+      \draw (\x cm,6pt) node[anchor=north,fill=white] {$\x$};
+    }
+    \foreach \y in {-1,-0.5,0.5,1}
+       \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
 
 \end{tikzpicture}
 \end{minipage}
