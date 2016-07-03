@@ -105,7 +105,7 @@
   \draw (-1.1,0) -- (1.1,0);
   \draw (0,-1.1) -- (0,1.1); 
   \draw (0,0) circle [radius=1cm];
-  \filldraw [black] ({#1}:1cm) circle [radius=0.015cm];
+  \filldraw [black] ({#1}:1cm) circle [radius=0.025cm];
   \draw (0,1.2cm) node {$y$};
   \draw (1.2cm,0) node {$x$};
 }
@@ -131,6 +131,9 @@
 }
 
 
+Angles that are a multiple of $\frac{\pi}{2}$ are aligned with the $x$
+and $y$ axis.
+
 \begin{minipage}{0.5\linewidth}
 \begin{tikzpicture}[scale=3]
     \unitcircleAxes{0}
@@ -150,7 +153,7 @@
 \end{tikzpicture}
 \end{minipage}
 
-\vspace{3em}
+%\vspace{3em}
 
 \begin{minipage}{0.5\linewidth}
 \begin{tikzpicture}[scale=3]
@@ -171,7 +174,6 @@
 \end{tikzpicture}
 \end{minipage}
 
-\vfill
 
 \begin{minipage}{0.5\linewidth}
 \begin{tikzpicture}[scale=3]
