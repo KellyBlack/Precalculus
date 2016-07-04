@@ -1,5 +1,86 @@
 
 
+\begin{figure}[!h]
+    \centering
+    \resizebox{\textwidth}{!}{
+        \begin{tikzpicture}[mindmap,
+        level 1 concept/.append style={level distance=130,sibling angle=90},
+        ]
+        \path[mindmap,concept color=black,text=white]
+        node[concept] {Function}
+        [clockwise from=0]
+        child[concept color=green!50!black] {
+            node[concept] (coord) {Coordinate System}
+            [clockwise from=0]
+            child { node[concept] (distanceFormula) {Distance Formula} 
+              child[concept color=green] {
+                node[concept] (circles) {Circles and Semi-Circles} 
+                [clockwise from=-30,sibling angle=90]
+                child { node[concept] {Radius} }
+                child { node[concept] {Center} }
+              }
+            }
+        }  
+        child[concept color=blue,sibling angle=60] {
+            node[concept] (graphs) {Equations and Graphs}
+            [clockwise from=-35]
+            child { node[concept] (intercepts) {Intercepts} }
+            child { node[concept] (shift) {Shifts} }
+            child { node[concept] (scale) {Scaling} }
+        }
+        child[concept color=red]{
+          node[concept] (special) {Special Cases}
+          [clockwise from=240]
+          child[concept color=red] { 
+            node[concept] (lines) {Linear} 
+            [clockwise from=270]
+            child { node[concept] (linearRate) {Rates} }
+            child { node[concept] (lineForms) {Different Forms} }
+          }
+          child[concept color=red] { 
+            node[concept] (quadratics) {Quadratics} 
+            [clockwise from=210]
+            child { node[concept] (quadVertex) {Vertex} }
+            child { node[concept] (quadMinMax) {Max/Min} }
+          }
+        }
+        child[concept color=black,sibling angle=-15] {
+            node[concept] (rangeDomain) {Range / Domain} 
+        }
+        child[concept color=black,sibling angle=-20] {
+            node[concept] (composition) {Compositions} 
+        }
+        child[concept color=black,sibling angle=-25] {
+            node[concept] (operations) {Operations} 
+        };
+
+        \begin{pgfonlayer}{background}
+        \draw [left color=black, right color=black, draw=white,
+               decorate,decoration=circle connection bar] 
+               (rangeDomain) -- (composition);
+        \draw [left color=blue, right color=green, draw=white, 
+               decorate,decoration=circle connection bar] 
+               (rangeDomain) -- (coord);
+        \draw [left color=blue, right color=black, draw=white, 
+               decorate,decoration=circle connection bar] 
+               (rangeDomain) -- (graphs);
+        \draw [left color=blue, right color=blue, draw=white, 
+               decorate,decoration=circle connection bar] 
+               (shift) -- (scale);
+        \draw [left color=red, right color=blue, draw=white,
+               decorate,decoration=circle connection bar] 
+               (special) -- (graphs);
+        \draw [left color=blue, right color=green, draw=white, 
+               decorate,decoration=circle connection bar] 
+               (intercepts) -- (coord);
+        \end{pgfonlayer}
+
+
+        \end{tikzpicture}
+    }
+\end{figure}
+
+
 \include{functions/section_coordinates}
 
 \include{functions/section_graphs}
