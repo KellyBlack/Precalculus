@@ -1,5 +1,45 @@
 
 
+\begin{figure}[!h]
+    \centering
+    \resizebox{0.8\textwidth}{!}{
+        \begin{tikzpicture}[mindmap,
+        level 1 concept/.append style={level distance=130,sibling angle=90},
+        ]
+        \path[mindmap,concept color=black,text=white]
+        node[concept] {Function}
+        [clockwise from=0]
+        child[concept color=red]{
+          node[concept] (exponential) {Exponential Function}
+        }
+        child[concept color=blue] {
+            node[concept] (inverse) {Inverse Function}
+        }
+        child[concept color=green] {
+            node[concept] (logarithm) {Logarithmic Function} 
+        }
+        child[concept color=gray] {
+            node[concept] (rangeDomain) {Range / Domain} 
+        };
+
+        \begin{pgfonlayer}{background}
+        \draw [left color=red, right color=green, draw=white,
+               decorate,decoration=circle connection bar] 
+               (exponential) -- (logarithm);
+        \draw [left color=blue, right color=red, draw=white,
+               decorate,decoration=circle connection bar] 
+               (exponential) -- (inverse);
+        \draw [left color=green, right color=blue, draw=white,
+               decorate,decoration=circle connection bar] 
+               (logarithm) -- (inverse);
+        \end{pgfonlayer}
+
+
+        \end{tikzpicture}
+    }
+\end{figure}
+
+
 \include{exponentials/section_introExponentials}
 
 \include{exponentials/section_naturalExponential}
