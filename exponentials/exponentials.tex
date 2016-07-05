@@ -15,7 +15,7 @@
         child[concept color=blue] {
             node[concept] (inverse) {Inverse Function}
         }
-        child[concept color=green!50] {
+        child[concept color=green!50!black] {
             node[concept] (logarithm) {Logarithmic Function} 
         }
         child[concept color=gray] {
@@ -29,7 +29,7 @@
         \draw [left color=blue, right color=red, draw=white,
                decorate,decoration=circle connection bar] 
                (exponential) -- (inverse);
-        \draw [left color=green!50, right color=blue, draw=white,
+        \draw [left color=green!50!black, right color=blue, draw=white,
                decorate,decoration=circle connection bar] 
                (logarithm) -- (inverse);
         \end{pgfonlayer}
