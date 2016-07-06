@@ -15,7 +15,9 @@ plotter = BasicPlot()
 plt.figure(num=1,frameon=False)
 
 ###############################
+plt.close('all')
 plotter.clearPlot()
+plotter.setFigure(None,(10,3.5))
 #plt.xkcd(scale=.6) #randomness=1,length=1,scale=0)
 
 x = np.arange(0,5,0.02)
@@ -36,14 +38,16 @@ axes.xaxis.set_ticks_position('bottom')
 axes.spines['bottom'].set_position(('data',0))
 axes.yaxis.set_ticks_position('left')
 axes.spines['left'].set_position(('data',0))
-axes.xaxis.set_label_coords(0.95, 0.53)
-axes.yaxis.set_label_coords(-0.05, 0.95)
+axes.xaxis.set_label_coords(0.95, 0.55)
+axes.yaxis.set_label_coords(-0.03, 0.95)
 
 #plt.show()
 plt.savefig('emptySineAxes.pgf',format='pgf')
 
 ###############################
+plt.close('all')
 plotter.clearPlot()
+plotter.setFigure(None,(10,3.5))
 #plt.xkcd(scale=.6) #randomness=1,length=1,scale=0)
 
 x = np.arange(0,5,0.02)
@@ -64,8 +68,8 @@ axes.xaxis.set_ticks_position('bottom')
 axes.spines['bottom'].set_position(('data',0))
 axes.yaxis.set_ticks_position('left')
 axes.spines['left'].set_position(('data',0))
-axes.xaxis.set_label_coords(0.95, 0.53)
-axes.yaxis.set_label_coords(-0.05, 0.95)
+axes.xaxis.set_label_coords(0.95, 0.55)
+axes.yaxis.set_label_coords(-0.03, 0.95)
 
 #plt.show()
 plt.savefig('emptyAxesCosine.pgf',format='pgf')
