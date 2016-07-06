@@ -15,7 +15,9 @@ plotter = BasicPlot()
 plt.figure(num=1,frameon=False)
 
 ###############################
+plt.close('all')
 plotter.clearPlot()
+plotter.setFigure(None,(10,3.5))
 #plt.xkcd(scale=.6) #randomness=1,length=1,scale=0)
 
 x = np.arange(0,5,0.02)
@@ -41,7 +43,9 @@ axes.yaxis.set_label_coords(-0.05, 0.95)
 plt.savefig('emptyAxesEarthY.pgf',format='pgf')
 
 ###############################
+plt.close('all')
 plotter.clearPlot()
+plotter.setFigure(None,(10,3.5))
 #plt.xkcd(scale=.6) #randomness=1,length=1,scale=0)
 
 x = np.arange(0,5,0.02)
