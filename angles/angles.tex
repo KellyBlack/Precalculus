@@ -1,4 +1,65 @@
 
+
+\begin{figure}[!h]
+    \centering
+    \resizebox{0.62\textwidth}{!}{
+        \begin{tikzpicture}[mindmap,
+        level 1 concept/.append style={level distance=130,sibling angle=120},
+        level 2/.append style={level distance=100,sibling angle=120},
+        ]
+        \path[mindmap,concept color=black,text=white]
+        node[concept] {Angles}
+        [clockwise from=0]
+        child[concept color=green!50!black,sibling angle=180] {
+            node[concept] (angleMeasurement) {Measurement}
+            [clockwise from=90]
+            child[concept color=green!50!black,sibling angle=180] {
+              node[concept] (radians) {Radians} 
+            }
+            child[concept color=green!50!black,sibling angle=180] {
+              node[concept] (degrees) {Degrees} 
+            }
+        }
+        child[concept color=blue,sibling angle=120]{
+          node[concept] (unitCircle) {Arcs}
+          [clockwise from=0]
+          child[concept color=blue] { 
+            node[concept] (arcLength) {Arc Length} 
+          }
+          child[concept color=blue] { 
+            node[concept] (arcArea) {Arc Area} 
+          }
+        }
+        child[concept color=red,sibling angle=120]{
+          node[concept] (unitCircle) {Unit Circle}
+          [clockwise from=90]
+          child[concept color=red] { 
+            node[concept] (trigFunctions) {Trigonometric Functions} 
+            [clockwise from=0]
+            child { node[concept] (rangeDomain) {Range / Domain} }
+          }
+        };
+
+        \begin{pgfonlayer}{background}
+        \draw [left color=red, right color=green, draw=white, 
+               decorate,decoration=circle connection bar] 
+               (trigFunctions) -- (radians);
+        \draw [left color=blue, right color=green!50!black, draw=white, 
+               decorate,decoration=circle connection bar] 
+               (arcLength) -- (radians);
+        \draw [left color=blue, right color=green!50!black, draw=white, 
+               decorate,decoration=circle connection bar] 
+               (arcArea) -- (radians);
+        \end{pgfonlayer}
+
+
+        \end{tikzpicture}
+    }
+\end{figure}
+
+
+
+
 \include{angles/section_angles}
 
 \include{angles/section_sineCosine}
