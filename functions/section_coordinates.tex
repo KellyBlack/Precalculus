@@ -1,23 +1,26 @@
 %=========================================================================
-% Start of 
+% Start of
 %=========================================================================
 \preClass{Coordinate Systems}
 
 \begin{problem}
 \item Make a sketch of a number line with zero at the center.  Mark
   the locations of -2, -2.5, 1.1, and 2.3 on your number line.
+  The relative distances between the points should be consistent.
 
   \vfill
 
 \item Make a sketch of a number line with zero at the center.  Mark
   the locations of -2 and 2.15 on your number line. What is the
   distance between the two points?
+  (The relative distances between the points should be consistent.)
 
   \vfill
 
 \item Make a sketch of a number line with zero at the center.  Mark
   the locations of -1.54 and 2.07 on your number line. What is the
   distance between the two points?
+  (The relative distances between the points should be consistent.)
 
   \vfill
 
@@ -26,37 +29,94 @@
 
 \actTitle{Coordinate Systems}
 \begin{problem}
-\item Mark the points $P_1(-2.1,-4.4)$ and $P_2(4.5,1.2)$ on the axes
+\item Mark the points $P_1(-2.1,-4.4)$ and $P_2(4.5,1.2)$ on the coordinate plane
   below. Determine the distance between the two points.  Include a
   sketch of a right triangle whose hypotenuse represents the distance
   between the two points.
 
-  \hspace*{-6em}
-  \scalebox{0.95}{\input{functions/img/emptyAxes.pgf}}
+  \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily]
+    % bounds
+    \def\lowX{-5.5}
+    \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+    \pgfmathsetmacro\nextXValue{int(\startX+1)}
+    \def\highX{5.5}
+    \def\lowY{-5.5}
+    \def\highY{5.5}
+    \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+    % ticks
+    \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+ 	% axis
+	\draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
+    \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+      \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+    }
+    \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+      \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+    }
+  \end{tikzpicture}
 
   \vfill
 
   \clearpage
 
-\item Mark the point $P_3(1.3,-2.4)$ on the axes below. Determine the
+\item Mark the point $P_3(1.3,-2.4)$ on the coordinate plane below. Determine the
   points on the $x$-axis that are a distance of 3 units from $P_3$.
   \sideNote{Write out the distance formula for the points on the
     $x$-axis and solve for the unknown variable.} Mark the points on
   the axes below.
 
-  \hspace*{-6em}
-  \scalebox{0.95}{\input{functions/img/emptyAxes.pgf}}
+  \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily]
+    % bounds
+    \def\lowX{-5.5}
+    \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+    \pgfmathsetmacro\nextXValue{int(\startX+1)}
+    \def\highX{5.5}
+    \def\lowY{-5.5}
+    \def\highY{5.5}
+    \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+    % ticks
+    \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+ 	% axis
+	\draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
+    \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+      \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+    }
+    \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+      \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+    }
+  \end{tikzpicture}
 
   \vfill
 
 
 \clearpage
 
-\item Mark the point $P_4(1,-2)$ on the axes below. Mark \textbf{all}
+\item Mark the point $P_4(1,-2)$ on the coordinate plane below. Mark \textbf{all}
   of the points that are a distance of 2 units from $P_4$.
 
-  \hspace*{-6em}
-  \scalebox{0.95}{\input{functions/img/emptyAxes.pgf}}
+  \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily]
+      % bounds
+      \def\lowX{-5.5}
+      \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+      \pgfmathsetmacro\nextXValue{int(\startX+1)}
+      \def\highX{5.5}
+      \def\lowY{-5.5}
+      \def\highY{5.5}
+      \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+      % ticks
+      \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+   	% axis
+  	\draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+      \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
+      \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+        \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+      }
+      \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+        \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+      }
+    \end{tikzpicture}
 
   \vfill
 
@@ -91,8 +151,8 @@
 \begin{problem}
 \item Briefly state two ideas from today's class.
   \begin{itemize}
-  \item 
-  \item 
+  \item
+  \item
   \end{itemize}
 \item For each equation below determine the values of $x$ that satisfy
   the equation. Express any approximations to at least two decimal
@@ -110,4 +170,3 @@
 \item Make a sketch of a number line with zero at the center.
   Indicate the set of numbers that satisfy $|x|>1.5$.
 \end{problem}
-
