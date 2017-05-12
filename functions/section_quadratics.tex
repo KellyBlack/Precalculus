@@ -1,5 +1,5 @@
 %=========================================================================
-% Start of 
+% Start of
 %=========================================================================
 \preClass{Parabolas}
 
@@ -20,8 +20,28 @@
       r(x) & = & -f(x-2).
     \end{eqnarray*}
 
-    \hspace*{-6em}
-    \scalebox{0.95}{\input{functions/img/emptyAxesShifted.pgf}}
+    \begin{tikzpicture}[y=1.1cm, x=1.1cm,font=\sffamily]
+        % bounds
+        \def\lowX{-5.5}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{5.5}
+        \def\lowY{-5.5}
+        \def\highY{5.5}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+      % axis
+      \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {$y$};
+        \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+          \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+        }
+        \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+        }
+        \draw (0,5.5) node [anchor=south] {Comparing Shifted Functions};
+      \end{tikzpicture}
 
   \end{subproblem}
 \end{problem}
@@ -29,32 +49,31 @@
 
 \actTitle{Quadratic Functions}
 \begin{problem}
-\item A developer has a square plot of land that is 100 meters by 100
-  meters that is next to a river. The land will be divided into two
-  parts by making a rectangle in one corner of the large plot with its
-  width along the river. The height of the rectangle will be ten
-  meters shorter than its width. It is estimated that the rectangular
-  plot of land will sell for \$2.00 per square meter plus 100\$/meter
-  times the width, and the remaining land will sell for \$4.00 per
-  square meter.  Determine the dimensions of the rectangular plot that
-  will result in the highest profit.
-  \begin{subproblem}
-    \item Make a sketch of the situation.
-      \vfill
-    \item Within the sketch above, identify and label the variables
-      that you will use.
-    \item Determine any relevant relationships between your variables
-      and the total cost of the land.
-    \item How will you solve this problem?
-      \vfill
-    \item Determine the dimensions of the rectangular plot that will
-      result in the highest profit.
-      \sideNote{Check your work and make sure that you maximized the
-        profit and did not minimize it.}
-      \vfill
-      \vfill
-  \end{subproblem}
+
+\item Maximize the product of two positive numbers whose sum is five.
+\begin{subproblem}
+  \item Make a rough sketch of the situation.
+    \sideNote{The product of two numbers is the area of a rectangle!}
+    \vfill
+  \item Within the sketch above, identify and label the variables
+    that you will use.
+  \item Determine the formula for the function to be maximized.
+    \sideNote{This is called the "Cost Function."}
+    \vfill
+  \item Determine any other relevant relationships between your variables that must be true in all circumstances.
+    \sideNote{This is called the "Constraint."}
+    \vfill
+  \item How will you solve this problem?
+    \vfill
+  \item Determine the values of the two numbers.
+    \sideNote{Check your work and make sure that you maximized the
+      profit and did not minimize it.}
+    \vfill
+    \vfill
+\end{subproblem}
+
   \clearpage
+
 \item A traffic engineer observes the movement of traffic on a busy
   street. She estimates that when the traffic density is 0 cars/meter
   that the rate of flow is 0 cars/minute. She notices that when the
@@ -65,13 +84,47 @@
   \begin{subproblem}
   \item Assuming that the rate of flow is 0 if the density is greater
     than 0.1 make a rough sketch of the rate of flow as a function of
-    the density below.  
+    the density below.
     \vfill
   \item Assuming that the rate of flow is a quadratic function of the
     traffic density when the density is between 0 and 0.1 cars/meter
     inclusive, determine the formula for the traffic density.
     \vfill
   \end{subproblem}
+
+  \clearpage
+
+  \item A developer has a square plot of land that is 100 meters by 100
+    meters that is next to a river. The land will be divided into two
+    parts by forming a rectangle on one side of the large plot with its
+    width along the river. The height of the rectangle will be ten
+    meters shorter than its width. It is estimated that the rectangular
+    plot of land will sell for \$2.00 per square meter plus 100\$/meter
+    times the width. The remaining land will be sold for \$4.00 per
+    square meter.  Determine the dimensions of the rectangular plot that
+    will result in the highest profit.
+    \begin{subproblem}
+      \item Make a sketch of the situation.
+        \sideNote{Label important aspects of the sketch.}
+        \vfill
+      \item Within the sketch above, identify and label the variables
+        that you will use.
+      \item Determine the total selling price for the land.
+        \sideNote{This is called the "Cost Function."}
+        \vfill
+      \item Determine any other relevant relationships between your variables that must be true in all circumstances.
+        \sideNote{This is called the "Constraint."}
+        \vfill
+      \item How will you solve this problem?
+        \vfill
+      \item Determine the dimensions of the rectangular plot that will
+        result in the highest profit.
+        \sideNote{Check your work and make sure that you maximized the
+          profit and did not minimize it.}
+        \vfill
+        \vfill
+    \end{subproblem}
+
 \end{problem}
 
 \postClass
@@ -79,8 +132,8 @@
 \begin{problem}
 \item Briefly state two ideas from today's class.
   \begin{itemize}
-  \item 
-  \item 
+  \item
+  \item
   \end{itemize}
 
 \item Determine the vertex of the following parabolas.
@@ -95,7 +148,7 @@
 \item Two super hero capes will be sewn as part of a
   demonstration. One cape will be in the shape of a square. The other
   cape will be in the shape of a triangle, and the height is the same
-  length as the base. They will be displayed together, and the sum of
+  length as its base. They will be displayed together, and the sum of
   the two lengths must be 6 feet. What are the dimensions of the capes
   that will minimize the total area of the capes?
 \end{problem}
@@ -105,4 +158,3 @@
 %%% mode: latex
 %%% TeX-master: "../labManual"
 %%% End:
-
