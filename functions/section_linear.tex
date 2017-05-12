@@ -1,5 +1,5 @@
 %=========================================================================
-% Start of 
+% Start of
 %=========================================================================
 \preClass{Linear Functions}
 
@@ -18,10 +18,30 @@
 
   Determine the relationship between the hare's and the tortoise's
   position. That is, given the hare's position determine the
-  tortoise's position. Make a sketch of the plot of the relationship using the axes below.
+  tortoise's position. Make a sketch of the graph of the relationship using the axes below.
 
-  \hspace*{-6em}
-    \scalebox{0.95}{\input{functions/img/emptyAxesHareTortoise.pgf}}
+  \begin{tikzpicture}[y=1.1cm, x=1.1cm,font=\sffamily]
+      % bounds
+      \def\lowX{-5.5}
+      \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+      \pgfmathsetmacro\nextXValue{int(\startX+1)}
+      \def\highX{5.5}
+      \def\lowY{-5.5}
+      \def\highY{5.5}
+      \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+      % ticks
+      \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+    % axis
+    \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {Hare};
+      \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {Tortoise};
+      \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+        \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+      }
+      \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+        \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+      }
+      \draw (0,5.5) node [anchor=south] {Hare vs. Tortoise};
+    \end{tikzpicture}
 
 
     What is the tortoise's position when the hare's position is 15
@@ -59,8 +79,9 @@
     cigarette butts in a nest given its distance from the theater.
     Use it to predict the number of cigarette butts in a nest 50
     meters from the theater. Also, make a sketch of the relationship.
+    \sideNote{Be sure to label your axes and annotate your plot.}
 
-    \vfill 
+    \vfill
     \vfill
     \vfill
 
@@ -83,16 +104,20 @@
 \begin{problem}
 \item Briefly state two ideas from today's class.
   \begin{itemize}
-  \item 
-  \item 
+  \item
+  \item
   \end{itemize}
-\item The per-capita growth rate for a species is approximated as a
+\item The growth rate for a population is the change in the number of individuals
+  in a unit time. The per-capita growth rate is the growth rate divided by
+  the total number of individuals.
+  The per-capita growth rate for a species is approximated as a
   linear function. It is estimated that when the population is near
   zero the per-capita growth rate is highest due to a lack of
-  competition and approaches 0.5 (units are 1/hour). When the
+  competition and approaches 0.5 (the time units are hours). When the
   population approaches 1,000 the per-capita growth rate is estimated
-  to be zero. 
+  to be zero.
   \begin{subproblem}
+    \item What are the units for the per capita growth rate?
     \item Determine the relationship that gives the per-capita growth
       rate as a function of the population, $p$.
     \item Make a sketch of the graph of the per-capita growth
