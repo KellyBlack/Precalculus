@@ -1,5 +1,5 @@
 %=========================================================================
-% Start of 
+% Start of
 %=========================================================================
 \preClass{Graphs of Functions}
 
@@ -17,6 +17,9 @@
   where $t$ is the time in days since the beginning of the year.
   \begin{subproblem}
   \item Make a sketch of the two functions below.
+  \sideNote{Label your axes and properly annotate your plot.}
+    \vfill
+  \item For what values of $t$ does it make sense to use these functions?
     \vfill
   \item A researcher decides to alter the situation and adds 5 million
     bacteria to the first population given by $B(t)$. Determine a
@@ -35,22 +38,23 @@
   \begin{eqnarray*}
     h(t) & = & \sqrt{\frac{t}{3}},
   \end{eqnarray*}
-  where $t$ is the time in years from when the seed was germinated. 
+  where $t$ is the time in years from when the seed was germinated.
   \begin{subproblem}
   \item Make a sketch of the height of a tree as a function of time.
+    \sideNote{Label your axes and properly annotate your plot.}
     \vfill
   \item Two seeds are planted, and the first seed germinates
     immediately. The second seed germinates one year after the first
     is germinated, and then begins to grow. Determine the formulas for
-    the height of the two trees with respect to the time that the
-    first seed is germinated. Make a sketch of the two functions on
-    the same graph.  
+    the height of the two trees with respect to the time that they
+    were planted. Make a sketch of the two functions on
+    the same graph.
     \vfill
 
-  \item A new strain of the tree is developed that grows at a rate
-    twice as fast as the original. Determine the formula that will
+  \item A new strain of the tree is developed that grows to the same height
+    in half the time. Determine the formula that will
     give the height of the new strain. Make a sketch comparing the
-    height of the original and the new strains.  
+    height of the original and the new strains.
     \vfill
   \end{subproblem}
 
@@ -68,11 +72,32 @@
       g(x) & = & f(3x), \\
       h(x) & = & f(x)+2, \\
       p(x) & = & f(x+2), \\
-      q(x) & = & 3f(x).
+      q(x) & = & 3f(x), \\
+      r(x) & = & -f(x)-2.
     \end{eqnarray*}
 
-    \hspace*{-6em}
-    \scalebox{0.95}{\input{functions/img/emptyAxesShifted.pgf}}
+    \begin{tikzpicture}[y=1.1cm, x=1.1cm,font=\sffamily]
+        % bounds
+        \def\lowX{-5.5}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{5.5}
+        \def\lowY{-5.5}
+        \def\highY{5.5}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+      % axis
+      \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {$y$};
+        \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+          \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+        }
+        \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+        }
+        \draw (0,5.5) node [anchor=south] {Comparing Shifted Functions};
+      \end{tikzpicture}
 
   \end{subproblem}
 \end{problem}
@@ -82,8 +107,8 @@
 \begin{problem}
 \item Briefly state two ideas from today's class.
   \begin{itemize}
-  \item 
-  \item 
+  \item
+  \item
   \end{itemize}
 \item An enzyme in a solution decays, and the concentration (mg/liter)
   as a function of time in hours is
@@ -114,4 +139,3 @@
 %%% mode: latex
 %%% TeX-master: "../labManual"
 %%% End:
-
