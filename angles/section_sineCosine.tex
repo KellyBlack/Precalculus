@@ -1,5 +1,5 @@
 %=========================================================================
-% Start of 
+% Start of
 %=========================================================================
 \preClass{Motion Around a Circle}
 
@@ -21,10 +21,10 @@
     \vfill
   \item What distance does the earth traverse in ten years?
     \vfill
-  \item What is the largest value that the $x$-coordinate obtains?
-    What is the smallest value that the $x$-coordinate obtains?
-    What is the largest value that the $y$-coordinate obtains?
-    What is the smallest value that the $y$-coordinate obtains?
+  \item What is the largest value that the $x$-coordinate can be?
+    What is the smallest value that the $x$-coordinate can be?
+    What is the largest value that the $y$-coordinate can be?
+    What is the smallest value that the $y$-coordinate can be?
     \vfill
   \end{subproblem}
 
@@ -51,40 +51,88 @@
     \item Make a rough sketch of the earth's $y$ position as a
       function of the angle.
 
-      \hspace{-4em}
-      \scalebox{0.65}{\input{angles/img/emptyAxesEarthY.pgf}}
+      \begin{tikzpicture}[y=2cm, x=2.7cm,font=\sffamily]
+          % bounds
+          \def\lowX{-0.5}
+          \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+          \pgfmathsetmacro\nextXValue{int(\startX+1)}
+          \def\highX{5}
+          \def\lowY{-1.25}
+          \def\highY{1.25}
+          \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+          % ticks
+          \draw[step = 1, gray, very thin,dashed,opacity=0.85] (0, \lowY) grid ( \highX,\highY);
+          % axis
+          \draw[thick,->] (0,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$\theta$};
+          \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {$y$};
+
+          \draw (1pt, 1) -- (-1pt, 1) node[yshift=-6,xshift=-1,anchor=east] { 1};
+          \draw (1pt,-1) -- (-1pt,-1) node[yshift=-6,xshift=-1,anchor=east] {-1};
+
+          \draw (1,1pt) -- (1,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\frac{ \pi}{2}$};
+          \draw (3,1pt) -- (3,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\frac{3\pi}{2}$};
+          \draw (5,1pt) -- (5,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\frac{5\pi}{2}$};
+          \draw (2,1pt) -- (2,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\pi$};
+          \draw (4,1pt) -- (4,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$2\pi$};
+          \draw (2.5,1.3) node [anchor=south] {$Y$ Coordinate of the Earth};
+        \end{tikzpicture}
 
     \item Make a rough sketch of the earth's $x$ position as a
       function of the angle.
 
-      \hspace{-4em}
-      \scalebox{0.65}{\input{angles/img/emptyAxesEarthX.pgf}}
+      \begin{tikzpicture}[y=2cm, x=2.7cm,font=\sffamily]
+          % bounds
+          \def\lowX{-0.5}
+          \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+          \pgfmathsetmacro\nextXValue{int(\startX+1)}
+          \def\highX{5}
+          \def\lowY{-1.25}
+          \def\highY{1.25}
+          \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+          % ticks
+          \draw[step = 1, gray, very thin,dashed,opacity=0.85] (0, \lowY) grid ( \highX,\highY);
+          % axis
+          \draw[thick,->] (0,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$\theta$};
+          \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {$x$};
+
+          \draw (1pt, 1) -- (-1pt, 1) node[yshift=-6,xshift=-1,anchor=east] { 1};
+          \draw (1pt,-1) -- (-1pt,-1) node[yshift=-6,xshift=-1,anchor=east] {-1};
+
+          \draw (1,1pt) -- (1,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\frac{ \pi}{2}$};
+          \draw (3,1pt) -- (3,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\frac{3\pi}{2}$};
+          \draw (5,1pt) -- (5,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\frac{5\pi}{2}$};
+          \draw (2,1pt) -- (2,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\pi$};
+          \draw (4,1pt) -- (4,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$2\pi$};
+          \draw (2.5,1.3) node [anchor=south] {$X$ Coordinate of the Earth};
+        \end{tikzpicture}
 
   \end{subproblem}
 
   \clearpage
 
-\item At the annual Plainfield $500\pi$ race a car will make 250 laps
+\item At the annual Plainfield $500\pi$ race a tractor will make 250 laps
   around a circular track. The track has a radius of 1 km. A single
-  car will make a trial run by going around the track at 1 km per
+  tractor will make a trial run by going around the track at 1 km per
   hour. (It is not a very fast race.) The car starts on the point
   furthest East and is initially moving to the North.
 
-      \scalebox{0.3}{\input{angles/img/plainfield500.pgf}}
+%      \scalebox{0.3}{\input{angles/img/plainfield500.pgf}}
 
 
   \begin{subproblem}
-  \item How far will the car travel in all? Determine the distance
+  \item How far will the tractor travel in all? Determine the distance
     traveled as a function of time, and then determine the angle,
     $\theta$, at any time.
     \vfill
+  \item What are the possible values of the angle, $\theta$?
+    \vspace{1em}
   \item Assuming that the origin is the center of the track, sketch a
-    plot of the car's $y$ position as a function of time for the
+    plot of the tractor's $y$ position as a function of time for the
     first two laps.
     \sideNote{Label the axes and annotate the intercepts.}
     \vfill
   \item Assuming that the origin is the center of the track, sketch a
-    plot of the car's $x$ position as a function of time for the
+    plot of the tractor's $x$ position as a function of time for the
     first two laps.
     \sideNote{Label the axes and annotate the intercepts.}
     \vfill
@@ -96,8 +144,8 @@
 \begin{problem}
 \item Briefly state two ideas from today's class.
   \begin{itemize}
-  \item 
-  \item 
+  \item
+  \item
   \end{itemize}
 \item Make a sketch of the sine function. Annotate the graph to show
   the amplitude and period of the function.
@@ -123,7 +171,7 @@
 \newcommand{\unitcircleAxes}[1]{
   \draw[step=0.5cm,black, dotted] (-1.1,-1.1) grid (1.1,1.1); % very thin,
   \draw (-1.1,0) -- (1.1,0);
-  \draw (0,-1.1) -- (0,1.1); 
+  \draw (0,-1.1) -- (0,1.1);
   \draw (0,0) circle [radius=1cm];
   \filldraw [black] ({#1}:1cm) circle [radius=0.025cm];
   \draw (0,1.2cm) node {$y$};
@@ -131,9 +179,9 @@
 }
 
 \newcommand{\triangleUnitCircle}[2]{
-    \draw[green,thick] (.2cm,0cm) arc [start angle=0, end angle={#1},radius=.2cm]; 
-    \draw[red!80,thick] ({#1}:1cm) -- ++(0,{#2}); 
-    \draw[blue!80,thick] (0,0) -- ({#1}:1cm); 
+    \draw[green,thick] (.2cm,0cm) arc [start angle=0, end angle={#1},radius=.2cm];
+    \draw[red!80,thick] ({#1}:1cm) -- ++(0,{#2});
+    \draw[blue!80,thick] (0,0) -- ({#1}:1cm);
 }
 
 \newcommand{\labelXAxis}[1]{
@@ -363,4 +411,3 @@ based on the $x$ and $y$ position of the point on the unit circle.
 %%% mode: latex
 %%% TeX-master: "../labManual"
 %%% End:
-
