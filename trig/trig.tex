@@ -1,3 +1,57 @@
+\begin{figure}[!h]
+    \centering
+    \resizebox{0.87\textwidth}{!}{
+        \begin{tikzpicture}[mindmap,
+        level 1 concept/.append style={level distance=130,sibling angle=120},
+        level 2/.append style={level distance=100,sibling angle=120},
+        ]
+        \path[mindmap,concept color=black,text=white]
+        node[concept] {Function}
+        [clockwise from=0]
+        child[concept color=green!50!black,sibling angle=180] {
+            node[concept] (trigFunctions) {Trig.\\Functions}
+            [clockwise from=55]
+            child[concept color=green!50!black,sibling angle=90] {
+              node[concept] (tangent) {Tangent}
+            }
+            child[concept color=green!50!black,sibling angle=90] {
+              node[concept] (sine) {Sine}
+            }
+            child[concept color=green!50!black,sibling angle=90] {
+              node[concept] (cosine) {Cosine}
+            }
+        }
+        child[concept color=blue,sibling angle=120]{
+          node[concept] (periodic) {Periodic\\Functions}
+          [clockwise from=-45]
+          child[concept color=blue] {
+            node[concept] (oscillations) {Oscillations}
+            [clockwise from=-90]
+            child[concept color=blue,sibling angle=45] {
+              node[concept] (frequency) {Frequency}
+            }
+            child[concept color=blue,sibling angle=45] {
+              node[concept] (amplitude) {Amplitude}
+            }
+          }
+        };
+
+        \begin{pgfonlayer}{background}
+%        \draw [color=blue,ultra thick,looseness=1.5,<-] (arcLength) [out=-22, in=-45] to (radians);
+        \draw [left color=blue, right color=green!50!black, draw=white,
+               decorate,decoration=circle connection bar]
+               (oscillations.east) -- (sine.south);
+        \draw [left color=blue, right color=green!50!black, draw=white,
+               decorate,decoration=circle connection bar]
+               (oscillations.east) -- (cosine.south);
+%        \draw [color=blue,ultra thick,looseness=1.5,<-] (arcArea) [out=0, in=-45] to (radians);
+        \end{pgfonlayer}
+
+
+        \end{tikzpicture}
+    }
+\end{figure}
+
 
 \include{trig/section_basicTrig}
 
