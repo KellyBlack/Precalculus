@@ -22,7 +22,7 @@
           child { node[concept] (domain) {Domain} }
         }
         child[concept color=green!50!black] {
-            node[concept] (logarithm) {Logarithmic Function} 
+            node[concept] (logarithm) {Logarithmic Function}
           [clockwise from=150]
           child { node[concept] (range) {Range} }
           child { node[concept] (domain) {Domain} }
@@ -30,13 +30,13 @@
 
         \begin{pgfonlayer}{background}
         \draw [left color=green, right color=red, draw=white,
-               decorate,decoration=circle connection bar] 
+               decorate,decoration=circle connection bar]
                (exponential) -- (logarithm);
         \draw [left color=blue, right color=red, draw=white,
-               decorate,decoration=circle connection bar] 
+               decorate,decoration=circle connection bar]
                (exponential) -- (inverse);
         \draw [left color=blue, right color=green!50!black, draw=white,
-               decorate,decoration=circle connection bar] 
+               decorate,decoration=circle connection bar]
                (logarithm) -- (inverse);
         \end{pgfonlayer}
 
