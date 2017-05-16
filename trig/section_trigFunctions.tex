@@ -13,9 +13,11 @@
     \vfill
   \item Sketch a plot of the ant's $x$-coordinate as a function of
     time.
+    \sideNote{Label your axes and annotate your plot.}
     \vfill
   \item Sketch a plot of the ant's $y$-coordinate as a function of
     time.
+    \sideNote{Label your axes and annotate your plot.}
     \vfill
   \end{subproblem}
 \end{problem}
@@ -27,10 +29,37 @@
   \begin{subproblem}
     \item Make a sketch of the sine function.
 
-      \hspace*{-6em}
-      \scalebox{0.7}{\input{trig/img/emptySineAxes.pgf}}
+      \hspace*{-3em}
+      \begin{tikzpicture}[y=2cm, x=1.2cm,font=\sffamily]
+          % bounds
+          \def\lowX{0.0}
+          \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+          \pgfmathsetmacro\nextXValue{int(\startX+1)}
+          \def\highX{12}
+          \def\lowY{-1.25}
+          \def\highY{1.25}
+          \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+          % ticks
+          \draw[step = 1, gray, very thin,dashed,opacity=0.85] (0, \lowY) grid ( \highX,\highY);
+          % axis
+          \draw[thick,->] (0,0) -- coordinate (x axis mid) (\highX,0) node[anchor = south west] {$\theta$};
+          \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {Sine};
 
-    \item Over what values of $\theta$ does the sine function repeat
+          \draw (1pt, 1) -- (-1pt, 1) node[yshift=-6,xshift=-1,anchor=east] { 1};
+          \draw (1pt,-1) -- (-1pt,-1) node[yshift=-6,xshift=-1,anchor=east] {-1};
+
+          \draw (1,1pt) -- (1,-1pt) node[yshift=-1,xshift=0,anchor=north east] {$\frac{ \pi}{2}$};
+          \foreach \x in {3,5,...,\highX} {
+            \draw (\x,1pt) -- (\x,-1pt) node[yshift=-8,xshift=1,anchor=east] {$\frac{\x\pi}{2}$};
+          }
+          \draw (2,1pt) -- (2,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\pi$};
+          \foreach \x in {2,3,...,6} {
+            \draw (2*\x,1pt) -- (2*\x,-1pt) node[yshift=-7,xshift=3,anchor=east] {$\x\pi$};
+          }
+          \draw (6,1.3) node [anchor=south] {The Sine Function};
+        \end{tikzpicture}
+
+    \item After what values of $\theta$ does the sine function start to repeat
       itself?
       \vfill
 
@@ -38,16 +67,46 @@
       \begin{eqnarray*}
         \sin(\theta) & = & \sin(\theta-a)?
       \end{eqnarray*}
+      \vspace{1em}
 
     \item Is the sine function an invertible function?
+      \vspace{1em}
 
       \clearpage
     \item Make a sketch of the cosine function.
 
-      \hspace*{-6em}
-      \scalebox{0.7}{\input{trig/img/emptyAxesCosine.pgf}}
+      \hspace*{-5em}
+      \begin{tikzpicture}[y=2cm, x=1.2cm,font=\sffamily]
+          % bounds
+          \def\lowX{0.0}
+          \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+          \pgfmathsetmacro\nextXValue{int(\startX+1)}
+          \def\highX{12}
+          \def\lowY{-1.25}
+          \def\highY{1.25}
+          \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+          % ticks
+          \draw[step = 1, gray, very thin,dashed,opacity=0.85] (0, \lowY) grid ( \highX,\highY);
+          % axis
+          \draw[thick,->] (0,0) -- coordinate (x axis mid) (\highX,0) node[anchor = south west] {$\theta$};
+          \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {Cosine};
 
-    \item Over what values of $\theta$ does the cosine function repeat
+          \draw (1pt, 1) -- (-1pt, 1) node[yshift=-6,xshift=-1,anchor=east] { 1};
+          \draw (1pt,-1) -- (-1pt,-1) node[yshift=-6,xshift=-1,anchor=east] {-1};
+
+          \draw (1,1pt) -- (1,-1pt) node[yshift=-1,xshift=0,anchor=north east] {$\frac{ \pi}{2}$};
+          \foreach \x in {3,5,...,\highX} {
+            \draw (\x,1pt) -- (\x,-1pt) node[yshift=-8,xshift=1,anchor=east] {$\frac{\x\pi}{2}$};
+          }
+          \draw (2,1pt) -- (2,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\pi$};
+          \foreach \x in {2,3,...,6} {
+            \draw (2*\x,1pt) -- (2*\x,-1pt) node[yshift=-7,xshift=3,anchor=east] {$\x\pi$};
+          }
+          \draw (6,1.3) node [anchor=south] {The Cosine Function};
+        \end{tikzpicture}
+
+
+    \item For what values of $\theta$ does the cosine function start to repeat
       itself?
       \vfill
 
@@ -55,8 +114,10 @@
       \begin{eqnarray*}
         \cos(\theta) & = & \cos(\theta-a)?
       \end{eqnarray*}
+      \vspace{1em}
 
     \item Is the cosine function an invertible function?
+    \vspace{1em}
 
   \end{subproblem}
 
