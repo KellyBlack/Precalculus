@@ -9,14 +9,14 @@
         \path[mindmap,concept color=black,text=white]
         node[concept] {Function}
         [clockwise from=-90]
-        child[concept color=blue,sibling angle=60] {
+        child[concept color=blue,sibling angle=60,text=black] {
             node[concept] (graphs) {Equations and Graphs}
             [clockwise from=-35]
             child { node[concept] (intercepts) {Intercepts} }
             child { node[concept] (shift) {Shifts} }
             child { node[concept] (scale) {Scaling} }
         }
-        child[concept color=red]{
+        child[concept color=red,text=black]{
           node[concept] (special) {Special Cases}
           [clockwise from=240]
           child[concept color=red] {
@@ -78,7 +78,10 @@
                (special) -- (graphs);
         \draw [left color=blue, right color=green, draw=white,
                decorate,decoration=circle connection bar]
-               (intercepts) -- (coord);
+               (graphs) -- (coord);
+       \draw [left color=blue, right color=green, draw=white,
+              decorate,decoration=circle connection bar]
+              (intercepts) -- (coord);
         \end{pgfonlayer}
 
 
