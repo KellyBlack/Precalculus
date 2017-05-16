@@ -8,30 +8,30 @@
         \path[mindmap,concept color=black,text=white]
         node[concept] {Function}
         [clockwise from=0]
-        child[concept color=green!50!black,sibling angle=180] {
-            node[concept] (trigFunctions) {Trig.\\Functions}
-            [clockwise from=55]
-            child[concept color=green!50!black,sibling angle=90] {
-              node[concept] (tangent) {Tangent}
-            }
-            child[concept color=green!50!black,sibling angle=90] {
-              node[concept] (sine) {Sine}
-            }
-            child[concept color=green!50!black,sibling angle=90] {
-              node[concept] (cosine) {Cosine}
-            }
-        }
-        child[concept color=blue,sibling angle=120]{
+        child[concept color=blue,sibling angle=0,text=black]{
           node[concept] (periodic) {Periodic\\Functions}
-          [clockwise from=-45]
-          child[concept color=blue] {
-            node[concept] (oscillations) {Oscillations}
+          [clockwise from=0]
+          child[concept color=green!50!black,sibling angle=90] {
+              node[concept] (trigFunctions) {Trig.\\Functions}
+              [clockwise from=55]
+              child[concept color=green!50!black,sibling angle=90] {
+                node[concept] (tangent) {Tangent}
+              }
+              child[concept color=green!50!black,sibling angle=90] {
+                node[concept] (sine) {Sine}
+              }
+              child[concept color=green!50!black,sibling angle=90] {
+                node[concept] (cosine) {Cosine}
+              }
+          }
+          child[concept color=blue,sibling angle=98,level distance=110,font=\fontsize{8pt}{10pt}\selectfont] {
+            node[concept,scale=1.4] (oscillations) {Oscillations}
             [clockwise from=-90]
-            child[concept color=blue,sibling angle=45] {
-              node[concept] (frequency) {Frequency}
+            child[concept color=blue,sibling angle=45,level distance=80,font=\fontsize{4pt}{6pt}\selectfont] {
+              node[concept,scale=1.5] (frequency) {Frequency}
             }
-            child[concept color=blue,sibling angle=45] {
-              node[concept] (amplitude) {Amplitude}
+            child[concept color=blue,sibling angle=45,level distance=80,font=\fontsize{4pt}{6pt}\selectfont] {
+              node[concept,scale=1.5] (amplitude) {Amplitude}
             }
           }
         };
