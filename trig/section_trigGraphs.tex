@@ -149,8 +149,39 @@
     $\frac{\pi}{2}$ units, oscillates between 2 and -2, and has a
     period of $2\pi$.
 
-    \vspace{-0.5em}
-    \hspace{-7em}\scalebox{0.72}{\input{trig/img/trigGraphs_1.pgf}}
+    \hspace*{-3.5em}
+    \begin{tikzpicture}[y=0.8cm, x=1.2cm,font=\sffamily]
+        % bounds
+        \def\lowX{-6}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{6}
+        \def\lowY{-3.1}
+        \def\highY{3.1}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+        % axis
+        \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = south west] {$x$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[xshift=-10,anchor = north east] {$f$};
+
+        \foreach \y in {-3,-2,-1,1,2,3} {
+          \draw (-1pt,\y) -- (1pt,\y) node[anchor=east] {$\y$};
+        }
+
+        \draw ( 1,1pt) -- ( 1,-1pt) node[yshift=-1,xshift=0,anchor=north east] {$\frac{ \pi}{2}$};
+        \draw (-1,1pt) -- (-1,-1pt) node[yshift=-1,xshift=0,anchor=north east] {$\frac{-\pi}{2}$};
+        \foreach \x in {-5,-3,3,5} {
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-8,xshift=1,anchor=east] {$\frac{\x\pi}{2}$};
+        }
+        \draw ( 2,1pt) -- ( 2,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\pi$};
+        \draw (-2,1pt) -- (-2,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$-\pi$};
+        \foreach \x in {-3,-2,2,3} {
+          \draw (2*\x,1pt) -- (2*\x,-1pt) node[yshift=-7,xshift=3,anchor=east] {$\x\pi$};
+        }
+        \draw (0,3.2) node [anchor=south] {Shifted Sine Function};
+      \end{tikzpicture}
+
 
     \item Determine the formula for the new function
       \begin{eqnarray*}
@@ -166,8 +197,39 @@
     $\frac{\pi}{2}$ units, oscillates between 3 and -1, and has a
     period of $2\pi$.
 
-    \vspace{-0.5em}
-    \hspace{-7em}\scalebox{0.72}{\input{trig/img/trigGraphs_1.pgf}}
+    \hspace*{-3.5em}
+    \begin{tikzpicture}[y=0.8cm, x=1.2cm,font=\sffamily]
+        % bounds
+        \def\lowX{-6}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{6}
+        \def\lowY{-3.1}
+        \def\highY{3.1}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+        % axis
+        \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = south west] {$x$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[xshift=-10,anchor = north east] {$g$};
+
+        \foreach \y in {-3,-2,-1,1,2,3} {
+          \draw (-1pt,\y) -- (1pt,\y) node[anchor=east] {$\y$};
+        }
+
+        \draw ( 1,1pt) -- ( 1,-1pt) node[yshift=-1,xshift=0,anchor=north east] {$\frac{ \pi}{2}$};
+        \draw (-1,1pt) -- (-1,-1pt) node[yshift=-1,xshift=0,anchor=north east] {$\frac{-\pi}{2}$};
+        \foreach \x in {-5,-3,3,5} {
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-8,xshift=1,anchor=east] {$\frac{\x\pi}{2}$};
+        }
+        \draw ( 2,1pt) -- ( 2,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\pi$};
+        \draw (-2,1pt) -- (-2,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$-\pi$};
+        \foreach \x in {-3,-2,2,3} {
+          \draw (2*\x,1pt) -- (2*\x,-1pt) node[yshift=-7,xshift=3,anchor=east] {$\x\pi$};
+        }
+        \draw (0,3.2) node [anchor=south] {Shifted Sine Function};
+      \end{tikzpicture}
+
 
     \item Determine the formula for the new function
       \begin{eqnarray*}
@@ -185,8 +247,39 @@
     $\frac{\pi}{2}$ units, oscillates between 3 and -3, and has a
     period of $2\pi$.
 
-    \vspace{-0.5em}
-    \hspace{-7em}\scalebox{0.72}{\input{trig/img/trigGraphs_2.pgf}}
+    \hspace*{-3.5em}
+    \begin{tikzpicture}[y=0.65cm, x=1.2cm,font=\sffamily]
+        % bounds
+        \def\lowX{-6}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{6}
+        \def\lowY{-3.1}
+        \def\highY{5.1}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+        % axis
+        \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = south west] {$x$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[xshift=-10,anchor = north east] {$h$};
+
+        \foreach \y in {-3,-2,-1,1,2,...,5} {
+          \draw (-1pt,\y) -- (1pt,\y) node[anchor=east] {$\y$};
+        }
+
+        \draw ( 1,1pt) -- ( 1,-1pt) node[yshift=-1,xshift=0,anchor=north east] {$\frac{ \pi}{2}$};
+        \draw (-1,1pt) -- (-1,-1pt) node[yshift=-1,xshift=0,anchor=north east] {$\frac{-\pi}{2}$};
+        \foreach \x in {-5,-3,3,5} {
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-8,xshift=1,anchor=east] {$\frac{\x\pi}{2}$};
+        }
+        \draw ( 2,1pt) -- ( 2,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\pi$};
+        \draw (-2,1pt) -- (-2,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$-\pi$};
+        \foreach \x in {-3,-2,2,3} {
+          \draw (2*\x,1pt) -- (2*\x,-1pt) node[yshift=-7,xshift=3,anchor=east] {$\x\pi$};
+        }
+        \draw (0,5.2) node [anchor=south] {Shifted Cosine Function};
+      \end{tikzpicture}
+
 
     \item Determine the formula for the new function
       \begin{eqnarray*}
@@ -202,8 +295,39 @@
     $\frac{\pi}{2}$ units, oscillates between 5 and -1, and has a
     period of $2\pi$.
 
-    \vspace{-0.5em}
-    \hspace{-7em}\scalebox{0.72}{\input{trig/img/trigGraphs_2.pgf}}
+    \hspace*{-3.5em}
+    \begin{tikzpicture}[y=0.65cm, x=1.2cm,font=\sffamily]
+        % bounds
+        \def\lowX{-6}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{6}
+        \def\lowY{-3.1}
+        \def\highY{5.1}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+        % axis
+        \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = south west] {$x$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[xshift=-10,anchor = north east] {$p$};
+
+        \foreach \y in {-3,-2,-1,1,2,...,5} {
+          \draw (-1pt,\y) -- (1pt,\y) node[anchor=east] {$\y$};
+        }
+
+        \draw ( 1,1pt) -- ( 1,-1pt) node[yshift=-1,xshift=0,anchor=north east] {$\frac{ \pi}{2}$};
+        \draw (-1,1pt) -- (-1,-1pt) node[yshift=-1,xshift=0,anchor=north east] {$\frac{-\pi}{2}$};
+        \foreach \x in {-5,-3,3,5} {
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-8,xshift=1,anchor=east] {$\frac{\x\pi}{2}$};
+        }
+        \draw ( 2,1pt) -- ( 2,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$\pi$};
+        \draw (-2,1pt) -- (-2,-1pt) node[yshift=-1,xshift=-1,anchor=north east] {$-\pi$};
+        \foreach \x in {-3,-2,2,3} {
+          \draw (2*\x,1pt) -- (2*\x,-1pt) node[yshift=-7,xshift=3,anchor=east] {$\x\pi$};
+        }
+        \draw (0,5.2) node [anchor=south] {Shifted Cosine Function};
+      \end{tikzpicture}
+
 
     \item Determine the formula for the new function
       \begin{eqnarray*}
@@ -220,8 +344,32 @@
   \item Make a sketch of a sine function that has a period of 1 and an
     amplitude of 1.
 
-    \vspace{-0.5em}
-    \hspace{-7em}\scalebox{0.72}{\input{trig/img/trigGraphs_3.pgf}}
+    \hspace*{-3.5em}
+    \begin{tikzpicture}[y=0.65cm, x=1.3cm,font=\sffamily]
+        % bounds
+        \def\lowX{-6}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{6}
+        \def\lowY{-2.1}
+        \def\highY{5.1}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+        % axis
+        \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = south west] {$x$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[xshift=-10,anchor = north east] {$q$};
+
+        \foreach \y in {-2,-1,1,2,...,5} {
+          \draw (-1pt,\y) -- (1pt,\y) node[anchor=east] {$\y$};
+        }
+
+        \foreach \x in {-3,-2.5,...,-0.5,0.5,1.0,...,3} {
+          \draw (2*\x,1pt) -- (2*\x,-1pt) node[yshift=-8,xshift=1,anchor=east] {$\x$};
+        }
+        \draw (0,5.2) node [anchor=south] {Shifted Sine Function};
+      \end{tikzpicture}
+
 
   \item Determine the formula for the new function
     \begin{eqnarray*}
@@ -236,8 +384,31 @@
   \item Make a sketch of a cosine function that is shifted right
     2 units, oscillates between 5 and -1, and has a period of 1.
 
-    \vspace{-0.5em}
-    \hspace{-7em}\scalebox{0.72}{\input{trig/img/trigGraphs_3.pgf}}
+    \hspace*{-3.5em}
+    \begin{tikzpicture}[y=0.65cm, x=1.3cm,font=\sffamily]
+        % bounds
+        \def\lowX{-6}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{6}
+        \def\lowY{-2.1}
+        \def\highY{5.1}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+        % axis
+        \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = south west] {$x$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[xshift=-10,anchor = north east] {$w$};
+
+        \foreach \y in {-2,-1,1,2,...,5} {
+          \draw (-1pt,\y) -- (1pt,\y) node[anchor=east] {$\y$};
+        }
+
+        \foreach \x in {-3,-2.5,...,-0.5,0.5,1.0,...,3} {
+          \draw (2*\x,1pt) -- (2*\x,-1pt) node[yshift=-8,xshift=1,anchor=east] {$\x$};
+        }
+        \draw (0,5.2) node [anchor=south] {Shifted Cosine Function};
+      \end{tikzpicture}
 
     \item Determine the formula for the new function
       \begin{eqnarray*}
@@ -254,8 +425,32 @@
   \item Make a sketch of a cosine function that is shifted right
     1 units, oscillates between 2 and -1, and has a period of 2.
 
-    \vspace{-0.5em}
-    \hspace{-7em}\scalebox{0.72}{\input{trig/img/trigGraphs_4.pgf}}
+    \hspace*{-3.5em}
+    \begin{tikzpicture}[y=0.85cm, x=1.8cm,font=\sffamily]
+        % bounds
+        \def\lowX{-4}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{4}
+        \def\lowY{-2.1}
+        \def\highY{3.1}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+        % axis
+        \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = south west] {$x$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[xshift=-10,anchor = north east] {$D$};
+
+        \foreach \y in {-2,-1,1,2,...,3} {
+          \draw (-1pt,\y) -- (1pt,\y) node[anchor=east] {$\y$};
+        }
+
+        \foreach \x in {-4,-3,...,-1,1,2,...,4} {
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-8,xshift=1,anchor=east] {$\x$};
+        }
+        \draw (0,3.2) node [anchor=south] {Shifted Cosine Function};
+      \end{tikzpicture}
+
 
     \item Determine the formula for the new function
       \begin{eqnarray*}
@@ -271,8 +466,32 @@
     2 units, oscillates between -1 and -4, and has a period of
     $\frac{2}{3}$.
 
-    \vspace{-0.5em}
-    \hspace{-7em}\scalebox{0.72}{\input{trig/img/trigGraphs_5.pgf}}
+    \hspace*{-3.5em}
+    \begin{tikzpicture}[y=0.85cm, x=1.8cm,font=\sffamily]
+        % bounds
+        \def\lowX{-4}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{4}
+        \def\lowY{-5.1}
+        \def\highY{1.1}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+        % axis
+        \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = south west] {$x$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[xshift=-10,anchor = north east] {$L$};
+
+        \foreach \y in {-5,-4,...,-1,1} {
+          \draw (-1pt,\y) -- (1pt,\y) node[anchor=east] {$\y$};
+        }
+
+        \foreach \x in {-4,-3,...,-1,1,2,...,4} {
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-8,xshift=1,anchor=east] {$\x$};
+        }
+        \draw (0,1.2) node [anchor=south] {Shifted Sine Function};
+      \end{tikzpicture}
+
 
     \item Determine the formula for the new function
       \begin{eqnarray*}
