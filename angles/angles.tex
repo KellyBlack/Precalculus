@@ -5,12 +5,14 @@
     \resizebox{0.87\textwidth}{!}{
         \begin{tikzpicture}[mindmap,
         level 1 concept/.append style={level distance=130,sibling angle=120},
-        level 2/.append style={level distance=100,sibling angle=120},
+        level 2 concept/.append style={level distance=80,sibling angle=120},
+        level 3 concept/.append style={level distance=70,sibling angle=120},
+        level 3 concept/.append style={level distance=60,sibling angle=120},
         ]
         \path[mindmap,concept color=black,text=white]
         node[concept] {Angles}
         [clockwise from=0]
-        child[concept color=green!50!black,sibling angle=180] {
+        child[concept color=green!50!black,sibling angle=180,text=black] {
             node[concept] (angleMeasurement) {Measurement}
             [clockwise from=90]
             child[concept color=green!50!black,sibling angle=180] {
@@ -20,23 +22,41 @@
               node[concept] (degrees) {Degrees}
             }
         }
-        child[concept color=blue,sibling angle=120]{
+        child[concept color=blue,sibling angle=120,text=black]{
           node[concept] (unitCircle) {Arcs}
           [clockwise from=0]
           child[concept color=blue] {
             node[concept] (arcLength) {Arc Length}
           }
-          child[concept color=blue] {
+          child[concept color=blue,sibling angle=65] {
             node[concept] (arcArea) {Arc Area}
           }
         }
-        child[concept color=red,sibling angle=120]{
+        child[concept color=red,sibling angle=120,text=black]{
           node[concept] (unitCircle) {Unit Circle}
           [clockwise from=90]
           child[concept color=red] {
             node[concept] (trigFunctions) {Trigonometric Functions}
-            [clockwise from=0]
-            child { node[concept] (rangeDomain) {Range / Domain} }
+            [counterclockwise from=0]
+            %child { node[concept] (rangeDomain) {Range / Domain} }
+            child[sibling angle=90] {
+              node[concept] (sine) {Sine}
+              [counterclockwise from=-22]
+              child[sibling angle=45] {node[concept] {Range}}
+              child[sibling angle=45] {node[concept] {Domain}}
+              }
+            child[sibling angle=90] {
+              node[concept] (cosine) {Cosine}
+              [counterclockwise from=68]
+              child[sibling angle=45] {node[concept] {Range}}
+              child[sibling angle=45] {node[concept] {Domain}}
+              }
+            child[sibling angle=90] {
+            node[concept] (tangnet) {Tangent}
+            [counterclockwise from=158]
+            child[sibling angle=45] {node[concept] {Range}}
+            child[sibling angle=45] {node[concept] {Domain}}
+            }
           }
         };
 
@@ -47,7 +67,7 @@
         %\draw [left color=blue, right color=green!50!black, draw=white,
         %       decorate,decoration=circle connection bar]
         %       (arcLength.east) -- (radians.east);
-        \draw [color=blue,ultra thick,looseness=1.5,<-] (arcLength) [out=-22, in=-45] to (radians);
+        \draw [color=blue,ultra thick,looseness=1.5,<->] (arcLength) [out=-22, in=-45] to (radians);
         %\draw [left color=blue, right color=green!50!black, draw=white,
         %       decorate,decoration=circle connection bar]
         %       (arcArea.east) -- (radians.east);
