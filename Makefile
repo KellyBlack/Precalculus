@@ -10,9 +10,11 @@ LATEX = pdflatex
 	$(LATEX) $<
 
 
+LATEXFILES = functions/section_coordinates.tex
+
 all:	labManual.pdf
 
-labManual.pdf: labManual.tex *.tex
+labManual.pdf: labManual.tex *.tex */*.tex
 	$(LATEX) labManual
 
 force:
