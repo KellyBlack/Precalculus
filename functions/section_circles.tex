@@ -134,6 +134,54 @@ expression.
 
   \clearpage
 
+  In mathematics the idea of proportionality has a specific
+  definition. The idea is that when two things are proportional then
+  any changes in one yield a similar change in the other. For example,
+  suppose we have two quantities. The first we call $x$, and the other
+  we call $y$. If $y$ is proportional to $x$, then if we double $x$
+  then $y$ will double. Likewise, if we triple $x$ then $y$ will
+  triple.
+
+  We express this mathematically by noting that if $y$ is proportional
+  to $x$ then the ratio of $y$ to $x$ must be a constant,
+  \begin{eqnarray*}
+    \frac{y}{x} & = & \mathrm{constant}.
+  \end{eqnarray*}
+  If we multiply both sides by $x$ then
+  \begin{eqnarray*}
+    y & = & x \cdot \mathrm{constant}.
+  \end{eqnarray*}
+
+  As an example, it is estimated that the length of a person's femur
+  is proportional to the person's total height. This implies that
+  \begin{eqnarray*}
+    \frac{\mathrm{height}}{\mathrm{femur ~ length}} & = & \mathrm{constant}.
+  \end{eqnarray*}
+  In a paper by Obialor \textit{et al}\footnote{Ambrose Obialor,
+    Churchill Ihentuge and Frank Akpuaka, \textbf{Determination of
+      Height Using Femur Length in Adult Population of Oguta Local
+      Government Area of Imo State Nigeria}, The FASEB Journal, April
+    2015, vol. 29 no. 1 Supplement LB19}, it is estimated that in a
+  specific area in Nigeria the mean height of women is 161.90 cm and
+  the mean femur length of women is 40.82 cm. If a woman's femur has a
+  length of 42.00 cm, what is her expected height?
+
+  First, we have to estimate the value of the constant. Assuming that
+  the means are consistent then 
+  \begin{eqnarray*}
+    \frac{161.90}{40.82} & = & \mathrm{constant.}
+  \end{eqnarray*}
+  Now we look at the expression for the unidentified woman,
+  \begin{eqnarray*}
+    \frac{\mathrm{height}}{42.00} & = & \frac{161.90}{40.82}.
+  \end{eqnarray*}
+  Solving for the height we get
+  \begin{eqnarray*}
+    \mathrm{height} & = & 42.00\cdot\frac{161.90}{40.82} \mathrm{cm}.
+  \end{eqnarray*}
+
+  \clearpage
+
 \item Windows are constructed, and their width is proportional to
   their height. One window is measured, and its width is 100cm, and its
   height is 200cm. 
@@ -189,28 +237,60 @@ expression.
   \item
   \item
   \end{itemize}
-\item A circle is circumscribed within a square so it just touches on
-  each of the four edges of the square.
+\item A square is circumscribed within a circle of radius $R$ so it
+  just touches the circle on each of the four corners of the square.
+
+  \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily]
+    % bounds
+    \def\lowX{-5.5}
+    \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+    \pgfmathsetmacro\nextXValue{int(\startX+1)}
+    \def\highX{5.5}
+    \def\lowY{-5.5}
+    \def\highY{5.5}
+    \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+    % ticks
+    \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+ 	% axis
+	\draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
+
+    \draw[black] (0:4) arc (0:360:4);
+    \draw[black] (45:4) -- (135:4) -- (225:4) -- (315:4) -- (45:4);
+    %\draw[black] (0:0) arc (0:30:0.2) node[midway,anchor=west] {$\theta$};
+
+    \draw (1pt,  4) -- (-1pt,  4) node[yshift=-6,xshift=-1,anchor=east] {$R$};
+    \draw (1pt, -4) -- (-1pt, -4) node[yshift=-6,xshift=-1,anchor=east] {$-R$};
+
+    \draw ( 4,1pt) -- ( 4,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$R$};
+    \draw (-4,1pt) -- (-4,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$R$};
+
+  \end{tikzpicture}
+
   \begin{subproblem}
-    \item Make a sketch of the square and circle. Mark the length of
-      the square and the radius of the circle.
-    \item Determine the relationships between the length of the edge,
-      the radius of the circle, the area of the square, and the area
-      of the circle.
-    \item Determine the area of the square not covered by the circle
-      as a function of the length of one side of the square.
-    \item Make a sketch of a graph of the area of the square not
-      covered by the circle. The horizontal axis should be the length
-      of one side of the square, and the vertical axis should be the
-      area. Label your axes.
-    \item How does the area change as the length of one side of the
-      square increases? (Does it change linearly, does the rate of
-      change increase or decrease?)
-    \item Determine the proportion of the area not covered by the
-      circle with respect to the area of the square. What percentage
-      of the area of the square is not covered? How does this change
-      as the length of one side of the square changes?
+    \item Sketch the radius of the circle at one of the points where the square touches the circle.
+    \item Find a convenient right triangle in the new diagram, and use
+      the triangle to determine the length of one of the sides of the
+      square. (You may have to double the length of the triangle to
+      get the length of the side.)
+    \item Determine the area of the square.
   \end{subproblem}
+
+\item A triangle with three equal sides is circumscribed within a
+  circle of radius $R$ so it just touches the circle on each of the
+  three corners of the triangle.
+
+  \begin{subproblem}
+  \item Make a sketch of the situation. (Label your axes and label the
+    length of the sides of the triangle.)
+  \item Sketch the radius of the circle at one of the points where the
+    triangle touches the circle.
+  \item Find a convenient right triangle in the new diagram, and use
+    the triangle to determine the length of one of the sides of the
+    triangle. (You may have to double the length of the triangle to
+    get the length of the side.)
+  \end{subproblem}
+
 
 \end{problem}
 
