@@ -56,47 +56,128 @@ expression.
 
 \actTitle{Graphs of Equations}
 \begin{problem}
+
+\item Sketch the set of all points that are a distance of two from the
+  point $Q(1,-3)$. What kind of figure do the points represent?
+
+  \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily]
+      % bounds
+      \def\lowX{-5.5}
+      \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+      \pgfmathsetmacro\nextXValue{int(\startX+1)}
+      \def\highX{5.5}
+      \def\lowY{-5.5}
+      \def\highY{5.5}
+      \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+      % ticks
+      \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+   	% axis
+  	\draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+      \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
+      \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+        \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+      }
+      \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+        \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+      }
+    \end{tikzpicture}
+
+
+\item Suppose a point, $P(x,y)$ is a distance of $R$ units from the
+  point $C(x_0,y_0)$.
+  \begin{subproblem}
+  \item Use the distance formula to express the distance relationship
+    between $P$ and $C$.
+    \vfill
+  \item Square both sides of the previous equation.
+    \vfill
+  \end{subproblem}
+
+
+\clearpage
+
+\item Make a sketch of the circle with a radius of two centered at the
+  point $P(-2,3)$. Determine a formula for the circle.
+
+  \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily]
+    % bounds
+    \def\lowX{-5.5}
+    \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+    \pgfmathsetmacro\nextXValue{int(\startX+1)}
+    \def\highX{5.5}
+    \def\lowY{-5.5}
+    \def\highY{5.5}
+    \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+    % ticks
+    \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+ 	% axis
+	\draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
+    \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+      \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+    }
+    \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+      \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+    }
+  \end{tikzpicture}
+
+  \clearpage
+
 \item Sketch a graph of the relationship given by
   \begin{eqnarray*}
     x^2 + 2x + y^2 - 8y & = & 8.
   \end{eqnarray*}
-  Determine the center and the radius of the circle.
-  Make a sketch of the circle. (Label the axes.)
+  Determine the center and the radius of the circle.  Make a sketch of
+  the circle. (Include the axes and label the axes.)  
+
   \vfill
 
   \clearpage
 
 \item Windows are constructed, and their width is proportional to
   their height. One window is measured, and its width is 100cm, and its
-  height is 200cm. Make a sketch of the relationship of the height of
-  a window given its width. Briefly discuss the relationship. How does
-  the height change as the width changes?
-  \sideNote{Annotate your plot and label your axes!}
+  height is 200cm. 
 
-  \vfill
+  \begin{subproblem}
+
+  \item Another window has a width of 75cm. What is its height?
+
+    \vfill
+
+  \item Make a sketch of the relationship of the height of a window
+    given its width. Briefly discuss the relationship. How does the
+    height change as the width changes?  \sideNote{Annotate your plot
+      and label your axes!}
+
+    \vfill
+    
+  \end{subproblem}
+
+  \clearpage
 
 \item The surface area of a sparrow's wing is proportional to the
   square of the length of its wing. A sparrow is measured, and it has
-  a wing length of 9cm and an area of 45cm\textsuperscript{2}. Make a
-  sketch of the relationship of the area of a sparrow's wing given the
-  length. Briefly discuss the relationship. How does the area change
-  as the length changes?
-  \sideNote{Annotate your plot and label your axes!}
+  a wing length of 9cm and an area of 45cm\textsuperscript{2}. 
+
+  \begin{subproblem}
+
+  \item Another sparrow is captured, and the length of its wing is
+    8cm. What is the area of its wing?
+
+    \vfill
+
+  \item Make a sketch of the relationship of the area of a sparrow's
+    wing given the length. Briefly discuss the relationship. How does
+    the area change as the length changes?  \sideNote{Annotate your
+      plot and label your axes!}
+
+    \vfill
+
+  \end{subproblem}
 
   \vfill
 
-\clearpage
 
-\item The mass of a sparrow is proportional to the cube of the length of its wing.
-  \begin{subproblem}
-    \item \label{sparrowWingArea} A sparrow is measured, and it has a wing length of 9cm and a mass of 30 grams.
-    Determine the mass of a sparrow whose wing length is 10cm.
-    \vfill
-
-    \item \label{sparrowMass} It is estimated that the mass of a sparrow is 27 grams. Determine an estimate
-    of its wing length.
-    \vfill
-  \end{subproblem}
 
 \end{problem}
 
@@ -130,12 +211,6 @@ expression.
       of the area of the square is not covered? How does this change
       as the length of one side of the square changes?
   \end{subproblem}
-  \item You watch a video from your favourite conspiracy theorist.
-    He says that scientists are supressing evidence about prehistoric sparrows.
-    He says that giant sparrows once existed whose wing length was 10 meters.
-    Use the results from exercises  \ref{sparrowWingArea} and \ref{sparrowMass} to determine if this makes sense.
-    Based on your result write out the comment that you will post in the comments
-    section in response to the video.
 
 \end{problem}
 
