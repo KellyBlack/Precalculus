@@ -12,6 +12,14 @@
 \usepackage{array}
 %\usepackage{wasysym}
 
+% Define a toggle that determines if a large or small print version
+% will be printed.
+\newtoggle{largePrint}
+\toggletrue{largePrint}
+\togglefalse{largePrint}
+
+% Define a toggle that determines if solutions are printed. 
+% (Not implemented yet)
 \newtoggle{solutions}
 \toggletrue{solutions}
 \togglefalse{solutions}
@@ -52,8 +60,7 @@
 
 \begin{document}
 
-%\fontsize{2cm}{1cm}\selectfont  % Uncomment this for a larger font
-                                 % for students with a visual impairment.
+\iftoggle{largePrint}{\fontsize{2cm}{1cm}\selectfont}
 
 \title{Classroom Activities \\
   Math 1113 - Precalculus
