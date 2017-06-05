@@ -16,29 +16,19 @@
 \toggletrue{solutions}
 \togglefalse{solutions}
 
-\ifpdf
-   \pdfcompresslevel=9
-   \pdfoutput=1
-
-
-   \usepackage[pdftex]{graphicx}
-   \usepackage[pass,pdftex]{geometry}
-   \usepackage[pdftex]{color}
-   \usepackage{hyperref}
-   \hypersetup{
-     pdftitle={Recitation Activities for Math 1113, precalculus},
-     pdfsubject={precalculus},
-     pdfauthor={UGA Mathematics Department},
-     pdfkeywords={classroom activities, precalculus},
-     anchorcolor = {red},
-     colorlinks = {true},
-     %pdfpagemode={FullScreen}
-   }
-\else
-   \usepackage{epsfig}
-   \usepackage{color}
-   \usepackage[pass]{geometry}
-\fi
+\usepackage{graphicx}
+\usepackage[pass]{geometry}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{
+  pdftitle={Recitation Activities for Math 1113, precalculus},
+  pdfsubject={precalculus},
+  pdfauthor={UGA Mathematics Department},
+  pdfkeywords={classroom activities, precalculus},
+  anchorcolor = {red},
+  colorlinks = {true},
+  % pdfpagemode={FullScreen}
+}
 
 \usepackage{tikz}
 \usepackage{pgf}
@@ -62,6 +52,8 @@
 
 \begin{document}
 
+%\fontsize{2cm}{1cm}\selectfont  % Uncomment this for a larger font
+                                 % for students with a visual impairment.
 
 \title{Classroom Activities \\
   Math 1113 - Precalculus

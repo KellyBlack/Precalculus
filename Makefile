@@ -4,7 +4,8 @@
 
 #macro definitions
 SHELL = /bin/sh
-LATEX = pdflatex
+LATEX = xelatex
+#LATEX = pdflatex
 
 .tex.aux:	
 	$(LATEX) $<
