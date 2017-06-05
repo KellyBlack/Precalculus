@@ -15,6 +15,59 @@
     x_H & = & 2 t,
   \end{eqnarray*}
   where $t$ is in minutes and $x$ is in meters.
+  \begin{subproblem}
+  \item Determine the positions of the tortoise at $t=0$, $t=1$, and
+    $t=2$.
+    \vfill
+  \item Determine the positions of the hare at $t=0$, $t=1$, and
+    $t=2$.
+    \vfill
+
+    \clearpage
+  \item For each time, plot the coordinate of the relative positions
+    on the set of axes below. Use the tortoise's position for the
+    $x$-coordinate, and use the hare's position for the
+    $y$-coordinate. For example, if the tortoise's position is 1m, and
+    the hare's position is 4m, then the coordinate would be $P(1,4)$.
+
+    \begin{tikzpicture}[y=1.1cm, x=1.1cm,font=\sffamily]
+        % bounds
+        \def\lowX{-5.5}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{5.5}
+        \def\lowY{-5.5}
+        \def\highY{5.5}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+     	% axis
+    	\draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {Hare};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {Tortoise};
+        \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+          \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+        }
+        \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+        }
+        \draw (0,5.5) node [anchor=south] {Hare vs. Tortoise};
+      \end{tikzpicture}
+
+  \end{subproblem}
+
+\clearpage
+
+\item A tortoise and a hare move in a straight line, and the both
+  start at $x=0$. The tortoise's position is given by
+  \begin{eqnarray*}
+    x_T & = & \frac{1}{2} t,
+  \end{eqnarray*}
+  where $t$ is in minutes and $x$ is in meters.  The hare's position
+  is given by
+  \begin{eqnarray*}
+    x_H & = & 2 t,
+  \end{eqnarray*}
+  where $t$ is in minutes and $x$ is in meters.
 
   Determine the relationship between the hare's and the tortoise's
   position. That is, given the hare's position determine the
