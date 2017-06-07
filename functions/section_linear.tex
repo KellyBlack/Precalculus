@@ -180,36 +180,87 @@
   etc., in order from lowest to highest and do not try to estimate
   their values.)
 
-    \begin{tikzpicture}[y=1.1cm, x=1.1cm,font=\sffamily]
-        % bounds
-        \def\lowX{-5.5}
-        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
-        \pgfmathsetmacro\nextXValue{int(\startX+1)}
-        \def\highX{5.5}
-        \def\lowY{-5.5}
-        \def\highY{5.5}
-        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
-        % ticks
-        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
-     	% axis
-    	\draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
-        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {$y$};
-        \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
-          \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
-        }
-        \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
-          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
-        }
+  \begin{tikzpicture}[y=1.1cm, x=1.1cm,font=\sffamily]
+    % bounds
+    \def\lowX{-5.5}
+    \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+    \pgfmathsetmacro\nextXValue{int(\startX+1)}
+    \def\highX{5.5}
+    \def\lowY{-5.5}
+    \def\highY{5.5}
+    \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+    % ticks
+    \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+    % axis
+    \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {$y$};
+    \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+      \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+    }
+    \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+      \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+    }
         
-        % Draw some lines and label them.
-        \draw[thick, blue] (  -1,-5.5) -- (  3, 5.5) node[anchor=north west] {$y=m_1 x + b_1$};
-        \draw[thick, blue] (  -3, 5.5) -- (  4,-5.5) node[anchor=south west] {$y=m_2 x + b_2$};
-        \draw[thick,  red] (-5.5,   2) -- (5.5,-2.5) node[anchor=south west] {$y=m_3 x + b_3$};
-        \draw[thick,  red] (-5.5,-4.1) -- (5.5, 1.5) node[anchor=north west] {$y=m_4 x + b_4$};
-        \draw[thick,black] (-5.5, 3.0) -- (5.5, 3.0) node[anchor=south east] {$y=m_5 x + b_5$};
-      \end{tikzpicture}
+    % Draw some lines and label them.
+    \draw[thick, blue] (  -1,-5.5) -- (  3, 5.5) node[anchor=north west] {$y=m_1 x + b_1$};
+    \draw[thick, blue] (  -3, 5.5) -- (  4,-5.5) node[anchor=south west] {$y=m_2 x + b_2$};
+    \draw[thick,  red] (-5.5,   2) -- (5.5,-2.5) node[anchor=south west] {$y=m_3 x + b_3$};
+    \draw[thick,  red] (-5.5,-4.1) -- (5.5, 1.5) node[anchor=north west] {$y=m_4 x + b_4$};
+    \draw[thick,black] (-5.5, 3.0) -- (5.5, 3.0) node[anchor=south east] {$y=m_5 x + b_5$};
+  \end{tikzpicture}
+
+  \clearpage
+
+\item For each question below the function, Larry($x$), is defined to be
+  \begin{eqnarray*}
+    \mathrm{Larry}(x) & = & \frac{1}{2} (x-1)^2+2.
+  \end{eqnarray*}
+  \begin{subproblem}
+  \item Make a sketch of Larry.
+
+    \begin{tikzpicture}[y=0.75cm, x=0.75cm,font=\sffamily]
+      % bounds
+      \def\lowX{-5.5}
+      \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+      \pgfmathsetmacro\nextXValue{int(\startX+1)}
+      \def\highX{5.5}
+      \def\lowY{-5.5}
+      \def\highY{5.5}
+      \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+      % ticks
+      \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+      % axis
+      \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+      \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {$y$};
+      \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+        \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+      }
+      \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+        \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+      }
+        
+    \end{tikzpicture}
+
+  \item Determine the average rate of change of Larry from $x=-2$ to
+    $x=3$. Add a sketch of the secant line for these points on your
+    sketch above.
+
+    \vfill
+
+  \item Determine a value of $x_0$ where the average rate of change
+    from $x=2$ to $x=x_0$ is zero. Add the a sketch of the resulting
+    secant line for these points on your sketch above.
+
+    \vfill
+
+  \item Is there any value of $x=a$ where you cannot find another
+    point so that the resulting average rate of change is zero?
+    Explain your reasoning.
+
+    \vspace{2em}
 
 
+  \end{subproblem}
 
 \end{problem}
 
