@@ -12,7 +12,7 @@
   where $t$ is the time in days since the beginning of the year.  The
   number of bacteria (in millions) in the second population is given by
   \begin{eqnarray*}
-    C(t) & = & 10+(t+2)^2,
+    C(t) & = & 10+(t-2)^2,
   \end{eqnarray*}
   where $t$ is the time in days since the beginning of the year.
   \begin{subproblem}
@@ -100,6 +100,105 @@
       \end{tikzpicture}
 
   \end{subproblem}
+
+  \clearpage
+
+\item The temperature of a snake can change based on its activity
+  level. Suppose that the temperature of a snake is taken at a fixed
+  time after it consumes a rodent, and the snake's temperature depends
+  on the mass of the rodent,
+  \begin{eqnarray*}
+    \mathrm{Temperature(m)} & = & 12+0.04m,
+  \end{eqnarray*}
+  where the temperature is in Celsius, and the mass, $m$, is in grams.
+
+  \begin{subproblem}
+  \item Make a sketch of the relationship on the axes below.
+
+    \hspace{-7em}
+    \begin{tikzpicture}[y=0.3cm, x=0.14cm,font=\sffamily]
+        % bounds
+        \def\lowX{-0.5}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{100.5}
+        \def\lowY{-0.5}
+        \def\highY{22.0}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[xstep = 10,ystep=5, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+      % axis
+      \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {Mass (g)};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {Temp.(C)};
+        \foreach \y in {5,10,...,\highY} {
+          \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+        }
+        \foreach \x in {10,20,...,\highX} {
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+        }
+        %\draw (0,5.5) node [anchor=south] {Comparing Shifted Functions};
+      \end{tikzpicture}
+
+  \item To convert Celsius to to Kelvin, you add 273.15K. What will
+    happen to the graph if it is converted to Kelvin? Can you add the
+    new plot to the existing axes?
+    \vfill
+  \item To convert Celsius to Fahrenheit, you use the function
+    \begin{eqnarray*}
+      \mathrm{Fahrenheit}(C) & = & \frac{9}{5}C + 32.
+    \end{eqnarray*}
+    If you convert the temperature to Fahrenheit what will happen to
+    the graph?
+    \vfill
+  \item What will happen if you convert grams to kilograms? (1kg=1,000g)
+
+  \end{subproblem}
+
+\clearpage
+
+\item The water levels for the ocean near the Tybee lighthouse and the
+  St. Simon's lighthouse are shown in the plot below. The solid line
+  is the water level for Tybee, and the dotted line is for
+  St. Simon's. According to the tidal charts for a given day it is
+  estimated that the low tide at Tybee is at 3pm, and the low tide at
+  St. Simon's is at 3:24pm. Determine the expression that will give
+  the water level at St. Simon's in terms of the water level at Tybee.
+
+\hspace{-4em}
+  \begin{tikzpicture}[y=0.8cm, x=.3cm,font=\sffamily]
+    % Define the x bounds
+    \def\lowX{-0.5}
+    \def\highX{48.5}
+    % define the y bounds
+    \def\lowY{-0.5}
+    \def\highY{7.6}
+    % Add a grid
+    \draw[xstep = 2.5,ystep=1, gray, very thin,opacity=0.5] (\lowX, \lowY) grid ( \highX, \highY);
+ 	% Draw the axes
+	\draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {Time(H)};
+    \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {Height(ft)};
+    % Label the y axis
+    \foreach \y in {1,2,...,7} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor = east] {$\y$};
+    }
+    % Label the x axis
+    \foreach \x in {5,10,...,45} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {$\x$};
+    }
+    % Draw the function.
+    \begin{scope}
+      %\clip(-4,-1) rectangle (8,5);
+      \draw[scale=1.0,domain=0:48,smooth,variable=\x,very thick,black,samples=120] 
+            plot ({\x},{3.7+3.5*sin(deg(pi*\x/12+pi/4))});
+      \draw[scale=1.0,domain=0:48,smooth,variable=\x,very thick,black,samples=120,dashed] 
+            plot ({\x},{3.45+3.25*sin(deg(pi*(\x-0.5)/12+pi/4))});
+    \end{scope}
+
+    %\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+  \end{tikzpicture}
+
+
 \end{problem}
 
 \postClass
