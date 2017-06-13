@@ -171,6 +171,98 @@
     \vspace{1em}
   \end{subproblem}
 
+\clearpage
+
+\item The owner of a shop will be selling two similar items and hopes
+  that customers will choose to buy either one or the other of these
+  items. The products are about the same size, and each one will take
+  up about 0.5 m\textsuperscript{2} of space. The first item will be
+  sold for 10\$ each, and the second item will be sold for 12\$
+  each. The cost to the owner depends on how many the owner buys,
+  \begin{eqnarray*}
+    C_1(x) & = & 5 - \frac{1}{20}(x-10)^2, \\
+    C_2(y) & = & 5 - \frac{1}{20}(y-10)^2,
+  \end{eqnarray*}
+  where $x$ is the number of the first item sold, and $y$ is the
+  number of the second item sold.
+
+%The owner has allocated 1000\$ for the two products and has 35
+%  m\textsuperscript{2} of total space for the two items.  The owner
+%  will buy $x$ units of the first item and $y$ units of the second
+%  item.
+
+  \begin{subproblem}
+    
+  \item Determine the relationship that determines the total revenue
+    for selling the two items. (Revenue is the total amount of sales.)
+
+    \vfill
+
+  \item Determine the relationship that determines the total cost for
+    selling the items.
+
+    \vfill
+
+  \item Make a sketch of the graphs of the two relationships. Use the
+    left axes for the revenue, and use the right axes for the cost.
+
+  \begin{tikzpicture}[y=0.5cm, x=0.5cm,font=\sffamily]
+      % bounds
+      \def\lowX{-0.5}
+      \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+      \pgfmathsetmacro\nextXValue{int(\startX+1)}
+      \def\highX{10.5}
+      \def\lowY{-0.5}
+      \def\highY{10.5}
+      \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+      % ticks
+      \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+    % axis
+    \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+      \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
+      \foreach \y in {2,4,...,\highY} {
+        \draw (1pt, \y) -- (-1pt, \y) node[yshift=-0,xshift=-1,anchor=east] {$\y$};
+      }
+      \foreach \x in {2,4,...,\highX} {
+        \draw (\x,1pt) -- (\x,-1pt) node[yshift=-0,xshift=-0,anchor=north] {$\x$};
+      }
+    \end{tikzpicture}
+  \begin{tikzpicture}[y=0.5cm, x=0.5cm,font=\sffamily]
+      % bounds
+      \def\lowX{-0.5}
+      \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+      \pgfmathsetmacro\nextXValue{int(\startX+1)}
+      \def\highX{10.5}
+      \def\lowY{-0.5}
+      \def\highY{10.5}
+      \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+      % ticks
+      \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+    % axis
+    \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+      \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
+      \foreach \y in {2,4,...,\highY} {
+        \draw (1pt, \y) -- (-1pt, \y) node[yshift=-0,xshift=-1,anchor=east] {$\y$};
+      }
+      \foreach \x in {2,4,...,\highX} {
+        \draw (\x,1pt) -- (\x,-1pt) node[yshift=-0,xshift=-0,anchor=north] {$\x$};
+      }
+    \end{tikzpicture}
+
+  \item If the owner chooses to purchase 4 of the first item,
+    determine the total profit. (Assume everything is sold.)
+    \vfill
+
+  \item Determine the function that represents the total profit given
+    the number of the first item purchased by the owner. (Assume
+    everything is sold.)
+    \vfill
+
+  \end{subproblem}
+
+  \clearpage
+
+
 \end{problem}
 
 \postClass
