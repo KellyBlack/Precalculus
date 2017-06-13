@@ -103,6 +103,74 @@
 
   \clearpage
 
+\item The expected amount in insurance claims, $I$, for a small,
+  college town depends on the number, $N$, of outside visitors to the
+  town, and the graph of the relationship is shown in the plot on the
+  left below. The number of visitors changes over the course of a
+  week, and the number of visitors based on the day of the week is
+  shown in the graph on the right. (Zero corresponds to Sunday.)
+
+  \hspace{-7em}
+  \begin{tikzpicture}[y=0.13mm, x=1.7mm,font=\sffamily]
+    % ticks
+    \draw[xstep = 5,ystep=50, gray, very thin,opacity=0.85] (0, 0) grid (50, 500);
+ 	% axis
+	\draw[thick,->] (0,0) -- coordinate (x axis mid) (51,0) 
+          node[yshift=-2em,xshift=-10em,anchor = north west] {$N=\mathrm{Number}\atop\mathrm{Visitors}$};
+    \draw[thick,->] (0,0) -- coordinate (y axis mid) (0,510) 
+          node[anchor = south east] {$I=\mathrm{Expected}\atop\mathrm{Claims~USD}$};
+    \foreach \y in {100,200,300,400,500} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor = east] {$\y$,000};
+    }
+    \foreach \x in {10,20,...,50} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {$\x$,000};
+    }
+    % Draw the function
+    \draw [black, very thick] plot [smooth, tension=0.3] coordinates {
+      (0,175) (10,150) (20,100) (30,400) (40,450) (50,475)};
+    \fill[black] (0, 175)  circle [radius=0.5ex];
+    \fill[black] (50,475) circle [radius=0.5ex];
+  \end{tikzpicture}
+  \begin{tikzpicture}[y=1.3mm, x=7.0mm,font=\sffamily]
+    % ticks
+    \draw[xstep = 1,ystep=5, gray, very thin,opacity=0.85] (0, 0) grid (6, 50);
+ 	% axis
+	\draw[thick,->] (0,0) -- coordinate (x axis mid) (6.2,0) 
+          node[yshift=-2em,xshift=-5em,anchor = north west] {Day};
+    \draw[thick,->] (0,0) -- coordinate (y axis mid) (0,51) 
+          node[anchor = south east] {$N=\mathrm{Number}\atop\mathrm{Visitors}$};
+    \foreach \y in {10,20,30,40,50} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor = east] {$\y$,000};
+    }
+    \foreach \x in {1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {$\x$};
+    }
+    % Draw the function
+    \draw [black, very thick] plot [smooth, tension=0.3] coordinates {
+      (0,15) (1,10) (2,8) (3,10) (4,15) (5,45) (6,50)};
+    \fill[black] (0, 15)  circle [radius=0.5ex];
+    \fill[black] (6,50) circle [radius=0.5ex];
+  \end{tikzpicture}
+
+  \begin{subproblem}
+  \item What is the expected amount of insurance claims on Monday?
+    \vfill
+  \item As the day of the week increases from Sunday to Monday what is
+    the change in the expected insurance claims?
+    \sideNote{A negative number indicates a decrease, and a positive
+      number indicates an increase.}
+    \vfill
+  \item As the day of the week increases from Wednesday to Thursday
+    what is the change in the expected insurance claims?
+    \vfill
+  \item Explain what meaning the expression $I(N(d))$ has where $d$ is
+    the day of the week.
+    \vfill
+  \item How can the function $I(N(d))$ increase from Sunday to Monday
+    when both functions are decreasing?
+    \vspace{1em}
+  \end{subproblem}
+
 \end{problem}
 
 \postClass
