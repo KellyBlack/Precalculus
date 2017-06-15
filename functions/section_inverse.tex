@@ -102,8 +102,50 @@
 \item Given the graphs of the two functions below determine the values
   of the expressions below the graph.
 
-  \hspace*{-6em}
-  \scalebox{0.95}{\input{functions/img/composition.pgf}}
+  \hspace{-2em}
+  \begin{tikzpicture}[y=12mm, x=7mm,font=\sffamily]
+    % ticks
+    \draw[xstep = 1,ystep=1, gray, very thin,opacity=0.85] (-4, -4) grid (4, 4);
+ 	% axis
+	\draw[thick,->] (-4.2,0) -- coordinate (x axis mid) (4.2,0) 
+          node[yshift=-2em,xshift=-10em,anchor = north west] {$x$};
+    \draw[thick,->] (0,-4.2) -- coordinate (y axis mid) (0,4.2) 
+          node[anchor = south east] {$y$};
+    \foreach \y in {-4,-3,-2,-1,1,2,3,4} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor = north east] {$\y$};
+    }
+    \foreach \x in {-4,-3,-2,-1,1,2,3,4} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north east] {$\x$};
+    }
+    % Draw the function
+    \draw [black, very thick] plot [smooth, tension=0.3] coordinates {
+      (-4,-2) (-2,0) (0,1) (2,2) (3,3) (4,4)};
+    \fill[black] (-4,-2) circle [radius=0.5ex];
+    \fill[black] ( 4, 4) circle [radius=0.5ex];
+    \draw (2,4.5) node {Graph of $f$};
+  \end{tikzpicture}
+  \begin{tikzpicture}[y=12mm, x=7mm,font=\sffamily]
+    % ticks
+    \draw[xstep = 1,ystep=1, gray, very thin,opacity=0.85] (-4, -4) grid (4, 4);
+ 	% axis
+	\draw[thick,->] (-4.2,0) -- coordinate (x axis mid) (4.2,0) 
+          node[yshift=-2em,xshift=-10em,anchor = north west] {$x$};
+    \draw[thick,->] (0,-4.2) -- coordinate (y axis mid) (0,4.2) 
+          node[anchor = south east] {$y$};
+    \foreach \y in {-4,-3,-2,-1,1,2,3,4} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor = north east] {$\y$};
+    }
+    \foreach \x in {-4,-3,-2,-1,1,2,3,4} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north east] {$\x$};
+    }
+    % Draw the function
+    \draw [black, very thick] plot [smooth, tension=0.3] coordinates {
+      (-4,3) (-3,2) (-2,1) (0,0) (2,-1) (3,-2) (4,-4)};
+    \fill[black] (-4, 3) circle [radius=0.5ex];
+    \fill[black] ( 4,-4) circle [radius=0.5ex];
+    \draw (2,4.5) node {Graph of $g$};
+  \end{tikzpicture}
+
 
   \begin{subproblem}
     \item $f(g(3)) =$
@@ -136,6 +178,19 @@
   \end{eqnarray*}
   (The sex ratio is calculated by taking the number of male snakes and
   dividing by the number of female snakes in the brood.)
+
+  \begin{subproblem}
+  \item What is the largest possible domain that can be used for this
+    function? Does this result make physical sense?
+    \vfill
+  \item What is the meaning for the inverse function? What is the
+    domain and range of the inverse?
+    \vfill
+  \item Determine the inverse function.
+    \vfill
+  \item Sketch a graph of the function and its inverse function on the
+    following page. Label your axes and annotate your plots.  
+  \end{subproblem}
 
 \end{problem}
 
