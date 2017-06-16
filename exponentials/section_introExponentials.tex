@@ -141,6 +141,7 @@ period, six hours, there are two bacteria. After another six hours,
 a total of 12 hours, there are four bacteria.
 In each six hour time period that follows the population doubles.
 
+\hspace{-3em}
 \begin{minipage}{\linewidth}
 \begin{tikzpicture}[
   scale=0.65,
@@ -151,15 +152,20 @@ In each six hour time period that follows the population doubles.
   level 4/.style={sibling distance=3.5em},
   level distance = 4em
 ]
-  \draw (-2,0) node [red] {\scriptsize Time 0};
-  \draw (-7,-1.6) node [red] {\scriptsize Time 1};
-  \draw [->,red!10] (-6,-1.6) -- (5,-1.6);
-  \draw (-10,-3.1) node [red] {\scriptsize Time 2};
-  \draw [->,red!10] (-9,-3.3) -- (8,-3.3);
-  \draw (-11.5,-5.0) node [red] {\scriptsize Time 3};
-  \draw [->,red!10] (-10.0,-4.9) -- (9.5,-4.9);
-  \draw (-12.0,-6.5) node [red] {\scriptsize Time 4};
-  \draw [->,red!10] (-11.0,-6.6) -- (10.5,-6.6);
+
+  \draw [-,red!30] (-11.0,0) -- (11.5,0) 
+        node [red,anchor=west] {\scriptsize Time 0};
+  \draw [-,red!30] (-11.0,-1.6) -- (11.5,-1.6) 
+        node [red,anchor=west] {\scriptsize Time 1};
+  \draw [-,red!30] (-11.0,-3.3) -- (11.5,-3.3) 
+        node [red,anchor=west] {\scriptsize Time 2};
+  \draw [-,red!30] (-11.0,-4.9) -- (11.5,-4.9) 
+        node [red,anchor=west] {\scriptsize Time 3};
+  \draw [-,red!30] (-11.0,-6.6) -- (11.5,-6.6) 
+        node [red,anchor=west] {\scriptsize Time 4};
+
+  \draw [->,blue!40] (12.5,-0.5) -- (12.5,-1.2) 
+        node[blue,anchor=west,yshift=-1] {\scriptsize 6 hours};
 
 \node{Eve} %
    child{ node {1}
