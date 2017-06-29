@@ -179,7 +179,7 @@
 {\usecounter{enumi}
 \setlength{\rightmargin}{0pt}
 %\setlength{\rightmargin}{-72pt}
-\setlength{\parsep}{1em}
+\setlength{\parsep}{0em}
 \setlength{\listparindent}{0pt}
 }}
 {\end{list}}
@@ -188,6 +188,16 @@
 {\begin{list}
 {(\alph{enumii})}
 {\usecounter{enumii}
+\setlength{\rightmargin}{0pt}
+\setlength{\parsep}{1em}
+\setlength{\listparindent}{0pt}
+}}
+{\end{list}}
+
+\newenvironment{subsubproblem}
+{\begin{list}
+{(\roman{enumiii})}
+{\usecounter{enumiii}
 \setlength{\rightmargin}{0pt}
 \setlength{\parsep}{1em}
 \setlength{\listparindent}{0pt}
