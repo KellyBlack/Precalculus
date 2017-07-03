@@ -4,61 +4,103 @@
 \preClass{Angle Measurement}
 
 \begin{problem}
-\item Make a sketch of a horizontal and vertical axes with labels for
-  the $x$ and $y$ axes. Make a sketch of a circle centered on the
-  origin of your axes with a radius $r$. (Just mark where $r$ and $-r$
-  are located on the axes.)  Label the radius and the
-  circumference. Finally, answer each of the questions below.
-
-  \vfill
-
+\item A circle has a radius of $r$ meters. Answer each of the
+  following questions:
   \begin{subproblem}
-  \item If the radius is 1m what is the circumference?
-    \vspace{4em}
-  \item If the radius is 2m what is the circumference?
-    \vspace{4em}
-  \item What is the general formula that relates the radius and the circumference?
-    \vspace{4em}
-  \item How many degrees are there in the angle that represents one
-    complete turn around a circle?
-    \vspace{4em}
-  \item On your circle above draw a ray from the origin along the line
-    that forms a 45 degree angle with the positive horizontal
-    axis. Indicate and label the angle.
+  \item Determine the lengths described below.
+    \begin{subsubproblem}
+    \item What is the circumference of the whole circle?
+      \vfill
+    \item What is the length around half of the circle?
+      \vfill
+    \item What is the length around one-fourth of the circle?
+      \vfill
+    \end{subsubproblem}
+  \item Determine the areas of the circle described below.
+    \begin{subsubproblem}
+    \item What is the area of the whole circle?
+      \vfill
+    \item What is the area of half of the circle?
+      \vfill
+    \item What is the area of one-fourth of the circle?
+      \vfill
+    \end{subsubproblem}
+  \item How many degrees are there in a full circle? Where did this
+    number come from?
+    \vfill
+  \item Make a sketch of a circle centered at the origin. Include the
+    $x$ and $y$-axes. Add the ray from the origin that forms a 45
+    degree angle with the positive $x$ axis.
+    \vfill
+    \vfill
   \end{subproblem}
 \end{problem}
 
 
 \actTitle{Angle Measurement}
 \begin{problem}
-\item Make a sketch of a horizontal and vertical axes with labels for
-  the $x$ and $y$ axes. Make a sketch of a circle of centered on the
-  origin of your axes. Label the radius and the
-  circumference. Finally, answer each of the questions below.
+\item For each of the angles below, print the angles in order from
+  smallest to largest. In each picture the dotted line is the initial
+  side, and the solid line is the terminal side.
 
-  \vfill
+    \vspace{1em}
+
+  \begin{tikzpicture}[y=3cm, x=3cm,font=\sffamily]
+    % Rays
+    \draw[black,thick,->] (0, 0) -- (1,0);
+    \draw[black,thick,dotted,->] (0, 0) -- (140:1);
+    \draw[black,thin] (0.2,0) arc (0:140:0.2);
+    \node at (70:0.32) {$\alpha$};
+
+    \begin{scope}[shift={(1.2,0)}]
+      % Rays
+      \draw[black,thick,->] (0, 0) -- (1,0); 
+      \draw[black,thick,dotted,->] (0, 0) -- (20:1); 
+      \draw[black,thin] (0.2,0) arc (0:20:0.2);
+      \node at (8:0.32) {$\beta$};
+    \end{scope}
+
+    \begin{scope}[shift={(0,-1.2)}]
+      % Rays
+      \draw[black,thick,->] (0, 0) -- (1,0);
+      \draw[black,thick,dotted,->] (0, 0) -- (70:1);
+      \draw[black,thin] (0.2,0) arc (0:70:0.2);
+      \node at (35:0.32) {$\gamma$};
+    \end{scope}
+
+    \begin{scope}[shift={(1.5,-0.2)}]
+      % Rays
+      \draw[black,thick,->] (0, 0) -- (1,0);
+      \draw[black,thick,dotted,->] (0, 0) -- (-100:1);
+      \draw[black,thin] (0.2,0) arc (0:-100:0.2);
+      \node at (-50:0.32) {$\delta$};
+    \end{scope}
+
+  \end{tikzpicture}
+
+\item Use the diagram below to make the points indicated in the
+  descriptions below.
+
+  \begin{tikzpicture}[y=2.7cm, x=2.7cm,font=\sffamily]
+    % Rays
+    \draw[black,thick,->] (-1.1, 0) -- (1.1, 0);
+    \draw[black,thick,->] (0, -1.1) -- (0, 1.1);
+    \draw[black,thin] (1,0) arc (0:360:1.0);
+  \end{tikzpicture}
 
   \begin{subproblem}
-    \item What is the length of the top half of the circle assuming
-      its radius is 1?
-      \vspace{3em}
-    \item What is the length of the top half of the circle assuming
-      its radius is $r$?
-      \vspace{3em}
-    \item What is the length of the part of the circle in the first
-      quadrant assuming its radius is $r$?
-      \vspace{3em}
-
-    \item What is the length of the sector that forms part of a circle
-      with an angle of 180 degrees assuming its radius is 1?
-      \vspace{3em}
-    \item What is the length of the sector that forms part of a circle
-      with an angle of 180 degrees assuming its radius is $r$?
-      \vspace{3em}
-    \item What is the length of the sector that forms part of a circle
-      with an angle of 90 degrees assuming its radius is $r$?
-      \vspace{3em}
-
+  \item Mark and label a point, $P$, where the ray from the origin to
+    the point form an angle of $\pi$ radians.
+  \item Mark and label a point, $Q$, where the ray from the origin to
+    the point form an angle of $2\pi$ radians.
+  \item Mark and label a point, $R$, where the ray from the origin to
+    the point form an angle of $\frac{\pi}{2}$ radians.
+  \item Mark and label a point, $S$, where the ray from the origin to
+    the point form an angle of $\frac{\pi}{4}$ radians.
+  \item Mark and label a point, $T$, where the ray from the origin to
+    the point form an angle of $0$ radians.
+  \item Mark and label a point, $U$, where the ray from the origin to
+    the point form an angle of $\frac{3\pi}{4}$ radians.
   \end{subproblem}
 
   \clearpage
@@ -115,7 +157,7 @@
 
   \item The value on the right side of your expression is the
     definition of radian measure for an angle. In one sentence explain
-    the meaning of the ratio on the left side of the expression.
+    the meaning of the value on the ride side of the expression.
 
     \vfill
 
@@ -123,6 +165,70 @@
 
   \clearpage
 
+\item A hare is placed on a track that is a circle with radius
+  10m. The hare moves around the track in the counter-clockwise
+  direction.
+  \begin{subproblem}
+  \item Make a sketch of the track below.
+    \vfill
+
+  \item Determine the angle that the hare moves around after moving
+    1m.  \sideNote{All angle measures should be in radians.} 
+    \vfill
+
+  \item Determine the angle that the hare moves around after moving 10m.
+    \vfill
+
+  \item Mark and annotate the sector formed after the hare moves
+    10m. What is the angle of the sector, and what is the area of the
+    sector?
+    \vfill
+
+  \item Mark and annotate the sector formed after the hare moves
+    2m. What is the angle of the sector, and what is the area of the
+    sector?
+    \vfill
+  \item Mark and annotate the sector formed after the hare moves
+    15m. What is the angle of the sector, and what is the area of the
+    sector?
+    \vfill
+  \end{subproblem}
+
+\clearpage
+
+\item A turtle and a hare are placed at the same start point, and they
+  move around a circle of radius 10m. The hare moves around the circle
+  counter-clockwise at 1m per minute. The turtle moves around the
+  circle counter-clockwise at 0.1m per minute.
+  \begin{subproblem}
+  \item After one hour where is the hare on the circle?
+    \vfill
+
+  \item After one hour what angle has the hare moved around the circle?
+    \vfill
+
+  \item After one hour where is the turtle on the circle?
+    \vfill
+
+  \item After one hour what angle has the turtle moved around the circle?
+    \vfill
+
+  \item How long will it take until the hare and the turtle are at the
+    start point at the same time?
+    \vfill
+  \end{subproblem}
+
+
+\end{problem}
+
+\postClass
+
+\begin{problem}
+\item Briefly state two ideas from today's class.
+  \begin{itemize}
+  \item
+  \item
+  \end{itemize}
 \item The following questions refer to the measure of an angle in
   radians.
   \begin{subproblem}
@@ -144,21 +250,6 @@
   \item If an angle is measured as being 120 degrees, how many radians
     is it?
     \vfill
-  \end{subproblem}
-
-\end{problem}
-
-\postClass
-
-\begin{problem}
-\item Briefly state two ideas from today's class.
-  \begin{itemize}
-  \item
-  \item
-  \end{itemize}
-\item
-  \begin{subproblem}
-    \item
   \end{subproblem}
 \end{problem}
 
