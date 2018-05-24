@@ -42,15 +42,17 @@
         % ticks
         \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
      	% axis
-    	\draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {Hare};
-        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {Tortoise};
+    	\draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0)
+                  node[anchor = south] {Hare's Position (m)};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY)
+                  node[anchor = south east] {Tortoise's Position (m)};
         \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
           \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
         }
         \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
-          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=0,anchor=east] {$\x$};
         }
-        \draw (0,5.5) node [anchor=south] {Hare vs. Tortoise};
+        \draw (0,6.0) node [anchor=south] {Hare vs. Tortoise};
       \end{tikzpicture}
 
   \end{subproblem}
@@ -59,14 +61,16 @@
 
 \item A tortoise and a hare move in a straight line, and the both
   start at $x=0$. The tortoise's position is given by
-  \begin{eqnarray*}
+  \begin{eqnarray}
+    \label{actLinear:eqn:tortoise}
     x_T & = & \frac{1}{2} t,
-  \end{eqnarray*}
+  \end{eqnarray}
   where $t$ is in minutes and $x$ is in meters.  The hare's position
   is given by
-  \begin{eqnarray*}
+  \begin{eqnarray}
+    \label{actLinear:eqn:hare}
     x_H & = & 2 t,
-  \end{eqnarray*}
+  \end{eqnarray}
   where $t$ is in minutes and $x$ is in meters.
 
   Determine the relationship between the hare's and the tortoise's
@@ -85,21 +89,26 @@
       % ticks
       \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
     % axis
-    \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {Hare};
-      \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {Tortoise};
+    	\draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0)
+                  node[anchor = south] {Hare's Position (m)};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY)
+                  node[anchor = south east] {Tortoise's Position (m)};
       \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
         \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
       }
       \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
         \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
       }
-      \draw (0,5.5) node [anchor=south] {Hare vs. Tortoise};
+      \draw (0,6) node [anchor=south] {Hare vs. Tortoise};
     \end{tikzpicture}
 
 
     What is the tortoise's position when the hare's position is 15
     meters? (Mark the associated coordinate on the plot above.)
 
+    In equation \ref{actLinear:eqn:tortoise} and
+    \ref{actLinear:eqn:hare} how many variables are there? How many
+    equations? Which variables are changing?
 
 \end{problem}
 
