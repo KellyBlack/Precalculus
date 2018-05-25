@@ -272,10 +272,44 @@
   \item 
   \item 
   \end{itemize}
-\item 
-  \begin{subproblem}
-    \item
-  \end{subproblem}
+\item A train moves along a track. From $t=0$ to $t=12$ hours it moves
+  from its initial position at a constant velocity to a new location
+  twenty-five miles away. From $t=12$ to $t=24$ hours the train moves
+  with a constant velocity to its start position. Determine a formula
+  for the train's position. Use proper notation for piecewise defined
+  functions.
+\item A car moves along a straight track. The graph of the car's
+  position is shown in the plot below. Write out a brief story
+  describing the car's position but also how its position is changing
+  in time.
+
+  \begin{tikzpicture}[y=1.0cm, x=1.0cm,font=\sffamily]
+    % bounds
+    \def\lowX{-0.5}
+    \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+    \pgfmathsetmacro\nextXValue{int(\startX+1)}
+    \def\highX{6.5}
+    \def\lowY{-0.5}
+    \def\highY{4.5}
+    \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+    \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+      % axis
+    \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {time (minutes)};
+    \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {Position (m)};
+    \foreach \y in {1,2,...,\highY} {
+      \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+    }
+    \foreach \x in {1,2,...,\highX} {
+      \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+    }
+    \draw [black, very thick] plot coordinates {
+      (0,0) (2,4) (4,4) (6,0)};
+    \fill (0, 0) circle [radius=0.5ex];
+    \fill (6, 0) circle [radius=0.5ex];
+
+  \end{tikzpicture}
+
 \end{problem}
 
 
