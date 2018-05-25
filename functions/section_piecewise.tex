@@ -133,8 +133,7 @@
     \mathrm{Harold}(x) & = & \left\{
                              \begin{array}{l@{\hspace{3em}}rcccl}
                                \frac{1}{2}(x+2) & -2 & \leq & x & < &  0, \\
-                               4-x^2            &  0 &   <  & x & < &  2, \\
-                               -2(x-2)          &  2 & \leq & x & < & 4.
+                               4-x^2            &  0 &   <  & x & < &  2.
                              \end{array}
                              \right.
   \end{eqnarray*}
@@ -153,8 +152,8 @@
         % ticks
         \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
       % axis
-      \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
-        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {$y$};
+        \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
         \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
           \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
         }
