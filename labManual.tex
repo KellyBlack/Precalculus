@@ -93,7 +93,89 @@ Free Documentation License".
 
 \tableofcontents
 
-%\clearpage
+% \clearpage
+
+\begin{figure}[!h]
+    \centering
+    \resizebox{!}{\textwidth}{
+        \begin{tikzpicture}[mindmap,
+        level 1 concept/.append style={level distance=130,sibling angle=120},
+        ]
+        \path[mindmap,concept color=black,text=white]
+        node[concept] {Function}
+        [clockwise from=-60]
+        child[concept color=blue,text=black] {
+            node[concept] (range) {Range and Domain}
+            [clockwise from=-35]
+            child { node[concept] (shift) {1-1} }
+            child { node[concept] (scale) {Inverse} }
+          }
+        child[concept color=red,text=black]{
+          node[concept] (problem) {Written Descriptions}
+          [clockwise from=180]
+          child[concept color=red] {
+            node[concept] (lines) {Problem Solving}
+          }
+        }
+        child[concept color=green!50!black,text=black] {
+            node[concept] (change) {Change}
+            [counterclockwise from=30]
+            child {node[concept] (total) {Total Change}}
+            child{node[concept] (avgRate) {Average Rate}}
+        };
+
+        \begin{scope}[every annotation/.style={fill=black!20}]
+          \node [annotation, above] at (-5,-4) {Polynomials};
+          \node [annotation, above] at (-5,-5) {Exponentials/Logarithms};
+          \node [annotation, above] at (-5,-6) {Trigonometric};
+        \end{scope}
+%        \begin{scope}[concept color=green!50!black]
+%        \node[extra concept,color=green!50!black,circle,font=\scriptsize,text=black,level distance=10]
+%             (coord) at (4,0) {Coordinate System}
+%             [clockwise from=0]
+%             child[concept color=green!50!black,level distance=70] {
+%                 node[concept] (distanceFormula) {Distance Formula}
+%%                 [clockwise from=-90]
+%%                 child {
+%%                    node[concept,color=green!50!black,text=black] (circles) {Circles and Semi-Circles}
+%%                    [clockwise from=-90,sibling angle=90]
+%%                    child { node[concept] {Radius} }
+%%                    child { node[concept] {Center} }
+%%              }
+%        };
+%      \end{scope}
+
+
+%        \begin{pgfonlayer}{background}
+%        \draw [left color=black, right color=black, draw=white,
+%               decorate,decoration=circle connection bar]
+%               (rangeDomain) -- (composition);
+%        \draw [left color=black, right color=green, draw=white,
+%               decorate,decoration=circle connection bar]
+%               (rangeDomain) -- (coord);
+%        \draw [left color=black, right color=blue, draw=white,
+%               decorate,decoration=circle connection bar]
+%               (rangeDomain) -- (graphs);
+%        \draw [left color=blue, right color=blue, draw=white,
+%               decorate,decoration=circle connection bar]
+%               (shift) -- (scale);
+%        \draw [left color=red, right color=blue, draw=white,
+%               decorate,decoration=circle connection bar]
+%               (special) -- (graphs);
+%        \draw [left color=blue, right color=green, draw=white,
+%               decorate,decoration=circle connection bar]
+%               (graphs) -- (coord);
+%       \draw [left color=blue, right color=green, draw=white,
+%              decorate,decoration=circle connection bar]
+%              (intercepts) -- (coord);
+%        \end{pgfonlayer}
+
+
+        \end{tikzpicture}
+      }
+      \caption{Broad overview of the topics for the full course.}
+\end{figure}
+
 
 \chapter{Functions and Preliminaries}
 
