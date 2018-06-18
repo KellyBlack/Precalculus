@@ -16,8 +16,7 @@
       g(x) & = & f(3x), \\
       h(x) & = & f(x)+2, \\
       p(x) & = & f(x+2), \\
-      q(x) & = & -f(x), \\
-      r(x) & = & -f(x-2).
+      q(x) & = & -f(x). \\
     \end{eqnarray*}
 
     \begin{tikzpicture}[y=1.1cm, x=1.1cm,font=\sffamily]
@@ -33,14 +32,14 @@
         \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
       % axis
       \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
-        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = north east] {$y$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
         \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
           \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
         }
         \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
           \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
         }
-        \draw (0,5.5) node [anchor=south] {Comparing Shifted Functions};
+        \draw (0,6.0) node [anchor=south] {Comparing Shifted Functions};
       \end{tikzpicture}
 
   \end{subproblem}
