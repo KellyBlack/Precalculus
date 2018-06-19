@@ -53,7 +53,7 @@
     \draw[black,thin] (0.2,0) arc (0:140:0.2);
     \node at (70:0.32) {$\alpha$};
 
-    \begin{scope}[shift={(1.2,0)}]
+    \begin{scope}[shift={(0,-1.0)}]
       % Rays
       \draw[black,thick,->] (0, 0) -- (1,0);
       \draw[black,thick,dotted,->] (0, 0) -- (20:1);
@@ -61,7 +61,7 @@
       \node at (8:0.32) {$\beta$};
     \end{scope}
 
-    \begin{scope}[shift={(0,-1.2)}]
+    \begin{scope}[shift={(0,-2.2)}]
       % Rays
       \draw[black,thick,->] (0, 0) -- (1,0);
       \draw[black,thick,dotted,->] (0, 0) -- (70:1);
@@ -69,7 +69,7 @@
       \node at (35:0.32) {$\gamma$};
     \end{scope}
 
-    \begin{scope}[shift={(1.5,-0.2)}]
+    \begin{scope}[shift={(0,-3.0)}]
       % Rays
       \draw[black,thick,->] (0, 0) -- (1,0);
       \draw[black,thick,dotted,->] (0, 0) -- (-100:1);
@@ -77,37 +77,48 @@
       \node at (-50:0.32) {$\delta$};
     \end{scope}
 
+    \draw[black,thick] (2,1) -- (2,-4);
+    \node at (2.4,0.1)  {Smallest:};
+    \node at (2.4,-1.45) {Largest:};
+    \foreach \y in {0,0.5,1.0,1.5} { \draw (2.7,-\y) -- (3.7,-\y); }
+
   \end{tikzpicture}
 
-\item Use the diagram below to make the points indicated in the
+  
+
+  \clearpage
+\item Use the diagram below to plot the points indicated in the
   descriptions below.
 
-  \begin{tikzpicture}[y=2.7cm, x=2.7cm,font=\sffamily]
-    % Rays
-    \draw[black,thick,->] (-1.1, 0) -- (1.1, 0);
-    \draw[black,thick,->] (0, -1.1) -- (0, 1.1);
-    \draw[black,thin] (1,0) arc (0:360:1.0);
-  \end{tikzpicture}
-
+  \begin{center}
+    \begin{tikzpicture}[y=3.2cm, x=3.2cm,font=\sffamily]
+      % Rays
+      \draw[black,thick,->] (-1.1, 0) -- (1.1, 0) node[anchor=west] {$x$};
+      \draw[black,thick,->] (0, -1.1) -- (0, 1.1) node[anchor=south east] {$y$};
+      \draw[black,thin] (1,0) arc (0:360:1.0);
+    \end{tikzpicture}
+  \end{center}
+  
   \begin{subproblem}
-  \item Mark and label a point, $P$, where the ray from the origin to
-    the point form an angle of $\pi$ radians.
-  \item Mark and label a point, $Q$, where the ray from the origin to
-    the point form an angle of $2\pi$ radians.
-  \item Mark and label a point, $R$, where the ray from the origin to
-    the point form an angle of $\frac{\pi}{2}$ radians.
-  \item Mark and label a point, $S$, where the ray from the origin to
-    the point form an angle of $\frac{\pi}{4}$ radians.
-  \item Mark and label a point, $T$, where the ray from the origin to
-    the point form an angle of $0$ radians.
-  \item Mark and label a point, $U$, where the ray from the origin to
-    the point form an angle of $\frac{3\pi}{4}$ radians.
+  \item Mark and label a point, $P$, on the circle where the ray from the origin to
+    the point form an angle of $\pi$ radians with the positive $x$-axis.
+  \item Mark and label a point, $Q$, on the circle where the ray from the origin to
+    the point form an angle of $2\pi$ radians with the positive $x$-axis.
+  \item Mark and label a point, $R$, on the circle where the ray from the origin to
+    the point form an angle of $\frac{\pi}{2}$ radians with the positive $x$-axis.
+  \item Mark and label a point, $S$, on the circle where the ray from the origin to
+    the point form an angle of $\frac{\pi}{4}$ radians with the positive $x$-axis.
+  \item Mark and label a point, $T$, on the circle where the ray from the origin to
+    the point form an angle of $0$ radians with the positive $x$-axis.
+  \item Mark and label a point, $U$, on the circle where the ray from the origin to
+    the point form an angle of $\frac{3\pi}{4}$ radians with the positive $x$-axis.
   \end{subproblem}
 
   \clearpage
 
-\item Make a sketch of a circle of radius $r$, and mark the radius and
-  circumference of the circle.
+\item Make a sketch of a circle centered at the origin and has a
+  radius $r$, and mark the radius and circumference of the circle.
+  \sideNote{Label your axes and annotate your plot.}
   \vfill
 
   \begin{subproblem}
@@ -117,22 +128,22 @@
 
   \item Mark a sector on your circle above whose angle is one half of
     the angle needed to make one complete turn around the circle. What
-    is the length of the sector of the circle?  \sideNote{This should
-      be a function of $r$.}
+    is the arc length of the sector of the circle?  \sideNote{This should
+      be a function of $r$. ($p=0.5$)}
 
 
     \vspace{4em}
 
   \item Mark a sector on your circle above whose angle is one third of
     the angle needed to make one complete turn around the circle. What
-    is the length of the sector?  \sideNote{This should be a function
-      of $r$.}
+    is the arc length of the sector?  \sideNote{This should be a function
+      of $r$.  ($p=0.3\overline{3}$)}
 
 
     \vspace{4em}
 
   \item If the angle of a sector is a fraction, $p$, of one whole turn around
-    the circle, what is the length of the sector? (If $p=0.5$ then it represents
+    the circle, what is the arc length of the sector? (If $p=0.5$ then it represents
     one half of a full turn around the circle.)
     \sideNote{This should be a function of $r$ and $p$.}
     \vspace{4em}
@@ -142,7 +153,7 @@
 \clearpage
 
 \item From the previous problem you should have a general formula that
-  relates the length of the sector with radius $r$ given the
+  relates the arc length of the sector with radius $r$ given the
   fraction, $p$, that its angle is of one complete turn around a
   circle.
 
@@ -170,7 +181,8 @@
   10m. The hare moves around the track in the counter-clockwise
   direction.
   \begin{subproblem}
-  \item Make a sketch of the track below.
+  \item Make a sketch of the track below. Determine the circumference
+    of the circle.
     \vfill
 
   \item Determine the angle that the hare moves around after moving
@@ -202,13 +214,13 @@
   counter-clockwise at 1m per minute. The turtle moves around the
   circle counter-clockwise at 0.1m per minute.
   \begin{subproblem}
-  \item After one hour where is the hare on the circle?
+  \item After one hour how far has the hare moved along the circle?
     \vfill
 
   \item After one hour what angle has the hare moved around the circle?
     \vfill
 
-  \item After one hour where is the turtle on the circle?
+  \item After one hour how far has the turtle moved on the circle?
     \vfill
 
   \item After one hour what angle has the turtle moved around the circle?
