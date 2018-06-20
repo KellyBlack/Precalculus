@@ -10,19 +10,21 @@
     \sin^2(\theta) + \cos^2(\theta) & = & 1.
   \end{eqnarray*}
 
-  \begin{tikzpicture}[y=3cm, x=3cm,font=\sffamily]
-      \draw[thick,opacity=0.85,->] (0, -1.1) -- (0,1.1) node[anchor=east] {$y$};
-      \draw[thick,opacity=0.85,->] (-1.1, 0) -- (1.1,0) node[anchor=south] {$x$};
-      \draw[thick] (1,0) arc (0:360:1);
-%      \draw[thick] (0,0) -- (30:1) node[midway,anchor=south] {$r$}
-%          -- ++(-90:0.5) node[midway,anchor=west] {$y$}
-%          -- (0,0) node[midway,anchor=north] {$x$};
-%      \draw[fill=black] (30:1) circle (0.02);
-%      \draw[text=black] (0:0.2) arc (0:30:0.2) node[midway,anchor=west] {$\theta$};
-    \end{tikzpicture}
-
+  \begin{center}
   \sideNote{Choose a point on the circle, draw the associated
     triangle, and then use the appropriate definitions.}
+    \begin{tikzpicture}[y=3cm, x=3cm,font=\sffamily]
+      \draw[thick,opacity=0.85,->] (0, -1.1) -- (0,1.1)
+      node[anchor=east] {$y$}; \draw[thick,opacity=0.85,->] (-1.1, 0)
+      -- (1.1,0) node[anchor=south] {$x$}; \draw[thick] (1,0) arc
+      (0:360:1);
+      % \draw[thick] (0,0) -- (30:1) node[midway,anchor=south] {$r$}
+      % -- ++(-90:0.5) node[midway,anchor=west] {$y$} -- (0,0)
+      % node[midway,anchor=north] {$x$}; \draw[fill=black] (30:1)
+      % circle (0.02); \draw[text=black] (0:0.2) arc (0:30:0.2)
+      % node[midway,anchor=west] {$\theta$};
+    \end{tikzpicture}
+  \end{center}
 
 \end{problem}
 
