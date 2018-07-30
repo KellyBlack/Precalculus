@@ -66,3 +66,15 @@ Students should be able to do each of the following:
 
 * Determine if two lines are perpendicular.
 
+Goals for activity 4 (Section 1.5 of the book)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Students should be able to do each of the following:
+
+* Determine the formula for a line given any set of minimal geometric information. (Example: given two points on the line.)
+
+* Express the point slope formula for a line given a written description of a physical situation.
+
+* Determine the slopes of parallel and perpendicular lines given written descriptions of a geometric or physical situation.
+
+* Construct a linear equation from a written description
