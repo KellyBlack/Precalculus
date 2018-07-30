@@ -42,7 +42,62 @@
         \draw (0,6.0) node [anchor=south] {Comparing Shifted Functions};
       \end{tikzpicture}
 
+    \end{subproblem}
+
+    \vfill
+    (See next page)
+    
+  \item Expand each of the functions below by FOILing the
+  expression. The first one is done as an example. Recall what it
+  means to FOIL an expression.
+
+  \begin{tikzpicture}[y=1em, x=1em,font=\sffamily]
+    %% Draw the (a+b) part
+    \node     at (0,0) {$($};
+    \node (a) at (1,0) {$a$};
+    \node     at (2,0) {$+$};
+    \node (b) at (3,0) {$b$};
+    \node     at (4,0) {$)\cdot($};
+
+    %% Draw the *(c+d) part
+    \node (c) at (5,0) {$c$};
+    \node     at (6,0) {$+$};
+    \node (d) at (7,0) {$d$};
+    \node     at (8,0) {$)$};
+
+    %% Draw the right hand side of the equation
+    \node     at (14,0) {$~=~a\cdot c + a\cdot d + b\cdot c + b\cdot d$};
+
+    %% Now make the pretty lines between the parts to FOIL
+    \path[red,<->,thick] (a.north) edge[bend left] node {} (c.north);
+    \path[red,<->,thick] (a.north) edge[bend left] node {} (d.north);
+
+    \path[blue,<->,thick] (b.south) edge[bend right] node {} (c.south);
+    \path[blue,<->,thick] (b.south) edge[bend right] node {} (d.south);
+
+  \end{tikzpicture}
+
+  \begin{subproblem}
+  \item ${\displaystyle (x-3)^2}$
+    \begin{eqnarray*}
+      (x-3)^2 & = & (x-3)\cdot(x-3), \\
+              & = & x\cdot x - 3\cdot x - 3\cdot x + (-3)\cdot(-3), \\
+              & = & x^2 - 3x - 3x + 9, \\
+              & = & x^2 - 6x + 9.
+    \end{eqnarray*}
+  \item ${\displaystyle (x+5)^2}$
+    \vfill
+  \item ${\displaystyle (y-4)^2}$
+    \vfill
+  \item ${\displaystyle (y+a)^2}$ where $a$ is a constant.
+    \vfill
   \end{subproblem}
+  
+\item if $(x-a)^2=x^2+12x+36$ what is the value of $a$? (Briefly
+  explain how you arrived at your result.)
+
+  \vfill
+
 \end{problem}
 
 
