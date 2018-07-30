@@ -78,3 +78,22 @@ Students should be able to do each of the following:
 * Determine the slopes of parallel and perpendicular lines given written descriptions of a geometric or physical situation.
 
 * Construct a linear equation from a written description
+
+
+Goals for activity 5 (Section 1.6 of the book)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Students should be able to do each of the following:
+
+* Determine the algebraic formula of a basic function given a written description or a graphical representation.
+
+* Determine the algebraic formula for a function after a vertical translation or scaling.
+
+* Determine the algebraic formula for a function after a horizontal translation or scaling.
+
+* Determine the algebraic formula for a function after a vertical reflection.
+
+* Determine the algebraic formula for a function after a combination of vertical and horizontal translations and scalings.
+
+* Graph a given function given a set of transformations.
+
