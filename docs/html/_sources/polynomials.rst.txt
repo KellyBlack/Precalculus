@@ -43,3 +43,26 @@ Students should be able to do each of the following:
 * Determine a function given a description of a situation.
 
 * Determine intervals in the domain where a function is increasing/decreasing/constant
+
+
+Goals for activity 3 (Section 1.4 of the book)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Students should be able to do each of the following:
+
+* Define a linear relationship from a written description.
+
+* Determine the slope of a line from a written description or an algebraic expression.
+
+* Compare the slopes of lines and interpret relative steepness as well as interpret positive versus negative slope.
+
+* Calculate the average rate of change between two points on a function.
+
+* Determine algebraic expressions for horizontal and vertical lines.
+
+* Translate the formulae for lines between slope-intercept, point slope, and general forms.
+
+* Determine if two lines are parallel.
+
+* Determine if two lines are perpendicular.
+
