@@ -97,3 +97,17 @@ Students should be able to do each of the following:
 
 * Graph a given function given a set of transformations.
 
+Goals for activity 6 (Section 1.7 of the book)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Students should be able to do each of the following:
+
+* Determine if a **simple** function is an even or odd function given a graphical representation or algebraic expression.
+  
+* Define piecewise defined functions with correct notation.
+  
+* Graph piecewise defined functions.
+  
+* Identifying the subset of a domain where a function is increasing, decreasing, or is constant.
+  
+* Determine relative minima and maxima from a graphical representation or for the algebraic representation of simple functions.
