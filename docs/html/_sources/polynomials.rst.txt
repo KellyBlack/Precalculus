@@ -126,5 +126,23 @@ Students should be able to do each of the following:
   
 * Determine the difference quotient at a point given a function.
 
+Goals for activity 8 (Section 2.1 of the book)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Students should be able to do each of the following:
+
+
+* Determine the algebraic expression for a written description or a graphical representation of a quadratic function.
+  
+* Graph a quadratic function given a written description or an algebraic expression in any form.
+  
+* Determine the standard equation for a quadratic function given a written description or a graphical representation.
+  
+* Determine the vertex of a parabola.
+  
+* Complete the square to convert a quadratic function into its vertex form.
+  
+* Determine an optimal solution to a written description of a  constrained optimization problem where the resulting cost function can be expressed as a quadratic function.
+
 
 
