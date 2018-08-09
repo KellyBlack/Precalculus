@@ -4,7 +4,7 @@ Exponential and Logarithmic Functions
 ---------------------------------------
 
 Goals for activity 10 and 11 (Section 3.2 of the book)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
 
@@ -44,3 +44,23 @@ Students should be able to do each of the following:
 * Recognize that :math:`\log(x)=\log_{10}(x)`.
     
 * Recognize that :math:`\ln(x)=\log_e(x)`.
+
+
+Goals for activity 13 (Section 3.4 of the book)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Students should be able to do each of the following:
+
+* Use the properties of logarithms to solve for a variable in a
+    variety of more complex forms:
+  
+  :math:`\log_a(u\cdot v)  =  \log_a(u) + \log_a(v),`
+          
+  :math:`\log_a\left(\frac{u}{v}\right)  =  \log_a(u) - \log_a(v),`
+          
+  :math:`\log_a\left(u^r\right) =  r\log_a(u).`
+    
+    
+* Solve for a variable when multiple logarithms with different bases are present in an expression. (Either using the substitution method or the change of base formula.)
+  
+* Change the base for a logarithm to either base $e$ or base 10 so an approximation can be found using a calculator.
