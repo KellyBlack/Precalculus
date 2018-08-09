@@ -146,10 +146,10 @@ Students should be able to do each of the following:
 
 
 
-  Goals for activity 9 (Section 3.1 of the book)
+Goals for activity 9 (Section 3.1 of the book)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Students should be able to do each of the following:
+Students should be able to do each of the following:
   
 * Determine if a given function is one-to-one. The function can be given in graphical, tabular, or algebraic forms.
 
