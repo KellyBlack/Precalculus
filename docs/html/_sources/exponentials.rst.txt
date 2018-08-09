@@ -14,7 +14,7 @@ Students should be able to do each of the following:
 
 * Be able to graph exponential functions. Be able to compare and identify different exponential functions whose parameters differ.
     
-* Convert and write any exponential function using base $e$.
+* Convert and write any exponential function using base *e*.
   
 * Solve compound interest problems given a written description of the situation.
     
@@ -63,4 +63,37 @@ Students should be able to do each of the following:
     
 * Solve for a variable when multiple logarithms with different bases are present in an expression. (Either using the substitution method or the change of base formula.)
   
-* Change the base for a logarithm to either base $e$ or base 10 so an approximation can be found using a calculator.
+* Change the base for a logarithm to either base *e* or base 10 so an approximation can be found using a calculator.
+
+
+Goals for activity 14 (Section 3.5 of the book)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Students should be able to do each of the following:
+
+* Solve equations with multiple exponential terms.
+
+* Determine inverses of complicated functions that have either exponential or logarithmic terms.
+
+* Manipulate equations with exponentials and transform them into other forms. For example, transform an expression with exponential terms into a quadratic equation.
+
+* Define relationships given written descriptions that include wither exponential or logarithmic terms.
+
+
+Goals for activity 15 (Section 3.6 of the book)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Students should be able to do each of the following:
+
+* Solve equations for various parameters.
+  
+* Solve equations for a variable.
+  
+* Construct equations from written descriptions.
+  
+* Determine logistic relationships given a written description.
+  
+* Identify growth vs decay given a verbal written description.
+
+
+
