@@ -40,7 +40,6 @@ Students should be able to do each of the following:
 * Given the radian measurement of an angle determine the approximate location of the corresponding point on the unit circle and determine which quadrant the point is in.
     
 * Determine the point on the unit circle when the corresponding angle is a multiple of :math:`\frac{\pi}{4}`.
-
     
 * Use the definition of trigonometric functions to determine the values of the functions given a coordinate on the unit circle.
     
@@ -53,6 +52,22 @@ Students should be able to do each of the following:
 * Determine the period of a trigonometric function.
     
 * Use a calculator to approximate trigonometric functions.
+
+
+
+Goals for activity 18 (Section 4.3 of the book)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Students should be able to do each of the following:
+
+
+* Determine values of trigonometric functions given right triangles.
+
+* Use the Pythagorean identity to determine the value of one trigonometric function in terms of another.
+
+* Determine the values of trigonometric functions using multiple right triangles.
+
+* Translate a written description of a problem into a trigonometric formulation
 
 
 
