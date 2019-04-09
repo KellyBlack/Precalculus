@@ -1,19 +1,75 @@
 %=========================================================================
-% Start of 
+% Start of activity on factoring polynomials
 %=========================================================================
-\preClass{Title}
+\preClass{Graphs of Polynomials}
 
 \begin{problem}
-\item
+\item Given the graph of the polynomial below determine one possible
+  definition of the polynomial.
+
+  \vfill
 \end{problem}
 
 
-\actTitle{title}
+\actTitle{Factoring Polynomials}
 \begin{problem}
+\item For each function below express the result as a polynomial plus
+  a remainder.
+  \begin{subproblem}
+  \item ${\displaystyle x }$.
+    \vfill
+  \item ${\displaystyle x }$.
+    \vfill
+  \item ${\displaystyle x }$.
+    \vfill
+  \end{subproblem}
+
+  \clearpage
+  
+\item Make a rough sketch of the polynomial
+  \begin{eqnarray*}
+    h(x) & = & 
+  \end{eqnarray*}
+
+  \begin{tikzpicture}[y=1.1cm, x=1.1cm,font=\sffamily]
+    % bounds
+    \def\lowX{-5.5}
+    \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+    \pgfmathsetmacro\nextXValue{int(\startX+1)}
+    \def\highX{5.5}
+    \def\lowY{-5.5}
+    \def\highY{5.5}
+    \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+    % ticks
+    \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+    % axis
+    \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
+    \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+      \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+    }
+    \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+      \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+    }
+    \draw (0,6.0) node [anchor=south] {Comparing Shifted Functions};
+  \end{tikzpicture}
+
+  \clearpage
+
+\item Given the graph of a polynomial below, determine the smallest
+  possible degree of the polynomial.
+
+
+  \clearpage
+
 \item 
   \begin{subproblem}
-    \item
+  \item 
+    \vfill
+  \item 
+    \vfill
   \end{subproblem}
+
 \end{problem}
 
 \postClass
