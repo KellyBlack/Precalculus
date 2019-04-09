@@ -1,19 +1,114 @@
 %=========================================================================
-% Start of 
+% Start of activity on general polynomials
 %=========================================================================
-\preClass{Title}
+\preClass{Polynomial Functions}
 
 \begin{problem}
-\item
+  \item Make a sketch of the following functions on the axes below.
+    \begin{eqnarray*}
+      g(x) & = & x, \\
+      h(x) & = & x^2, \\
+      p(x) & = & x^2+x, \\
+      q(x) & = & x^3, \\
+      r(x) & = & x^3+x^2.
+    \end{eqnarray*}
+
+    \begin{tikzpicture}[y=1.1cm, x=1.1cm,font=\sffamily]
+        % bounds
+        \def\lowX{-5.5}
+        \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+        \pgfmathsetmacro\nextXValue{int(\startX+1)}
+        \def\highX{5.5}
+        \def\lowY{-5.5}
+        \def\highY{5.5}
+        \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+        % ticks
+        \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+      % axis
+      \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+        \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
+        \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+          \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+        }
+        \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+        }
+        \draw (0,6.0) node [anchor=south] {Comparing Shifted Functions};
+      \end{tikzpicture}
+
 \end{problem}
 
 
-\actTitle{title}
+\actTitle{Polynomial Functions}
 \begin{problem}
-\item 
+\item For each function below determine its long term behaviour. As
+  $x$ gets very large and positive what happens to the function? As
+  $x$ gets very negative what happens to the function?
   \begin{subproblem}
-    \item
+  \item ${\displaystyle x }$.
+    \vfill
+  \item ${\displaystyle x }$.
+    \vfill
+  \item ${\displaystyle x }$.
+    \vfill
+  \item ${\displaystyle x }$.
+    \vfill
   \end{subproblem}
+
+  \clearpage
+
+\item Make a rough sketch of the function of the function
+  \begin{eqnarray*}
+    k(x) & = & 
+  \end{eqnarray*}
+  using the axes below.
+
+  \begin{tikzpicture}[y=1.1cm, x=1.1cm,font=\sffamily]
+    % bounds
+    \def\lowX{-5.5}
+    \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
+    \pgfmathsetmacro\nextXValue{int(\startX+1)}
+    \def\highX{5.5}
+    \def\lowY{-5.5}
+    \def\highY{5.5}
+    \pgfmathsetmacro\nextYValue{int(\lowY+1)}
+    % ticks
+    \draw[step = 1, gray, very thin,dashed,opacity=0.85] (\lowX, \lowY) grid ( \highX,\highY);
+    % axis
+    \draw[thick,->] (\lowX,0) -- coordinate (x axis mid) (\highX,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,\lowY) -- coordinate (y axis mid) (0,\highY) node[anchor = south east] {$y$};
+    \foreach \y in {-5,-4,...,-1,1,2,...,\highY} {
+      \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+    }
+    \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
+      \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+    }
+    \draw (0,6.0) node [anchor=south] {Comparing Shifted Functions};
+  \end{tikzpicture}
+
+  \vfill
+
+  \clearpage
+  
+  \item Make up a polynomial that is positive on the intervals $ $ and
+    is negative on the intervals $ $.
+
+    \vfill
+
+  \item A polynomial is positive on the intervals
+    $ $ and is negative on the intervals $ $. What is the minimum degree
+    of the polynomial?
+
+    \vfill
+
+    \clearpage
+    
+  \item  Given the graph of the polynomial below determine one
+    possible definition of the polynomial.
+    
+    \vfill
+
+
 \end{problem}
 
 \postClass
