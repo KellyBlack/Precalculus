@@ -92,9 +92,9 @@
   \clearpage
   
 \item Make up a polynomial that is strictly positive on the intervals
-  $(-\infty,-4)\cup(-2,3)\cup(3,5)$
+  $(-\infty,-4)\cup(-2,3)$
   and is strictly negative on the intervals
-  $(-4,-2)\cup(5,\infty)$.
+  $(-4,-2)\cup(3,\infty)$.
 
     \vfill
 
@@ -108,7 +108,34 @@
     \clearpage
     
   \item  Given the graph of the polynomial below determine one
-    possible definition of the polynomial.
+    possible polynomial it could be.
+
+    \begin{tikzpicture}[y=0.75cm, x=1.0cm,font=\sffamily]
+      \begin{scope}[shift={(0,0)}]
+        % axis
+        \draw[ultra thick,->] (-5.5,0) -- coordinate (x axis mid) (5.5,0)
+            node[anchor = north west] {$x$}; 
+        \draw[ultra thick,->] (0,-4.5) -- coordinate (y axis mid) (0,4.5) 
+            node[anchor = east,shift={(-0.2,0.2)}]  {\LARGE{$g'$}};
+
+      \draw[ultra thick,black]
+       (-4, 3) .. controls +(  0:1)   and +(140:1)   .. (-2, 0)
+       (-2, 0) .. controls +(-40:1)   and +(  0:-0.6) .. (0,-1)
+       ( 0,-1) .. controls +(  0:0.9) and +(  0:-2)   .. (1, -1)
+       ( 1,-1) .. controls +(  0:0.6) and +(  0:-0.5) .. (2,0)
+       ( 2, 0) .. controls +(  0:1)   and +(135: 1)   .. (4,-2)
+      ;
+
+      \fill[black] (-4,3) circle [radius=0.6ex]; % Draw an open dot on the 
+      \fill[white] (-4,3) circle [radius=0.4ex]; % left side of the function.
+      \fill[black] (4,-2) circle [radius=0.6ex]; % Draw an open dot on the 
+      \fill[white] (4,-2) circle [radius=0.4ex]; % right side of the function.
+
+      \node[anchor=west] at (6,0) {This is the graph of $g'$.};
+    \end{scope}
+
+    \end{tikzpicture}
+
     
     \vfill
 
