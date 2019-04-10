@@ -1,10 +1,49 @@
 %=========================================================================
-% Start of 
+% Start of activity on angle sum formulae
 %=========================================================================
-\preClass{Title}
+\preClass{Distance Between Two Points}
 
 \begin{problem}
-\item
+\item Determine the distance between the points $P$ and $Q$ using the distance formula.
+
+  \begin{tikzpicture}[y=3cm, x=3cm,font=\sffamily]
+      \draw[thick,opacity=0.85,->] (0, -1.1) -- (0,1.1) node[anchor=east] {$y$};
+      \draw[thick,opacity=0.85,->] (-1.1, 0) -- (1.1,0) node[anchor=south] {$x$};
+      \draw[thick] (1,0) arc (0:360:1);
+      \draw[thick] (0,0) -- (40:1) node[midway,anchor=south] {$1$}
+          node[anchor=west] {$P(\cos(\alpha),\sin(\alpha))$};
+      \draw[text=black] (0:0.2) arc (0:40:0.2) node[midway,anchor=west] {$\alpha$};
+      \fill[black] (40:1) circle [radius=0.6ex]; % Draw a dot
+      \draw[thick] (0,0) -- (-70:1) node[midway,anchor=north] {$1$}
+          node[anchor=west,xshift=5,yshift=-3] {$Q(\cos(\beta),\sin(\beta))$};
+      \draw[text=black] (0:0.2) arc (0:-70:0.2) node[midway,anchor=west] {$\beta$};
+      \fill[black] (-70:1) circle [radius=0.6ex]; % Draw a dot
+      \draw[black,thick,dotted] (40:1) -- (-70:1);
+    \end{tikzpicture}
+
+    \vfill
+
+\item Determine the distance between the points $R$ and $S$ using the distance formula.
+
+  \begin{tikzpicture}[y=3cm, x=3cm,font=\sffamily]
+      \draw[thick,opacity=0.85,->] (0, -1.1) -- (0,1.1) node[anchor=east] {$y$};
+      \draw[thick,opacity=0.85,->] (-1.1, 0) -- (1.1,0) node[anchor=south] {$x$};
+      \draw[thick] (1,0) arc (0:360:1);
+      \draw[thick] (0,0) -- (110:1) node[midway,anchor=south east,xshift=-5] {$1$}
+          node[anchor=east,xshift=-5] {$R(\cos(\alpha+\beta),\sin(\alpha+\beta))$};
+      \draw[text=black] (0:0.2) arc (0:110:0.2);
+      \node[midway,anchor=south west,xshift=15] at (45,0.2) {$\alpha+\beta$};
+      \fill[black] (110:1) circle [radius=0.6ex]; % Draw a dot
+      \fill[black] (1,0) circle [radius=0.6ex] node[anchor=north west] {$S(1,0)$};
+      \draw[black,thick,dotted] (110:1) -- (1,0);
+    \end{tikzpicture}
+
+    \vfill
+
+  \item What can you say about the two distances?
+    
+    \vspace*{1em}
+    
 \end{problem}
 
 
