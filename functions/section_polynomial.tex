@@ -107,31 +107,31 @@
 
     \clearpage
     
-  \item  Given the graph of the polynomial below determine one
-    possible polynomial it could be.
+  \item  The graph of a polynomial is shown below.  Determine one
+    possible formula for the polynomial.
 
     \begin{tikzpicture}[y=0.75cm, x=1.0cm,font=\sffamily]
       \begin{scope}[shift={(0,0)}]
         % axis
-        \draw[ultra thick,->] (-5.5,0) -- coordinate (x axis mid) (5.5,0)
+        \draw[ultra thick,->] (-6.5,0) -- coordinate (x axis mid) (7.5,0)
             node[anchor = north west] {$x$}; 
-        \draw[ultra thick,->] (0,-4.5) -- coordinate (y axis mid) (0,4.5) 
-            node[anchor = east,shift={(-0.2,0.2)}]  {\LARGE{$g'$}};
+        \draw[ultra thick,->] (0,-6.5) -- coordinate (y axis mid) (0,4.5) 
+            node[anchor = east,shift={(-0.2,0.2)}]  {$P(x)$};
 
       \draw[ultra thick,black]
-       (-4, 3) .. controls +(  0:1)   and +(140:1)   .. (-2, 0)
-       (-2, 0) .. controls +(-40:1)   and +(  0:-0.6) .. (0,-1)
-       ( 0,-1) .. controls +(  0:0.9) and +(  0:-2)   .. (1, -1)
-       ( 1,-1) .. controls +(  0:0.6) and +(  0:-0.5) .. (2,0)
-       ( 2, 0) .. controls +(  0:1)   and +(135: 1)   .. (4,-2)
-      ;
+       (-6, -5) .. controls +( 85:1)   and +(240:2)    .. (-5, 0)
+       (-5,  0) .. controls +( 60:2)   and +(180: 0.6) .. (-3, 0)
+       (-3,  0) .. controls +(  0:0.6) and +(110: 4.0) .. ( 1, 0)
+       ( 1,  0) .. controls +(290:4.0) and +(230: 1.0) .. ( 4, 0)
+       ( 4,  0) .. controls +( 50:1.0) and +(120: 1.0) .. ( 6, 0)
+       ( 6,  0) .. controls +(300:1)   and +(100: 1)   .. ( 7,-5)
+       ;
 
-      \fill[black] (-4,3) circle [radius=0.6ex]; % Draw an open dot on the 
-      \fill[white] (-4,3) circle [radius=0.4ex]; % left side of the function.
-      \fill[black] (4,-2) circle [radius=0.6ex]; % Draw an open dot on the 
-      \fill[white] (4,-2) circle [radius=0.4ex]; % right side of the function.
+       \foreach \x in {-6,-5,...,-1,1,2,...,6} {
+          \draw (\x,0.15) -- (\x,-0.15) node[yshift=-1,xshift=-5,anchor=north] {$\x$};
+        }
 
-      \node[anchor=west] at (6,0) {This is the graph of $g'$.};
+
     \end{scope}
 
     \end{tikzpicture}
