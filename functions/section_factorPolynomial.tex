@@ -54,10 +54,10 @@
   
 \item Make a rough sketch of the polynomial
   \begin{eqnarray*}
-    h(x) & = & 
+    h(x) & = & -2x^3+4x^2+10x-12
   \end{eqnarray*}
 
-  \begin{tikzpicture}[y=1.1cm, x=1.1cm,font=\sffamily]
+  \begin{tikzpicture}[y=0.9cm, x=0.9cm,font=\sffamily]
     % bounds
     \def\lowX{-5.5}
     \pgfmathtruncatemacro\startX{round(0.5+\lowX)}
@@ -77,8 +77,10 @@
     \foreach \x in {-5,-4,...,-1,1,2,...,\highX} {
       \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
     }
-    \draw (0,6.0) node [anchor=south] {Comparing Shifted Functions};
+    %\draw (0,6.0) node [anchor=south] {Comparing Shifted Functions};
   \end{tikzpicture}
+
+  \vfill
 
   \clearpage
 
