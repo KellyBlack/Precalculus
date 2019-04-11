@@ -7,6 +7,32 @@
 \item Given the graph of the polynomial below determine one possible
   definition of the polynomial.
 
+      \begin{tikzpicture}[y=0.75cm, x=1.0cm,font=\sffamily]
+      \begin{scope}[shift={(0,0)}]
+        % axis
+        \draw[ultra thick,->] (-6.5,0) -- coordinate (x axis mid) (7.5,0)
+            node[anchor = north west] {$x$}; 
+        \draw[ultra thick,->] (0,-6.5) -- coordinate (y axis mid) (0,4.5) 
+            node[anchor = east,shift={(-0.2,0.2)}]  {$P(x)$};
+
+      \draw[ultra thick,black]
+       (-6, -5) .. controls +( 85:1)   and +(230:1)    .. (-5, 0)
+       (-5,  0) .. controls +( 50:3)   and +(110: 1.6) .. ( 0, 0)
+       ( 0,  0) .. controls +(290:2.0) and +(240: 1.5) .. ( 3, 0)
+       ( 3,  0) .. controls +( 60:1.5) and +(120: 1.0) .. ( 6, 0)
+       ( 6,  0) .. controls +(300:1)   and +(100: 1)   .. ( 7,-5)
+       ;
+
+       \foreach \x in {-6,-5,...,-1,1,2,...,6} {
+          \draw (\x,0.15) -- (\x,-0.15) node[yshift=-1,xshift=-5,anchor=north] {$\x$};
+        }
+
+
+    \end{scope}
+
+    \end{tikzpicture}
+
+
   \vfill
 \end{problem}
 
