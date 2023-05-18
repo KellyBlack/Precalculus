@@ -1,0 +1,239 @@
+
+\actTitle{Worksheet 3.1}
+
+\noindent \textbf{Instructions:}  Work together in groups of  3 or 4 to complete the following problems.
+
+
+
+
+\begin{enumerate}
+\item Choose 3 of the following functions for your group to work with.  You must choose $x^2$ and two other functions.
+$$f(x)=x \quad \quad g(x)=x^2 \quad \quad h(x)=x^3 \quad \quad j(x)=\frac{1}{x} \quad \quad m(x)=\sqrt{x}  \quad p(x)=\sqrt[3]{x}$$
+
+\item Use transformations like shifting, stretching, compressing, and reflecting to transform each of your 3 functions.  Write your 3 new functions.
+
+\vfill
+
+\item  For each of the 3 new functions, calculate the domain and range.
+
+\vfill
+
+\newpage
+
+
+\item Determine \emph{algebraically} if each of your functions are one-to-one.  
+
+\vfill
+\vfill
+
+
+\item For each of your functions that are not one-to-one, make a domain restriction so that the function becomes one-to-one on the new domain.
+
+\vfill
+
+\newpage
+
+
+\item For each of your functions (including those with new domain restrictions), find their inverse functions.
+
+\vfill
+
+\item Use function composition to verify that the inverse functions you have described are truly inverses to your functions.
+
+\vfill
+
+\newpage
+
+\item Graph your function and its inverse on the same coordinate axes.  Check that they are properly symmetric to each other.
+
+\begin{multicols}{2}
+
+\begin{tikzpicture}[y=.6cm, x=.6cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+    %% Draw the function.
+ %   \begin{scope}
+ %        \draw[very thick,black] (-3,2) -- (1,1);
+ %        \draw[very thick,black] (3.05,1.05) -- (4,3);
+    %semi-circle
+  %       \draw[very thick, black] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+     %    \draw[ultra thick, black, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+     %dots
+     %  \fill[black] (-3, 2) circle[radius=0.5ex];
+     %   \fill[black] (1,1) circle[radius=0.5ex];
+     %    \fill[black] (4,3) circle[radius=0.5ex];
+     %     \draw[very thick, black] (3,1) circle[radius=0.5ex];
+
+
+   % \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+  \end{tikzpicture}
+
+\vspace{1in}
+
+
+\begin{tikzpicture}[y=.6cm, x=.6cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+    %% Draw the function.
+ %   \begin{scope}
+ %        \draw[very thick,black] (-3,2) -- (1,1);
+ %        \draw[very thick,black] (3.05,1.05) -- (4,3);
+    %semi-circle
+  %       \draw[very thick, black] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+     %    \draw[ultra thick, black, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+     %dots
+     %  \fill[black] (-3, 2) circle[radius=0.5ex];
+     %   \fill[black] (1,1) circle[radius=0.5ex];
+     %    \fill[black] (4,3) circle[radius=0.5ex];
+     %     \draw[very thick, black] (3,1) circle[radius=0.5ex];
+
+
+   % \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+  \end{tikzpicture}
+
+
+
+\columnbreak
+
+\begin{tikzpicture}[y=.6cm, x=.6cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+    %% Draw the function.
+ %   \begin{scope}
+ %        \draw[very thick,black] (-3,2) -- (1,1);
+ %        \draw[very thick,black] (3.05,1.05) -- (4,3);
+    %semi-circle
+  %       \draw[very thick, black] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+     %    \draw[ultra thick, black, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+     %dots
+     %  \fill[black] (-3, 2) circle[radius=0.5ex];
+     %   \fill[black] (1,1) circle[radius=0.5ex];
+     %    \fill[black] (4,3) circle[radius=0.5ex];
+     %     \draw[very thick, black] (3,1) circle[radius=0.5ex];
+
+
+   % \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+  \end{tikzpicture}
+  
+
+\vspace{1in}
+
+
+\begin{tikzpicture}[y=.6cm, x=.6cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+    %% Draw the function.
+ %   \begin{scope}
+ %        \draw[very thick,black] (-3,2) -- (1,1);
+ %        \draw[very thick,black] (3.05,1.05) -- (4,3);
+    %semi-circle
+  %       \draw[very thick, black] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+     %    \draw[ultra thick, black, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+     %dots
+     %  \fill[black] (-3, 2) circle[radius=0.5ex];
+     %   \fill[black] (1,1) circle[radius=0.5ex];
+     %    \fill[black] (4,3) circle[radius=0.5ex];
+     %     \draw[very thick, black] (3,1) circle[radius=0.5ex];
+
+
+   % \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+  \end{tikzpicture}
+  
+  
+\end{multicols}
+
+\item Repeat all of the above steps with a fourth, fifth, and even sixth function from the above list.
+
+\end{enumerate}
+
+
+
+

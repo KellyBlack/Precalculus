@@ -1,0 +1,223 @@
+\documentclass[12pt,twoside,letterpaper]{book}
+%\usepackage{layout}
+%\usepackage{makeidx}
+\RequirePackage{verbatim}
+%\RequirePackage{alltt}
+\usepackage{ifpdf}
+\usepackage{etoolbox}
+\usepackage{multicol}
+\usepackage{dsfont}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{array}
+%\usepackage{wasysym}
+\usepackage{qrcode}
+
+\usepackage{amsmath, amssymb, array}
+\usepackage{enumitem}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{stfloats}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+\usepackage{minipage-marginpar}
+\setlength{\columnsep}{1cm}
+\usepackage{pinlabel} % for pin labels on figure
+
+
+\newcommand{\boxcolor}{gray!30}
+\usepackage{mdframed}
+\newenvironment{boxme}{\begin{mdframed}[backgroundcolor=\boxcolor,linewidth=0pt,nobreak=true]}{\end{mdframed}}
+\newenvironment{boxthm}{\begin{mdframed}[backgroundcolor=\boxcolor,nobreak=true]}{\end{mdframed}}
+\newenvironment{boxdef}{\begin{mdframed}[backgroundcolor=\boxcolor,linewidth=0pt,nobreak=true]}{\end{mdframed}}
+
+
+% Define a toggle that determines if a large or small print version
+% will be printed.
+\newtoggle{largePrint}
+\toggletrue{largePrint}
+\togglefalse{largePrint}
+
+% Define a toggle that determines if solutions are printed. 
+% (Not implemented yet)
+\newtoggle{solutions}
+\toggletrue{solutions}
+\togglefalse{solutions}
+
+\usepackage{graphicx}
+\usepackage[pass]{geometry}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{
+  pdftitle={Recitation Activities for Math 1113, precalculus},
+  pdfsubject={precalculus},
+  pdfauthor={UGA Mathematics Department},
+  pdfkeywords={classroom activities, precalculus},
+  anchorcolor = {blue},
+  colorlinks = {true},
+  runcolor = {black},
+  linkcolor = {red},
+  urlcolor = {black},
+  % pdfpagemode={FullScreen}
+}
+
+\usepackage{tikz}
+\usepackage{pgf}
+\usetikzlibrary{calc,mindmap,backgrounds,arrows,shapes.geometric}
+%\usepackage{pstricks}
+
+
+\pagestyle{myheadings}
+
+%\setlength{\basicoddside}{\oddsidemargin}
+%\setlength{\basicevenside}{\evensidemargin}
+%\setlength{\basicwidth}{\textwidth}
+%\setlength{\basictop}{\topmargin}
+%\setlength{\basicheight}{\textheight}
+
+
+\input{header}
+\setcounter{activity}{0}
+
+\input{latexDefinitions}
+
+\begin{document}
+
+\iftoggle{largePrint}{\fontsize{2cm}{1cm}\selectfont}
+
+\title{Classroom Activities \\
+  Math 1113 - Precalculus
+  \iftoggle{solutions}{%
+    \\\textit{Solution Manual}
+  }
+}
+\author{University of Georgia\\Department of Mathematics}
+
+\date{}
+\maketitle
+
+\noindent
+Copyright (C)  2017-2018 Toyin Alli and Kelly Black University of Georgia Department of Mathematics
+
+\noindent
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU
+Free Documentation License".
+
+\vfill
+
+\qrcode[height=1in,hyperlink,tight]{https://github.com/KellyBlack/Precalculus}
+
+\tableofcontents
+
+\clearpage
+
+\begin{figure}[!h]
+    \centering
+    \resizebox{!}{\textwidth}{
+        \begin{tikzpicture}[mindmap,
+        level 1 concept/.append style={level distance=130,sibling angle=120},
+        ]
+        \path[mindmap,concept color=black,text=white]
+        node[concept] {Function}
+        [clockwise from=-60]
+        child[concept color=blue,text=black] {
+            node[concept] (range) {Range and Domain}
+            [clockwise from=-35]
+            child { node[concept] (shift) {1-1} }
+            child { node[concept] (scale) {Inverse} }
+          }
+        child[concept color=red,text=black]{
+          node[concept] (problem) {Written Descriptions}
+          [clockwise from=180]
+          child[concept color=red] {
+            node[concept] (lines) {Problem Solving}
+          }
+        }
+        child[concept color=green!50!black,text=black] {
+            node[concept] (change) {Change}
+            [counterclockwise from=30]
+            child {node[concept] (total) {Total Change}}
+            child{node[concept] (avgRate) {Average Rate}}
+        };
+
+        \begin{scope}[every annotation/.style={fill=black!20}]
+          \node [annotation, above] at (-5,-4) {Polynomials};
+          \node [annotation, above] at (-5,-5) {Exponentials/Logarithms};
+          \node [annotation, above] at (-5,-6) {Trigonometric};
+        \end{scope}
+%        \begin{scope}[concept color=green!50!black]
+%        \node[extra concept,color=green!50!black,circle,font=\scriptsize,text=black,level distance=10]
+%             (coord) at (4,0) {Coordinate System}
+%             [clockwise from=0]
+%             child[concept color=green!50!black,level distance=70] {
+%                 node[concept] (distanceFormula) {Distance Formula}
+%%                 [clockwise from=-90]
+%%                 child {
+%%                    node[concept,color=green!50!black,text=black] (circles) {Circles and Semi-Circles}
+%%                    [clockwise from=-90,sibling angle=90]
+%%                    child { node[concept] {Radius} }
+%%                    child { node[concept] {Center} }
+%%              }
+%        };
+%      \end{scope}
+
+
+%        \begin{pgfonlayer}{background}
+%        \draw [left color=black, right color=black, draw=white,
+%               decorate,decoration=circle connection bar]
+%               (rangeDomain) -- (composition);
+%        \draw [left color=black, right color=green, draw=white,
+%               decorate,decoration=circle connection bar]
+%               (rangeDomain) -- (coord);
+%        \draw [left color=black, right color=blue, draw=white,
+%               decorate,decoration=circle connection bar]
+%               (rangeDomain) -- (graphs);
+%        \draw [left color=blue, right color=blue, draw=white,
+%               decorate,decoration=circle connection bar]
+%               (shift) -- (scale);
+%        \draw [left color=red, right color=blue, draw=white,
+%               decorate,decoration=circle connection bar]
+%               (special) -- (graphs);
+%        \draw [left color=blue, right color=green, draw=white,
+%               decorate,decoration=circle connection bar]
+%               (graphs) -- (coord);
+%       \draw [left color=blue, right color=green, draw=white,
+%              decorate,decoration=circle connection bar]
+%              (intercepts) -- (coord);
+%        \end{pgfonlayer}
+
+
+        \end{tikzpicture}
+      }
+      \caption{Broad overview of the topics for the full course.}
+\end{figure}
+
+
+\chapter{Functions and Preliminaries}
+
+
+
+\input{functions/functions}
+
+\chapter{Exponential and Logarithmic Functions}
+
+\input{exponentials/exponentials}
+
+\chapter{Angle Measurement}
+
+\input{angles/angles}
+
+\chapter{Trigonometric Functions}
+
+\input{trig/trig}
+
+\chapter{GNU Free Documentation License}
+\include{fdl-1.3}
+
+\end{document}

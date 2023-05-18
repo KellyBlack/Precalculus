@@ -1,0 +1,55 @@
+\preClass{Coordinate Systems}
+
+
+
+\noindent Watch the Pre-Class videos for Section 4.5 A and answer the following questions. Remember that in your written work you are graded on the correctness of your supporting work and not just your final answer. Always give an exact answer unless you are explicitly told to round; calculator approximations will not receive full credit. 
+
+
+\begin{enumerate}
+\item Let $f(x)=2\sin(3x-\frac{\pi}{2})$.
+
+\begin{enumerate}
+
+\item  Determine the period, amplitude, and phase shift of $f(x)=2\sin(3x-\frac{\pi}{2})$.\vfill
+\item Find an interval containing exactly one cycle (period).\vfill
+\item  Determine the $x$-values of the five key points in the cycle above.
+$$x_1= \quad \quad \quad \quad x_2= \quad \quad \quad \quad x_3= \quad \quad \quad \quad x_4= \quad \quad \quad \quad x_5= \quad \quad \quad \quad$$
+\vfill
+
+\end{enumerate}
+\newpage
+
+
+\item (2 points) Graph $f(x)=2\sin(3x-\frac{\pi}{2})$.
+
+\begin{tikzpicture}[y=1cm, x=1.5cm,font=\sffamily]
+    %% ticks
+    \draw[step = 1, gray] (-5,-5) grid (5,5);
+    %% axis
+    \draw[thick,->] (-5.5,0) -- coordinate (x axis mid) (5.5,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,-5.5) -- coordinate (y axis mid) (0,5.5) node[anchor = north east] {$y$};
+    \foreach \y in {-6,-5,...,-1,1,2,...,6} {
+      \draw (2pt, \y) -- (-2pt, \y);
+    }
+    \foreach \x in {-6,-5,...,-1,1,2,...,6} {
+      \draw (\x,2pt) -- (\x,-2pt);
+    }
+
+  \end{tikzpicture}
+
+
+
+
+
+
+
+\item  Determine the period, amplitude, and phase shift of $f(x)=-7\cos(\pi x -4)$\vfill
+
+
+
+
+
+\end{enumerate}
+
+
+

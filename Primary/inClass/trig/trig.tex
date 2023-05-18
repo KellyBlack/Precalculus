@@ -1,0 +1,86 @@
+\begin{figure}[!h]
+    \centering
+    \resizebox{0.87\textwidth}{!}{
+        \begin{tikzpicture}[mindmap,
+        level 1 concept/.append style={level distance=130,sibling angle=120},
+        level 2/.append style={level distance=100,sibling angle=120},
+        ]
+        \path[mindmap,concept color=black,text=white]
+        node[concept] {Function}
+        [clockwise from=0]
+        child[concept color=blue,sibling angle=0,text=black]{
+          node[concept] (periodic) {Periodic\\Functions}
+          [clockwise from=0]
+          child[concept color=green!50!black,sibling angle=90] {
+              node[concept] (trigFunctions) {Trig.\\Functions}
+              [clockwise from=55]
+              child[concept color=green!50!black,sibling angle=90] {
+                node[concept] (tangent) {Tangent}
+              }
+              child[concept color=green!50!black,sibling angle=90] {
+                node[concept] (sine) {Sine}
+              }
+              child[concept color=green!50!black,sibling angle=90] {
+                node[concept] (cosine) {Cosine}
+              }
+          }
+          child[concept color=blue,sibling angle=98,level distance=110,font=\fontsize{8pt}{10pt}\selectfont] {
+            node[concept,scale=1.4] (oscillations) {Oscillations}
+            [clockwise from=-90]
+            child[concept color=blue,sibling angle=45,level distance=80,font=\fontsize{4pt}{6pt}\selectfont] {
+              node[concept,scale=1.5] (frequency) {Frequency}
+            }
+            child[concept color=blue,sibling angle=45,level distance=80,font=\fontsize{4pt}{6pt}\selectfont] {
+              node[concept,scale=1.5] (amplitude) {Amplitude}
+            }
+          }
+        };
+
+        \begin{pgfonlayer}{background}
+%        \draw [color=blue,ultra thick,looseness=1.5,<-] (arcLength) [out=-22, in=-45] to (radians);
+        \draw [left color=blue, right color=green!50!black, draw=white,
+               decorate,decoration=circle connection bar]
+               (oscillations.east) -- (sine.south);
+        \draw [left color=blue, right color=green!50!black, draw=white,
+               decorate,decoration=circle connection bar]
+               (oscillations.east) -- (cosine.south);
+%        \draw [color=blue,ultra thick,looseness=1.5,<-] (arcArea) [out=0, in=-45] to (radians);
+        \end{pgfonlayer}
+
+
+        \end{tikzpicture}
+      }
+      \caption{Topics for the section on trigonometric functions.}
+\end{figure}
+
+\include{trig/Preclass-4.3}
+\include{trig/Worksheet-4.3}
+
+\include{trig/Preclass-4.4}
+\include{trig/Worksheet-4.4}
+
+\include{trig/Worksheet-4.1-4.4}
+
+\include{trig/Preclass-4.5A}
+\include{trig/Worksheet-4.5A}
+
+\include{trig/Preclass-4.5B}
+\include{trig/Worksheet-4.5B}
+
+\include{trig/Preclass-4.7A}
+\include{trig/Worksheet-4.7A}
+
+\include{trig/Preclass-4.7B}
+\include{trig/Worksheet-4.7B}
+
+\include{trig/Preclass-5.1}
+\include{trig/Worksheet-5.1}
+
+\include{trig/Preclass-5.2}
+\include{trig/Worksheet-5.2}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../labManual"
+%%% End:

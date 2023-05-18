@@ -1,0 +1,80 @@
+
+
+\begin{figure}[!h]
+    \centering
+    \resizebox{0.80\textwidth}{!}{
+        \begin{tikzpicture}[mindmap,
+        level 1 concept/.append style={level distance=130,sibling angle=120},
+        ]
+        \path[mindmap,concept color=black,text=white]
+        node[concept] {Function}
+        [clockwise from=0]
+        child[concept color=red]{
+          node[concept] (exponential) {Exponential Function}
+          [clockwise from=30]
+          child { node[concept] (range) {Range} }
+          child { node[concept] (domain) {Domain} }
+        }
+        child[concept color=blue] {
+            node[concept] (inverse) {Inverse Function}
+          [clockwise from=-90]
+          child { node[concept] (range) {Range} }
+          child { node[concept] (domain) {Domain} }
+        }
+        child[concept color=green!50!black] {
+            node[concept] (logarithm) {Logarithmic Function}
+          [clockwise from=150]
+          child { node[concept] (range) {Range} }
+          child { node[concept] (domain) {Domain} }
+        };
+
+        \begin{pgfonlayer}{background}
+        \draw [left color=green, right color=red, draw=white,
+               decorate,decoration=circle connection bar]
+               (exponential) -- (logarithm);
+        \draw [left color=blue, right color=red, draw=white,
+               decorate,decoration=circle connection bar]
+               (exponential) -- (inverse);
+        \draw [left color=blue, right color=green!50!black, draw=white,
+               decorate,decoration=circle connection bar]
+               (logarithm) -- (inverse);
+        \end{pgfonlayer}
+
+
+        \end{tikzpicture}
+    }
+    \caption{Topics for the second section of the course.}
+  \end{figure}
+
+
+
+%\include{exponentials/Worksheet-3.1-boring}
+
+\include{exponentials/Preclass-3.1}
+\include{exponentials/Worksheet-3.1b}
+
+\include{exponentials/Preclass-3.2}
+\include{exponentials/Worksheet-3.2}
+
+\include{exponentials/Preclass-3.3}
+\include{exponentials/Worksheet-3.3}
+
+\include{exponentials/Preclass-3.4}
+\include{exponentials/Worksheet-3.4}
+
+\include{exponentials/Worksheet-3.2-3.4-Review}
+
+\include{exponentials/Preclass-3.5A}
+\include{exponentials/Worksheet-3.5a}
+
+\include{exponentials/Preclass-3.5B}
+\include{exponentials/Worksheet-3.5b}
+
+\include{exponentials/Preclass-3.6}
+\include{exponentials/Worksheet-3.6}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../labManual"
+%%% End:

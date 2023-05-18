@@ -1,0 +1,184 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, array}
+\pagestyle{plain}
+
+\textwidth=6.5in
+\hoffset-1in
+\textheight=9in
+\voffset-1in
+
+\usepackage{enumitem}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{stfloats}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+
+
+
+\begin{document}
+
+
+\noindent MATH 1113   \hfill 1.1 - Rectangular Coordinate System\\
+
+
+
+\noindent \textbf{Topics:}  $x,y$-plane and coordinate system, quadrants, plotting points, distance formula, graphing an equation, $x$ and $y$ intercepts\\
+
+\noindent \textbf{Student Learning Outcomes:}
+\begin{enumerate}
+\item Students will be able to plot points in an $x,y$-plane using a coordinate system.
+\item Students will be able to determine the distance between two points on an $x,y$-plane using the distances formula.
+\item Students will be able to graph an equation on an $x,y$-plane and determine the $x$ and $y$ intercepts of the equation.
+\end{enumerate}
+
+\hrule 
+\vspace{5mm}
+\noindent \textbf{Rectangular Coordinate System}\\
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=5,
+    axis lines=center,
+    axis on top=true,
+    domain=0:1,
+    ]
+
+   
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+
+\begin{enumerate}
+\item Plot and label the given points on the coordinate axes below.\\
+
+$$A(2,-3) \quad \quad B(-2,0) \quad \quad C(-1,2)$$
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=5,
+    axis lines=center,
+    axis on top=true,
+    domain=0:1,
+    ]
+
+   
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\newpage
+\noindent \textbf{The Distance Formula}\\
+\item Label the points $(1,5)$ and $(4,9)$ on the graph below.  Then draw a line representing the distance between the points and label that line $d$.
+
+\begin{center}
+
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=-2, xmax=6,
+    ymin=-2, ymax=10,
+    axis lines=center,
+    axis on top=true,
+    domain=1:4,
+    ]
+
+\end{axis}
+
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+\item Determine the horizontal distance between the points $(1,5)$ and $(4,9)$:\\
+(This is the distance between the $x$-values.)\\[.3in]
+\item Determine the vertical distance between the points $(1,5)$ and $(4,9)$:\\
+(This is the distance between the $y$-values.)\\[.3in]
+\item How can we use these two values to determine the straight-line distance $d$ between the points $(1,5)$ and $(4,9)$?\\[.3in]
+\item Calculate the distance between the points $(1,5)$ and $(4,9)$.
+
+\end{enumerate}
+\vfill
+
+\noindent \textbf{The Distance Formula:}  The distance between points $(x_1,y_1$ and $(x_2,y_2)$ is given by $$d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$
+
+\newpage
+
+\noindent \textbf{Graph Equations by Plotting Points}\\
+\item Graph the equation $y=x+2$.\\
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=5,
+    axis lines=center,
+    axis on top=true,
+    domain=0:1,
+    ]
+
+   
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\item Graph the equation $y-|x|=-1$.
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=5,
+    axis lines=center,
+    axis on top=true,
+    domain=0:1,
+    ]
+
+   
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+
+\noindent \textbf{Finding $x$ and $y$ Intercepts}\\
+An $x$-intercept is a point $(x,y)$ where a graph crosses the $x$-axis and a $y$-intercept is a point $(x,y)$ where a graph crosses the $y$-axis.\\
+
+\item Determine the $x$-intercept(s) and $y$-intercepts of the previous example, $y-|x|=-1$ and label them on the graph.
+\begin{enumerate}
+\item $x$-intercept(s):\\
+$y$-intercept(s):\\
+\item What do you notice about the intercepts?\\
+\item How are they different?
+\end{enumerate}
+\newpage
+
+\item Determine the $x$-intercepts of $y-|x|=-1$ algebraically.
+\vfill
+\item Determine the $y$-intercept of $y-|x|=-1$ algebraically.
+\vfill
+\end{enumerate}
+
+\noindent \textbf{Student Learning Outcomes Check}
+
+\begin{enumerate}
+\item Can you plot points in an $x,y$-plane using a coordinate system?\\
+\item Are you able to determine the distance between two points on an $x,y$-plane using the distances formula?\\
+\item Can you graph an equation on an $x,y$-plane and determine the $x$ and $y$ intercepts of the equation?
+\end{enumerate}
+
+\noindent \textbf{If any of your answers were no, please ask about these topics in class.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

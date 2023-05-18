@@ -1,0 +1,183 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, array}
+\pagestyle{plain}
+
+\textwidth=6.5in
+\hoffset-1in
+\textheight=9in
+\voffset-1in
+
+\usepackage{enumitem}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{stfloats}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+\newcommand{\boxcolor}{gray!30}
+\usepackage{mdframed}
+\newenvironment{boxme}{\begin{mdframed}[backgroundcolor=\boxcolor,linewidth=0pt,nobreak=true]}{\end{mdframed}}
+\newenvironment{boxthm}{\begin{mdframed}[backgroundcolor=\boxcolor,nobreak=true]}{\end{mdframed}}
+\newenvironment{boxdef}{\begin{mdframed}[backgroundcolor=\boxcolor,linewidth=0pt,nobreak=true]}{\end{mdframed}}
+
+
+
+
+\begin{document}
+
+
+\noindent MATH 1113   \hfill 5.1 - Fundamental Trigonometric Identities\\
+
+
+
+\noindent \textbf{Topics:}  inverse trig functions\\
+
+\noindent \textbf{Student Learning Outcomes:}
+\begin{enumerate}
+\item Students will be able to simplify trigonometric expressions.
+\item Students will be able to verify trigonometric identities.
+
+\end{enumerate}
+
+\hrule 
+\vspace{5mm}
+
+\section{Simplifying Trigonometric Expressions}
+
+\begin{boxthm}
+{\bf Fundamental Trigonometric Identities}
+
+Reciprocal Identities
+
+$$\sin x =\frac{1}{\csc x} \hspace{2cm}\cos x = \frac{1}{\sec x}\hspace{2cm}\tan x = \frac{1}{\cot x}$$
+
+$$\csc x =\frac{1}{\sin x} \hspace{2cm}\sec x = \frac{1}{\cos x}\hspace{2cm}\cot x = \frac{1}{\tan x}$$
+
+Quotient Identities
+
+$$\tan x = \frac{\sin x}{\cos x} \hspace{3cm} \cot x = \frac{\cos x}{\sin x}$$
+
+Pythagorean Identities
+
+$$\sin^2 x + \cos^2 x=1 \hspace{2cm}\tan^2 x +1 = \sec^2 x \hspace{2cm}1+\cot^2 x = \csc^2 x$$
+
+Even and Odd Identities
+
+$$\sin( -x) =-\sin x\hspace{2cm}\cos( -x) = \cos x\hspace{2cm}\tan(- x) = -\tan x$$
+
+$$\csc( -x) =-\csc x\hspace{2cm}\sec( -x) = \sec x\hspace{2cm}\cot(- x) = -\cot x$$
+
+\end{boxthm}
+
+{\bf Note:} It is often helpful to notice alternative forms of Pythagorean Identities, such as $\sin^2 x = 1-\cos^2 x$ or $\cos^2 x = 1-\sin^2 x$.
+
+
+
+
+\begin{enumerate}
+\vspace{-.1in}
+\item Simplify each of the following. Write the final form with no fractions or products.
+
+\begin{enumerate}
+\item $\tan(x) \cos^2(x) \sec(x)$
+\vfill
+
+
+\newpage
+
+\item $\displaystyle \frac{\cos (\theta)}{1+\sin (\theta)}+\tan (\theta)$
+\vfill
+
+%\item $\displaystyle \frac{\tan^2 (t) - 1}{\tan (t) \sin( t) + \sin (t)}$
+%\vfill
+
+\end{enumerate}
+
+\section{Verify Trigonometric Identities}
+\begin{boxthm}
+{\bf Trigonometric Identities}
+
+An {\bf identity} is an equation which it is true for all values of x for which the expressions on the left and right are defined.
+
+\vspace{0.5cm}
+
+{\bf Guidelines for proving Trigonometric Identities:}
+\begin{enumerate}
+\item Work with one side of the equation (usually the more complicated side) and keep the other side in mind as your final goal.
+
+\item Look for opportunities to apply the fundamental identities.
+
+\begin{itemize}
+
+\item If the expression is a product or quotient of factors, consider the reciprocal and quotient identities.
+
+\item If squared terms are present, look to see if the terms can be grouped in one of the forms of a Pythagorean identity.
+
+\item If an expression involves a negative argument, consider using the even or odd function identities.
+
+\end{itemize}
+
+\item Apply basic algebraic techniques such as factoring, multiplying terms, combining like terms, and writing fractions with a common denominator.
+
+\item Consider writing expressions explicitly in terms of sine and cosine.
+
+\end{enumerate}
+
+\end{boxthm}
+
+\newpage
+
+\item Prove that each of the following equations is an identity. (Note: The {\bf entire} proof is your answer.)
+\begin{enumerate}
+\item $\displaystyle \frac{\sin(-x)\cot(-x)}{\cos x} = 1$
+\vfill
+
+\item $\displaystyle \frac{1}{1-\cos (x)}-\frac{1}{1+\cos (x)} = 2\cot (x)\csc (x)$
+\vfill
+\vfill
+\newpage
+
+\item $\displaystyle 1 - \frac{\sin^2 t}{1+\cos t} = \cos t$
+\vfill
+
+\item $\displaystyle \frac{\cot x}{\csc x}-\frac{\csc x}{\cot x} = -\sin x \tan x$
+\vfill
+
+\newpage
+
+%\item $\displaystyle \frac{1}{1+\sin x}+\frac{1}{1-\sin x} = 2\sec^2 x$
+%\vfill
+
+\item $\displaystyle \frac{\sin x}{\csc x - \cot x} = 1+\cos x$
+\vfill
+
+
+\end{enumerate}
+
+
+\end{enumerate}
+\vfill
+\noindent \textbf{Student Learning Outcomes Check}
+
+\begin{enumerate}
+\item Are you able to simplify trigonometric expressions?
+\item Are you able to verify trigonometric identities?
+
+\end{enumerate}
+
+\noindent \textbf{If any of your answers were no, please ask about these topics in class.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

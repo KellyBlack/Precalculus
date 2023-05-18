@@ -1,0 +1,173 @@
+
+
+\actTitle{Worksheet 3.4}
+
+
+\noindent \textbf{Instructions:}  Work together in groups of  3 or 4 to complete the following problems.
+
+\noindent CAUTION: There is NO RULE for breaking down $\log_a(u+w)$ or $\log_a(u-w)$.  
+
+
+\begin{enumerate}
+
+\item Let $M=\log_b(x)$ and $N=\log_b(y)$.
+\begin{enumerate}
+\item Write the given equations in exponential form.\vfill
+\item Show that $xy=b^{M+N}$.\vfill
+\item Write the expression $xy=b^{M+N}$ in logarithmic form.\vfill
+\item Substitute for $M$ and $N$.\vfill
+\item What did you just find?
+\vfill
+\end{enumerate}
+
+\item Let $M=\log_b(x)$ and $N=\log_b(y)$.  Use the process above to show the Quotient Property of Logarithms is true.
+$$\log_b\Big(\frac{x}{y}\Big)=\log_b(x)-\log_b(y)$$
+\vfill
+\vfill
+\vfill
+
+
+\newpage
+
+\item Expand the following to express in terms of logarithms of $x$, $y$, $z$, or $w$.
+\begin{enumerate}
+\item $\log_4(xz)$ \\[.2in]
+%\item $\ln(\sqrt[7]{x^5})$
+\item $\log_2\left( \dfrac{x}{y} \right)$ \\[.2in]
+\item $\ln\left( \dfrac{w^2z^3}{y^2\sqrt[5]{x}} \right)$ \\[1in]
+%\item $\log(z \sqrt[5]{x^7y^3})$
+\end{enumerate}
+
+
+
+\item Condense the following to express as a single logarithm.
+\begin{enumerate}
+%\item $\log_3(x)+\log_3(4y^2)$
+\item $\log_7(4x^5)-\log_7(x^2)$ \\[.5in]
+\item $-4\Bigg (\ln(2)-\ln(7)\Bigg )+5\ln(3)$ \\[.7in]
+\item $7 \log_8 (x) - 3 \log_8(2x+3) + 2\log_8(x-3)$ \\[1in]
+%\item  $\dfrac{1}{4} \ln(x y^2) + \dfrac{1}{3} \ln(y^5 \sqrt{x} )-3\ln\left(\dfrac{z}{y}\right)$
+
+\end{enumerate}
+
+
+
+
+\newpage
+
+
+\item Rewrite the function without using any logarithms.
+\begin{enumerate}
+\item $ \displaystyle f(x) = 10 \ln(e^{-7+2x})$ \\[.5in]
+\item $\displaystyle f(x)=3^{\log_3(8)-5 \log_3(x^2+1)}$ \\[1in]
+
+\item $f(x) = \log ({10}^{4x+y}{100}^{y-x})$ \\[1in]
+\end{enumerate}
+
+
+\item Use the given approximations to approximate the value of the following logarithms.
+$$\log_b(2)\approx 0.356 \quad \quad \quad \quad \log_b(3)\approx 0.565 \quad \quad \quad \quad \log_b(5)\approx 0.827$$
+
+\begin{enumerate}
+\item $\log_b(15)$\vfill
+\item $\log_b(10)$\vfill
+\item $\log_b(81)$\vfill
+\item $\displaystyle \log_b(\frac{15}{2})$\vfill
+\end{enumerate}
+
+
+
+
+\newpage
+
+\item  For each of the following functions, determine whether or not its graph is shown below.
+
+\begin{multicols}{3}
+\begin{enumerate}
+	\item $y=2^x+3$
+	\item $y=\ln(x-2)$
+	\item $y = 2^{-x}+3$
+	\item $y=e^{-x}-3$
+	\item $y=-\ln(x-2)$
+	\item $y=-\log_2(x+3)-4$
+\end{enumerate}	
+\end{multicols}
+
+
+\begin{center}
+\begin{tikzpicture}[y=.8cm, x=.8cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-8, -8) grid (8, 8);
+ 	%% Draw the axes
+	\draw[thick,<->] (-8.5,0) -- coordinate (x axis mid) (8.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-8.5) -- coordinate (y axis mid) (0,8.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-8,...,-1,1,2,...,8} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor = south east] {\tiny $\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-8,...,-1,1,2,...,8} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny $\x$};
+    }
+    %% Draw the function.
+    \begin{scope}
+%         \draw[very thick,blue] (-3,2) -- (1,1);
+%         \draw[very thick,blue] (3.05,1.05) -- (4,3);
+%         \draw[very thick,blue] (1.1,4) -- (3,4);
+    %semi-circle
+         %\draw[very thick, blue] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+         %\draw[ultra thick, blue, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+         \draw[ultra thick, blue, <->, domain=-7.75:2.25] plot[samples=100] (\x, {2^\x+3});
+         \draw[ultra thick, blue, dotted, domain=-7.75:7.75] plot[samples=100] (\x, 3);
+         \draw[ultra thick, red, <->, domain=2.0005:7.75] plot[samples=100] (\x, {ln(\x-2)});
+         \draw[ultra thick, red, dotted, range=-7.75:7.75] plot[samples=100] (2,-7.75)--(2,7.75);
+         \draw[ultra thick, orange, <->, domain=-2.2:7.75] plot[samples=100] (\x, {e^-\x-3});
+         \draw[ultra thick, orange, dotted, domain=-7.75:7.75] plot[samples=100] (\x, -3);
+         \draw[ultra thick, purple, <->, domain=-2.999:7.75] plot[samples=100] (\x, {-log2(\x+3)-4});
+         \draw[ultra thick, purple, dotted, range=-7.75:7.75] plot[samples=100] (-3,-7.75)--(-3,7.75);
+
+           %dots
+%         \fill[blue] (-3, 2) circle[radius=0.5ex];
+%         \fill[blue] (1,1) circle[radius=0.5ex];
+%         \fill[blue] (4,3) circle[radius=0.5ex];
+%         \draw[very thick, blue] (3,1) circle[radius=0.5ex];
+%         \fill[blue] (3,4) circle[radius=0.5ex];
+%         \draw[very thick, blue] (1,4) circle[radius=0.5ex];
+
+
+    \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+\end{tikzpicture}
+\end{center}
+
+
+
+
+
+\item Use the change-of-base formula to write $\Big(\log_2(5)\Big)\Big(\log_5(9)\Big)$ as a single logarithm.
+\vfill
+
+
+
+
+
+
+
+
+
+
+  
+
+
+\end{enumerate}
+

@@ -1,0 +1,420 @@
+
+
+\actTitle{Worksheet 3.3}
+
+
+\noindent \textbf{Instructions:}  Work together in groups of  3 or 4 to complete the following problems.
+
+
+
+
+\begin{enumerate}
+\item Write the following in exponential form.
+ $$\log_3(x)=9   \quad \quad \quad \quad \log_2(8)=x   \quad \quad \quad \quad \log_2(y)=5  \quad \quad  \quad \quad \log_5(y)=2$$
+\vfill
+\item Write the following in logarithmic form.
+ $$y=3^4  \quad \quad \quad \quad \quad \quad m=4^2  \quad \quad \quad \quad \quad \quad 64=4^x \quad \quad \quad \quad  \quad \quad 32=x^5$$
+\vfill
+\item Solve the following by first rewriting the equation in exponential form.
+\begin{enumerate}
+\item $\log_3(x)=4$
+\vfill
+\vfill
+\item $\log_{m}(81)=4$
+\vfill
+\vfill
+\item $\displaystyle \log_2(\frac{x}{2})=5$
+\vfill
+\vfill
+\item $\log_2(4x)=5$
+\vfill
+\vfill
+\end{enumerate}
+
+
+
+\newpage
+\item Determine the inverse of the following functions.  (Hint:  you will need to rewrite in logarithmic or exponential form after switching $x$ and $y$.)  Then determine the domain and range of the function and its inverse.
+\begin{enumerate}
+\item $f(x)=\log_3(x)$ \quad \quad \quad $f^{-1}(x)=$
+\begin{flushright}
+ Domain of $f(x)$:  \quad \quad \quad\quad\quad\quad Range of $f(x)$:\quad\quad\quad\quad \vfill
+Domain of $f^{-1}(x)$:   \quad \quad\quad\quad\quad Range of $f^{-1}(x)$:\quad\quad\quad\quad
+\end{flushright}
+\vfill
+\item $f(x)=\log_5(x+3)$  \quad \quad \quad $f^{-1}(x)=$
+\begin{flushright}
+Domain of $f(x)$:  \quad \quad \quad\quad\quad\quad Range of $f(x)$:\quad\quad\quad\quad \vfill
+Domain of $f^{-1}(x)$:   \quad \quad\quad\quad\quad Range of $f^{-1}(x)$:\quad\quad\quad\quad
+\end{flushright}
+
+\vfill 
+\item $f(x)=\ln(7x-4)$  \quad \quad \quad $f^{-1}(x)=$
+\begin{flushright}
+Domain of $f(x)$:  \quad \quad \quad\quad\quad\quad Range of $f(x)$:\quad\quad\quad\quad \vfill 
+Domain of $f^{-1}(x)$:   \quad \quad\quad\quad\quad Range of $f^{-1}(x)$:\quad\quad\quad\quad
+\end{flushright}
+
+\newpage
+
+\vfill
+\item $\displaystyle f(x)=4^{x+3}$  \quad \quad \quad $f^{-1}(x)=$
+\begin{flushright}
+Domain of $f(x)$:  \quad \quad \quad\quad\quad\quad Range of $f(x)$:\quad\quad\quad\quad \vfill
+Domain of $f^{-1}(x)$:   \quad \quad\quad\quad\quad Range of $f^{-1}(x)$:\quad\quad\quad\quad
+\end{flushright}
+
+\vfill
+\item $f(x)=e^{3x}$  \quad \quad \quad $f^{-1}(x)=$
+\begin{flushright}
+Domain of $f(x)$:  \quad \quad \quad\quad\quad\quad Range of $f(x)$:\quad\quad\quad\quad \vfill 
+Domain of $f^{-1}(x)$:   \quad \quad\quad\quad\quad Range of $f^{-1}(x)$:\quad\quad\quad\quad
+\end{flushright}
+
+\vfill
+\end{enumerate}
+  
+\item Graph $f(x)=2^x$ and $f^{-1}(x)=\log_2(x)$ on the rectangular coordiantes below and include their asymptotes.  
+
+\begin{itemize}
+\begin{multicols}{2}
+\item[(a)] $f(x)=2^x$
+
+\begin{tikzpicture}[y=.5cm, x=.5cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+    %% Draw the function.
+ %   \begin{scope}
+ %        \draw[very thick,black] (-3,2) -- (1,1);
+ %        \draw[very thick,black] (3.05,1.05) -- (4,3);
+    %semi-circle
+  %       \draw[very thick, black] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+     %    \draw[ultra thick, black, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+     %dots
+     %  \fill[black] (-3, 2) circle[radius=0.5ex];
+     %   \fill[black] (1,1) circle[radius=0.5ex];
+     %    \fill[black] (4,3) circle[radius=0.5ex];
+     %     \draw[very thick, black] (3,1) circle[radius=0.5ex];
+
+
+   % \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+  \end{tikzpicture}
+
+\vspace{1in}
+
+
+\item[(b)] $f^{-1}(x)=\log_2(x)$ 
+
+\begin{tikzpicture}[y=.5cm, x=.5cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+    %% Draw the function.
+ %   \begin{scope}
+ %        \draw[very thick,black] (-3,2) -- (1,1);
+ %        \draw[very thick,black] (3.05,1.05) -- (4,3);
+    %semi-circle
+  %       \draw[very thick, black] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+     %    \draw[ultra thick, black, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+     %dots
+     %  \fill[black] (-3, 2) circle[radius=0.5ex];
+     %   \fill[black] (1,1) circle[radius=0.5ex];
+     %    \fill[black] (4,3) circle[radius=0.5ex];
+     %     \draw[very thick, black] (3,1) circle[radius=0.5ex];
+
+
+   % \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+  \end{tikzpicture}
+
+
+\end{multicols}
+\end{itemize}
+
+\vfill
+
+
+\newpage
+
+\newpage
+
+\item Graph each of the following transformed logarithmic functions.  
+
+\begin{itemize}
+
+\item[(a)] $f(x)=\log_2(-x+3)+1$
+
+\begin{tikzpicture}[y=.5cm, x=.5cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+    %% Draw the function.
+ %   \begin{scope}
+ %        \draw[very thick,black] (-3,2) -- (1,1);
+ %        \draw[very thick,black] (3.05,1.05) -- (4,3);
+    %semi-circle
+  %       \draw[very thick, black] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+     %    \draw[ultra thick, black, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+     %dots
+     %  \fill[black] (-3, 2) circle[radius=0.5ex];
+     %   \fill[black] (1,1) circle[radius=0.5ex];
+     %    \fill[black] (4,3) circle[radius=0.5ex];
+     %     \draw[very thick, black] (3,1) circle[radius=0.5ex];
+
+
+   % \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+  \end{tikzpicture}
+
+\vspace{1in}
+
+
+\item[(b)] $f^{-1}(x)=2\log_3(x+4)-1$ 
+
+\begin{tikzpicture}[y=.5cm, x=.5cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+    %% Draw the function.
+ %   \begin{scope}
+ %        \draw[very thick,black] (-3,2) -- (1,1);
+ %        \draw[very thick,black] (3.05,1.05) -- (4,3);
+    %semi-circle
+  %       \draw[very thick, black] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+     %    \draw[ultra thick, black, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+     %dots
+     %  \fill[black] (-3, 2) circle[radius=0.5ex];
+     %   \fill[black] (1,1) circle[radius=0.5ex];
+     %    \fill[black] (4,3) circle[radius=0.5ex];
+     %     \draw[very thick, black] (3,1) circle[radius=0.5ex];
+
+
+   % \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+  \end{tikzpicture}
+  \newpage
+
+\item[(c)] $f(x)=-3\ln(x-2)$
+
+\begin{tikzpicture}[y=.5cm, x=.5cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+    %% Draw the function.
+ %   \begin{scope}
+ %        \draw[very thick,black] (-3,2) -- (1,1);
+ %        \draw[very thick,black] (3.05,1.05) -- (4,3);
+    %semi-circle
+  %       \draw[very thick, black] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+     %    \draw[ultra thick, black, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+     %dots
+     %  \fill[black] (-3, 2) circle[radius=0.5ex];
+     %   \fill[black] (1,1) circle[radius=0.5ex];
+     %    \fill[black] (4,3) circle[radius=0.5ex];
+     %     \draw[very thick, black] (3,1) circle[radius=0.5ex];
+
+
+   % \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+  \end{tikzpicture}
+
+\vspace{1in}
+
+
+\item[(d)] $f^{-1}(x)=\log_5(5-x)$ 
+
+\begin{tikzpicture}[y=.5cm, x=.5cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+    %% Draw the function.
+ %   \begin{scope}
+ %        \draw[very thick,black] (-3,2) -- (1,1);
+ %        \draw[very thick,black] (3.05,1.05) -- (4,3);
+    %semi-circle
+  %       \draw[very thick, black] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+     %    \draw[ultra thick, black, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+     %dots
+     %  \fill[black] (-3, 2) circle[radius=0.5ex];
+     %   \fill[black] (1,1) circle[radius=0.5ex];
+     %    \fill[black] (4,3) circle[radius=0.5ex];
+     %     \draw[very thick, black] (3,1) circle[radius=0.5ex];
+
+
+   % \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+  \end{tikzpicture}
+
+
+\end{itemize}
+
+\vfill
+
+
+
+\newpage
+
+\noindent Since $f(x)=b^x$ and $g(x)=\log_b(x)$ are inverses, $$ f(g(x))=b^{\log_b(x)}=x \quad \quad \quad \quad g(f(x))=\log_b(b^x)=x.$$
+
+
+
+\item Evaluate the following expressions.
+\begin{enumerate}
+\item $\log_{10}(1000)=$
+\vfill
+\item $\log_3(27)=$
+\vfill
+\item $\log_4(1)=$
+\vfill
+\item $\displaystyle \log_2(\frac{1}{4})=$
+\vfill
+\item $3^{\log_3(12)}=$
+\vfill
+\item $e^{\ln(4)}=$
+\vfill
+\item $64^{\log_4(2)}=$
+\vfill
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+\end{enumerate}
+

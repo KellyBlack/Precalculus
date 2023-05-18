@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, array}
+\pagestyle{plain}
+
+\textwidth=6.5in
+\hoffset-1in
+\textheight=9in
+\voffset-1in
+
+\usepackage{enumitem}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{stfloats}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+\newcommand{\boxcolor}{gray!30}
+\usepackage{mdframed}
+\newenvironment{boxme}{\begin{mdframed}[backgroundcolor=\boxcolor,linewidth=0pt,nobreak=true]}{\end{mdframed}}
+\newenvironment{boxthm}{\begin{mdframed}[backgroundcolor=\boxcolor,nobreak=true]}{\end{mdframed}}
+\newenvironment{boxdef}{\begin{mdframed}[backgroundcolor=\boxcolor,linewidth=0pt,nobreak=true]}{\end{mdframed}}
+
+
+
+
+\begin{document}
+
+
+\noindent MATH 1113   \hfill 2.2 - Introduction to Polynomial Functions\\
+
+
+
+\noindent \textbf{Topics:}  polynomials, leading term test, intermediate value theorem\\
+
+\noindent \textbf{Student Learning Outcomes:}
+\begin{enumerate}
+\item Students will be able to determine the end behavior of a polynomial function.
+\item Students will be able to identify zeros and multiplicities of zeros.
+\item Students will be able apply the Intermediate Value Theorem.
+
+\end{enumerate}
+
+\hrule 
+\vspace{5mm}
+
+\section{End Behavior of Polynomial Functions}
+
+\begin{boxthm}
+{\bf Definition of a Polynomial Function}
+Let $n$ be a positive, whole number and $a_n,a_{n-1}, a_{n-2}...,a_1,a_0$ be real numbers, where $a_n\neq 0$.  Then a function defined by $$f(x)=a_nx^n+a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+...+a_1x+a_0$$ is called a \textbf{polynomial function of degree $n$}.
+
+\end{boxthm}
+
+
+Examples:
+$$f(x)=5x^2+8x^4 \quad \quad \quad g(x)=\frac{x^2+3}{x^2} \quad \quad \quad  h(x)=4x^5-3x^4+2x^2 \quad \quad \quad k(x)=4\sqrt{x}-\frac{3}{x} +x^2$$
+
+\vfill
+We have already studied several special cases of polynomial functions:
+
+$$f(x)=2 \quad \quad \quad g(x)=3x+1 \quad \quad \quad  h(x)=4x^2+7x-1$$
+
+
+\vfill
+
+Polynomial functions of degree 2 or higher have graphs that are smooth and continuous.\\[.5in]
+
+
+\newpage
+
+\includegraphics[scale=.95]{poly1}
+\begin{enumerate}
+
+\item Use the leading term test to determine the function's end behavior.
+
+
+\begin{enumerate}
+\item $f(x)=-7x^5+2x^3+7x+5$
+\vfill
+
+\item $f(x)=\frac{1}{4}x(2x-3)^3(x+4)^2$
+\vfill
+\vfill
+\end{enumerate}
+
+\section{Identify Zeros and Multiplicities of Zeros}
+\begin{boxthm}
+{\bf Multiplicities and $x$-Intercepts}
+If $f$ is a polynomial function, then the values of $x$ for which $f(x)=0$ are called the \textbf{zeros (roots or solutions)} of $f(x)$.  Each real root of the polynomial equations appears as an $x$-intercept of the graph of the polynomial function.\\
+\\
+If $r$ is a zero of \textbf{even multiplicity}, then the graph \textbf{touches} the $x$-axis and \textbf{turns around} at $r$.  If $r$ is a zero of \textbf{odd multiplicity}, then the graph \textbf{crosses} the $x$-axis at $r$.  Regardless of whether the multiplicity of a zero is even or odd graphs tend to flatten out near zeros with multiplicity greater than one.
+\end{boxthm}
+\newpage
+
+
+
+\item Find the zeros for each polynomial function and give the multiplicity for each.  State whether the graph crosses the $x$-axis, or touches the $x$-axis and turns around, at each zero.
+
+\begin{enumerate}
+\item $f(x)=4(x+3)(x-7)^2$
+\vfill
+\item $f(x)=x^3-6x^2+9x$
+\vfill
+\end{enumerate}
+
+
+\newpage
+
+\section{Apply the Intermediate Value Theorem}
+\begin{boxthm}
+{\bf Intermediate Value Theorem}
+Let $f$ be a polynomial function.  For $a<b$, if $f(a)$ and $f(b)$ have opposite signs, then $f$ has at least one zero on the interval $[a,b]$.
+\end{boxthm}
+
+\item Use the Intermediate Value Theorem to determine if $f(x)=4x^4-8x^2+2$ has a real zero on the interval $[-1,0]$.
+\vfill
+
+
+\item Sketch a graph of $f(x)=x^3-9x$
+\vfill
+\vfill
+\vfill
+
+
+
+\end{enumerate}
+
+\noindent \textbf{Student Learning Outcomes Check}
+
+\begin{enumerate}
+\item Are you able to determine the end behavior of a polynomial function?
+\item Can you identify zeros and multiplicities of zeros?
+\item Are you able apply the Intermediate Value Theorem?
+\end{enumerate}
+
+\noindent \textbf{If any of your answers were no, please ask about these topics in class.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
