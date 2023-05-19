@@ -63,27 +63,27 @@
 \newpage
 
 \item Suppose that the three circles drawn below have radii of length 1, 2, and 3.  For each pair of points given below, find the shortest path connecting the points.
-\vspace{-1in}
+%\vspace{-1in}
 \begin{center}
-	\labellist
-		\large\hair 2pt
-		\pinlabel (1) at 630 400
-		\pinlabel {\huge$\bullet$} at 612 397
-		\pinlabel (2) at 460 680
-		\pinlabel {\huge$\bullet$} at 460 660
-		\pinlabel (3) at 150 500
-		\pinlabel {\huge$\bullet$} at 130 498
-		\pinlabel (4) at 185 210
-		\pinlabel {\huge$\bullet$} at 205 220
-		\pinlabel (5) at 290 510
-		\pinlabel {\huge$\bullet$} at 280 495
-		\pinlabel (6) at 395 325
-		\pinlabel {\huge$\bullet$} at 380 325
-	\endlabellist
-	\includegraphics[width=\textwidth]{radial_graph}
+  \begin{tikzpicture}[scale=8]
+    \foreach \t in {0,15,30,...,345} {
+      \draw[-] (0,0) -- (\t:1);
+    }   
+    \draw (0,0) circle(1);
+    \draw (0,0) circle(0.66);
+    \draw (0,0) circle(0.33);
+    \filldraw[black] (1,0) circle (0.02) node[anchor=west] {(1)};
+    \filldraw[black] (60:1) circle (0.02) node[anchor=west] {(2)};
+    \filldraw[black] (150:0.66) circle (0.02) node[anchor=west] {(3)};
+    \filldraw[black] (240:0.66) circle (0.02) node[anchor=west] {(4)};
+    \filldraw[black] (105:0.33) circle (0.02) node[anchor=south west] {(5)};
+    \filldraw[black] (315:0.33) circle (0.02) node[anchor=west] {(6)};
+  \end{tikzpicture}
 \end{center}
 
-\vspace{-1in}
+
+
+%\vspace{-1in}
 \begin{enumerate}
 \begin{multicols}{3}
 	\item From (1) to (2).
