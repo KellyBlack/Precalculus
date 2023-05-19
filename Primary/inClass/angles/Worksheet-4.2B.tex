@@ -115,7 +115,58 @@ $\csc(t)=$ &  $\sec(t)=$   & $\cot(t)=$    \\
 \end{enumerate}
 \newpage
 
-\item If you plan on using the unit circle instead of special triangles and the chart for angles on the $x$ and $y$ axes, start memorizing the angles of the unit circle in radians as well as the points along the unit circle.\\
-\includegraphics[scale=.6]{blankunitcircle}
+\item If you plan on using the unit circle instead of special triangles and the chart for angles on the $x$ and $y$ axes, start memorizing the angles of the unit circle in radians as well as the points along the unit circle.
 \end{enumerate}
 
+\noindent
+\begin{tikzpicture}[scale=5]
+  \draw[step=0.5cm,black, dotted] (-1.1,-1.1) grid (1.1,1.1); % very thin,
+  \draw[->] (-1.1,0) -- (1.1,0) node[anchor=west] {$x$};
+  \draw[->] (0,-1.1) -- (0,1.1) node[anchor=south] {$y$};
+  \draw (0,0) circle(1);
+
+  \foreach \x in {-1,-0.5,0.5,1} {
+    \draw (\x cm,1pt) -- (\x cm,-1pt);
+    %%\draw (\x cm,-1pt) node[anchor=north,fill=white] {$\x$};
+  }
+
+  \foreach \y in {-1,-0.5,0.5,1}{
+    \draw (-1pt,\y cm) -- (1pt,\y cm);
+    %%\draw (-1pt,\y cm) node[anchor=east,fill=white] {$\y$};
+  }
+  
+  %\draw[green,thick] (.2cm,0cm) arc [start angle=0, end angle=0,radius=.2cm];
+  \draw[blue!80,thick] (0,0) -- (0:1)
+     node[black,anchor=south west] {(\rule{1cm}{0.025cm},\rule{1cm}{0.025cm})};
+  \node[black,anchor=north west] at (0:1) {$\theta=$};
+  \fill[black] (0:1) circle (0.02);
+
+  \foreach \y in {30,45,60,90}{
+    \draw[blue!80,thick] (0,0) -- (\y:1)
+        node[black,anchor=south west] {(\rule{1cm}{0.025cm},\rule{1cm}{0.025cm}), $\theta=$};
+    \fill[black] (\y:1) circle (0.02);
+  }
+  \foreach \y in {120,135,150,180}{
+    \draw[blue!80,thick] (0,0) -- (\y:1)
+        node[black,anchor=south east] {$\theta=$~~~~~~~~~,(\rule{1cm}{0.025cm},\rule{1cm}{0.025cm})};
+    \fill[black] (\y:1) circle (0.02);
+  }
+  \foreach \y in {210,225,240,270}{
+    \draw[blue!80,thick] (0,0) -- (\y:1)
+        node[black,anchor=north east] {$\theta=$~~~~~~~~~,(\rule{1cm}{0.025cm},\rule{1cm}{0.025cm})};
+    \fill[black] (\y:1) circle (0.02);
+  }
+  \foreach \y in {300,315,330}{
+    \draw[blue!80,thick] (0,0) -- (\y:1)
+        node[black,anchor=north west] {(\rule{1cm}{0.025cm},\rule{1cm}{0.025cm}),$\theta=$};
+    \fill[black] (\y:1) circle (0.02);
+  }
+
+
+  \foreach \x in {0.75,-0.95} {
+    \foreach \y in {-1.35,1.35} {
+      \node[black,thick,anchor=south west]  at (\x,\y) {Positive:};
+      \node[red!80,thick,anchor=north west] at (\x,\y) {Negative:};
+    }
+  }
+\end{tikzpicture}

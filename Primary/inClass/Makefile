@@ -23,6 +23,8 @@ force:
 view:	labManual.pdf
 	/usr/bin/okular labManual.pdf &
 
+testing.pdf:
+	$(LATEX) testing
 
 clean:
 	rm -f *.aux *.nav *.snm *.toc *.log *.dvi *.out *~ functions/*.aux functions/*~ exponentials/*.aux exponentials/*~ trig/*.aux trig/*~ angles/*~ angles/*.aux

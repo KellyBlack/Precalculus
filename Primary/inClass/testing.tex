@@ -1,0 +1,91 @@
+\documentclass[12pt,twoside,letterpaper]{book}
+%\usepackage{layout}
+%\usepackage{makeidx}
+\RequirePackage{verbatim}
+%\RequirePackage{alltt}
+\usepackage{ifpdf}
+\usepackage{etoolbox}
+\usepackage{multicol}
+\usepackage{dsfont}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{array}
+%\usepackage{wasysym}
+\usepackage{qrcode}
+
+\usepackage{amsmath, amssymb, array}
+\usepackage{enumitem}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{stfloats}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+\usepackage{minipage-marginpar}
+\setlength{\columnsep}{1cm}
+\usepackage{pinlabel} % for pin labels on figure
+
+
+\newcommand{\boxcolor}{gray!30}
+\usepackage{mdframed}
+\newenvironment{boxme}{\begin{mdframed}[backgroundcolor=\boxcolor,linewidth=0pt,nobreak=true]}{\end{mdframed}}
+\newenvironment{boxthm}{\begin{mdframed}[backgroundcolor=\boxcolor,nobreak=true]}{\end{mdframed}}
+\newenvironment{boxdef}{\begin{mdframed}[backgroundcolor=\boxcolor,linewidth=0pt,nobreak=true]}{\end{mdframed}}
+
+
+% Define a toggle that determines if a large or small print version
+% will be printed.
+\newtoggle{largePrint}
+\toggletrue{largePrint}
+\togglefalse{largePrint}
+
+% Define a toggle that determines if solutions are printed. 
+% (Not implemented yet)
+\newtoggle{solutions}
+\toggletrue{solutions}
+\togglefalse{solutions}
+
+\usepackage{graphicx}
+\usepackage[pass]{geometry}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{
+  pdftitle={Recitation Activities for Math 1113, precalculus},
+  pdfsubject={precalculus},
+  pdfauthor={UGA Mathematics Department},
+  pdfkeywords={classroom activities, precalculus},
+  anchorcolor = {blue},
+  colorlinks = {true},
+  runcolor = {black},
+  linkcolor = {red},
+  urlcolor = {black},
+  % pdfpagemode={FullScreen}
+}
+
+\usepackage{tikz}
+\usepackage{pgf}
+\usetikzlibrary{calc,mindmap,backgrounds,arrows,shapes.geometric}
+%\usepackage{pstricks}
+
+
+\pagestyle{myheadings}
+
+%\setlength{\basicoddside}{\oddsidemargin}
+%\setlength{\basicevenside}{\evensidemargin}
+%\setlength{\basicwidth}{\textwidth}
+%\setlength{\basictop}{\topmargin}
+%\setlength{\basicheight}{\textheight}
+
+
+\input{header}
+\setcounter{activity}{0}
+
+\input{latexDefinitions}
+
+\begin{document}
+
+\include{angles/Worksheet-4.2b}
+
+
+\end{document}
