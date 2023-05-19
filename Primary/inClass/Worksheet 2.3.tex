@@ -76,15 +76,61 @@
 \vfill
 
 
-\item Use the graph of $y=x^3+6x^2-7x-60$ to determine a solution of the equation.  Use synthetic division to verify that this number is a solution of the equation.  Then solve $$x^3+6x^2-7x-60=0$$
+\item Use the graph of $y=x^3+6x^2-7x-60$ to determine a solution of
+  the equation
+  $$x^3+6x^2-7x-60=0.$$
+  Use synthetic division to verify that this number is a solution of
+  the equation.
 
-\includegraphics[scale=.6]{poly1}
+    \begin{tikzpicture}[y=0.08cm, x=0.08cm,font=\sffamily]
+
+    \begin{scope}[shift={(0,0)},xscale=20,yscale=0.2]
+      %\draw[xstep = 2,ystep=5, gray, very thin,opacity=0.85] (0,40) grid (16,90);
+      \draw[thick,black,->] (0,0) -- (5.1,0) node[anchor=west] {$x$};
+      \draw[thick,black,->] (0,-125) -- (0,135) node[anchor=south] {$y$};
+
+      %% Label the y axis
+      \foreach \y in {-125,-100,-75,-50,-25,25,50,100,125} {
+        \draw (0.05, \y) -- (-0.05, \y);
+      }
+      %% Label the x axis
+      \foreach \x in {1,2,3,4,5} {
+        \draw (\x,-5) -- (\x,5);
+      }
+
+      \node[black,anchor=south] at (5,0) {5};
+      \node[black,anchor=east] at (0,-125) {-125};
+      \node[black,anchor=east] at (0,125) {125};
+      \node[black,anchor=west] at (0.2,110) {$y=x^3+6x^2-7x-60$};
+    \end{scope}
+
+    \begin{scope}[shift={(0,0)},xscale=20,yscale=0.2]
+      \draw[scale=1.0,domain=-0.2:4.6,smooth,variable=\x,very thick,black,samples=120,<->] 
+            plot ({\x},{\x^3+6*\x^2-7*\x-60});
+    \end{scope}
+
+
+  \end{tikzpicture}
+
 \vfill
 
 \newpage
 
-\item Use the table to determine a solution of the equation.  Use synthetic division to verify that this number is a solution of the equation.  Then solve $$48x^3-110x^2+29x-2=0$$
-\includegraphics[scale=.6]{poly2}
+\item Use the table below to determine a solution of the equation
+  $$48x^3-110x^2+29x-2=0.$$
+  Use synthetic division to verify that this number is a solution of
+  the equation.
+
+  \begin{tabular}[h]{r|rr}
+    x & \multicolumn{2}{l}{$y=48x^3-110x^2+29x-2$} \\ \hline
+    -3 & -2375 \\
+    -2 & -884  \\
+    -1 & -189 \\
+     0 & -2 \\
+     1 & -35 \\
+     2 & 0 \\
+     3 & 391
+  \end{tabular}
 \vfill
 
 \item Use the factor theorem to determine if the given binomial is a factor of the polynomial $f(x)=x^4+11x^3+41x^2+61x+30$.

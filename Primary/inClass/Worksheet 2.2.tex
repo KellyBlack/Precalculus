@@ -320,7 +320,35 @@ $$k(x)=\sin(x+5)-2 \quad \quad \quad \quad j(x)=3(x-1)^3(x+2)^2(x-5) \quad \quad
 
 \newpage
 \begin{center}
-\includegraphics[scale=.6]{heart}
+  \begin{tikzpicture}[y=0.08cm, x=0.08cm,font=\sffamily]
+
+    \begin{scope}[shift={(0,0)},xscale=4,yscale=1]
+      \draw[xstep = 2,ystep=5, gray, very thin,opacity=0.85] (0,40) grid (16,90);
+      \draw[thick,black,->] (-1,40) -- (18,40) node[anchor=west] {$x$};
+      \draw[thick,black,->] (0,39) -- (0,95) node[anchor=south] {$y$};
+
+      %% Label the y axis
+      \foreach \y in {40,50,60,...,90} {
+        \draw (1pt, \y) -- (-1pt, \y) node[anchor=south east] {\tiny$\y$};
+      }
+      %% Label the x axis
+      \foreach \x in {0,4,8,12,16} {
+        \draw (\x,40) -- (\x,39) node[anchor=north,shift={(0.7,0)}] {\tiny$\x$};
+      }
+
+    \end{scope}
+
+    \begin{scope}[shift={(0,0)},xscale=4,yscale=1]
+     \draw[blue,ultra thick,rounded corners]
+          (  1, 67) .. controls +( 20: 1) and +(210:1.5)  .. (4,72)
+          (4.0, 72) .. controls +(-130:0.5) and +(165:1)  .. (9,64)
+          (9,64)    .. controls +(30:1.0) and +(230:1.0) .. (11,67)
+          (11,67)   .. controls +(15:1.0) and +(210:1.0) .. (13,69)
+          (13,69)   .. controls +(-30:0.5) and +(110:1)    .. (15,60)
+          ;
+     \end{scope}
+  \end{tikzpicture}
+
 \end{center}
 \item The graph shows the heart rate of a person watching a short film, where $x$ represents time in minutes, and $y$ represents heart rate in beats per minute.  Answer the following questions.
 \begin{enumerate}
