@@ -26,8 +26,29 @@ The \underline{slope of a line} is $m = \dfrac{y_2-y_1}{x_2-x_1}$.  \\ \hline
 
 
 \begin{enumerate}
-\item Sketch the line through the pair of points $P(4,2)$ and $Q(-3,5 )$, and find the slope of the line. \\
-\scalebox{0.3}{\includegraphics{bigaxes}} 
+\item Sketch the line through the pair of points $P(4,2)$ and $Q(-3,5
+)$, and find the slope of the line. 
+
+      \begin{tikzpicture}[y=0.5cm, x=0.5cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+          %% ticks
+          \draw[xstep = 1, ystep=1.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-6.0,-6.0) grid ( 6.0, 6.0);
+             %% axis
+           \draw[ultra thick,->] (-6.5,0) -- coordinate (x axis mid) (6.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
+
+           %\foreach \y in {-1,1,...,4} {
+           %   \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=1,anchor=west] {$\y$};
+           % }
+           %\foreach \x in {-3,-2,-1,1,2,3} {
+           %   \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+           % }
+
+          \end{scope}
+        \end{tikzpicture}
 
 \hspace{-.3in} \begin{tabular}{| l |}\hline
  \noindent The \underline{point-slope equation} for the line through the point $(x_1,y_1)$ with slope $m$ is \\
@@ -65,21 +86,59 @@ The \underline{slope of a line} is $m = \dfrac{y_2-y_1}{x_2-x_1}$.  \\ \hline
 \end{tabular} %\\[.5in]
 
 \vspace{-.1in}
-\item Determine a point-slope equation for the line through $(-1,2)$ which is parallel to the line $2x + 3y - 5 = 0$ and graph the equation.\\
-\scalebox{0.3}{\includegraphics{bigaxes}} 
-\\[1in]
+\item Determine a point-slope equation for the line through $(-1,2)$ which is parallel to the line $2x + 3y - 5 = 0$ and graph the equation.
+
+      \begin{tikzpicture}[y=0.5cm, x=0.5cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+          %% ticks
+          \draw[xstep = 1, ystep=1.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-6.0,-6.0) grid ( 6.0, 6.0);
+             %% axis
+           \draw[ultra thick,->] (-6.5,0) -- coordinate (x axis mid) (6.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
+
+           %\foreach \y in {-1,1,...,4} {
+           %   \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=1,anchor=west] {$\y$};
+           % }
+           %\foreach \x in {-3,-2,-1,1,2,3} {
+           %   \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+           % }
+
+          \end{scope}
+        \end{tikzpicture}
 
 
 
-
+\clearpage
 
 \hspace{-.3in}\begin{tabular}{| l |  }
 \hline Perpendicular lines have slopes that are ``negative reciprocals" of each other. If $m_1$ is the \\ slope of one of the lines, then the slope of the other line must be $-1/m_1$. \\ \hline
 \end{tabular} 
 
-\item Determine an equation of the line through the point $(-3, 1)$ which is perpendicular to the line $2x+4y+7=0$ and graph the equation.\\
-\scalebox{0.3}{\includegraphics{bigaxes}} 
-\\
+\item Determine an equation of the line through the point $(-3, 1)$ which is perpendicular to the line $2x+4y+7=0$ and graph the equation.
+
+      \begin{tikzpicture}[y=0.5cm, x=0.5cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+          %% ticks
+          \draw[xstep = 1, ystep=1.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-6.0,-6.0) grid ( 6.0, 6.0);
+             %% axis
+           \draw[ultra thick,->] (-6.5,0) -- coordinate (x axis mid) (6.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
+
+           %\foreach \y in {-1,1,...,4} {
+           %   \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=1,anchor=west] {$\y$};
+           % }
+           %\foreach \x in {-3,-2,-1,1,2,3} {
+           %   \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+           % }
+
+          \end{scope}
+        \end{tikzpicture}
 
 
 \subsection{Average Rate of Change}
