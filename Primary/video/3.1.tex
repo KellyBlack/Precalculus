@@ -46,29 +46,51 @@
 \subsection{Determine Whether Two Functions are Inverses} ~
 
 
-\noindent \begin{tabular}{ | l  |} \hline
-\noindent \underline{Theorem on Inverse Functions.} Let $f$ be a one-to-one function with domain $D$ and  \\ range $R$. If $g$ is a function with domain $R$ and range $D$, then $g$ is the inverse \\ function of $f$ precisely when both of the following conditions hold:   \\ 
+\noindent \begin{tabular}{ | p{0.8\textwidth} |} \hline \noindent
+\underline{Theorem on Inverse Functions.} Let $f$ be a one-to-one
+function with domain $D$ and range $R$. If $g$ is a function with
+domain $R$ and range $D$, then $g$ is the inverse function of $f$
+precisely when both of the following conditions hold:
+
 $ \star$ \quad $g(f(x))=x$ for every $x$ in $D$, and \\
 $ \star$ \quad $f(g(y))=y$ for every $y$ in $R$.\\ \hline
 \end{tabular} 
 
-\noindent \textbf{Notation:}  "f inverse" is typically written as $f^{-1}$. It is important to note that $f^{-1}$ does NOT mean the same thing as $\dfrac{1}{f}$.
-
+\noindent \textbf{Notation:} "f inverse" is typically written as
+$f^{-1}$. It is important to note that $f^{-1}$ does NOT mean the same
+thing as $\dfrac{1}{f}$.
 
 \item Let $f(x) = x^2+4, \quad x \geq 0$, and let $g(x) = \sqrt{x-4}, \quad x \geq 4 $
-
 \begin{enumerate}
-\item Use the theorem on inverse functions to determine whether $f$ and $g$ are inverses.  \\[2in]
-\item Sketch the graphs of $f$ and $g$ on the same coordinate axes.
+\item Use the theorem on inverse functions to determine whether $f$
+      and $g$ are inverses.
 
-\scalebox{0.5}{\includegraphics{bigaxes}}
+\vfill
 
+\item Sketch the graphs of $f$ and $g$ on the same coordinate axes. \samepage \\
+      \begin{tikzpicture}[y=0.6cm, x=0.6cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+          %% ticks
+          \draw[xstep = 1, ystep=1.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-6.0,-6.0) grid ( 6.0, 6.0);
+             %% axis
+           \draw[ultra thick,->] (-6.5,0) -- coordinate (x axis mid) (6.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
+
+           %\foreach \y in {-1,1,...,4} {
+           %   \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=1,anchor=west] {$\y$};
+           % }
+           %\foreach \x in {-3,-2,-1,1,2,3} {
+           %   \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+           % }
+
+          \end{scope}
+        \end{tikzpicture}
 \end{enumerate}
 
-
-\newpage
-
-
+\clearpage
 
 \subsection{Find the Inverse of a Function} ~
 
