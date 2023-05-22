@@ -86,10 +86,42 @@ Write a formula for $f(x)$. \\
 \end{tabular}
 
 \subsection{Characteristics of a Function}
-\vspace{-.1in} 
-\item Using the graph of the function $g$ below, determine the following. \\
-\begin{tabular}{l l } \begin{tabular}{l} \scalebox{0.3}{\includegraphics{pwgraph}} \end{tabular} &
 
+
+\item Using the graph of the function $g$ below, determine the following. \\
+
+\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+      \begin{tikzpicture}[y=0.75cm, x=0.75cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+          %% ticks
+          \draw[xstep = 1, ystep=1.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-4.0,-1.0) grid ( 4.0, 4.0);
+             %% axis
+           \draw[ultra thick,->] (-4.5,0) -- coordinate (x axis mid) (4.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-1.5) -- coordinate (y axis mid) (0,4.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
+            %% \draw[ultra thick,black] 
+           \draw[ultra thick] plot coordinates
+               {(-4,3) (-3,2) (-1,2) (1,1) (2,3) (3,2) }
+               node[anchor=north west] {\large $g(x)$};
+           \fill[black] (-4,3) circle [radius=0.5ex];
+           %\fill[black] (-3,2) circle [radius=0.3ex];
+           %\fill[black] (-1,2) circle [radius=0.3ex];
+           %\fill[black] ( 1,1) circle [radius=0.3ex];
+           %\fill[black] ( 2,3) circle [radius=0.3ex];
+           \fill[black] ( 3,2) circle [radius=0.5ex];
+
+           %\foreach \y in {-1,1,...,4} {
+           %   \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=1,anchor=west] {$\y$};
+           % }
+           %\foreach \x in {-3,-2,-1,1,2,3} {
+           %   \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+           % }
+
+          \end{scope}
+        \end{tikzpicture}
+&
 \begin{tabular}{l }
  $g(-4)$ \\ \\
  $g(-2)$ \\ \\
@@ -97,6 +129,7 @@ Write a formula for $f(x)$. \\
  all $x$ such that $g(x)<2$ \\[1.5in]
 \end{tabular}
 \end{tabular}
+
 
 
 
