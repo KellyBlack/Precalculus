@@ -262,8 +262,28 @@ compressing the graph vertically by a factor of $1/c$.
 \item For the graph of $y=f(x)$ shown below, sketch the graph of $y =
   |f(x)|$.
   
-\scalebox{0.3}{\includegraphics{sineflip}} 
+  \begin{tikzpicture}[y=0.7cm, x=1.0cm,font=\sffamily]
+    %% ticks
+    \draw[step = 1, gray,dashed] (-4,-3) grid (6,3);
+    %% axis
+    \draw[thick,->] (-4.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,-3.5) -- coordinate (y axis mid) (0,3.5) node[anchor = north east] {$y$};
+    \foreach \y in {-3,-2,-1,1,2,3} {
+      \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+    }
+    \foreach \x in {-4,-2,2,4,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=3,anchor=east] {$\x$};
+    }
 
+    \begin{scope}
+      %% \clip(-4,-1) rectangle (8,5);
+      \draw[scale=1.0,domain=-4:6,smooth,variable=\x,very thick,black,samples=120] 
+            plot ({\x},{2*sin(deg(pi*\x))}) node[anchor=south west] {$f(x)$};
+      \fill[black] (-4,0) circle [radius=0.5ex];
+      \fill[black] ( 6,0) circle [radius=0.5ex];
+    \end{scope}
+
+   \end{tikzpicture}
 
 
 
