@@ -182,8 +182,34 @@ Remember, when talking about function \textbf{values}, we mean
 $y$-values.  So in this section we will determine the relative minimum
 and maximum $y$-values of a function.
 
-\item For the graph of $y=f(x)$ shown.\\
-\scalebox{0.8}{\includegraphics{relminmax}}
+\item For the graph of $y=f(x)$ shown.
+
+        \begin{tikzpicture}[y=0.33cm, x=0.66cm,font=\sffamily]
+          \begin{scope} %[shift={(0,8)}]
+          %% ticks
+          \draw[xstep = 1, ystep=2.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-7.0,-16.0) grid ( 7.0, 4.0);
+             %% axis
+           \draw[ultra thick,->] (-7.5,0) -- coordinate (x axis mid) (7.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-16.5) -- coordinate (y axis mid) (0,4.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
+
+           \foreach \y in {-16,-14,...,-2,2,4} {
+              \draw (1pt, \y) -- (-1pt, \y) node[yshift=-4,xshift=0,anchor=east] {$\y$};
+            }
+           \foreach \x in {-6,-4,-2,2,4,6} {
+              \draw (\x,1pt) -- (\x,-1pt) node[yshift=0,xshift=5,anchor=north] {$\x$};
+            }
+          \end{scope}
+
+          \begin{scope}
+            \draw[ultra thick,<->] plot [smooth] coordinates
+            {(-5.3,4) (-3.8,-14.5) (-1.7,-6) (0,-9)
+             (1.7,-6) (3.8,-14.5) (5.3,4) };
+          \end{scope}
+        \end{tikzpicture}
+
 \begin{enumerate}
 \item Determine the location and value of any relative maxima.\\[.3in]
 \item Determine the location and value of any relative minima.
