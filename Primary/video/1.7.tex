@@ -137,10 +137,45 @@ In this section, we will determine intervals on the $x$-axis where the
 function values on the $y$-axis are increasing, decreasing, or
 constant.
 
-\item Determine where the following function is increasing, decreasing, or constant.\\
-\scalebox{0.5}{\includegraphics{incrdecr}} 
+\item Determine where the following function is increasing, decreasing, or constant.
 
-\newpage
+      \begin{tikzpicture}[y=0.8cm, x=0.8cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+          %% ticks
+          \draw[xstep = 1, ystep=1.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-4.0,-2.0) grid ( 4.0, 5.0);
+             %% axis
+           \draw[ultra thick,->] (-4.5,0) -- coordinate (x axis mid) (4.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-2.5) -- coordinate (y axis mid) (0,5.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
+
+           \foreach \y in {-2,-1,2,3,4} {
+              \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=1,anchor=west] {$\y$};
+            }
+           \foreach \x in {-4,-3,-2,-1,1,2,3,4} {
+              \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+            }
+          \end{scope}
+
+          \begin{scope}
+            \draw[ultra thick,<-] plot [smooth] coordinates
+                {(-2.3,5) (-2,4) (-1,1) (0,0) (1,1) };
+            \fill[black] (1,1) circle [radius=0.6ex]; 
+
+            \draw[black,ultra thick] (1,3) -- (2,3);
+            \fill[black] (1,3) circle [radius=0.6ex]; % Draw an open dot on the 
+            \fill[white] (1,3) circle [radius=0.3ex]; 
+            \fill[black] (2,3) circle [radius=0.6ex]; % Draw an open dot on the 
+
+            \draw[black,ultra thick,->] (2,2) -- (4,4);
+            \fill[black] (2,2) circle [radius=0.6ex]; % Draw an open dot on the 
+            \fill[white] (2,2) circle [radius=0.3ex]; 
+
+          \end{scope}
+        \end{tikzpicture}
+
+\clearpage
 
 \subsection{Relative Minimum and Relative Maximum Values}
 Remember, when talking about function \textbf{values}, we mean
