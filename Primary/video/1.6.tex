@@ -149,21 +149,42 @@ compressing the graph vertically by a factor of $1/c$.
 \newpage
 \item For the graph of $y=f(x)$ shown below, sketch the graph of $y=2f(x+3)-1$. \\
 %\noindent Hint: work in stages, one modification at a time. Use order of operations to make your stages.\\
-\scalebox{0.25}{\includegraphics{pwshift}} 
-%\end{enumerate}
-%
-%
-%
-%
-%\noindent MATH 1113 - Alli  \hfill Section 2.5 - Graphs of Functions\\
-%\noindent Part 2 \\
-%\noindent Topics: reflections of graphs, stretching/compressing of graphs   \\
+  \scalebox{0.25}{\includegraphics{pwshift}}
+
+    \noindent
+      \begin{tikzpicture}[y=0.5cm, x=0.5cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+          %% ticks
+          \draw[xstep = 1, ystep=1.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-8.0,-6.0) grid ( 9.0, 6.0);
+             %% axis
+           \draw[ultra thick,->] (-8.5,0) -- coordinate (x axis mid) (9.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
+
+           \foreach \y in {-6,-4,...,-2,2,4,...,6} {
+              \draw (1pt, \y) -- (-1pt, \y) node[yshift=0,xshift=0,anchor=east] {$\y$};
+            }
+           \foreach \x in {-8,-6,...,-2,2,4,...,8} {
+              \draw (\x,1pt) -- (\x,-1pt) node[yshift=0,xshift=0,anchor=north] {$\x$};
+            }
+
+            \draw[ultra thick] (-1,2) -- (2,4) -- (3,3);
+            \fill[black] (-1,2) circle [radius=0.5ex];
+            \fill[black] ( 3,3) circle [radius=0.5ex];
+          \end{scope}
+
+        \end{tikzpicture}
 
 
 
-\begin{tabular}{| l |} \hline \underline{Reflection through the $y$-axis.} The graph of $y=f(-x)$ is obtained by reflecting the graph of $y=f(x)$ \\ through the $y$-axis.
- \\ \hline
-\end{tabular} 
+  \begin{tabular}{| p{0.8\textwidth} |} \hline
+    \underline{Reflection through the $y$-axis.} The graph of
+    $y=f(-x)$ is  obtained by reflecting the graph of $y=f(x)$
+    through the $y$-axis.
+    \\ \hline
+  \end{tabular} 
 
 %\begin{enumerate}
 \vspace{-.1in}
