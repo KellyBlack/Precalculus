@@ -218,20 +218,51 @@ compressing the graph vertically by a factor of $1/c$.
 
 
 
+\clearpage
 
-\hspace{-.4in} \begin{tabular}{| l |} \hline \underline{Horizontal Compression/Stretching} Assume that $c$ is a positive number. \\
-If $c>1$, the graph of $y=f(cx)$ is obtained by compressing the graph horizontally by a factor $c$. \\
-If $c$ is between $0$ and $1$, the graph of $y=f(cx)$ is obtained by stretching the graph of $y=f(x)$ \\ horizontally by a factor of $1/c$.
+\begin{tabular}{| p{0.8\textwidth} |} \hline
+  \underline{Horizontal Compression/Stretching} Assume that $c$ is a positive number. 
+  If $c>1$, the graph of $y=f(cx)$ is obtained by compressing the
+  graph horizontally by a factor $c$. If $c$ is between $0$ and $1$,
+  the graph of $y=f(cx)$ is obtained by stretching the graph of
+  $y=f(x)$ horizontally by a factor of $1/c$.
  \\ \hline
 \end{tabular} 
 
-\vspace{-.1in}
-\item For the graph of $y=f(x)$ shown below, sketch the graph of $y=f(2x)$.\\
-\scalebox{0.3}{\includegraphics{pwshift2}} 
+\item For the graph of $y=f(x)$ shown below, sketch the graph of
+  $y=f(2x)$.
+  
+  \noindent
+      \begin{tikzpicture}[y=0.7cm, x=0.7cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+          %% ticks
+          \draw[xstep = 1, ystep=1.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-8.0,-3.0) grid ( 8.0, 6.0);
+             %% axis
+           \draw[ultra thick,->] (-8.5,0) -- coordinate (x axis mid) (8.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-3.5) -- coordinate (y axis mid) (0,6.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
 
-\newpage
-\item For the graph of $y=f(x)$ shown below, sketch the graph of $y = |f(x)|$.\\
-\scalebox{0.3}{\includegraphics{sineflip}} \\[2in]
+           \foreach \y in {-3,-2,-1,1,2,3,4,5,6} {
+              \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=1,anchor=east] {$\y$};
+            }
+           \foreach \x in {-8,-6,...,-2,2,4,...,8} {
+              \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=north] {$\x$};
+            }
+
+            \draw[ultra thick] (-6,6) -- (-2,1) -- (1,4);
+            \fill[black] (-6,6) circle [radius=0.5ex];
+            \fill[black] ( 1,4) circle [radius=0.5ex];
+          \end{scope}
+
+        \end{tikzpicture}
+
+
+\item For the graph of $y=f(x)$ shown below, sketch the graph of $y =
+  |f(x)|$.
+  
+\scalebox{0.3}{\includegraphics{sineflip}} 
 
 
 
