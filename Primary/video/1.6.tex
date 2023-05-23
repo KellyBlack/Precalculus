@@ -147,9 +147,8 @@ compressing the graph vertically by a factor of $1/c$.
 
 
 \newpage
-\item For the graph of $y=f(x)$ shown below, sketch the graph of $y=2f(x+3)-1$. \\
-%\noindent Hint: work in stages, one modification at a time. Use order of operations to make your stages.\\
-  \scalebox{0.25}{\includegraphics{pwshift}}
+\item For the graph of $y=f(x)$ shown below, sketch the graph of $y=2f(x+3)-1$. 
+%\noindent Hint: work in stages, one modification at a time. Use order of operations to make your stages.
 
     \noindent
       \begin{tikzpicture}[y=0.5cm, x=0.5cm,font=\sffamily]
@@ -188,10 +187,34 @@ compressing the graph vertically by a factor of $1/c$.
 
 %\begin{enumerate}
 \vspace{-.1in}
-\item For the graph of $y=f(x)$ shown below, sketch the graph of $y=f(-x)$.\\
-\scalebox{0.5}{\includegraphics{pwshift4}} 
+\item For the graph of $y=f(x)$ shown below, sketch the graph of
+  $y=f(-x)$.
+  
+  \noindent
+      \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+          %% ticks
+          \draw[xstep = 1, ystep=1.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-5.0,-1.0) grid ( 5.0, 5.0);
+             %% axis
+           \draw[ultra thick,->] (-5.5,0) -- coordinate (x axis mid) (5.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-1.5) -- coordinate (y axis mid) (0,5.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
 
+           \foreach \y in {-1,1,2,3,4,5} {
+              \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=1,anchor=east] {$\y$};
+            }
+           \foreach \x in {-5,-4,...,-1,1,2,3,4,5} {
+              \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=north] {$\x$};
+            }
 
+            \draw[ultra thick] (-1,2) -- (2,4) -- (3,3);
+            \fill[black] (-1,2) circle [radius=0.5ex];
+            \fill[black] ( 3,3) circle [radius=0.5ex];
+          \end{scope}
+
+        \end{tikzpicture}
 
 
 
