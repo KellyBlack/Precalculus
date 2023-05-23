@@ -69,8 +69,54 @@ that is, by "plugging one function into another". One must be careful, however, 
 
 \end{enumerate}
 
+      \begin{tikzpicture}[y=1.2cm, x=1.2cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+          %% ticks
+          \draw[xstep = 1, ystep=1.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-1.0,-1.0) grid ( 5.0, 4.0);
+             %% axis
+           \draw[ultra thick,->] (-1.5,0) -- coordinate (x axis mid) (5.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-1.5) -- coordinate (y axis mid) (0,4.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
 
-\noindent \scalebox{1}{\includegraphics{comp1}} \hspace{1in} \scalebox{1}{\includegraphics{comp2}}
+           \foreach \y in {-1,1,2,3,4} {
+              \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=1,anchor=west] {$\y$};
+            }
+           \foreach \x in {-1,1,2,3,4,5} {
+              \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+            }
+
+            \draw[ultra thick,<->] plot [smooth] coordinates
+                {(1,-1) (2,3) (3,1) (4,-1) (5,3) (5.2,4) }
+                node[anchor=south east] {$y=f(x)$};
+
+         \end{scope}
+
+        \begin{scope}[shift={(8,0)}]
+          %% ticks
+          \draw[xstep = 1, ystep=1.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-1.0,-1.0) grid ( 4.0, 4.0);
+             %% axis
+           \draw[ultra thick,->] (-1.5,0) -- coordinate (x axis mid) (4.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-1.5) -- coordinate (y axis mid) (0,4.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
+
+           \foreach \y in {-1,1,2,3,4} {
+              \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=1,anchor=west] {$\y$};
+            }
+           \foreach \x in {-1,1,2,3,4} {
+              \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+            }
+            
+            \draw[ultra thick,<->] plot [smooth] coordinates
+                {(-1.2,-1) (-1,0) (0,3) (1,4) (2,3) (3,0) (3.2,-1) }
+                node[anchor=north west] {$y=g(x)$};
+          \end{scope}
+
+        \end{tikzpicture}
+
 
 \newpage
 
