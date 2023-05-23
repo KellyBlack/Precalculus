@@ -101,15 +101,42 @@ The graph of $y = f(x+c)$ is obtained from the graph of $y=f(x)$ by shifting it 
 
 
 \vspace{-.1in}
-\item For the graph of $y=f(x)$ shown below, sketch the graph of $y=-f(x)$.\\
-\scalebox{0.5}{\includegraphics{pwshift1}} 
+\item For the graph of $y=f(x)$ shown below, sketch the graph of $y=-f(x)$.
+
+  \noindent
+      \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+          %% ticks
+          \draw[xstep = 1, ystep=1.0,black,dashed,thick] % very thin,opacity=0.85,
+                 (-5.0,-5.0) grid ( 3.0, 5.0);
+             %% axis
+           \draw[ultra thick,->] (-5.5,0) -- coordinate (x axis mid) (3.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-5.5) -- coordinate (y axis mid) (0,5.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
+
+           \foreach \y in {-5,...,-1,1,2,3,4,5} {
+              \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=1,anchor=east] {$\y$};
+            }
+           \foreach \x in {-5,-4,...,-1,1,2,3} {
+              \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=north] {$\x$};
+            }
+
+            \draw[ultra thick] (-1,2) -- (2,4) -- (3,3);
+            \fill[black] (-1,2) circle [radius=0.5ex];
+            \fill[black] ( 3,3) circle [radius=0.5ex];
+          \end{scope}
+
+        \end{tikzpicture}
 
 
 
-
-\hspace{-.3in} \begin{tabular}{| l |} \hline \underline{Vertical Compression/Stretching} Assume that $c$ is a positive number. \\
-If $c>1$, the graph of $y=cf(x)$ is obtained by stretching the graph of $y=f(x)$ vertically \\ by a factor of $c$. \\
-If $c$ is between $0$ and $1$, the graph of $y=cf(x)$ is obtained by compressing the graph vertically\\ by a factor of $1/c$.
+\begin{tabular}{| p{0.8\textwidth} |} \hline
+\underline{Vertical Compression/Stretching} Assume that $c$ is a
+positive number.  If $c>1$, the graph of $y=cf(x)$ is obtained by
+stretching the graph of $y=f(x)$ vertically by a factor of $c$.  If
+$c$ is between $0$ and $1$, the graph of $y=cf(x)$ is obtained by
+compressing the graph vertically by a factor of $1/c$.
  \\ \hline
 \end{tabular} 
 
