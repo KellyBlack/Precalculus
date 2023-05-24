@@ -17,18 +17,76 @@
 
 \subsection{Standard Form of a Quadratic Function} ~
 
-\noindent \underline{Quadratic Formula.} The roots of the equation $ax^2+bx+c=0$ are \begin{tabular}{| l |} \hline \\ $x = \dfrac{-b \pm \sqrt{b^2-4ac}}{2a}$  \\ \\ \hline
-\end{tabular} 
+\noindent \underline{Quadratic Formula.} The roots of the equation $ax^2+bx+c=0$ are \\
+\begin{eqnarray}
+  x = \dfrac{-b \pm \sqrt{b^2-4ac}}{2a}
+\end{eqnarray}
 
-
-\hspace{-.3in}\begin{tabular}{| l |} \hline 
-\noindent \underline{Standard Equation of a Parabola.} The standard equation of a parabola is \\
+\hspace{-.3in}\begin{tabular}{| p{0.8\textwidth} |} \hline 
+\noindent \underline{Standard Equation of a Parabola.}
+The standard equation of a parabola is 
 $ y = a(x-h)^2 + k$. The point $(h,k)$ is the vertex of the parabola.
 \\ \hline
 \end{tabular} 
 
-\includegraphics[scale=.7]{graphstandard}
+      \begin{tikzpicture}[y=0.9cm, x=0.9cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+           \draw[ultra thick,->] (-2.5,0) -- coordinate (x axis mid) (3.5,0)
+                node[font=\scriptsize,anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-0.5) -- coordinate (y axis mid) (0,4.5) 
+                node[font=\scriptsize,anchor = west,shift={(0.0,-0.2)}]  {$y$};
+        \end{scope}
+        \begin{scope} %[shift={(0,8)}]
+           \draw[ultra thick,black,<-]
+           (-2,4) .. controls +( 0.5,-2) and +(-0.5, 0) .. (0,0)
+           node[font=\scriptsize,anchor=east,pos=0] {$f(x)=ax^2$};
+           \draw[ultra thick,black,->]
+           ( 0,0) .. controls +( 0.5, 0) and +(-0.5,-2) .. (2,4)
+           node[font=\scriptsize,anchor=north east,pos=0] {Vertex: $(0,0)$};
+           \draw[fill=black]  (0,0) circle (0.05);
+         \end{scope}
+        \begin{scope}[shift={(1.5,0.75)}]
+           \draw[ultra thick,blue,<-]
+           (-2,4) .. controls +( 0.5,-2) and +(-0.5, 0) .. (0,0)
+           node[font=\scriptsize,anchor=south,pos=0,blue] {$g(x)=a(x-h)^2+k$};
+           \draw[ultra thick,blue,->]
+           ( 0,0) .. controls +( 0.5, 0) and +(-0.5,-2) .. (2,4)
+           node[font=\scriptsize,anchor=north west,pos=0] {Vertex: $(h,k)$};
+           \draw[fill=blue]  (0,0) circle (0.05);
+           \draw[thick,dashed,green!30!black] (0,3.5) -- (0,-1)
+           node[font=\scriptsize,anchor=north west,green!30!black] {Axis of symmetry: $x=h$};
+           \node[black,anchor=north,shift={(-0.5,0)}] at (0,-1.5) {$a>0$: Parabola opens upward.};
+         \end{scope}
 
+        \begin{scope}[shift={(8,4)}]
+           \draw[ultra thick,->] (-2.5,0) -- coordinate (x axis mid) (3.5,0)
+                node[font=\scriptsize,anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-4.5) -- coordinate (y axis mid) (0,0.5) 
+                node[font=\scriptsize,anchor = west,shift={(0.0,-0.2)}]  {$y$};
+        \end{scope}
+        \begin{scope}[shift={(8,4)}]
+           \draw[ultra thick,black,<-]
+           (-2,-4) .. controls +( 0.5,2) and +(-0.5, 0) .. (0,0)
+           node[font=\scriptsize,anchor=west,pos=0] {$f(x)=ax^2$};
+           \draw[ultra thick,black,->]
+           ( 0,0) .. controls +( 0.5, 0) and +(-0.5,2) .. (2,-4)
+           node[font=\scriptsize,anchor=south east,pos=0] {Vertex: $(0,0)$};
+           \draw[fill=black]  (0,0) circle (0.05);
+         \end{scope}
+        \begin{scope}[shift={(9.5,4.75)}]
+           \draw[ultra thick,blue,<-]
+           (-2,-4) .. controls +( 0.5,2) and +(-0.5, 0) .. (0,0);
+           \draw[ultra thick,blue,->]
+           ( 0,0) .. controls +( 0.5, 0) and +(-0.5,2) .. (2,-4)
+           node[font=\scriptsize,anchor=west,pos=0] {Vertex: $(h,k)$}
+           node[font=\scriptsize,anchor=north west,pos=1,blue] {$g(x)=a(x-h)^2+k$};
+           \draw[fill=blue]  (0,0) circle (0.05);
+           \draw[thick,dashed,green!30!black] (0,0.5) -- (0,-3.5)
+           node[font=\scriptsize,anchor=south,green!30!black,pos=0] {Axis of symmetry: $x=h$};
+           \node[black,anchor=north,shift={(-0.5,0)}] at (0,-5.5) {$a<0$: Parabola opens downward.};
+         \end{scope}
+
+        \end{tikzpicture}
 
 
 \newpage
