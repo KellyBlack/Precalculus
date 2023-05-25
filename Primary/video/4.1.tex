@@ -23,20 +23,30 @@ $\star$  The original position of the ray is called the \textbf{initial side} of
 $\star$  The endpoint of the ray is called the \textbf{vertex}.\\
 \hline
 \end{tabular}
-  
-\noindent\scalebox{.15}{\includegraphics{angles1}} 
 
-
-
-
-
-
-\begin{tabular}{c c c}
-\scalebox{.15}{\includegraphics{angles4}} & \scalebox{.15}{\includegraphics{angles2}} & \scalebox{.15}{\includegraphics{angles3}} \\
-\end{tabular} \\
-
-
-
+\begin{tikzpicture}[y=3.0cm, x=3.0cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+          \draw[thick,<->]
+                (1,0) --  (0,0) node[anchor=north,pos=0.5,font=\scriptsize] {Initial Side}
+                -- (45:1) node[anchor=east,pos=0,font=\scriptsize] {Vertex}
+                          node[anchor=south east,pos=0.5,font=\scriptsize] {Terminal Side}; 
+          \fill[black] (0,0) circle [radius=0.4ex];
+          \end{scope}
+        \begin{scope}[shift={(-1.5,-1)},scale=0.75]
+          \draw[thick,<->] (1,0) -- (0,0) -- (-1,0) ; 
+          \fill[black] (0,0) circle [radius=0.4ex] node[anchor=south,font=\scriptsize] {Straight angle};
+          \end{scope}
+        \begin{scope}[shift={(0,-1)},scale=1.0]
+          \draw[thick,<->] (1,0) -- (0,0) -- (45:1);
+          \draw[thin,black,->] (0.5,0) arc (0:42:0.5);
+          \fill[black] (0,0) circle [radius=0.4ex] node[anchor=north west,font=\scriptsize] {Positive angle};
+          \end{scope}
+        \begin{scope}[shift={(1.5,-0.3)},scale=1.0]
+          \draw[thick,<->] (1,0) -- (0,0) -- (-45:1);
+          \draw[thin,black,->] (0.5,0) arc (0:-42:0.5);
+          \fill[black] (0,0) circle [radius=0.4ex] node[anchor=south west,font=\scriptsize] {Negative angle};
+          \end{scope}
+        \end{tikzpicture}
 
 
 
