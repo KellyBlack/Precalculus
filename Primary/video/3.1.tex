@@ -25,9 +25,52 @@
 \begin{enumerate}
 \item Determine whether the graph is the graph of a one-to-one function.
 
- \begin{tabular}{c c }
-\scalebox{0.7}{\includegraphics{oneone2}} &   \scalebox{0.7}{\includegraphics{oneone1}}  
-\end{tabular} 
+      \begin{tikzpicture}[y=0.8cm, x=0.8cm,font=\sffamily]
+        \begin{scope} %[shift={(0,8)}]
+           \draw[ultra thick,->] (-1.5,0) -- coordinate (x axis mid) (5.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-1.5) -- coordinate (y axis mid) (0,4.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
+
+           \foreach \y in {-1,1,2,3,4} {
+              \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+            }
+           \foreach \x in {-1,1,2,3,4,5} {
+              \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+            }
+
+            \draw[ultra thick,black]
+              (1,4)  .. controls +( 0.8, -0.1)  and +(-0.25,0.4) .. (4,2);
+
+            \fill[black] (1,4) circle [radius=0.4ex];
+            \fill[black] (4,2) circle [radius=0.4ex]; 
+         \end{scope}
+
+        \begin{scope}[shift={(9,0)}]
+           \draw[ultra thick,->] (-1.5,0) -- coordinate (x axis mid) (5.5,0)
+                node[anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-1.5) -- coordinate (y axis mid) (0,4.5) 
+                node[anchor = east,shift={(-0.2,-0.2)}]  {$y$};
+
+           \foreach \y in {-1,1,2,3,4} {
+              \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+            }
+           \foreach \x in {-1,1,2,3,4,5} {
+              \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+            }
+
+
+            \draw[ultra thick,black,dashed]
+              (0.0,2)  .. controls +( 0.25,  0.5)  and +(-0.25,0.0)  .. (0.5,3.5)
+              (0.5,3.5) .. controls +( 0.25, 0.0)  and +(-0.4,0.0) .. (1.5,0.5)
+              (1.5,0.5) .. controls +( 0.4,  0.0)  and +(-0.2,-0.5)   .. (2,2)
+              ;
+
+            \fill[black] (0,2) circle [radius=0.4ex];
+            \fill[black] (2,2) circle [radius=0.4ex]; 
+         \end{scope}
+        \end{tikzpicture}
+
 
 \item Determine whether the following functions are one-to-one.
 \begin{enumerate}
