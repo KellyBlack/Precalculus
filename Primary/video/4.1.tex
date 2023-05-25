@@ -80,7 +80,8 @@ Certain angles have special names:
     \begin{scope}[shift={(1,0)},scale=0.8]
           \draw[thick,<->] (1,0) -- (0,0)
                node[anchor=north,font=\scriptsize,align=left,pos=0.5] {Right angle \\ $\frac{1}{4}$ rotation}
-              -- (90:1);
+               -- (90:1);
+          \draw[thin] (0.1,0) -- (0.1,0.1) -- (0,0.1);
           \draw[thin,black,->] (0.3,0) arc (0:90:0.3)
               node[anchor=south west,font=\scriptsize,pos=0.5] {$90^\circ$};
           \fill[black] (0,0) circle [radius=0.4ex];
@@ -110,8 +111,25 @@ How many degrees does it take to make a full circle?
 
 \subsection{Finding Radian Measure} ~
 
-\textbf{Radian Measure}  To define radian measure we will use a circle of radius $r$ and the central angle $\theta$.  $\theta$ has a measure of \textbf{one radian} if it intercepts an arc of length equal to the radius of the circle.\\
-\includegraphics[scale=.7]{radians2}
+\textbf{Radian Measure} To define radian measure we will use a circle
+of radius $r$ and the central angle $\theta$.  $\theta$ has a measure
+of \textbf{one radian} if it intercepts an arc of length equal to the
+radius of the circle.
+
+\begin{tikzpicture}[y=2cm, x=2cm,font=\sffamily]
+    \begin{scope}[shift={(0,0)},scale=0.8]
+          \draw[thick,<->] (1.2,0) -- (0,0)
+               node[anchor=north,font=\scriptsize,align=left,pos=0.5] {$r$}
+              -- (60:1.2);
+          \draw[thin,black,->] (0.4,0) arc (0:58:0.4)
+              node[anchor=south west,font=\scriptsize,pos=0.5] {$\theta$};
+          \draw[ultra thick,red!60!black] (1,0) arc (0:58:1)
+              node[anchor=south west,font=\scriptsize,pos=0.5] {$r$};
+          \draw[black] (0,0) circle(1);
+          \fill[black] (0,0) circle [radius=0.4ex];
+    \end{scope}
+\end{tikzpicture}
+
 
 \item If a circle has a radius of 5 and  $\theta$ intercepts an arc of length 10, what is $\theta$?\vfill
 
