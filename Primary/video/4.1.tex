@@ -131,10 +131,15 @@ radius of the circle.
 \end{tikzpicture}
 
 
-\item If a circle has a radius of 5 and  $\theta$ intercepts an arc of length 10, what is $\theta$?\vfill
+\item If a circle has a radius of 5 and $\theta$ intercepts an arc of
+  length 10, what is $\theta$?
+  \vfill
 
-\hspace{-.35in}\begin{tabular}{ | l | }
-\hline The \emph{radian} measurement of an angle is the number of radii that can be laid out on the \\ subtended arc. In other words, $\theta = \dfrac{\text{arc length}\, s}{\text{radius}\, r}$. \\ \\ \hline
+\hspace{-.35in}
+\begin{tabular}{ | l | } \hline
+  The \emph{radian} measurement of an angle is the number of radii that can be laid out on the \\
+  subtended arc. In other words, $\theta = \dfrac{\text{arc length}\, s}{\text{radius}\, r}$. \\
+  \\ \hline
 \end{tabular}
 \newpage
 
@@ -147,7 +152,21 @@ $$\theta=\frac{s}{r}=\frac{\text{circumference}}{r}=\frac{2\pi r}{r}=2\pi$$
 Therefore, 1 rotation is $360^\circ=2\pi$ radians.\\
 What if we divide both sides by 2?\\[.2in]
 
-\includegraphics[scale=.9]{radians3}\\[.3in]
+\begin{tikzpicture}[y=2.5cm, x=2.5cm,font=\sffamily]
+    \begin{scope}[shift={(0,0)},scale=1.0]
+          \draw[thick,<->] (-1.2,0) -- (1.2,0);
+               %node[anchor=north east,font=\scriptsize,align=left,pos=0.0] {straight angle};
+          \draw[thick,<->] (0,-1.2) -- (0,1.2);
+          \draw[thin,black,->] (0.6,0) arc (0:90:0.6)
+              node[anchor=south west,font=\scriptsize,pos=0.5] {$\frac{\pi}{2}$};
+          \draw[thin,black,->] (0.5,0) arc (0:180:0.5)
+              node[anchor=south east,font=\scriptsize,pos=1] {$\pi$ - Straight angle};
+          \draw[thin,black,->] (0.4,0) arc (0:270:0.4)
+              node[anchor=north east,font=\scriptsize,pos=0.85] {$\frac{3\pi}{2}$};
+          \draw[thin,black,->] (0.3,0) arc (0:360:0.3)
+              node[anchor=north west,font=\scriptsize,pos=0.9] {$2\pi$};
+    \end{scope}
+\end{tikzpicture}
 
 
 \textbf{Conversions}\\
