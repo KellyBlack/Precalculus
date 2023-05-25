@@ -182,9 +182,27 @@ To covert from radians to degrees, multiply by $\frac{180}{\pi}$.\\
 
 \subsection{Coterminal Angles} ~
 
-\textbf{Coterminal Angles}  Two angles are coterminal angles if they have the same terminal side and initial side but different rotations.\\
+\textbf{Coterminal Angles} Two angles are coterminal angles if they
+have the same terminal side and initial side but different rotations.
 
-\includegraphics[scale=.7]{coterminal}\\
+\begin{tikzpicture}[y=3.5cm, x=3.5cm,font=\sffamily]
+    \begin{scope}[shift={(0,0)},scale=1.0]
+          \draw[thick,<->] (-1.0,0) -- (1.2,0)
+             node[anchor=north,font=\scriptsize,align=left,pos=0.8] {Initial Side}
+             node[anchor=north,font=\scriptsize,align=left] {$x$};
+          \draw[thick,<->] (0,-1) -- (0,1)
+              node[anchor=east,font=\scriptsize,align=left] {$y$};
+          \draw[thick,->] (0,0) -- (30:1)
+              node[anchor=east,font=\scriptsize,align=left] {$y$}
+              node[anchor=south west,font=\scriptsize] {Terminal Side};
+          \draw[thin,black,->] (0.4,0) arc (0:30:0.4)
+              node[anchor=south west,font=\scriptsize,pos=0.5] {$30^\circ$};
+          \draw[thin,black,->] (0.3,0) arc (0:390:0.3)
+              node[anchor=north west,font=\scriptsize,pos=0.75] {$390^\circ$};
+    \end{scope}
+\end{tikzpicture}
+
+
 
 \item Find two positive angles and two negative angles coterminal to $\theta = 60^\circ$.  \\[1in]
 
