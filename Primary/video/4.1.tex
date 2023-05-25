@@ -217,24 +217,27 @@ If $\theta$ is the radian measure of a central angle of a circle of radius $r$, 
 
 
 
-\item \begin{enumerate}
-\item Determine the length of the arc subtended by the angle $\beta$ below. \\
-\scalebox{.15}{\includegraphics{sector2}}
- \vfill
-\item Determine the area of the circular sector with central angle $\beta$ above. 
-\end{enumerate}
+\item
+  \begin{enumerate}
+  \item Determine the length of the arc subtended by the angle $\beta$ below.
 
+    \begin{tikzpicture}[y=2.0cm, x=2.0cm,font=\sffamily]
+      \begin{scope}[shift={(0,0)},scale=1.0]
+        \draw[black] (0,0) circle(1);
+        \draw[thick] (1,0) -- (0,0)
+             node[anchor=north,pos=0.5] {3 inches}
+             --  (155:1);
+        \draw[thin,black] (0.4,0) arc (0:155:0.4)
+              node[anchor=south west,font=\scriptsize,pos=0.5] {$\beta=155^\circ$};
+    \end{scope}
+\end{tikzpicture}
 
-\vfill
-
-
-
-
-
-
-
-
-
+    
+    \vfill
+    
+  \item Determine the area of the circular sector with central angle $\beta$ above.
+    \vfill
+  \end{enumerate}
 \end{enumerate}
 
 \noindent \textbf{Student Learning Outcomes Check}
