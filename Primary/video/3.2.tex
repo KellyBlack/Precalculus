@@ -141,23 +141,58 @@ of circles and angle measures, the number $e \approx 2.71828$ is
 important to problems involving exponential exponential functions (and
 their inverses).
 
-Where does the number $e$ come from? Consider the expression $$\Bigg(1+\frac{1}{n}\Bigg)^n$$
-If you plug in larger and larger values for $n$, this expression gets closer and closer to $e$.  Try it out!\\
-\includegraphics[scale=.8]{e}
+Where does the number $e$ come from? Consider the
+expression $$\left(1+\frac{1}{n}\right)^n$$ If you plug in larger and
+larger values for $n$, this expression gets closer and closer to $e$.
+Try it out!
 
+  \begin{tikzpicture}[y=1.0cm, x=1.0cm,font=\sffamily]
+    \begin{scope}
+      %% ticks
+      \draw[step = 1.0, gray,dashed] (-3,0) grid (3,6);
+      %% axis
+      \draw[thick,->] (-3.5,0) -- coordinate (x axis mid) (3.5,0) node[anchor = north west] {$x$};
+      \draw[thick,->] (0,-0.5) -- coordinate (y axis mid) (0,6.5) node[anchor = west] {$y$};
+      \foreach \y in {1,2,3,4,5,6} { \draw (1pt, \y) -- (-1pt, \y)
+             node[font=\scriptsize,yshift=5,xshift=-1,anchor=east] {$\y$}; }
+      \foreach \x in {-3,-2,-1,1,2,3} { \draw (\x,1pt) --
+        (\x,-1pt) node[font=\scriptsize,yshift=-5,xshift=3,anchor=east] {$\x$};
+      }
+
+      \begin{scope}
+        %% \clip(-4,-1) rectangle (8,5);
+        \draw[scale=1.0,domain=-3.5:1.8,smooth,variable=\x,very thick,black,samples=100,<->]
+             plot ({\x},{2.718^\x}) node[anchor=south west] {$f(x)=e^x$};
+
+        \fill[black] (-1,0.368) circle [radius=0.5ex] node[anchor=south east,xshift=0]
+             {$\left(-1,\frac{1}{e}\right)$};
+        \fill[black] (0,1) circle [radius=0.5ex] node[anchor=north west,xshift=0]
+             {$\left(0,1\right)$};
+        \fill[black] (1,2.718) circle [radius=0.5ex] node[anchor=west,xshift=0]
+             {$\left(1,e\right)$};
+
+       \end{scope}
+     \end{scope}
+
+   \end{tikzpicture}
 
 
 
 
 \subsection{Compound Interest} ~
 
-\hspace{-.3in} \begin{tabular}{ | l  |} \hline 
-\noindent \underline{Compound Interest Formula (Annually, Monthly, Quarterly, Daily, Etc.)}  
-$A= P \left( 1+ \dfrac{r}{n} \right)^{nt}$ \\ 
-In this formula, $P$ is the principal, $r$ is the annual interest rate in decimal form, $n$ is\\ the number of interest periods per year, $t$ is the number of years $P$ is invested, and $A$ is the\\ amount after $t$ years. \\ \hline
+\hspace{-.3in}
+\begin{tabular}{ | p{0.9\textwidth} |} \hline 
+  \noindent \underline{Compound Interest Formula (Annually, Monthly, Quarterly, Daily, Etc.)}  
+  \begin{eqnarray*}
+    A= P \left( 1+ \dfrac{r}{n} \right)^{nt}.
+  \end{eqnarray*}
+  In this formula, $P$ is the principal, $r$ is the annual interest rate in decimal form,
+  $n$ is the number of interest periods per year, $t$ is the number of years $P$ is invested,
+  and $A$ is the amount after $t$ years. \\ \hline
 \end{tabular} 
 
-\item Suppose \$ 2000 is invested at a rate of $3 \%$ compounded monthly. Find the \emph{principal after 18 months}. (Round your answer to the nearest cent.) \vfill
+\item Suppose \$2000.00 is invested at a rate of $3 \%$ compounded monthly. Find the \emph{principal after 18 months}. (Round your answer to the nearest cent.) \vfill
 
 
  \hspace{-.3in} \begin{tabular}{| l |} \hline
