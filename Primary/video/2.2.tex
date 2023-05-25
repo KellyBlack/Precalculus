@@ -39,12 +39,7 @@ Polynomial functions of degree 2 or higher have graphs that are smooth and conti
 
 \clearpage
 
-\includegraphics[scale=.95]{poly1}
 
-%\noindent\fcolorbox{gray!10}{blue!10}{%
-%\begin{minipage}{\dimexpr1.0\textwidth-2\fboxrule-2\fboxsep\relax}
-%some text
-%\end{minipage}}%
 
 \subsection{The Leading Coefficient Test}
 
@@ -85,6 +80,9 @@ of $x$.
               (3.4,-.5) .. controls +( 0.4, 0.0)  and +(-0.25,-0.5)  .. (4.4,1)
               ;
 
+           \node[black,anchor=north,shift={(0,0)},align=center] at (3,-2.5)
+              {Odd degree, \\ leading coefficient is positive.};
+
         \end{scope}
 
         \begin{scope}[shift={(9,0)}]
@@ -107,6 +105,75 @@ of $x$.
               (2.7,0)   .. controls +( 0.25,0.25) and +(-0.4,0.0)   .. (3.4,.5)
               (3.4,.5) .. controls +( 0.4, 0.0)  and +(-0.25,0.5)  .. (4.4,-1)
               ;
+
+           \node[black,anchor=north,shift={(0,0)},align=center] at (3,-2.5)
+              {Odd degree, \\ leading coefficient is negative.};
+
+        \end{scope}
+
+      \end{tikzpicture}
+
+Secondly, if $n$ is an even number, then the long term behaviour
+is the same when comparing very large values of $x$ to very
+small values of $x$.
+
+
+      \begin{tikzpicture}[y=0.9cm, x=0.9cm,font=\sffamily]
+        \begin{scope} %[shift={(9,0)}]
+           \draw[ultra thick,->] (-0.5,0) -- coordinate (x axis mid) (6.5,0)
+                node[font=\scriptsize,anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-2.5) -- coordinate (y axis mid) (0,2.5) 
+                node[font=\scriptsize,anchor = west,shift={(0.0,-0.2)}]  {$y$};
+
+           \draw[ultra thick,black,<-]
+           (0.5,2) .. controls +( 0.06,-0.24) and +(-0.25, 0.5) .. (0.8,1)
+               node[font=\scriptsize,anchor=west,pos=0] {Rises left};
+           \draw[ultra thick,black,->]
+           ( 6.0,1) .. controls +( 0.25,0.5) and +(-0.06,-0.24) .. (6.3,2)
+           node[font=\scriptsize,anchor=east,pos=1] {Rises right};
+
+           \draw[ultra thick,black,dashed]
+              (0.8,1)  .. controls +( 0.25, -0.5)  and +(-0.25,0.4) .. (1.3,0)
+              (1.3,0)   .. controls +( 0.25,-0.4)  and +(-0.4,0.0)   .. (2,-0.5)
+              (2,-0.5)   .. controls +( 0.4, 0.0)  and +(-0.25, -0.25) .. (2.7,0)
+              (2.7,0)   .. controls +( 0.25,0.25)  and +(-0.4,0.0)   .. (3.4,.5)
+              (3.4,.5) .. controls +( 0.4, 0.0)    and +(-0.25,0.25)  .. (4.1,0.0)
+              (4.1, 0.0) .. controls +(0.25,-0.25) and +(-0.4,0.0) .. (4.8,-0.5)
+              (4.8,-0.5) .. controls +(0.4,0.0)    and +(-0.25,-0.25) .. (5.5,0.0)
+              (5.5, 0.0) .. controls +(0.25,0.4)   and +(-0.25,-0.5)   .. (6.0,1.0)
+              ;
+
+           \node[black,anchor=north,shift={(0,0)},align=center] at (3,-2.5)
+              {Even degree, \\ leading coefficient is positive.};
+
+        \end{scope}
+
+        \begin{scope}[shift={(9,0)}]
+           \draw[ultra thick,->] (-0.5,0) -- coordinate (x axis mid) (6.5,0)
+                node[font=\scriptsize,anchor = north west] {$x$}; 
+           \draw[ultra thick,->] (0,-2.5) -- coordinate (y axis mid) (0,2.5) 
+                node[font=\scriptsize,anchor = west,shift={(0.0,-0.2)}]  {$y$};
+
+           \draw[ultra thick,black,<-]
+           (0.5,-2) .. controls +( 0.06,0.24) and +(-0.25,-0.5) .. (0.8,-1)
+               node[font=\scriptsize,anchor=west,pos=0] {Falls left};
+           \draw[ultra thick,black,->]
+           ( 6.0,-1) .. controls +( 0.25,-0.5) and +(-0.06,0.24) .. (6.3,-2)
+           node[font=\scriptsize,anchor=east,pos=1] {Falls right};
+
+           \draw[ultra thick,black,dashed]
+              (0.8,-1)  .. controls +( 0.25, 0.5)  and +(-0.25,-0.4) .. (1.3,0)
+              (1.3,0)   .. controls +( 0.25, 0.4)  and +(-0.4,0.0)   .. (2,0.5)
+              (2,0.5)   .. controls +( 0.4, 0.0)  and +(-0.25, 0.25) .. (2.7,0)
+              (2.7,0)   .. controls +( 0.25,-0.25)  and +(-0.4,0.0)   .. (3.4,-.5)
+              (3.4,-.5) .. controls +( 0.4, 0.0)    and +(-0.25,-0.25)  .. (4.1,0.0)
+              (4.1, 0.0) .. controls +(0.25,0.25) and +(-0.4,0.0) .. (4.8,0.5)
+              (4.8, 0.5) .. controls +(0.4,0.0)    and +(-0.25,0.25) .. (5.5,0.0)
+              (5.5, 0.0) .. controls +(0.25,-0.4)   and +(-0.25,0.5)   .. (6.0,-1.0)
+              ;
+
+           \node[black,anchor=north,shift={(0,0)},align=center] at (3,-2.5)
+              {Even degree, \\ leading coefficient is negative.};
 
         \end{scope}
 
