@@ -22,10 +22,50 @@
 \hspace{1.5in} $y = \log_a(x)$    if and only if   $a^y=x$. \\  \hline
 \end{tabular} \\
 
-\noindent Above, the left-hand equation is said to be in \emph{logarithmic form}, while the right-hand equation is said to be in \emph{exponential form}. The equations are \emph{equivalent}: they have the same solutions. 
+\noindent Above, the left-hand equation is said to be in
+\emph{logarithmic form}, while the right-hand equation is said to be
+in \emph{exponential form}. The equations are \emph{equivalent}: they
+have the same solutions.
 
-\begin{tabular}{ c  c}
-\begin{tabular}{c} \scalebox{1}{\includegraphics{logdef}} \end{tabular} & \begin{tabular}{c } Example: $f(x) = \log_2(x)$ \\ \scalebox{.7}{\includegraphics{log1}} \end{tabular}
+\noindent
+\begin{tabular}{m{0.4\textwidth}@{\hspace{2em}}m{0.5\textwidth}}
+  \begin{tikzpicture}[y=0.7cm, x=0.7cm,font=\sffamily]
+    \node[anchor=west] at (0,0) {$\log_a(x)=y$ is equivalent to $a^y=x$.};
+    \draw[thick,<->] (1.1,-0.3) -- (1.1,-1) 
+       node[anchor=north west,yshift=-1,pos=1] {$a$ is the base.}
+       -- (7.5,-1) -- (7.5,-0.3);
+    \draw[thick,<->] (3,0.5) -- (3,1.2)
+       node[anchor=south west,yshift=1,pos=1] {$y$ is the exponent.}
+       -- (7.7,1.2) -- (7.7,0.5);
+     \end{tikzpicture}
+  &
+  \begin{tikzpicture}[y=0.7cm, x=0.7cm,font=\sffamily]
+    \begin{scope}
+      %% ticks
+      \draw[step = 1.0, gray,dashed] (-1,-2) grid (8,4);
+      %% axis
+      \draw[thick,->] (-1.5,0) -- coordinate (x axis mid) (8.5,0)
+          node[anchor = north west] {$x$};
+      \draw[thick,->] (0,-2.5) -- coordinate (y axis mid) (0,4.5) node[anchor=west] {$y$};
+
+      \foreach \y in {-1,1,2,3,4} {
+        \draw (1pt, \y) -- (-1pt, \y)
+            node[font=\scriptsize,yshift=-6,xshift=-1,anchor=east] {$\y$};
+      }
+      \foreach \x in {-1,1,2,3,4,5,6,7,8} {
+        \draw (\x,1pt) -- (\x,-1pt) node[font=\scriptsize,yshift=-5,xshift=3,anchor=east] {$\x$};
+      }
+
+      \node[anchor=west,align=left] at (-0.5,5.5) {Example: $f(x)=\log_2(x)$};
+      
+      \begin{scope}
+        %% \clip(-4,-1) rectangle (8,5);
+        \draw[scale=1.0,domain=0.17:8,smooth,variable=\x,very thick,black,samples=100,<->]
+            plot ({\x},{ln(\x)/ln(2)}) node[anchor=south west] {$\log_2(x)$};
+      \end{scope}
+     \end{scope}
+
+  \end{tikzpicture}
 \end{tabular}
 
 \begin{enumerate}
