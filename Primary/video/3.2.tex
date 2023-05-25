@@ -19,6 +19,8 @@
 
 \noindent\underline{Exponential functions $y=a^x$} (always assume $a>0$) \\[.2in]
 
+\clearpage
+
 \begin{center}
 \begin{tabular}{l | l}
 exponential growth: $a>1$      & exponential decay: $0<a<1$ \\
@@ -30,6 +32,73 @@ has an asymptote of $y=0$  & has an asymptote of $y=0$ \\
 $y$-intercept is $(0,1)$, no $x$-intercept & $y$-intercept is $(0,1)$,  no $x$-intercept  \\
 \end{tabular} 
 \end{center}
+
+
+  \begin{tikzpicture}[y=0.7cm, x=0.7cm,font=\sffamily]
+    \begin{scope}
+      %% ticks
+      \draw[step = 1.0, gray,dashed] (-4,-1) grid (5,6);
+      %% axis
+      \draw[thick,->] (-4.5,0) -- coordinate (x axis mid) (5.5,0)
+      node[anchor = north west] {$x$}; \draw[thick,->] (0,-1.5) --
+      coordinate (y axis mid) (0,6.5) node[anchor = north east] {$y$};
+      \foreach \y in {-1,1,2,3,4,5,6} { \draw (1pt, \y) -- (-1pt, \y)
+        node[font=\scriptsize,yshift=-6,xshift=-1,anchor=east] {$\y$}; }
+      \foreach \x in {-4,-3,-2,-1,1,2,3,4,5} { \draw (\x,1pt) --
+        (\x,-1pt) node[font=\scriptsize,yshift=-5,xshift=3,anchor=east]
+        {$\x$}; }
+
+      \node[anchor=west,align=left] at (-4,7.5) {Exponential growth: $a>1$};
+      \node[anchor=west,align=left] at (-4,-3)
+      {
+        Always increasing \\
+        one-to-one \\
+        has an asymptote of $y=0$ \\
+        $y$-intercept: (0,1), no $x$-intercept
+      };
+      
+      \begin{scope}
+        %% \clip(-4,-1) rectangle (8,5);
+        \draw[scale=1.0,domain=-4:1.65,smooth,variable=\x,very
+        thick,black,samples=100] plot ({\x},{3^\x}) node[anchor=south
+        west] {$3^x$};
+        %% \fill[black] (1/6,5) circle [radius=0.5ex] node[anchor=south
+        %% west,xshift=-8] {$\left(\frac{1}{6},5\right)$};
+      \end{scope}
+     \end{scope}
+
+     \begin{scope}[shift={(11,0)}]
+      %% ticks
+      \draw[step = 1.0, gray,dashed] (-4,-1) grid (5,6);
+      %% axis
+      \draw[thick,->] (-4.5,0) -- coordinate (x axis mid) (5.5,0)
+      node[anchor = north west] {$x$}; \draw[thick,->] (0,-1.5) --
+      coordinate (y axis mid) (0,6.5) node[anchor = north east] {$y$};
+      \foreach \y in {-1,1,2,3,4,5,6} { \draw (1pt, \y) -- (-1pt, \y)
+        node[font=\scriptsize,yshift=-6,xshift=-1,anchor=east] {$\y$}; }
+      \foreach \x in {-4,-3,-2,-1,1,2,3,4,5} { \draw (\x,1pt) --
+        (\x,-1pt) node[font=\scriptsize,yshift=-5,xshift=3,anchor=east]{$\x$};
+      }
+
+      \node[anchor=west,align=left] at (-4,7.5) {Exponential decay: $0<a<1$};
+      \node[anchor=west,align=left] at (-4,-3)
+      {
+        Always decreasing \\
+        one-to-one \\
+        has an asymptote of $y=0$ \\
+        $y$-intercept: (0,1), no $x$-intercept
+      };
+
+      \begin{scope}
+        %% \clip(-4,-1) rectangle (8,5);
+        \draw[scale=1.0,domain=-2.6:5,smooth,variable=\x,very thick,black,samples=100]
+                 plot ({\x},{0.5^\x});
+        \node[anchor=south west] at (-2.6,6) {$\left(\frac{1}{2}\right)^x$};
+        %% \fill[black] (1/6,5) circle [radius=0.5ex] node[anchor=south
+        %% west,xshift=-8] {$\left(\frac{1}{6},5\right)$};
+      \end{scope}
+     \end{scope}
+   \end{tikzpicture}
 
 \scalebox{0.9}{\includegraphics{expex}} 
 
