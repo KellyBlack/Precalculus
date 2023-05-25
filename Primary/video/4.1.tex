@@ -24,7 +24,7 @@ $\star$  The endpoint of the ray is called the \textbf{vertex}.\\
 \hline
 \end{tabular}
 
-\begin{tikzpicture}[y=3.0cm, x=3.0cm,font=\sffamily]
+     \begin{tikzpicture}[y=3.0cm, x=3.0cm,font=\sffamily]
         \begin{scope} %[shift={(0,8)}]
           \draw[thick,<->]
                 (1,0) --  (0,0) node[anchor=north,pos=0.5,font=\scriptsize] {Initial Side}
@@ -66,10 +66,45 @@ $\star$ Greek letters are commonly used to name the angles: $\alpha$ (alpha), $\
 
 \newpage
 \textbf{Degree Measure}  We can measure angles using degrees noted by $^\circ$.\\[1.3in]
-Certain angles have special names:\\
-\includegraphics[scale=.82]{anglenames}
+Certain angles have special names:
 
-How many degrees is a full circle?\\
+\begin{tikzpicture}[y=3.0cm, x=3.0cm,font=\sffamily]
+    \begin{scope}[shift={(0,0)},scale=0.8]
+          \draw[thick,<->] (1,0) -- (0,0)
+               node[anchor=north,font=\scriptsize,align=left,pos=0.5] {Acute angle\\$0^\circ<\theta<90^\circ$}
+              -- (45:1);
+          \draw[thin,black,->] (0.3,0) arc (0:42:0.3)
+              node[anchor=south west,font=\scriptsize,pos=0.5] {$\theta$};
+          \fill[black] (0,0) circle [radius=0.4ex];
+    \end{scope}
+    \begin{scope}[shift={(1,0)},scale=0.8]
+          \draw[thick,<->] (1,0) -- (0,0)
+               node[anchor=north,font=\scriptsize,align=left,pos=0.5] {Right angle \\ $\frac{1}{4}$ rotation}
+              -- (90:1);
+          \draw[thin,black,->] (0.3,0) arc (0:90:0.3)
+              node[anchor=south west,font=\scriptsize,pos=0.5] {$90^\circ$};
+          \fill[black] (0,0) circle [radius=0.4ex];
+    \end{scope}
+    \begin{scope}[shift={(2.5,0)},scale=0.8]
+          \draw[thick,<->] (1,0) -- (0,0)
+               node[anchor=north,font=\scriptsize,align=left,pos=0.5] {Obtuse angle\\$90^\circ<\theta<180^\circ$}
+              -- (135:1);
+          \draw[thin,black,->] (0.3,0) arc (0:132:0.3)
+              node[anchor=south west,font=\scriptsize,pos=0.5] {$\theta$};
+          \fill[black] (0,0) circle [radius=0.4ex];
+    \end{scope}
+    \begin{scope}[shift={(4.2,0)},scale=0.8]
+          \draw[thick,<->] (1,0) -- (0,0)
+               node[anchor=north,font=\scriptsize,align=left,pos=0.5] {Straight angle \\ $\frac{1}{2}$ rotation}
+              -- (180:1);
+          \draw[thin,black,->] (0.3,0) arc (0:180:0.3)
+              node[anchor=south west,font=\scriptsize,pos=0.5] {$180^\circ$};
+          \fill[black] (0,0) circle [radius=0.4ex];
+    \end{scope}
+\end{tikzpicture}
+
+
+How many degrees does it take to make a full circle?
 
 
 
