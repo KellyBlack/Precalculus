@@ -61,14 +61,30 @@ follows:
 
 \begin{enumerate}
 \item Find the six trig functions of $\theta$ in the triangle below.
-\begin{center}
-\includegraphics[scale=.6]{trigex1}\\
+  \begin{center}
+  \begin{tikzpicture}[y=0.5cm, x=0.5cm,font=\sffamily]
+    \draw[black,thick,fill=gray!0] (0,0)--(12,0)--(12,5) -- cycle;
+    \draw[black] (11,0) -- (11,1) -- (12,1);
+    \draw[thin,black] (2,0) arc (0:24:2)
+              node[anchor=west,pos=0.5] {$\theta$};
+    \node[anchor=west] at (12,2.5) {5};
+    \node[anchor=north] at (6,0) {12};
+  \end{tikzpicture}
 \end{center}
+\begin{eqnarray*}
+  \begin{array}{rcl@{\hspace{4em}}rcl@{\hspace{4em}}rcl}
+    \sin(\theta) & = &  & 
+    \cos(\theta) & = &  &
+    \tan(\theta) & = &  \\ [10pt]
+    \csc(\theta) & = &  & 
+    \sec(\theta) & = &  &
+    \cot(\theta) & = & 
+  \end{array}
+\end{eqnarray*}
 
 \item Find the sine, cosine, and tangent of 45$^{\circ}$ using the triangle below.
 
-\includegraphics[scale=.6]{trigex2}\\
-
+  \includegraphics[scale=.6]{trigex2}\\
 
 \item Find the sine, cosine, and tangent of 30$^{\circ}$ and  60$^{\circ}$ using the triangle below.\\
 \includegraphics[scale=.6]{trigex3}\\
