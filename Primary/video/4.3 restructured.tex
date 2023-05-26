@@ -24,11 +24,20 @@ The sum of angles of a triangle is 180$^{\circ}$.\\[.2in]
 \noindent If we know two sides of a right triangle, we can use the \textbf{Pythagorean Theorem} $a^2+b^2=c^2$ to find the 3rd side.
 
 \begin{center}
-\includegraphics[scale=.6]{righttriangle}\\
+  \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily]
+    \draw[black,thick,fill=gray!0] (0,0)--(4,0)--(4,2) -- cycle;
+    \draw[black] (3.8,0) -- (3.8,0.2) -- (4,0.2);
+    \draw[thin,black] (0.8,0) arc (0:30:0.8)
+              node[anchor=west,pos=0.5] {$\theta$};
+    \node[anchor=west] at (4,1) {Opposite side of angle $\theta$};
+    \node[anchor=north] at (2,0) {Adjacent side of angle $\theta$};
+    \node[anchor=south east] at (2,1) {Hypotenuse};
+  \end{tikzpicture}
 \end{center}
 
-
-In the \textbf{right} triangle above, the \textbf{\emph{six trigonometric functions}} of an angle $\theta$ are defined as follows:
+In the \textbf{right} triangle above, the \textbf{\emph{six
+    trigonometric functions}} of an angle $\theta$ are defined as
+follows:
 
 \begin{center}
 \includegraphics[scale=.6]{trigdef}\\
