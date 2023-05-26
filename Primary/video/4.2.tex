@@ -18,10 +18,82 @@
 
 \subsection{Trigonometric Functions of Real Numbers} ~
 
-\noindent A \textbf{\underline{unit circle}} is a circle of radius 1 with center at the origin.  The equation of a unit circle is:
+\noindent
+A \textbf{\underline{unit circle}} is a circle of radius 1 with center
+at the origin.  The equation of a unit circle is:
 $$x^2+y^2=1$$
 
-\includegraphics[scale=.6]{unitpic}
+\begin{tikzpicture}[y=2cm, x=2cm,font=\sffamily]
+     \begin{scope}[shift={(0,0)},scale=1]
+          \draw[black] (0,0) circle(1);
+          \draw[thick,<->] (1.2,0) -- (0,0)
+               node[anchor=north,align=left,pos=0.5] {$r$}
+              -- (60:1.2);
+          \draw[thin,black,->] (0.4,0) arc (0:58:0.4)
+              node[anchor=south west,pos=0.5] {$\theta$};
+          \draw[ultra thick,red!60!black] (1,0) arc (0:58:1)
+              node[anchor=south west,pos=0.5] {$s=r\theta$};
+          \fill[black] (0,0) circle [radius=0.4ex];
+     \end{scope}
+
+     \begin{scope}[shift={(2.75,0)},scale=0.8]
+       \draw[thick,->] (-1.3,0) -- (1.3,0) node[anchor=south west,font=\scriptsize] {$x$};
+       \draw[thick,->] (0,-1.3) -- (0,1.3) node[anchor=east,font=\scriptsize] {$y$};
+       \draw[black] (0,0) circle(1);
+       \draw[thick,red!60!black] (60:1)
+          -- (0,0) -- (1,0)
+          node[anchor=north west,font=\scriptsize,align=left,pos=1.0] {$(1,0)$};
+       \draw[thick,red!60!black] (1,0) arc (0:60:1)
+          node[anchor=south west,font=\scriptsize,pos=0.5] {$t$};
+       \draw[ultra thick,red!60!black,->] (.35,0) arc (0:60:.35)
+              node[anchor=south west,font=\scriptsize,pos=0.5] {$t$};
+       \fill[red!60!black] (1,0) circle [radius=0.4ex];
+       \fill[red!60!black] (60:1) circle [radius=0.4ex]
+                 node[anchor=south west,font=\scriptsize,align=left] {$P(x,y)$};
+       \node[black,anchor=east] at (-0.25,-1.1) {$x^2+y^2=1$};
+       \node[black,align=left,draw,text width=22em] at (2,-2.2)
+          {In a unit circle, the radian measure of the central angle 
+            is equal to the length of the subtended arc. Both are 
+            given as $t$ in the figures above.};
+     \end{scope}
+   
+     \begin{scope}[shift={(5.5,0)},scale=0.8]
+       \draw[thick,->] (-1.3,0) -- (1.3,0) node[anchor=south west,font=\scriptsize] {$x$};
+       \draw[thick,->] (0,-1.3) -- (0,1.3) node[anchor=east,font=\scriptsize] {$y$};
+       \draw[black] (0,0) circle(1);
+       \draw[thick,red!60!black] (-60:1)
+          -- (0,0) -- (1,0)
+          node[anchor=north west,font=\scriptsize,align=left,pos=1.0] {$(1,0)$};
+       \draw[thick,red!60!black] (1,0) arc (0:-60:1)
+          node[anchor=north west,font=\scriptsize,pos=0.5] {$t$};
+       \draw[ultra thick,red!60!black,->] (.35,0) arc (0:-60:.35)
+              node[anchor=north west,font=\scriptsize,pos=0.5] {$t$};
+       \fill[red!60!black] (1,0) circle [radius=0.4ex];
+       \fill[red!60!black] (-60:1) circle [radius=0.4ex]
+                 node[anchor=north west,font=\scriptsize,align=left] {$P(x,y)$};
+       \node[black,anchor=east] at (-0.25,-1.1) {$x^2+y^2=1$};
+       \end{scope}
+
+ \end{tikzpicture}
+
+   \noindent\colorbox{blue!10}{%
+   \parbox{\dimexpr\linewidth}%
+   {%
+     \textbf{Definitions of the trigonometric functions in terms of a
+       unit circle.}
+
+     If $t$ is a real number and $P(x,y)$ is a point on the unit
+     circle corresponding to $t$, then
+     \begin{eqnarray*}
+       \begin{array}{rcl@{\hspace{4em}}rcl}
+         \sin(t) & = & y, & \csc(t) & = & \frac{1}{y},~y\neq 0,\\ [10pt]
+         \cos(t) & = & x, & \sec(t) & = & \frac{1}{x},~x\neq 0, \\ [10pt]
+         \tan(t) & = & \frac{y}{x},~x\neq 0, & \cot(t) & = & \frac{x}{y},~y\neq 0.
+       \end{array}
+     \end{eqnarray*}
+   }
+ }
+
 
 \newpage
 
