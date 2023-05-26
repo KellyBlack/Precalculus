@@ -186,10 +186,39 @@
 
 
 \begin{enumerate}
-\vspace{-.1in}
-\item \begin{enumerate} \item Explain how to obtain the graph of $f(x)=-3\sin(x)$ from the graph of $y=\sin(x)$.\\[.5in]
-\item Sketch the graph of the function $f(x)= -3\sin(x)$. \\
-\scalebox{.8}{\includegraphics[scale=1.5]{gentrig1}}\\
+\item
+  \begin{enumerate}
+  \item Explain how to obtain the graph of $f(x)=-3\sin(x)$ from the graph of $y=\sin(x)$.\\[.5in]
+    \vfill
+
+    
+  \item Sketch the graph of the function $f(x)= -3\sin(x)$. Label the
+    axes with the correct values.
+    
+    \noindent
+    \begin{tikzpicture}[y=1.0cm, x=1.8cm,font=\sffamily]
+    \begin{scope}
+      %% ticks
+      \draw[step = 1.0, gray,dashed] (-4,-3) grid (4,3);
+      %% axis
+      \draw[thick,->] (-4.5,0) -- coordinate (x axis mid) (4.5,0)
+          node[anchor = north west] {$x$};
+      \draw[thick,->] (0,-3.5) -- coordinate (y axis mid) (0,3.5) node[anchor=west] {$y$};
+
+      \foreach \y in {-3,-2,-1,1,2,3} {
+        \draw (1pt, \y) -- (-1pt, \y)
+            %node[font=\scriptsize,yshift=-6,xshift=-1,anchor=east] {$\y$}
+        ;
+      }
+      \foreach \x in {-4,-3,-2,-1,1,2,3,4} {
+        \draw (\x,1pt) -- (\x,-1pt)
+           %node[font=\scriptsize,yshift=-5,xshift=3,anchor=east] {$\x$}
+        ;
+      }
+     \end{scope}
+
+  \end{tikzpicture}
+
 \item Determine the period and amplitude of the function $f(x)= -3\sin(x)$. \\[1in]
 \end{enumerate}
 
@@ -225,10 +254,33 @@ $\star$ The \emph{phase shift} is $-C/B$. A negative phase shift is a shift to t
 
 \item Find an interval containing exactly one cycle.\vfill
 
-\item Sketch the graph of $f(x)=\sin(x+\pi/6)$. 
-\end{enumerate} 
+\item Sketch the graph of $f(x)=\sin(x+\pi/6)$. Label the values on the axes.
 
-\scalebox{.8}{\includegraphics[scale=1.5]{gentrig1}}
+    \noindent
+    \begin{tikzpicture}[y=1.0cm, x=1.8cm,font=\sffamily]
+    \begin{scope}
+      %% ticks
+      \draw[step = 1.0, gray,dashed] (-4,-3) grid (4,3);
+      %% axis
+      \draw[thick,->] (-4.5,0) -- coordinate (x axis mid) (4.5,0)
+          node[anchor = north west] {$x$};
+      \draw[thick,->] (0,-3.5) -- coordinate (y axis mid) (0,3.5) node[anchor=west] {$y$};
+
+      \foreach \y in {-3,-2,-1,1,2,3} {
+        \draw (1pt, \y) -- (-1pt, \y)
+            %node[font=\scriptsize,yshift=-6,xshift=-1,anchor=east] {$\y$}
+        ;
+      }
+      \foreach \x in {-4,-3,-2,-1,1,2,3,4} {
+        \draw (\x,1pt) -- (\x,-1pt)
+           %node[font=\scriptsize,yshift=-5,xshift=3,anchor=east] {$\x$}
+        ;
+      }
+     \end{scope}
+
+  \end{tikzpicture}
+
+\end{enumerate} 
 
 
 \newpage
@@ -239,10 +291,33 @@ $\star$ The \emph{phase shift} is $-C/B$. A negative phase shift is a shift to t
 
 \item Find an interval containing exactly one cycle.\vfill
 
-\item Sketch the graph of $f(x)=3\cos(2x+\pi/2)$. 
-\end{enumerate} 
+\item Sketch the graph of $f(x)=3\cos(2x+\pi/2)$. Label the values on the axes.
 
-\scalebox{.8}{\includegraphics[scale=1.5]{gentrig1}}\\[.5in]
+    \noindent
+    \begin{tikzpicture}[y=1.0cm, x=1.8cm,font=\sffamily]
+    \begin{scope}
+      %% ticks
+      \draw[step = 1.0, gray,dashed] (-4,-3) grid (4,3);
+      %% axis
+      \draw[thick,->] (-4.5,0) -- coordinate (x axis mid) (4.5,0)
+          node[anchor = north west] {$x$};
+      \draw[thick,->] (0,-3.5) -- coordinate (y axis mid) (0,3.5) node[anchor=west] {$y$};
+
+      \foreach \y in {-3,-2,-1,1,2,3} {
+        \draw (1pt, \y) -- (-1pt, \y)
+            %node[font=\scriptsize,yshift=-6,xshift=-1,anchor=east] {$\y$}
+        ;
+      }
+      \foreach \x in {-4,-3,-2,-1,1,2,3,4} {
+        \draw (\x,1pt) -- (\x,-1pt)
+           %node[font=\scriptsize,yshift=-5,xshift=3,anchor=east] {$\x$}
+        ;
+      }
+     \end{scope}
+
+  \end{tikzpicture}
+
+\end{enumerate} 
 
 
 
