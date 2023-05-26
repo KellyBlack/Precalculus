@@ -91,7 +91,7 @@
       \node[black,align=center,text width=3em,font=\scriptsize,xshift=-2,anchor=north west] at (0,0)
            {Starting point: $x=\frac{C}{B}$};
 
-      \draw[black] (1,1) -- (3.5,1);
+      \draw[black] (1.3,1) -- (3.5,1);
       \draw[black,->] (3.3, 0.7) -- (3.3,1);
       \draw[black,<-] (3.3, 0.0) -- (3.3,0.3);
       \node[black,align=center,text width=3em,font=\scriptsize,xshift=0] at (3.3,0.5)
@@ -99,9 +99,90 @@
     \end{scope}
   \end{tikzpicture}
 
+\noindent
+  \begin{tikzpicture}[y=1.0cm, x=0.8cm,font=\sffamily]
+    \begin{scope}
+      %% ticks
+      % \draw[step = 1.0, gray,dashed] (-3,-1.2) grid (3,1.2);
+      %% axis
+      \draw[thick,->] (-4.5,0) -- coordinate (x axis mid) (8.5,0)
+           node[anchor = north west,xshift=-4] {$x$};
+      \draw[thick,->] (0,-1.5) -- coordinate (y axis mid) (0,1.5)
+           node[anchor = north west] {$y$};
+      \foreach \y in {-1,1} {
+        \draw (1pt, \y) -- (-1pt, \y) node[anchor=east] {\y};
+      }
+      \foreach \x in {-4,-3,...,8} {
+        \draw(\x,4pt) -- (\x,-4pt);
+      }
 
-\includegraphics{cosine1}\includegraphics[scale=0.7]{cosine2}\\
-\noindent \underline{Recall} The period of the sine graph is $2\pi$; the period of the cosine graph is also $2\pi$. 
+      \node[yshift=-5,xshift=0,anchor=north] at (1,0) {$\frac{\pi}{2}$};
+      \node[yshift=-5,xshift=0,anchor=north] at (2,0) {$\pi$};
+      \foreach \x in {3,5,7} {
+        \node[yshift=-5,xshift=0,anchor=north] at (\x,0) {$\frac{\x\pi}{2}$};
+      }
+      \foreach \x in {2,3,4} {
+        \node[yshift=-5,xshift=2.5,anchor=north] at (2*\x,0) {$\x\pi$};
+      }
+
+      \node[yshift=-5,xshift=0,anchor=north] at (-1,0)  {$-\frac{\pi}{2}$};
+      \node[yshift=-5,xshift=-5,anchor=north] at (-2,0) {$-\pi$};
+      \node[yshift=-5,xshift=0,anchor=north] at (-3,0)  {$-\frac{3\pi}{2}$};
+      \node[yshift=-5,xshift=-10,anchor=north] at (-4,0) {$-2\pi$};
+
+      \draw[black] (4,-0.6) -- (4,-1.5);
+      \draw[black] (4,0.3) -- (4,0.9);
+      \draw[black,<-] (0,-1.3) -- (1.2,-1.3);
+      \draw[black,->] (2.8,-1.3) -- (4,-1.3);
+      \node[black,align=center,text width=5em,font=\scriptsize,yshift=-5] at (2,-1.3)
+           {1 cycle, period$=2\pi$};
+
+      \draw[black] (-2.3,-1) -- (-5.5,-1);
+      \draw[black] (-4.4, 1) -- (-5.5, 1);
+      \draw[black,->] (-5.5, 0.4) -- (-5.5,1);
+      \draw[black,<-] (-5.5,-0.4) -- (-5.5,-1);
+      \node[black,align=center,text width=5em,font=\scriptsize,xshift=-5] at (-5.5,0)
+         {Range is $-1\leq y \leq 1$};
+
+      \begin{scope}
+        %% \clip(-4,-1) rectangle (8,5);
+        \draw[scale=1.0,domain=-4.5:8.5,smooth,variable=\x,very thick,blue!50!black,samples=120,<->]
+           plot ({\x},{cos(deg(0.5*pi*\x))}) node[anchor=south east,yshift=4] {$\cos(x)$};
+      \end{scope}
+    \end{scope}
+
+    \begin{scope}[shift={(10,0)},scale=1.0]
+      \fill [red!10!white] (-1.1,-1.8) rectangle (5.5,1.5);
+      \draw[thick,->] (-0.8,0) -- coordinate (x axis mid) (4.5,0)
+           node[anchor = north west] {$x$};
+      \draw[thick,->] (-0.4,-1.2) -- coordinate (y axis mid) (-0.4,1.2)
+           node[anchor = north east] {$y$};
+      \begin{scope}
+        %% \clip(-4,-1) rectangle (8,5);
+        \draw[scale=1.0,domain=0:4,smooth,variable=\x,very thick,blue!50!black,samples=60,<->]
+           plot ({\x},{cos(deg(0.5*pi*\x))});
+      \end{scope}
+      \node[anchor=south,font=\scriptsize,blue] at (1,1) {$A\cos(Bx-C)$};   
+      \draw[black] (0,-0.3) -- (0,-1.7);
+      \draw[black] (4,-0.3) -- (4,-1.7);
+      \draw[black,<-] (0,-1.5) -- (0.8,-1.5);
+      \draw[black,->] (3.2,-1.5) -- (4,-1.5);
+      \node[black,align=center,text width=5em,font=\scriptsize,yshift=0] at (2,-1.5)
+           {Period$=\frac{2\pi}{B}$};
+      \node[black,align=center,text width=3em,font=\scriptsize,xshift=-2,anchor=north west] at (-0.2,0)
+           {Starting point: $x=\frac{C}{B}$};
+
+      \draw[black] (0.5,1) -- (2.2,1);
+      \draw[black,->] (2.0, 0.7) -- (2.0,1);
+      \draw[black,<-] (2.0, 0.0) -- (2.0,0.3);
+      \node[black,align=center,text width=3em,font=\scriptsize,xshift=0] at (2.0,0.5)
+          {Amplitude: $|A|$};
+    \end{scope}
+  \end{tikzpicture}
+
+
+  \noindent \underline{Recall} The period of the sine graph is $2\pi$;
+  the period of the cosine graph is also $2\pi$.
 
 
 \begin{enumerate}
