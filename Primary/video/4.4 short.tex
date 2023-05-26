@@ -79,10 +79,48 @@ $$\sin(\theta)=\frac{4}{5}, \quad  \theta \text{ in Quadrant 2}$$\vfill
 \subsection{Reference Angles}
 
 Let's draw our two reference triangles as well as an $xy-$plane.\\[1.5in]
-\hspace{-.3in}\begin{tabular}{| l |} \hline
-Let $\theta$ be a nonquadrantal angle in standard position. The \underline{reference angle} for $\theta$, \\ called $\theta_R$, is the \emph{acute} angle $\theta_R$ that the \emph{terminal side} of $\theta$ makes with the $x$-axis. \\ \hline
-\end{tabular}\\
-\includegraphics{refimage}\\
+\hspace{-.3in}
+\begin{tabular}{| p{0.9\textwidth} |} \hline
+  Let $\theta$ be a
+  nonquadrantal angle in standard position.  The \underline{reference
+  angle} for $\theta$, called $\theta_R$, is the \emph{acute} angle
+  $\theta_R$ that the \emph{terminal side} of $\theta$ makes with the
+  $x$-axis. \\ \hline
+\end{tabular}
+
+     \begin{tikzpicture}[y=2.0cm, x=2.0cm,font=\sffamily]
+       \begin{scope}[shift={(-2.75,0)},scale=1.0]
+         \draw[black,->] (-1.1,0) -- (1.1,0) node[anchor=south west] {$x$};
+         \draw[black,->] (0,-1.1) -- (0,1.1) node[anchor=south east] {$y$};
+         \draw[ultra thick,blue!50!black,<->] (1,0) -- (0,0) -- (135:1);
+         \draw[thin,black,->] (0.3,0) arc (0:133:0.3) node[anchor=south west,pos=0.5] {$\theta$};
+         \draw[thin,black,->] (135:0.5) arc (135:180:0.5) node[anchor=south east,pos=0.5] {$\theta_R$};
+         \draw[thin,black] (135:0.4) arc (135:180:0.4);
+         \node[anchor=north,font=\scriptsize,text width=9em,align=left] at (0,-1.1)
+             {If $90^\circ<\theta<180^\circ$, then $\theta_R=180^\circ-\theta$};
+       \end{scope}
+       \begin{scope}[shift={(0,0)},scale=1.0]
+         \draw[black,->] (-1.1,0) -- (1.1,0) node[anchor=south west] {$x$};
+         \draw[black,->] (0,-1.1) -- (0,1.1) node[anchor=south east] {$y$};
+         \draw[ultra thick,blue!50!black,<->] (1,0) -- (0,0) -- (225:1);
+         \draw[thin,black,->] (0.3,0) arc (0:223:0.3)  node[anchor=south east,pos=0.5] {$\theta$};
+         \draw[thin,black,->] (180:0.5) arc (180:225:0.5) node[anchor=north east,pos=0.5] {$\theta_R$};
+         \draw[thin,black] (180:0.4) arc (180:225:0.4);
+         \node[anchor=north,font=\scriptsize,text width=9em,align=left] at (0,-1.1)
+             {If $180^\circ<\theta<270^\circ$, then $\theta_R=\theta-180^\circ$};
+       \end{scope}
+       \begin{scope}[shift={(2.75,0)},scale=1.0]
+         \draw[black,->] (-1.1,0) -- (1.1,0) node[anchor=south west] {$x$};
+         \draw[black,->] (0,-1.1) -- (0,1.1) node[anchor=south east] {$y$};
+         \draw[ultra thick,blue!50!black,<->] (1,0) -- (0,0) -- (315:1);
+         \draw[thin,black,->] (0.3,0) arc (0:312:0.3)  node[anchor=south east,pos=0.5] {$\theta$};
+         \draw[thin,black,->] (315:0.5) arc (315:360:0.5) node[anchor=north west,pos=0.5] {$\theta_R$};
+         \draw[thin,black] (315:0.4) arc (315:360:0.4);
+         \node[anchor=north,font=\scriptsize,text width=9em,align=left] at (0,-1.1)
+             {If $270^\circ<\theta<360^\circ$, then $\theta_R=360^\circ-\theta$};
+       \end{scope}
+     \end{tikzpicture}
+
 
 \newpage
 
