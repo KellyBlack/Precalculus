@@ -50,9 +50,21 @@ Trigonometric functions of quadrantal angles:\\
 
 \subsection{The Signs of the Trigonometric Functions} ~
 
-\begin{center}
-\includegraphics[scale=.8]{signs}
-\end{center}
+\begin{tikzpicture}[y=2cm, x=2cm,font=\sffamily]
+     \begin{scope}[shift={(0,0)},scale=1]
+       \fill [blue!10!white] (0,0) rectangle (1.5,1.5);
+       \fill [red!10!white] (-1.7,0) rectangle (0.,1.5);
+       \fill [green!10!white] (-1.7,-1.5) rectangle (0,0);
+       \fill [orange!10!white] (0,-1.5) rectangle (1.5,0);
+       \draw[thick,->] (-1.7,0) -- (1.5,0) node[anchor=south west,font=\scriptsize] {$x$};
+       \draw[thick,->] (0,-1.5) -- (0,1.5) node[anchor=east,font=\scriptsize] {$y$};
+       \node at (0.8,1.2) [anchor=north,align=center,text width=8em,yshift=0em] {\textbf{Quadrant I} \\ All functions positive};
+       \node at (-0.8,1.2) [anchor=north,align=center,text width=8em,yshift=0em] {\textbf{Quadrant II} \\ Sine and cosecant positive, all others negative.};
+       \node at (-0.8,-0.2) [anchor=north,align=center,text width=8em,yshift=0em] {\textbf{Quadrant III} \\ Tangent and cotangent positive. All others negative.};
+       \node at (0.8,-0.2) [anchor=north,align=center,text width=8em,yshift=0em] {\textbf{Quadrant IV} \\ Coine and secant positive, all others negative.};
+     \end{scope}
+\end{tikzpicture}
+
 
 \item Let $\theta$ be an angle in standard position.  Name the quadrant in which $\theta$ lies.
 $$\sin(\theta)<0, \quad \quad \tan(\theta)<0$$
