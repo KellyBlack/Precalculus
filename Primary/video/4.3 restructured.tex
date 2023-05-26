@@ -91,8 +91,21 @@ follows:
     \node[anchor=south east] at (0.5,0.5) {$\sqrt{2}$};
   \end{tikzpicture}
 
-\item Find the sine, cosine, and tangent of 30$^{\circ}$ and  60$^{\circ}$ using the triangle below.\\
-\includegraphics[scale=.6]{trigex3}\\
+\item Find the sine, cosine, and tangent of 30$^{\circ}$ and
+  60$^{\circ}$ using the triangle below.
+  
+\begin{tikzpicture}[y=3cm, x=3cm,font=\sffamily]
+  \draw[thick,black] (0,0) -- (1,0) -- (60:2) -- cycle;
+  \draw[thick,black,dashed] (1,0) -- (2,0) -- (60:2);
+  \draw[very thin,black] (0.8,0.0) -- (0.8,0.2) -- (1,0.2);
+  \draw[thin,black] (0.2,0) arc (0:60:0.2);
+  \node[black,anchor=north] at (0.5,0) {1};
+  \node[black,anchor=west] at (1,0.8) {$\sqrt{3}$};
+  \node[black,anchor=south east] at (60:1) {$2$};
+  \node[black,anchor=south west] at (12.5:0.2) {$60^\circ$};
+  \draw[thin,black] (60:1.8) arc (240:270:0.2);
+  \node[black,anchor=west] at (60:1.65) {$30^\circ$};
+\end{tikzpicture}
 
 
 \newpage
