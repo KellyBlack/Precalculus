@@ -4,32 +4,44 @@
 
 \videoLink{Section 1.1}{https://www.youtube.com/playlist?list=PLYHZK3b8UFw3ad1wlhTMGcL5kgita6QGS}
 
+\noindent
+Student goals:
+  \begin{itemize}
+  \item Plot points in the coordinate plane.
+  \item Identify the four quandrants of the coordinate plane.
+  \item Calculate the distance between two points.
+  \item Make rough sketch of the graph of a function by plotting
+    points first.
+  \item Determine the $x$ and $y$ intercepts of a function
+    analytically and graphically.
+  \end{itemize}
+
+
 \noindent \textbf{Instructions:}  Work together in groups of  3 or 4 to complete the following problems.
 
 
 \begin{enumerate}
-\item The points $ABC$ form a triangle.
-\begin{enumerate}
-\item Plot $A(-1,2),B(3,0) , C(4,2), $ and draw the triangle on the graph below.\\
 
- \begin{tikzpicture}[y=.7cm, x=.7cm,font=\sffamily]
-    %% ticks
-    \draw[step = 1, gray] (-6,-6) grid (6,6);
-    %% axis
-    \draw[thick,->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
-    \draw[thick,->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = north east] {$y$};
-    \foreach \y in {-6,-5,...,-1,1,2,...,6} {
-      \draw (2pt, \y) -- (-2pt, \y);
-    }
-    \foreach \x in {-6,-5,...,-1,1,2,...,6} {
-      \draw (\x,2pt) -- (\x,-2pt);
-    }
+\item Mark the points $P_1(-2,-4.5)$ and $P_2(4,1.5)$ on the
+  coordinate plane below. Determine the distance between the two
+  points.  Include a sketch of a right triangle whose hypotenuse
+  represents the distance between the two points. Label the lengths of
+  each side of the right triangle.
 
+  \begin{tikzpicture}[y=0.75cm, x=0.75cm,font=\sffamily]
+    % bounds
+    % ticks
+    \draw[step = 1, gray, very thin,dashed,opacity=0.85] (-5.5, -5.5) grid ( 5.5,5.5);
+ 	% axis
+	\draw[thick,->] (-5.5,0) -- coordinate (x axis mid) (5.5,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,-5.5) -- coordinate (y axis mid) (0,5.5) node[anchor = south east] {$y$};
+    \foreach \y in {-5,-4,...,-1,1,2,...,5.5} {
+      \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+    }
+    \foreach \x in {-5,-4,...,-1,1,2,...,5.5} {
+      \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+    }
   \end{tikzpicture}
-
-\item Find the perimeter of the triangle.\vfill
-\item Is the triangle a right triangle?  Show work to support your answer.\\[1in]
-\end{enumerate}
 
 
 \newpage
@@ -46,7 +58,11 @@
 
 \newpage
 
-\item Use the given problem solving process below to determine all points lying on the $y$-axis that are 5 units away from the point $(4,-2)$.  As a group, write your complete solution on the board. 
+\item Determine all points lying on the $y$-axis that are 5 units away
+  from the point $(4,-2)$.  Use the problem solving process stated
+  below, and explicitly identify which part of the process you are
+  using in each of your steps.  As a group, write your complete
+  solution on the board.
 
 
 \begin{boxthm}
@@ -86,12 +102,30 @@
 
 
 
+\hwTitle{Homework Section 1.1}
 
+\begin{enumerate}
+\item The points $ABC$ form a triangle.
+  \begin{enumerate}
+  \item Plot $A(-1,2),B(3,0) , C(4,2), $ and draw the triangle on the graph below.\\
 
+    \begin{tikzpicture}[y=.7cm, x=.7cm,font=\sffamily]
+      %% ticks
+      \draw[step = 1, gray] (-6,-6) grid (6,6);
+      %% axis
+      \draw[thick,->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+      \draw[thick,->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = north east] {$y$};
+      \foreach \y in {-6,-5,...,-1,1,2,...,6} {
+        \draw (2pt, \y) -- (-2pt, \y);
+      }
+      \foreach \x in {-6,-5,...,-1,1,2,...,6} {
+        \draw (\x,2pt) -- (\x,-2pt);
+      }
 
+    \end{tikzpicture}
 
-
-
-
-
-
+  \item Determine the perimeter of the triangle.
+  \item Is the triangle a right triangle?  Show work to support your answer.
+  \end{enumerate}
+  
+\end{enumerate}
