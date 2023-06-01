@@ -630,4 +630,74 @@ $$f(-1)= \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad
 
 \begin{enumerate}
 \item Complete question \ref{question:1.7:absoluteValue}.
+\item A store sells cold drinks. From 10:00am till 12:00pm (noon) it
+  sells 0.2 drinks per minute. From 12:00pm till 4:00pm it sells 0.4
+  drinks per minute. Determine the function that gives the number of
+  drinks sold in one day given the number of minutes past 10:00am.
+  State your final answer as a function of time and as a piecewise
+  defined function.
+
+\item The graph of a function, $h(x)$, is given below. Use the graph
+  to answer each of the questions below.
+
+    \begin{tikzpicture}[y=1.0cm, x=1.0cm,font=\sffamily]
+        %% ticks
+        \draw[step = 1, gray,dashed] (-3,-1) grid (3,4);
+        %% axis
+        \draw[thick,->] (-3.5,0) -- coordinate (x axis mid) (3.5,0) node[anchor = north west] {$x$};
+        \draw[thick,->] (0,-1.5) -- coordinate (y axis mid) (0,4.5) node[anchor = north east] {$y$};
+        \foreach \y in {-1,1,2,3,4} {
+          \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+        }
+        \foreach \x in {-3,-2,-1,1,2,3} {
+          \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+        }
+
+        \draw[ultra thick] plot [smooth] coordinates
+           {(-3,3) (-2,1) (-1,3)};
+
+        \draw[ultra thick] plot [smooth] coordinates
+           {(1,2) (2,2) };
+        
+        %\draw[ultra thick,black]
+        % (-4, 0) .. controls +(35: 1) and +(180:0.5) .. (-2, 2)
+        % (-2, 2) .. controls +(0:0.5) and +(135:1)   .. (0, 0);
+        % (-2, 0) .. controls +( 90:0.5) and +(-40:-0.5) .. (0,3)
+        % ( 0, 3) .. controls +(-40:0.5) and +(-15:-1) .. (3, 2);
+
+        % \draw[ultra thick,black] (0,-1) --  (4,3);
+        \draw[black,fill=black]  (-3,3) circle (0.1);
+        \draw[black,fill=white]  (-3,3) circle (0.075);
+        \draw[black,fill=black]  (-1,3) circle (0.1);
+        \draw[black,fill=white]  (-1,3) circle (0.075);
+        \draw[black,fill=black]  (1,2) circle (0.1);
+        \draw[black,fill=white]  (1,2) circle (0.075);
+        \draw[black,fill=black]  (2,2) circle (0.1);
+      \end{tikzpicture}
+
+
+
+    \begin{enumerate}
+    \item Determine the domain and range of $h(x)$.
+    \item Determine the intervals where the function is
+      increasing and the intervals where the function is decreasing.
+    \item Determine the formula for the function using
+      proper notation for a piecewise defined function. (The curved
+      part to the left is a parabola.)
+    \end{enumerate}
+
+\item The cost to use a parking garage is \$5.00 for the first
+    thirty minutes. After thirty minutes the cost is an additional
+    five cents for each minute thereafter.
+    \begin{enumerate}
+    \item Determine the formula for the cost to park a car given the
+      number of minutes it is parked and use proper notation for a
+      piecewise defined function.
+    \item Determine the average rate of change of the cost to park a
+      car between $t$ minutes and zero minutes. (In other words what
+      is the average rate of change of the cost from time $t$ to time
+      0.) What happens to the average rate of change after a very long
+      time?
+    \end{enumerate}
+
 \end{enumerate}
