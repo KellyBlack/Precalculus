@@ -34,11 +34,11 @@
 \end{enumerate}
 \vfill
 
-\newpage
+\clearpage
 
-\item For this problem, let $f(x)=\sqrt{x}$.
+\item For this problem, let $g(x)=\sqrt{x}$.
 \begin{enumerate}
-\item Graph $f(x)=\sqrt{x}$.  Then determine the domain and range of $f(x)$.\\
+\item Graph $g(x)=\sqrt{x}$.  Then determine the domain and range of $g(x)$.\\
 \begin{tikzpicture}[y=.5cm, x=0.5cm,font=\sffamily]
     %% ticks
     \draw[step = 1, gray] (-11,-11) grid (11,11);
@@ -55,7 +55,58 @@
   \end{tikzpicture}
 
 \vfill
-\item Graph and label $f(x)-3$ on the coordinate system above.  Then determine the domain and range of $f(x)-3$.\vfill
+\item Graph and label $g(x)-3$ on the coordinate system above.  Then determine the domain and range of $g(x)-3$.\vfill
+\vfill
+\end{enumerate}
+
+
+\clearpage
+
+\item For this problem, let $h(x)=x$.
+\begin{enumerate}
+\item Graph $h(x)=x$.  Then determine the domain and range of $h(x)$.\\
+\begin{tikzpicture}[y=.5cm, x=0.5cm,font=\sffamily]
+    %% ticks
+    \draw[step = 1, gray] (-11,-11) grid (11,11);
+    %% axis
+    \draw[thick,->] (-11.5,0) -- coordinate (x axis mid) (11.5,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,-11.5) -- coordinate (y axis mid) (0,11.5) node[anchor = north east] {$y$};
+    \foreach \y in {-6,-5,...,-1,1,2,...,6} {
+      \draw (2pt, \y) -- (-2pt, \y);
+    }
+    \foreach \x in {-6,-5,...,-1,1,2,...,6} {
+      \draw (\x,2pt) -- (\x,-2pt);
+    }
+
+  \end{tikzpicture}
+
+\vfill
+\item Graph and label $h(x)+1$ on the coordinate system above.  Then determine the domain and range of $h(x)+1$.\vfill
+\vfill
+\end{enumerate}
+
+\clearpage
+
+\item For this problem, let $k(x)=x^2$.
+\begin{enumerate}
+\item Graph $k(x)=x^2$.  Then determine the domain and range of $k(x)$.\\
+\begin{tikzpicture}[y=.5cm, x=0.5cm,font=\sffamily]
+    %% ticks
+    \draw[step = 1, gray] (-11,-11) grid (11,11);
+    %% axis
+    \draw[thick,->] (-11.5,0) -- coordinate (x axis mid) (11.5,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,-11.5) -- coordinate (y axis mid) (0,11.5) node[anchor = north east] {$y$};
+    \foreach \y in {-6,-5,...,-1,1,2,...,6} {
+      \draw (2pt, \y) -- (-2pt, \y);
+    }
+    \foreach \x in {-6,-5,...,-1,1,2,...,6} {
+      \draw (\x,2pt) -- (\x,-2pt);
+    }
+
+  \end{tikzpicture}
+
+\vfill
+\item Graph and label $k(x-2)$ on the coordinate system above.  Then determine the domain and range of $k(x-2)$.\vfill
 \vfill
 \end{enumerate}
 
