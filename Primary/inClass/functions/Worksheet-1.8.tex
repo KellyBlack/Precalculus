@@ -152,6 +152,60 @@ Student goals:
 \vfill
 \vfill
 
+\clearpage
+
+\item Two functions are defined by
+  \begin{eqnarray*}
+    \begin{array}{lcl@{\hspace{2em}}lcl}
+      k(x) & = & |x|-2, & m(x) & = & 4-x^2.
+    \end{array}
+  \end{eqnarray*}
+
+  \begin{tikzpicture}[y=0.7cm, x=0.7cm,font=\sffamily]
+
+    \begin{scope}[shift={(0,0)}]      
+      %% ticks
+      \draw[step = 1, gray,dashed] (-4,-4) grid (4,4);
+      %% axis
+      \draw[thick,->] (-4.5,0) -- coordinate (x axis mid) (4.5,0) node[anchor = north west] {$x$};
+      \draw[thick,->] (0,-4.5) -- coordinate (y axis mid) (0,4.5) node[anchor = east] {$k$};
+      \foreach \y in {-4,-3,-2,-1,1,2,3,4} {
+        \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+      }
+      \foreach \x in {-4,-3,-2,-1,1,2,3,4} {
+        \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=3,anchor=east] {$\x$};
+      }
+    \end{scope}
+
+    \begin{scope}[shift={(11,0)}]      
+      %% ticks
+      \draw[step = 1, gray,dashed] (-4,-4) grid (4,4);
+      %% axis
+      \draw[thick,->] (-4.5,0) -- coordinate (x axis mid) (4.5,0) node[anchor = north west] {$x$};
+      \draw[thick,->] (0,-4.5) -- coordinate (y axis mid) (0,4.5) node[anchor = east] {$m$};
+      \foreach \y in {-4,-3,-2,-1,1,2,3,4} {
+        \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+      }
+      \foreach \x in {-4,-3,-2,-1,1,2,3,4} {
+        \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=3,anchor=east] {$\x$};
+      }
+    \end{scope}
+
+
+  \end{tikzpicture}
+
+  \begin{enumerate}
+  \item Use the two axes above to make a rough sketch of both
+    functions.
+  \item For what values of $x$ is $k(x)=0$?
+    \vfill
+  \item Determine the $x$-intercepts of $k(m(x))$.
+    \vfill
+  \item For what values of $x$ is $k(x)$ increasing?
+    \vfill
+  \item Determine the values of $x$ where $k(m(x))$ is increasing.
+    \vfill
+  \end{enumerate}
 
 
 \end{enumerate}
