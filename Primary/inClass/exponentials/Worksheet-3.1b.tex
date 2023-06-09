@@ -340,6 +340,190 @@ throughout the remaining questions.
 
 \end{enumerate}
 
+\hwTitle{Section 3.1}
 
+\begin{enumerate}
+\item The graph of a function, $h$, is given in the plot below, and a
+  table is given for all of the values of a function, $g$. Use the
+  information in the graph and the table to answer each of the
+  questions below. \textbf{If a value does not exist briefly explain
+    why.}
+
+  \begin{tabular}{p{0.7\textwidth}p{0.2\textwidth}}
+    \begin{minipage}{0.7\linewidth}
+      \begin{tikzpicture}[y=0.75cm, x=0.75cm,font=\sffamily]
+        \draw[step = 1, gray, thin,opacity=0.85] (-4,-4) grid (4,4);
+        \draw[black,ultra thick,->] (-4.5,0) -- (4.5,0) node[anchor=north west] {$x$};
+        \draw[black,ultra thick,->] (0,-4.5) -- (0,4.5) node[anchor=east] {$h$};
+        \node[black,anchor=south west] at (0.3,4) {Graph of $h(x)$};
+        \foreach \y in {-4,-3,-2,-1,1,2,3,4} {
+          \draw (1pt, \y) -- (-1pt, \y) node[anchor = east,yshift=2] {$\y$};
+          \draw (\y,1pt) -- (\y,-1pt) node[anchor = north,xshift=2] {$\y$};
+        }
+        %% Draw the function.
+        \begin{scope}
+          \draw[ultra thick,black] (-3, 3) .. controls +(0:1) and +(-40:-1) .. (0, 2)
+                    ( 0, 2) .. controls +(-40:1.0) and +(-50:-0.5) .. (1, 1)
+                    ( 1, 1) .. controls +(-50:0.5) and +(-40:-0.5) .. (2,0)
+                    ( 2,0) .. controls +(-40:0.5) and +(-15:-1) .. (3, -4);
+          \draw[black,fill=black]  (-3,3) circle (0.1);
+          \draw[black,fill=black]  (3,-4) circle (0.1);
+        \end{scope}
+      \end{tikzpicture}
+    \end{minipage}
+    &
+      \begin{minipage}{0.2\linewidth}
+        \begin{tabular}{r|r}
+          $x$ & $g(x)$ \\ \hline
+          0 & 5 \\
+          1 & 0 \\
+          2 & -3 \\
+          3 & 1 \\
+          4 & 3 
+        \end{tabular}
+      \end{minipage}
+  \end{tabular}
+
+  \begin{enumerate}
+  \item  Is the function $h$ 1-1? (Briefly justify your answer.)
+  \item  Determine the value of $g(h(2))$.
+  \item  Determine the value of  $h(g(2))$.
+  \item  Determine the value of $g^{-1}(h(3))$.
+  \item  Determine the value of $g(h^{-1}(3))$.
+  \item  Determine the range and domain of $g^{-1}$.
+  \item  Determine the range and domain of $h^{-1}$.
+  \end{enumerate}
+
+\item The following questions refer to the functions whose graphs are
+  given below.x
+
+    \begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+    \begin{minipage}{0.5\linewidth}
+      \begin{tikzpicture}[y=0.5cm, x=0.5cm,font=\sffamily]
+        \draw[step = 1, gray, thin,opacity=0.85] (-4,-4) grid (4,4);
+        \draw[black,ultra thick,->] (-4.5,0) -- (4.5,0) node[anchor=north west] {$x$};
+        \draw[black,ultra thick,->] (0,-4.5) -- (0,4.5) node[anchor=east] {$k$};
+        \node[black,anchor=south west] at (0.3,4) {Graph of $k(x)$};
+        %\foreach \y in {-4,-3,-2,-1,1,2,3,4} {
+        %  \draw (1pt, \y) -- (-1pt, \y) node[anchor = east,yshift=2] {$\y$};
+        %  \draw (\y,1pt) -- (\y,-1pt) node[anchor = north,xshift=2] {$\y$};
+        %}
+        %% Draw the function.
+        \begin{scope}
+          \draw[black,ultra thick] (-3.5,2) -- (0,-1);
+          \draw[black,ultra thick] (0,1)    -- (2.5,-2);
+          \draw[black,fill=black]  (-3.5,2) circle (0.2);
+          \draw[black,fill=black]  (0,-1) circle (0.2);
+          \draw[black,fill=white]  (0,-1) circle (0.1);
+          \draw[black,fill=black]  (0, 1) circle (0.2);
+          \draw[black,fill=black]  (2.5,-2) circle (0.2);
+        \end{scope}
+      \end{tikzpicture}
+    \end{minipage}
+    &
+      \begin{minipage}{0.5\linewidth}
+      \begin{tikzpicture}[y=0.5cm, x=0.5cm,font=\sffamily]
+        \draw[step = 1, gray, thin,opacity=0.85] (-4,-4) grid (4,4);
+        \draw[black,ultra thick,->] (-4.5,0) -- (4.5,0) node[anchor=north west] {$x$};
+        \draw[black,ultra thick,->] (0,-4.5) -- (0,4.5) node[anchor=east] {$p$};
+        \node[black,anchor=south west] at (0.3,4) {Graph of $p(x)$};
+        %\foreach \y in {-4,-3,-2,-1,1,2,3,4} {
+        %  \draw (1pt, \y) -- (-1pt, \y) node[anchor = east,yshift=2] {$\y$};
+        %  \draw (\y,1pt) -- (\y,-1pt) node[anchor = north,xshift=2] {$\y$};
+        %}
+        %% Draw the function.
+        \begin{scope}
+          \draw[black,ultra thick] (-3.5,3) -- (0,1);
+          \draw[black,ultra thick] (0,-1)    -- (2.5,-3);
+          \draw[black,fill=black]  (-3.5,3) circle (0.2);
+          \draw[black,fill=black]  (0,1) circle (0.2);
+          \draw[black,fill=white]  (0,1) circle (0.1);
+          \draw[black,fill=black]  (0,-1) circle (0.2);
+          \draw[black,fill=black]  (2.5,-3) circle (0.2);
+        \end{scope}
+      \end{tikzpicture}
+      \end{minipage}
+    \end{tabular}
+
+    \begin{enumerate}
+    \item Determine the domain of $k(x)$ and determine the set of
+      values of $x$ over which the function is decreasing. Is the
+      function, $k(x)$, one-to-one? (Briefly justify your reasoning.)
+    \item Determine the domain of $p(x)$ and determine the set of
+      values of $x$ over which the function is decreasing. Is the
+      function, $p(x)$, one-to-one? (Briefly justify your reasoning.)
+    \item Are $k(x)$ and $p(x)$ strictly decreasing functions? If a
+      function is strictly decreasing is the function one-to-one?
+      (Briefly justify your reasoning.)
+    \end{enumerate}
+
+  \item The graph of a function is given below. Determine whether or
+    not an inverse for the function exists. If not determine a
+    restriction on the domain so that the function is invertable on
+    your restricted domain. Your restricted domain should allow you to
+    invert the function for any value of $y$ in the range of the
+    original function.
+
+      \begin{tikzpicture}[y=1.0cm, x=1.0cm,font=\sffamily]
+    %% ticks
+    \draw[step = 1, gray,dashed] (-4,-2) grid (4,2);
+    %% axis
+    \draw[thick,->] (-4.5,0) -- coordinate (x axis mid) (4.5,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,-2.5) -- coordinate (y axis mid) (0,2.5) node[anchor = south] {$l(x)$};
+    \foreach \y in {-2,-1,1,2} {
+      \draw (1pt, \y) -- (-1pt, \y) node[yshift=-6,xshift=-1,anchor=east] {$\y$};
+    }
+    \foreach \x in {-4,-3,...,-1,1,2,...,4} {
+      \draw (\x,1pt) -- (\x,-1pt) node[yshift=-5,xshift=-1,anchor=east] {$\x$};
+    }
+
+    \begin{scope}
+      %\clip(-4,-1) rectangle (8,5);
+      \draw[scale=1.0,domain=-4:4,smooth,variable=\x,very thick,black,samples=120] 
+           plot ({\x},{sin(deg(pi*\x/2))});
+      \fill[black] (-4,0) circle [radius=0.5ex];
+      \fill[white] (-4,0) circle [radius=0.3ex];
+      \fill[black] ( 4,0) circle [radius=0.5ex];
+      \fill[white] ( 4,0) circle [radius=0.3ex];
+    \end{scope}
+
+  \end{tikzpicture}
+
+\item The equation for a function, $j(x)$, is given below, and a table
+  is given for all of the values of a function, $v(x)$. Use the
+  formula and the table to answer each of the questions
+  below. \textbf{If a value does not exist briefly explain why.}
+
+  \begin{tabular}{p{0.3\textwidth}p{0.3\textwidth}}
+    \begin{minipage}{0.3\linewidth}
+      \begin{eqnarray*}
+        j(x) & = & |x|,
+      \end{eqnarray*}
+    \end{minipage}
+    &
+      \begin{minipage}{0.3\linewidth}
+        \begin{tabular}{r|r}
+          $x$ & $v(x)$ \\ \hline
+          0 & 10 \\
+          1 &  8 \\
+          2 &  4 \\
+          3 &  0 \\
+          4 & -2
+        \end{tabular}
+      \end{minipage}
+  \end{tabular}
+
+  \begin{enumerate}
+  \item  Is the function $j$ 1-1? (Briefly justify your answer.)
+  \item  Is the function $v$ 1-1? (Briefly justify your answer.)
+  \item  Determine the value of $j(v(2))$.
+  \item  Determine the value of  $v(j(-2))$.
+  \item  Determine the value of $v^{-1}(j(-3))$.
+  \item  Determine the value of $v(j^{-1}(-3))$.
+  \item  Determine the range and domain of $v^{-1}$.
+  \end{enumerate}
+
+
+\end{enumerate}
 
 
