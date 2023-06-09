@@ -171,7 +171,8 @@ $\sqrt[3]{x}=x^{1/3}$.
 
 \begin{equation*}
   \begin{array}{rcl@{\hspace{2em}}l}
-    x^{1/3} & = & 3 & \textrm{Original~equation.}\\
+    \sqrt[3]{x} & = & 3 & \textrm{Original~equation.}\\
+    x^{1/3} & = & 3 & \textrm{Use~definition~of~cube~root.}\\
     \left(x^{1/3}\right)^{3/1} & = & 3^{3/1} & \textrm{Raise~both~sides~to~$3/1$.}\\
     x^1 & = & 3^3 & \textrm{Use~exponential~properties.} \\
     x & = & 27    & \textrm{Simplify.}
@@ -181,9 +182,9 @@ $\sqrt[3]{x}=x^{1/3}$.
 \item Use the example above to solve each of the following
   equations. Take one step at a time and write down each step.
 \begin{enumerate}
-\item  $x^{3/2}=64$. 
+\item  $\left(\sqrt{x}\right)^{3}=64$. 
   \vfill
-\item  $5x^{1/7}-2=13$
+\item  $5\sqrt[7]{x}-2=13$
   \vfill
 \end{enumerate}
 
@@ -262,79 +263,28 @@ another?
 \end{enumerate}
 
 
-%\clearpage
-%
-%\item  Match the following functions to their graph.
-%
-%\begin{multicols}{4}
-%\begin{enumerate}
-%	\item $y=2^x$
-%	\item $y=1.25^x$
-%	\item $y=-2^x$
-%	\item $y=-1.25^x$
-%	\item $y=2^{-x}$
-%	\item $y=1.25^{-x}$
-%	\item $y=-2^{-x}$
-%	\item $y=-1.25^{-x}$
-%\end{enumerate}	
-%\end{multicols}
-%
-%
-%\begin{center}
-%\begin{tikzpicture}[y=.8cm, x=.8cm,font=\sffamily,
-%	mydot/.style={
-%    circle,
-%    fill=white,
-%    draw,
-%    outer sep=0pt,
-%    inner sep=1.5pt
-%  }]
-%    %% Add a grid
-%    \draw[step = 1, gray, very thin,opacity=0.85] (-8, -8) grid (8, 8);
-% 	%% Draw the axes
-%	\draw[thick,<->] (-8.5,0) -- coordinate (x axis mid) (8.5,0) node[anchor = north west] {$x$};
-%    \draw[thick,<->] (0,-8.5) -- coordinate (y axis mid) (0,8.5) node[anchor = south west] {$y$};
-%    %% Label the y axis
-%    \foreach \y in {-8,...,-1,1,2,...,8} {
-%      \draw (1pt, \y) -- (-1pt, \y) node[anchor = south east] {\tiny $\y$};
-%    }
-%    %% Label the x axis
-%    \foreach \x in {-8,...,-1,1,2,...,8} {
-%      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny $\x$};
-%    }
-%    %% Draw the function.
-%    \begin{scope}
-%%         \draw[very thick,blue] (-3,2) -- (1,1);
-%%         \draw[very thick,blue] (3.05,1.05) -- (4,3);
-%%         \draw[very thick,blue] (1.1,4) -- (3,4);
-%    %semi-circle
-%         %\draw[very thick, blue] (1,1) arc [radius=1, start angle=180, end angle= 5];
-%     %parabola
-%         %\draw[ultra thick, blue, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
-%         \draw[ultra thick, blue, <->, domain=-7.75:3.0] plot[samples=100] (\x, {2^\x});
-%         \draw[ultra thick, red, <->, domain=-7.75:7.75] plot[samples=100] (\x, {(1.25)^\x});
-%         \draw[ultra thick, orange, <->, domain=-3.0:7.75] plot[samples=100] (\x, {2^-\x});
-%         \draw[ultra thick, purple, <->, domain=-7.75:7.75] plot[samples=100] (\x, {(1.25)^-\x});
-%         \draw[ultra thick, blue, <->, domain=-3.0:7.75] plot[samples=100] (\x, {-2^-\x});
-%         \draw[ultra thick, red, <->, domain=-7.75:7.75] plot[samples=100] (\x, {-(1.25)^-\x});
-%         \draw[ultra thick, orange, <->, domain=-7.75:3.0] plot[samples=100] (\x, {-2^\x});
-%         \draw[ultra thick, purple, <->, domain=-7.75:7.75] plot[samples=100] (\x, {-(1.25)^\x});
-%           %dots
-%%         \fill[blue] (-3, 2) circle[radius=0.5ex];
-%%         \fill[blue] (1,1) circle[radius=0.5ex];
-%%         \fill[blue] (4,3) circle[radius=0.5ex];
-%%         \draw[very thick, blue] (3,1) circle[radius=0.5ex];
-%%         \fill[blue] (3,4) circle[radius=0.5ex];
-%%         \draw[very thick, blue] (1,4) circle[radius=0.5ex];
-%
-%
-%    \end{scope}
-%
-%    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
-%
-%\end{tikzpicture}
-%\end{center}
+\clearpage
 
+\item Two functions are defined,
+  \begin{equation*}
+    \begin{array}{rcl@{\hspace{2em}}rcl}
+      p(x) & = & 1 + \left(\frac{1}{2}\right)^x, & d(x) & = & a^x,
+    \end{array}
+  \end{equation*}
+  where $a$ is a constant.
+  \begin{enumerate}
+  \item Make a rough sketch of the function $p(x)$. (Label your axes.)
+    \vfill
+  \item Determine all possible values of $a$ that will ensure that
+    $p(x)>d(x)$ for all $x>0$.
+    \vfill
+  \item Determine all possible values of $a$ that will ensure that
+    $p(x)>d(x)$ for all $x<0$.
+    \vfill
+  \item Determine all possible values of $a$ that will ensure that
+    $p(x)<d(x)$ for all $x>0$.
+    \vfill
+  \end{enumerate}
 
 
 
@@ -346,9 +296,11 @@ another?
 \begin{enumerate}
 \item Solve each of the following equations for $x$.
   \begin{enumerate}
-  \item Solve the equation $x^{3/2}=8$
-  \item Solve the equation $x^{2/3}=16$
-  \item Solve the equation $x^{5/9}=243$
+  \item $\left(\sqrt{x}\right)^3=8$
+  \item $\left(\sqrt[3]{x}\right)^2=16$
+  \item $\left(\sqrt[9]{x}\right)^5=243$
+  \item $\left(\sqrt[4]{x}+2\right)^3=27$
+  \item $\left(\frac{\sqrt[3]{x}-2}{7}\right)^4=16$
   \end{enumerate}
 \item Simplify the expressions completely (there should only be one
   instance of each variable and only positive exponents). For each
@@ -360,4 +312,129 @@ another?
   \item $\dfrac{(\sqrt{x}(x-1))^{100} \cdot x^2}{(x-1)^{101}}$ 
   \item $\sqrt{x^2}$
   \end{enumerate}
+
+\item The function $Gi(x)$ is defined by
+  \begin{eqnarray*}
+    Gi(x) & = & 5-C \cdot \left(\frac{1}{6}\right)^x,
+  \end{eqnarray*}
+  where $C$ is a constant.
+  \begin{enumerate}
+  \item Given that $Gi(0)=3.5$, determine the value of $C$.
+  \item Make a rough sketch of the function, $Gi(x)$. Describe the
+    behaviour of $Gi$, and in particular discuss the long-term trend
+    of the function.
+  \end{enumerate}
+
+\item The function $Ro(x)$ is defined by
+  \begin{eqnarray*}
+    Ro(x) & = & A + 7 \cdot \left(\frac{2}{3}\right)^x,
+  \end{eqnarray*}
+  where $A$ is a constant.
+  \begin{enumerate}
+  \item Given that $Ro(0)=2.1$, determine the value of $A$.
+  \item Make a rough sketch of the function, $Ro(x)$. Describe the
+    behaviour of $Gi$, and in particular discuss the long-term trend
+    of the function.
+  \end{enumerate}
+
+\item Two functions are defined,
+  \begin{equation*}
+    \begin{array}{rcl@{\hspace{2em}}rcl}
+      u(x) & = & 4 + \left(\frac{5}{7}\right)^x, & w(x) & = & a^x,
+    \end{array}
+  \end{equation*}
+  where $a$ is a constant.
+  \begin{enumerate}
+  \item Make a rough sketch of the function $u(x)$. (Label your axes.)
+  \item Determine all possible values of $a$ that will ensure that
+    $u(x)>w(x)$ for all $x>0$.
+  \item Determine all possible values of $a$ that will ensure that
+    $u(x)>w(x)$ for all $x<0$.
+  \end{enumerate}
+
+\item Two functions are defined,
+  \begin{equation*}
+    \begin{array}{rcl@{\hspace{2em}}rcl}
+      c(x) & = & -1 + \left(\frac{1}{3}\right)^x, & k(x) & = & a^x,
+    \end{array}
+  \end{equation*}
+  where $a$ is a constant.
+  \begin{enumerate}
+  \item Make a rough sketch of the function $c(x)$. (Label your axes.)
+  \item Determine all possible values of $a$ that will ensure that
+    $c(x)<k(x)$ for all $x>0$.
+  \item Determine all possible values of $a$ that will ensure that
+    $c(x)<k(x)$ for all $x<0$.
+  \end{enumerate}
+
+\item  Match each of the following functions to their graph. \nopagebreak
+\begin{multicols}{2}
+\begin{enumerate}
+	\item $y=2^x$
+	\item $y=-2^x$
+	\item $y=2^{-x}$
+	\item $y=-2^{-x}$
+	\item $y=1.25^x$
+	\item $y=1.25^{-x}$
+	\item $y=-1.25^x$
+	\item $y=-1.25^{-x}$
+\end{enumerate}	
+\end{multicols}
+\nopagebreak
+\begin{center}
+\begin{tikzpicture}[y=.8cm, x=.8cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-8, -8) grid (8, 8);
+ 	%% Draw the axes
+	\draw[thick,<->] (-8.5,0) -- coordinate (x axis mid) (8.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-8.5) -- coordinate (y axis mid) (0,8.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-8,...,-1,1,2,...,8} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor = south east] {\tiny $\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-8,...,-1,1,2,...,8} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny $\x$};
+    }
+    %% Draw the function.
+    \begin{scope}
+%         \draw[very thick,blue] (-3,2) -- (1,1);
+%         \draw[very thick,blue] (3.05,1.05) -- (4,3);
+%         \draw[very thick,blue] (1.1,4) -- (3,4);
+    %semi-circle
+         %\draw[very thick, blue] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+         %\draw[ultra thick, blue, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+         \draw[ultra thick, blue, <->, domain=-7.75:3.0] plot[samples=100] (\x, {2^\x});
+         \draw[ultra thick, red, <->, domain=-7.75:7.75] plot[samples=100] (\x, {(1.25)^\x});
+         \draw[ultra thick, orange, <->, domain=-3.0:7.75] plot[samples=100] (\x, {2^-\x});
+         \draw[ultra thick, purple, <->, domain=-7.75:7.75] plot[samples=100] (\x, {(1.25)^-\x});
+         \draw[ultra thick, blue, <->, domain=-3.0:7.75] plot[samples=100] (\x, {-2^-\x});
+         \draw[ultra thick, red, <->, domain=-7.75:7.75] plot[samples=100] (\x, {-(1.25)^-\x});
+         \draw[ultra thick, orange, <->, domain=-7.75:3.0] plot[samples=100] (\x, {-2^\x});
+         \draw[ultra thick, purple, <->, domain=-7.75:7.75] plot[samples=100] (\x, {-(1.25)^\x});
+           %dots
+%         \fill[blue] (-3, 2) circle[radius=0.5ex];
+%         \fill[blue] (1,1) circle[radius=0.5ex];
+%         \fill[blue] (4,3) circle[radius=0.5ex];
+%         \draw[very thick, blue] (3,1) circle[radius=0.5ex];
+%         \fill[blue] (3,4) circle[radius=0.5ex];
+%         \draw[very thick, blue] (1,4) circle[radius=0.5ex];
+
+
+    \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+\end{tikzpicture}
+\end{center}
+
+
 \end{enumerate}
