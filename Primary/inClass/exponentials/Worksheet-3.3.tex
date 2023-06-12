@@ -313,6 +313,54 @@ Domain of $p^{-1}(x)$:   \quad \quad\quad\quad\quad Range of $p^{-1}(x)$:\quad\q
   \item $64^{\log_4\left(2\right)}=$
     \vfill
   \end{enumerate}
+
+  \clearpage
+
+\item With the advent of high frequency stock trading new methods to
+  quantify the volatility of a security have been devised. The idea is
+  to take the time that securities are traded, and divide the time up
+  into equal time periods. The trading day may be divided up into ten
+  minute intervals, and the price of a security at the end of each
+  time period is recorded. For example, the price of a stock at the
+  end of the 50\textsuperscript{th} minute of the trading day would be
+  designated as $P_5$. One proposed measure of volatility is to take
+  the logarithm of the ratio of the prices between two successive time
+  periods. The volatility of a stock from the 50\textsuperscript{th}
+  to the 60\textsuperscript{th} minute of the day would be
+  \begin{eqnarray*}
+    V_6(t) & = & \ln\left(\frac{P_6}{P_5}\right).
+  \end{eqnarray*}
+
+  \begin{enumerate}
+  \item Briefly describe what happens to the volatility, $V_6$, as
+    $P_6$ gets bigger than $P_5$. How does the volatility change as
+    $P_6$ gets much bigger?
+    \vfill
+  \item Briefly describe what happens to the volatility, $V_6$, as
+    $P_6$ gets smaller than $P_5$. How does the volatility change as
+    $P_6$ gets much smaller?
+    \vfill
+  \item Under what circumstances is the volatility, $V_6$, close to
+    zero?
+    \vfill
+  \item If you purchase a security in the morning and monitor the
+    volatility of the security throughout the day, do you prefer to
+    see positive or negative numbers for the volatility? If the
+    volatility gets bigger how does the price of the stock change?
+    \vfill
+
+  \item A different way to quantify volatility has been proposed using
+    the following definition:
+    \sideNote{What might happen when you add the volatilities of a security over successive time periods?}
+    \begin{eqnarray*}
+      \hat{V}_6(t) & = & \left(\ln\left(\frac{P_6}{P_5}\right)\right)^2.
+    \end{eqnarray*}
+    How is this different, and what are the relative advantages and
+    disadvantages of the definition?
+    \vfill
+
+  \end{enumerate}
+  
 \end{enumerate}
 
 \hwTitle{Section 3.3}
@@ -440,6 +488,32 @@ Domain of $p^{-1}(x)$:   \quad \quad\quad\quad\quad Range of $p^{-1}(x)$:\quad\q
 
   \end{tikzpicture}
 
+\item One way to change a logarithmic expression is to convert it into
+  its logarithmic form and then back into its logarithmic form after
+  performing some algebra steps. This can be difficult for non-trivial
+  expressions. One particular example is examined:
+  \begin{eqnarray*}
+    y & = & \log(x) + \log(3).
+  \end{eqnarray*}
+  Show that the expression above is equivalent to $y=\log(3x)$ using
+  the following steps:
+  \begin{enumerate}
+  \item Subtract $\log(3)$ from both sides.
+  \item Substitute $u=y-\log(3)$.
+  \item Rewrite the expression into its exponential form.
+  \item Substitute the definition of $u$ so the new form is in terms of $y$.
+  \item Use exponential properties and properties of the logarithm to show that
+    \begin{eqnarray*}
+      10^{y-\log(3)} & = & \frac{10^y}{3}.
+    \end{eqnarray*}
+    (Show all the steps required to establish this identity.)
+  \item Solve the equation for $10^y$.
+  \item Convert the new expression into its logarithmic form to show
+    that $y=\log(3x)$.
+  \end{enumerate}
+
+\item Mimic the steps in the previous problem to show that
+  $y=3\log(x)$ implies that $y=\log\left(x^3\right)$.
 
 \end{enumerate}
 
