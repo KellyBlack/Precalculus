@@ -23,34 +23,150 @@ functions that you will construct. You will start with three basic
 functions and transform them into new functions which will be used
 throughout the remaining questions.
 \begin{enumerate}
-\item Use $g(x)=x^2$ and two of the following functions for your
+\item Use $g(x)=(x+1)^2$ and two of the following functions for your
   group.  Along with $g(x)$ choose two from the following functions:
-  $$f(x)=x, \quad \quad
-  h(x)=x^3, \quad \quad
-  j(x)=\frac{1}{x}, \quad \quad
-  m(x)=\sqrt{x},  \quad \quad
+  $$f(x)=x-1, \quad \quad
+  h(x)=(x-2)^3, \quad \quad
+  j(x)=\frac{1}{x}+1, \quad \quad
+  m(x)=\sqrt{x+2}-1,  \quad \quad
   p(x)=\sqrt[3]{x}.$$
 
-\item Pick some transformations like shifting, stretching,
-  compressing, and reflecting to transform each of your 3
-  functions. Give each of your new functions a new name and write your
-  3 new functions below.  \sideNote{These are transformations for you
-    to choose.}
+\item State the parent function for each of your three functions.
 
   \vfill
 
-\item Calculate the domain and range. For each of the 3 new functions.
+\item For each of your functions, briefly state the transformations
+  that will change the parent function to the final function.
 
   \vfill
 
-\clearpage
+  \clearpage
 
+\item Sketch the graphs of each of your functions on a separate axis
+  below, and include the parent function of each function on the same
+  axis.
+  
+  \begin{tabular}{p{0.5\linewidth}p{0.5\linewidth}}
+
+\begin{tikzpicture}[y=.6cm, x=.6cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+
+  \end{tikzpicture}
+
+&
+
+
+\begin{tikzpicture}[y=.6cm, x=.6cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+
+  \end{tikzpicture}
+
+\\
+
+\begin{tikzpicture}[y=.6cm, x=.6cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+
+  \end{tikzpicture}
+  
+
+&
+
+
+\begin{tikzpicture}[y=.6cm, x=.6cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -6) grid (6, 6);
+ 	%% Draw the axes
+	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-6.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-6,...,-1,1,2,...,6} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor =  east] {\tiny$\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-6,...,-1,1,2,...,6} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny$\x$};
+    }
+
+  \end{tikzpicture}
+  
+  
+\end{tabular}
+
+
+\item Calculate the domain and range for each of your three functions.
+
+  \vfill
+
+  \clearpage
 
 \item Determine \emph{algebraically} if each of your functions are one-to-one.  
 
-\vfill
-\vfill
-
+  \vfill
+  \vfill
 
 \item For each of your functions that are not one-to-one, make a
   domain restriction so that the function becomes one-to-one on the
@@ -59,7 +175,6 @@ throughout the remaining questions.
 \vfill
 
 \clearpage
-
 
 \item For each of your functions (including those with new domain restrictions), find their inverse functions.
 
