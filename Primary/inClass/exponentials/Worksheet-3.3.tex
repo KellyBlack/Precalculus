@@ -56,7 +56,8 @@ Student goals:
 \item Determine the inverse of each of the following functions.
   (Hint: rewrite each expression in logarithmic or exponential form
   after switching $x$ and $y$.)  Determine the domain and range of the
-  function and its inverse.
+  function and its inverse.  \sideNote{If you are unsure of the domain
+    and range make a quick sketch of the graph of the function.}
 \begin{enumerate}
 \item $f(x)=\log_3(x)$
 
@@ -324,17 +325,19 @@ Student goals:
 
   \clearpage
 
-\item With the advent of high frequency stock trading new methods to
-  quantify the volatility of a security have been devised. The idea is
-  to take the time that securities are traded, and divide the time up
-  into equal time periods. The trading day may be divided up into ten
-  minute intervals, and the price of a security at the end of each
-  time period is recorded. For example, the price of a stock at the
-  end of the 50\textsuperscript{th} minute of the trading day would be
-  designated as $P_5$. One proposed measure of volatility is to take
-  the logarithm of the ratio of the prices between two successive time
-  periods. The volatility of a stock from the 50\textsuperscript{th}
-  to the 60\textsuperscript{th} minute of the day would be
+\item The advent of high frequency stock trading has motivated
+  definitions of new methods to quantify the volatility of a
+  security. The idea is to take a trading period and divide the time
+  up into equal time periods. The trading period may be divided up
+  into ten minute intervals, and the price of a security at the end of
+  each time period is recorded. For example, the price of a stock at
+  the end of the 50\textsuperscript{th} minute of the trading day
+  would be designated as $P_5$. One proposed measure of volatility is
+  to take the logarithm of the ratio of the prices between two
+  successive time periods. The volatility of a stock from the
+  50\textsuperscript{th} to the 60\textsuperscript{th} minute of the
+  day would be \sideNote{Note that the price of a security is a real
+    number greater than or equal to zero.}
   \begin{eqnarray*}
     V_6(t) & = & \ln\left(\frac{P_6}{P_5}\right).
   \end{eqnarray*}
@@ -388,23 +391,12 @@ Student goals:
   after switching $x$ and $y$.)  Determine the domain and range of the
   function and its inverse.
   \begin{enumerate}
-  \item $h(x)=\ln(7x-4)$,  \quad \quad \quad $h^{-1}(x)=$ \\
-    \begin{flushright}
-      \begin{tabular}{l@{\hspace{3em}}l}
-        Domain of $h(x)$:  &  Range of $h(x)$: \\
-        Domain of $h^{-1}(x)$:   & Range of $h^{-1}(x)$:
-      \end{tabular}
-    \end{flushright}
-    \item $\displaystyle k(x)=4^{x+3}$  \quad \quad \quad $k^{-1}(x)=$
-      \begin{flushright}
-        \begin{tabular}{l@{\hspace{3em}}l}
-          Domain of $k(x)$: & Range of $k(x)$: \\
-          Domain of $k^{-1}(x)$:  &  Range of $k^{-1}(x)$:
-        \end{tabular}
-      \end{flushright}
+  \item $h(x)=\ln(7x-4)$ 
+  \item $\displaystyle k(x)=4^{x+3}$ 
   \end{enumerate}
 
-\item Graph each of the following transformed logarithmic functions.  
+\item Graph each of the following transformed logarithmic
+  functions. Graph and annotate the asymptote for each function.
 \item[(c)] $u(x)=-3\ln(x-2)$
 
 \begin{tikzpicture}[y=.7cm, x=.7cm,font=\sffamily,
@@ -497,7 +489,7 @@ Student goals:
   \end{tikzpicture}
 
 \item One way to change a logarithmic expression is to convert it into
-  its logarithmic form and then back into its logarithmic form after
+  its exponential form and then back into its logarithmic form after
   performing some algebra steps. This can be difficult for non-trivial
   expressions. One particular example is examined:
   \begin{eqnarray*}

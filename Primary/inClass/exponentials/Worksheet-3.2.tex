@@ -69,7 +69,7 @@ Student goals:
 
   \begin{enumerate}
   \item $g(x)=3^x$
-    \sideNote{Include the new function obtained in each step
+    \sideNote{State the new function obtained in each step
         of the transformation below.}
 
         \begin{tabular}{m{0.5\textwidth}m{0.5\textwidth}}
@@ -302,6 +302,74 @@ another?
 \hwTitle{Section 3.2}
 
 \begin{enumerate}
+  \item  Match each of the following functions to their graph.
+\begin{multicols}{2}
+\begin{enumerate}
+	\item $y=2^x$
+	\item $y=-2^x$
+	\item $y=2^{-x}$
+	\item $y=-2^{-x}$
+	\item $y=1.25^x$
+	\item $y=1.25^{-x}$
+	\item $y=-1.25^x$
+	\item $y=-1.25^{-x}$
+\end{enumerate}	
+\end{multicols}
+%\begin{center}
+\begin{tikzpicture}[y=.8cm, x=.8cm,font=\sffamily,
+	mydot/.style={
+    circle,
+    fill=white,
+    draw,
+    outer sep=0pt,
+    inner sep=1.5pt
+  }]
+    %% Add a grid
+    \draw[step = 1, gray, very thin,opacity=0.85] (-8, -8) grid (8, 8);
+ 	%% Draw the axes
+	\draw[thick,<->] (-8.5,0) -- coordinate (x axis mid) (8.5,0) node[anchor = north west] {$x$};
+    \draw[thick,<->] (0,-8.5) -- coordinate (y axis mid) (0,8.5) node[anchor = south west] {$y$};
+    %% Label the y axis
+    \foreach \y in {-8,...,-1,1,2,...,8} {
+      \draw (1pt, \y) -- (-1pt, \y) node[anchor = south east] {\tiny $\y$};
+    }
+    %% Label the x axis
+    \foreach \x in {-8,...,-1,1,2,...,8} {
+      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny $\x$};
+    }
+    %% Draw the function.
+    \begin{scope}
+%         \draw[very thick,blue] (-3,2) -- (1,1);
+%         \draw[very thick,blue] (3.05,1.05) -- (4,3);
+%         \draw[very thick,blue] (1.1,4) -- (3,4);
+    %semi-circle
+         %\draw[very thick, blue] (1,1) arc [radius=1, start angle=180, end angle= 5];
+     %parabola
+         %\draw[ultra thick, blue, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
+         \draw[ultra thick, blue, <->, domain=-7.75:3.0] plot[samples=100] (\x, {2^\x});
+         \draw[ultra thick, red, <->, domain=-7.75:7.75] plot[samples=100] (\x, {(1.25)^\x});
+         \draw[ultra thick, orange, <->, domain=-3.0:7.75] plot[samples=100] (\x, {2^-\x});
+         \draw[ultra thick, purple, <->, domain=-7.75:7.75] plot[samples=100] (\x, {(1.25)^-\x});
+         \draw[ultra thick, blue, <->, domain=-3.0:7.75] plot[samples=100] (\x, {-2^-\x});
+         \draw[ultra thick, red, <->, domain=-7.75:7.75] plot[samples=100] (\x, {-(1.25)^-\x});
+         \draw[ultra thick, orange, <->, domain=-7.75:3.0] plot[samples=100] (\x, {-2^\x});
+         \draw[ultra thick, purple, <->, domain=-7.75:7.75] plot[samples=100] (\x, {-(1.25)^\x});
+           %dots
+%         \fill[blue] (-3, 2) circle[radius=0.5ex];
+%         \fill[blue] (1,1) circle[radius=0.5ex];
+%         \fill[blue] (4,3) circle[radius=0.5ex];
+%         \draw[very thick, blue] (3,1) circle[radius=0.5ex];
+%         \fill[blue] (3,4) circle[radius=0.5ex];
+%         \draw[very thick, blue] (1,4) circle[radius=0.5ex];
+
+
+    \end{scope}
+
+    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
+
+\end{tikzpicture}
+%\end{center}
+
 \item Solve each of the following equations for $x$.
   \begin{enumerate}
   \item $\left(\sqrt{x}\right)^3=8$
@@ -374,75 +442,7 @@ another?
   \item Determine all possible values of $a$ that will ensure that
     $c(x)<k(x)$ for all $x<0$.
   \end{enumerate}
-
-\item  Match each of the following functions to their graph. \nopagebreak
-\begin{multicols}{2}
-\begin{enumerate}
-	\item $y=2^x$
-	\item $y=-2^x$
-	\item $y=2^{-x}$
-	\item $y=-2^{-x}$
-	\item $y=1.25^x$
-	\item $y=1.25^{-x}$
-	\item $y=-1.25^x$
-	\item $y=-1.25^{-x}$
-\end{enumerate}	
-\end{multicols}
-\nopagebreak
-\begin{center}
-\begin{tikzpicture}[y=.8cm, x=.8cm,font=\sffamily,
-	mydot/.style={
-    circle,
-    fill=white,
-    draw,
-    outer sep=0pt,
-    inner sep=1.5pt
-  }]
-    %% Add a grid
-    \draw[step = 1, gray, very thin,opacity=0.85] (-8, -8) grid (8, 8);
- 	%% Draw the axes
-	\draw[thick,<->] (-8.5,0) -- coordinate (x axis mid) (8.5,0) node[anchor = north west] {$x$};
-    \draw[thick,<->] (0,-8.5) -- coordinate (y axis mid) (0,8.5) node[anchor = south west] {$y$};
-    %% Label the y axis
-    \foreach \y in {-8,...,-1,1,2,...,8} {
-      \draw (1pt, \y) -- (-1pt, \y) node[anchor = south east] {\tiny $\y$};
-    }
-    %% Label the x axis
-    \foreach \x in {-8,...,-1,1,2,...,8} {
-      \draw (\x,1pt) -- (\x,-1pt) node[anchor = north] {\tiny $\x$};
-    }
-    %% Draw the function.
-    \begin{scope}
-%         \draw[very thick,blue] (-3,2) -- (1,1);
-%         \draw[very thick,blue] (3.05,1.05) -- (4,3);
-%         \draw[very thick,blue] (1.1,4) -- (3,4);
-    %semi-circle
-         %\draw[very thick, blue] (1,1) arc [radius=1, start angle=180, end angle= 5];
-     %parabola
-         %\draw[ultra thick, blue, domain=-5:0] plot (\x, {(-0.2)*(\x-5)*(\x+5)});
-         \draw[ultra thick, blue, <->, domain=-7.75:3.0] plot[samples=100] (\x, {2^\x});
-         \draw[ultra thick, red, <->, domain=-7.75:7.75] plot[samples=100] (\x, {(1.25)^\x});
-         \draw[ultra thick, orange, <->, domain=-3.0:7.75] plot[samples=100] (\x, {2^-\x});
-         \draw[ultra thick, purple, <->, domain=-7.75:7.75] plot[samples=100] (\x, {(1.25)^-\x});
-         \draw[ultra thick, blue, <->, domain=-3.0:7.75] plot[samples=100] (\x, {-2^-\x});
-         \draw[ultra thick, red, <->, domain=-7.75:7.75] plot[samples=100] (\x, {-(1.25)^-\x});
-         \draw[ultra thick, orange, <->, domain=-7.75:3.0] plot[samples=100] (\x, {-2^\x});
-         \draw[ultra thick, purple, <->, domain=-7.75:7.75] plot[samples=100] (\x, {-(1.25)^\x});
-           %dots
-%         \fill[blue] (-3, 2) circle[radius=0.5ex];
-%         \fill[blue] (1,1) circle[radius=0.5ex];
-%         \fill[blue] (4,3) circle[radius=0.5ex];
-%         \draw[very thick, blue] (3,1) circle[radius=0.5ex];
-%         \fill[blue] (3,4) circle[radius=0.5ex];
-%         \draw[very thick, blue] (1,4) circle[radius=0.5ex];
-
-
-    \end{scope}
-
-    %%\node[above=0.1cm] at (-2,2 )   {\nextXValue};
-
-\end{tikzpicture}
-\end{center}
+  
 
 
 \end{enumerate}
