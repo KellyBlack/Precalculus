@@ -114,10 +114,13 @@ relevant figure.
 \hwTitle{Section 4.1}
 
 \begin{enumerate}
-  \item Suppose that the three circles drawn below have radii of length 1, 2, and 3.  For each pair of points given below, find the shortest path connecting the points.
+\item Suppose that the three circles drawn below have radii of length
+  1, 2, and 3. You can move from one point to the other only by moving
+  along the segments shown in the diagram.  For each pair of points
+  given below, find the shortest path connecting the points.
 %\vspace{-1in}
 \begin{center}
-  \begin{tikzpicture}[scale=8]
+  \begin{tikzpicture}[scale=5]
     \foreach \t in {0,15,30,...,345} {
       \draw[-] (0,0) -- (\t:1);
     }   
@@ -154,7 +157,56 @@ relevant figure.
   the circle $r$ and the subtended angle $\theta$.  Then round the
   result to the nearest tenth of a unit.
   \begin{enumerate}
-  \item $r=1.2$ ft; $\theta=\frac{\pi}{6}$\vfill
-  \item $r=2.1$ ft; $\theta=\frac{11\pi}{6}$\vfill
+  \item $r=1.2$ ft; $\theta=\frac{\pi}{6}$
+  \item $r=2.1$ ft; $\theta=\frac{11\pi}{6}$
   \end{enumerate}
+
+\item Determine the function that returns the angle of a sector of
+  radius 5 given the area of the sector. If you double the area what
+  happens to the angle?
+\item Determine the function that returns the angle of a sector of
+  radius 8 given the arclength of the sector. If you double the
+  arclength what happens to the angle?
+
+\item The radian measure of the angle $\psi$ is $\frac{\pi}{4}$, and
+  the area of the sector defined by the shaded region is 11.
+  Determine the radius of the circle. If the area is increased how
+  does the radius change? \\ \samepage
+  \begin{tikzpicture}[y=1.5cm, x=1.5cm,font=\sffamily]
+    \draw[thin,black,fill=gray] (0,0) -- (40:2) arc (40:180:2) -- (0,0);
+    %\draw[very thick,black] (40:2) arc (40:180:2);
+    \draw[black] (0,0) circle (2);
+    \draw[black] (0:.5) arc (0:40:.5) node[pos=0.1,anchor=south west] {$\psi$};
+    % \node[xshift=0] at (145:0.7) {$\delta$};
+    % \draw[thin,black] (110:0.3) arc (110:180:0.3);
+    \draw[thin,black,->] (-2.2,0.0) -- (2.2,0.0) node[anchor=south west] {$x$};
+    \draw[thin,black,->] (0.0,-2.2) -- (0.0,2.2) node[anchor=south east] {$y$};
+    %\node[black,anchor=north] at (-1,0) {$r=3$};
+    % \node[black,anchor=south west] at (55:2) {$s$};
+  \end{tikzpicture}
+
+\item The circle in the diagram below has a radius of 2, and the
+  arclength of the sector defined by the shaded region is 5.1.
+  Determine the radian measure of the angle $\psi$. If the arclength
+  is increased how does the angle change? \\ \samepage
+  \begin{tikzpicture}[y=1.5cm, x=1.5cm,font=\sffamily]
+    \draw[thin,black,fill=gray] (0,0) -- (40:2) arc (40:180:2) -- (0,0);
+    \draw[very thick,black] (40:2) arc (40:180:2);
+    \draw[black] (0,0) circle (2);
+    \draw[black] (40:0.5) arc (40:-180:.5) node[pos=0.4,anchor=north west] {$\psi$};
+    \draw[thin,black,->] (-2.2,0.0) -- (2.2,0.0) node[anchor=south west] {$x$};
+    \draw[thin,black,->] (0.0,-2.2) -- (0.0,2.2) node[anchor=south east] {$y$};
+    \node[black,anchor=north] at (-1,0) {$r=2$};
+    \node[black,anchor=south east] at (122:2) {$s$};
+  \end{tikzpicture}
+
+
+\item A race track is in the shape of a circle, and the inside
+  diameter of the track is 0.8km. A cart goes around the track eight
+  and a half times hugging the inside of the track, and the diameter
+  of its rear wheel is 0.3m. (1000m=1km) What angle did the rear wheel
+  turn? If the diameter of the track is increased what will happen to
+  the angle?
+
+
 \end{enumerate}
