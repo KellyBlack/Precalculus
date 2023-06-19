@@ -170,3 +170,62 @@ Student goals:
 
 \end{enumerate}
 
+
+\hwTitle{Section 4.2A}
+
+\begin{enumerate}
+\item Using the axes below, for each quadrant, determine if the sine
+  function is positive or negative. Also indicate whether or not the
+  sine is increasing or decreasing for an angle, $t$, in the quadrant.
+  
+  \begin{tikzpicture}[y=1.5cm, x=1.5cm,font=\sffamily]
+    \draw[thin,black,->] (-1.2,0.0) -- (1.2,0.0) node[anchor=south west] {$x$};
+    \draw[thin,black,->] (0.0,-1.2) -- (0.0,1.2) node[anchor=south east] {$y$};
+  \end{tikzpicture}
+
+\item Using the axes below, for each quadrant, determine if the cosine
+  function is positive or negative. Also indicate whether or not the
+  sine is increasing or decreasing for an angle, $t$, in the quadrant.
+  
+  \begin{tikzpicture}[y=1.5cm, x=1.5cm,font=\sffamily]
+    \draw[thin,black,->] (-1.2,0.0) -- (1.2,0.0) node[anchor=south west] {$x$};
+    \draw[thin,black,->] (0.0,-1.2) -- (0.0,1.2) node[anchor=south east] {$y$};
+  \end{tikzpicture}
+
+\item The circle in the diagram below has a radius of 3.  Determine
+  the cosine of the angle, $\theta$, given the area, $A$, of the
+  shaded sector and use your result to answer the following questions.
+  \\ \samepage
+  \begin{tikzpicture}[y=1.5cm, x=1.5cm,font=\sffamily]
+    \draw[thin,black,fill=gray] (0,0) -- (0:2) arc (0:50:2) -- (0,0);
+    \draw[black] (0,0) circle (2);
+    \draw[black] (0:0.5) arc (0:50:.5) node[pos=0.4,anchor=south west] {$\theta$};
+    \draw[thin,black,->] (-2.2,0.0) -- (2.2,0.0) node[anchor=south west] {$x$};
+    \draw[thin,black,->] (0.0,-2.2) -- (0.0,2.2) node[anchor=south east] {$y$};
+    \node[black,anchor=north] at (-1,0) {$r=3$};
+    \fill[black] (50:2) circle[radius=0.5ex] node[anchor=south west] {$(x,y)$};
+    %\node[black,anchor=south east] at (122:2) {$s$};
+  \end{tikzpicture}
+  
+  Determine values of the angle, $\theta$, (between 0 and $2\pi$) where
+  each of the following constraints is satisfied:
+  \begin{enumerate}
+  \item The cosine is positive and increasing.
+  \item The cosine is positive and decreasing.
+  \item The cosine is negative and increasing.
+  \item The cosine is negative and decreasing.
+  \end{enumerate}
+
+\item Repeat the previous problem for the sine function.
+
+\item For what values of $t$ between 0 and $2\pi$ is the cosine
+  increasing the fastest and where is it decreasing the
+  fastest. Briefly explain your reasoning. (Hint: think about a
+  small bead moving around the outside at a constant speed.)
+
+\item For what values of $t$ between 0 and $2\pi$ is the sine
+  increasing the fastest and where is it decreasing the
+  fastest. Briefly explain your reasoning. (Hint: think about a
+  small bead moving around the outside at a constant speed.)xs
+
+\end{enumerate}
