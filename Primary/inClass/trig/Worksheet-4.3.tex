@@ -6,6 +6,17 @@
 
 \noindent \textbf{Instructions:}  Work together in groups of  3 or 4 to complete the following problems.\\
 
+Student goals:
+\begin{itemize}
+\item Determine values of trigonometric functions given right triangles.
+\item Use the Pythagorean identity to determine the value of one
+  trigonometric function in terms of another.
+\item Determine the values of trigonometric functions using multiple
+  right triangles.
+\item Translate a written description of a problem into a
+  trigonometric formulation
+\end{itemize}
+
 
 \begin{enumerate}
 
@@ -40,12 +51,12 @@
 \item Use the isosceles right triangle and the 30/60/90 triangle to complete the table.
 
 \begin{table}[h]
-\begin{tabular}{|l|l|l|l|l|l|l|}
+\begin{tabular}{|l|m{.12\textwidth}|m{.12\textwidth}|m{.12\textwidth}|m{.12\textwidth}|m{.12\textwidth}|m{.12\textwidth}|}
 \hline
 \textbf{$\theta$}        & \textbf{$\sin(\theta)$} & \textbf{$\cos(\theta)$} & \textbf{$\tan(\theta)$} & \textbf{$\csc(\theta)$} & \textbf{$\sec(\theta)$} & \textbf{$\cot(\theta)$} \\ \hline
-30$^\circ=\frac{\pi}{6}$ &                         &                         &                         &                         &                         &                         \\ \hline
-45$^\circ=\frac{\pi}{4}$ &                         &                         &                         &                         &                         &                         \\ \hline
-60$^\circ=\frac{\pi}{3}$ &                         &                         &                         &                         &                         &                         \\ \hline
+30$^\circ=\frac{\pi}{6}$ &                         &                         &                         &                         &                         &                         \\  [2em] \hline
+45$^\circ=\frac{\pi}{4}$ &                         &                         &                         &                         &                         &                         \\  [2em] \hline
+60$^\circ=\frac{\pi}{3}$ &                         &                         &                         &                         &                         &                         \\  [2em] \hline
 \end{tabular}
 \end{table}
 
@@ -57,7 +68,6 @@
   \node[black,anchor=west] at (1,0.5) {1};
   \node[black,anchor=south east] at (45:0.7) {$\sqrt{2}$};
   \node[black,anchor=south west] at (12.5:0.2) {$45^\circ$};
-
   \draw[thin,black] (45:1.25) arc (225:270:0.17);
   \node[black,anchor=west,xshift={8pt}] at (45:1.1) {$45^\circ$};
 \end{tikzpicture}
@@ -68,11 +78,15 @@
   \draw[very thin,black] (0.8,0.0) -- (0.8,0.2) -- (1,0.2);
   \draw[thin,black] (0.2,0) arc (0:60:0.2);
   \node[black,anchor=north] at (0.5,0) {1};
-  \node[black,anchor=west] at (1,0.8) {$\sqrt{3}$};
+  \node[black,anchor=north] at (1.5,0) {1};
+  \node[black,anchor=west] at (1,0.8) {$h$};
   \node[black,anchor=south east] at (60:1) {$2$};
+  \node[black,anchor=south west] at (30:1.75) {$2$};
   \node[black,anchor=south west] at (12.5:0.2) {$60^\circ$};
   \draw[thin,black] (60:1.8) arc (240:270:0.2);
   \node[black,anchor=west] at (60:1.65) {$30^\circ$};
+  \draw[thin,black] (1.8,0) arc (180:120:0.2) node[pos=0.5,anchor=south east] {$60^\circ$};
+  \draw[thin,black] (1,1.535) arc (270:300:0.2) node[pos=0.,anchor=north west,yshift=-7] {$30^\circ$};
 \end{tikzpicture}
 
 \vfill
