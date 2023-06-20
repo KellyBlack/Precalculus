@@ -17,13 +17,6 @@ Student goals:
   trigonometric formulation
 \end{itemize}
 
-
-\begin{enumerate}
-
-\item Find the exact values of the six trigonometric functions of $\theta$ and $\alpha$
-\begin{enumerate}
-\item Use the following triangle.\\
-
 \newcommand{\trigTriangle}[5]{%
 	\begin{tikzpicture}[scale=2.5]
 	\draw (0,0) -- (2,0) -- (2,1) -- (0,0);
@@ -38,11 +31,16 @@ Student goals:
 	\end{tikzpicture}
 }
 
-	\trigTriangle{$\theta$}{$\alpha$}{8}{10}{6}
+\begin{enumerate}
 
-\vfill
+\item Find the exact values of the six trigonometric functions of $\theta$ and $\alpha$
+\begin{enumerate}
 \item Use the following triangle.\\
-\trigTriangle{$\theta$}{$\alpha$}{15}{ }{8}
+\trigTriangle{$\theta$}{$\alpha$}{8}{10}{~}
+\vfill
+
+\item Use the following triangle.\\
+\trigTriangle{$\theta$}{$\alpha$}{15}{~}{8}
 \vfill
 \end{enumerate}
 
@@ -103,45 +101,57 @@ Student goals:
 
 
 
-\item For each problem below determine the values of the missing quantities. All angles are in radians, and your answers for angles should be in radians. (The triangles are not drawn to scale.)
+\item For each problem below determine the values of the missing
+  quantities. All angles are in radians, and your answers for angles
+  should be in radians. (The triangles are not drawn to scale.)
 \begin{enumerate}
-\item \newcommand{\trigTriangle}[5]{%
-	\begin{tikzpicture}[scale=2.5]
-	\draw (0,0) -- (2,0) -- (2,1) -- (0,0);
-	\draw (1.9,0) -- (1.9,0.1) -- (2,0.1);
-	\draw (0.3,0) arc(0:40:0.2);
-	\draw (0.5,0.1) node { #1 };
-	\draw (1.8,0.7) node { #2 };
-	\draw (1,-0.1) node { #3 };
-	\draw (1,0.6) node { #4 };
-	\draw (2,0.8) arc(270:210:0.2);
-	\draw (2.1,0.5) node { #5 };
-	\end{tikzpicture}
+
+\item ~ \\
+\begin{tikzpicture}[scale=2.5]
+  \draw (0,0) -- (2,0) -- (2,1) -- (0,0);
+  \draw (1.9,0) -- (1.9,0.1) -- (2,0.1);
+  \draw (0.3,0) arc(0:40:0.2);
+  \draw (0.5,0.1) node { $\pi/4$ };
+  \draw (1.8,0.7) node { $\alpha$ };
+  \draw (1,-0.1) node { $a$ };
+  \draw (1,0.6) node { 4 };
+  \draw (2,0.8) arc(270:210:0.2);
+  \draw (2.1,0.5) node { $b$ };
+\end{tikzpicture}
+	
+\framebox[0.3\textwidth][l]{
+  \begin{tabular}{lc}
+    $a$ & $=$ \\ [15pt]
+    $b$ & $=$ \\ [15pt]
+    $\alpha$ & $=$ \\
+  \end{tabular}
 }
 
+\vfill
 
+\item ~ \\
+  \begin{tikzpicture}[scale=2.5]
+    \draw (0,0) -- (2,0) -- (2,1) -- (0,0);
+    \draw (1.9,0) -- (1.9,0.1) -- (2,0.1);
+    \draw (0.3,0) arc(0:40:0.2);
+    \draw (0.5,0.1) node { $\pi/6$ };
+    \draw (1,0.6) node { $h$ };
+    \draw (2.1,0.5) node { $b$ };
+    \draw (2,0) -- (3,0) -- (2,1) -- (2,0);
+    \draw (2.8,0) arc(180:134:0.2);
+    \draw (2.8,0) node[anchor=south east] { $\pi/3$ };
+    \draw (2.6,0.6) node { $2$ };
+  \end{tikzpicture}
 
-\trigTriangle{$\pi/4$}{$\alpha$}{a}{4}{b}
 	
-	\framebox[0.3\textwidth][l]{
-		\begin{tabular}{lc}
-			$a$ & $=$ \\ [15pt]
-			$b$ & $=$ \\ [15pt]
-			$\alpha$ & $=$ \\
-		\end{tabular}
-	}
-	\vfill
-
-\item \trigTriangle{$\pi/6$}{$\psi$}{2}{h}{b}
-	
-	\framebox[0.3\textwidth][l]{
-		\begin{tabular}{lc}
-			$b$ & $=$ \\ [15pt]
-			$h$ & $=$ \\ [15pt]
-			$\psi$ & $=$ \\
-		\end{tabular}
-	}
-	\vfill
+  \framebox[0.3\textwidth][l]{
+    \begin{tabular}{lc}
+      $h$ & $=$ \\ [15pt]
+      $b$ & $=$ \\ [15pt]
+    \end{tabular}
+  }
+  
+  \vfill
 
 \end{enumerate}
 \clearpage
