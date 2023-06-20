@@ -200,13 +200,26 @@ relevant figure.
     \node[black,anchor=south east] at (122:2) {$s$};
   \end{tikzpicture}
 
-
 \item A race track is in the shape of a circle, and the inside
   diameter of the track is 0.8km. A cart goes around the track eight
   and a half times hugging the inside of the track, and the diameter
   of its rear wheel is 0.3m. (1000m=1km) What angle did the rear wheel
   turn? If the diameter of the track is increased what will happen to
   the angle?
+
+\item The author of a video game will construct a path that
+  ghost characters will travel around within the game, and the shape
+  is shown in the figure below. It consists of a circle with a sector
+  removed on its right side. The angle of the missing sector will be
+  $\frac{\pi}{3}$ radians, and the full length of the path, including
+  the outside of the partial circle and the two radii, should be 4
+  meters. What should the radius of the circle be? \\ \samepage      
+  \begin{tikzpicture}[y=1.0cm, x=1.0cm,font=\sffamily]
+    \draw[very thick,black] (0,0) -- (30:2)  arc (30:330:2) -- cycle;
+    \draw[thin,black] (-30:0.5) arc (-30:30:0.5);
+    \node[anchor=west,black] at (0:0.5) {$\frac{\pi}{3}$};
+    \node[anchor=east,black,xshift=-5] at (30:1.25) {$r$};
+  \end{tikzpicture}
 
 \item A researcher performed an experiment with three
   species of mole. For each subject she measured its mass and cardiac
