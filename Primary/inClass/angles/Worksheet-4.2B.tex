@@ -14,15 +14,16 @@
   the real number $t$.
 
 \begin{enumerate}
-\item Make a diagram of the unit circle with $P$ on it.
+\item Make a diagram of the unit circle with $P$ on it. Indicate the
+  angle $t$ and annotate the point, $P$.
 
   \vfill
   \vfill
 
 \item Determine the values of the six trig functions at $t$. 
 
-\begin{tabular}{l l l }
-$\sin(t)=$\phantom{sldkfjdlkdlkjfl}&  $\cos(t)=$\phantom{sldkfjdlkdlkjfl}& $\tan(t)=$\phantom{sldkfjdlkdlkjfl}    \\
+\begin{tabular}{l@{\hspace{0.25\textwidth}}l@{\hspace{0.25\textwidth}}l@{\hspace{0.25\textwidth}} }
+$\sin(t)=$ &  $\cos(t)=$ & $\tan(t)=$    \\
 & & \\
 & & \\
 $\csc(t)=$ &  $\sec(t)=$   & $\cot(t)=$    \\
@@ -142,10 +143,19 @@ $\csc(t)=$ &  $\sec(t)=$   & $\cot(t)=$    \\
 \item The domain is all real numbers excluding odd multiples of $\frac{\pi}{2}$.\vfill
 \item The domain is all real numbers excluding multiples of $\pi$.\vfill
 \end{enumerate}
-\clearpage
 
-\item If you plan on using the unit circle instead of special triangles and the chart for angles on the $x$ and $y$ axes, start memorizing the angles of the unit circle in radians as well as the points along the unit circle.
 \end{enumerate}
+
+\hwTitle{Section 4.2B}
+
+\begin{enumerate}
+
+
+\item If you plan on using the unit circle instead of special
+  triangles and the chart for angles on the $x$ and $y$ axes, start
+  memorizing the angles of the unit circle in radians as well as the
+  points along the unit circle.
+
 
 \noindent
 \begin{tikzpicture}[scale=5]
@@ -199,3 +209,85 @@ $\csc(t)=$ &  $\sec(t)=$   & $\cot(t)=$    \\
     }
   }
 \end{tikzpicture}
+
+\item Each of the following questions refer to points on the edge of a
+  circle that is centered at the origin.
+  \begin{enumerate}
+  \item A point on a circle of radius four is in the second
+    quadrant. The point is given by $P(-2.7, y)$. Determine the cosine
+    and sine of the angle formed by the ray to $P$ and the positive
+    $x$-axis.
+  \item A point on a circle of radius two is in the third
+    quadrant. The point is given by $P(x, -1.2)$. Determine the cosine
+    and sine of the angle formed by the ray to $P$ and the positive
+    $x$-axis.
+  \item What are coordinates (The x and y values) of the point on the
+    unit circle where the angle between the ray through the point and
+    the positive x-axis is $\frac{11\pi}{6}$ radians?
+  \item The point $P$ is in the first quadrant. What are the possible
+    range of values for the sine of the angle formed by the ray to $P$
+    and the positive $x$-axis? What are the possible range of values
+    for the cosine of the angle?
+  \item The point $P$ is in the fourth quadrant. What are the possible
+    range of values for the sine of the angle formed by the ray to $P$
+    and the positive $x$-axis? What are the possible range of values
+    for the cosine of the angle?
+  \end{enumerate}
+
+\item The radian measure of the angle $\alpha$ satisfies
+  $\frac{\pi}{2}<\alpha<\pi$. The radian measure of the angle $\beta$
+  satisfies $\frac{3\pi}{2}<\beta<2\pi$.  Given the values below
+  determine the values of each of the quantities below:
+  \begin{eqnarray*}
+    \sin(\alpha) & = & \frac{5}{9}, \\
+    \cos(\beta)  & = & \frac{2}{7}.
+  \end{eqnarray*}
+  
+  \begin{enumerate}
+    \begin{multicols}{2}
+    \item ${\displaystyle \cos(\alpha) }$
+    \item ${\displaystyle \sin(-\alpha) }$
+    \item ${\displaystyle \sin(\pi+\alpha) }$
+      \columnbreak
+    \item ${\displaystyle \sin(\pi+\beta) }$
+    \item ${\displaystyle \cos(\alpha-\pi) }$
+    \item ${\displaystyle \tan(\alpha+\pi)\cdot\tan(\beta-\pi) }$
+    \end{multicols}
+  \end{enumerate}
+
+\item Determine the values of the cosine and sine of the angles
+  indicated in each of the following questions.
+
+  \begin{enumerate}
+  \item The point shown in the diagram below is on the \textbf{unit
+      circle}.  Determine the values of the cosine, sine, and tangent
+    of the angle $\delta$ as shown in the diagram.
+    
+
+    \begin{tikzpicture}[y=1.5cm, x=1.5cm,font=\sffamily]
+      \draw[thick,black,->] (-1.2,0) -- (1.2,0) node[anchor=west] {$x$};
+      \draw[thick,black,->] (0,-1.2) -- (0,1.2) node[anchor=south] {$y$};
+      \draw[thick,black] (0,0) circle (1);
+      \draw[black,fill=black] (0,0) -- (110:1) circle (0.05) node[anchor=south east] {$(x,0.85)$}  ; % ,fill=gray
+      \node[black,anchor=west] at (50:0.3)  {$\delta$};
+      \draw[thin,black] (0:0.3) arc (0:110:0.3);
+    \end{tikzpicture}
+
+  \item The point shown in the diagram below is on the \textbf{unit
+      circle}.  Determine the values of the cosine, sine, and tangent
+    of the angle $\gamma$ as shown in the diagram.
+    
+
+    \begin{tikzpicture}[y=1.5cm, x=1.5cm,font=\sffamily]
+      \draw[thick,black,->] (-1.2,0) -- (1.2,0) node[anchor=west] {$x$};
+      \draw[thick,black,->] (0,-1.2) -- (0,1.2) node[anchor=south] {$y$};
+      \draw[thick,black] (0,0) circle (1);
+      \draw[black,fill=black] (0,0) -- (210:1) circle (0.05) node[anchor=north east] {$(-0.6,y)$}  ; % ,fill=gray
+      %\node[black,anchor=west] at (50:0.3)  {$\delta$};
+      \draw[thin,black] (0:0.3) arc (0:210:0.3) node[pos=0.5,anchor=south east] {$\gamma$};
+    \end{tikzpicture}
+
+  \end{enumerate}
+
+
+\end{enumerate}
