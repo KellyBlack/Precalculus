@@ -7,7 +7,6 @@
 \begin{enumerate}
 
 \item Write an equation of the form $A\cos(Bx+C)+D$ for the given graph where $A>0$ and  $B>0$.
-
 \begin{center}
 \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily,
 	mydot/.style={
@@ -18,7 +17,7 @@
     inner sep=1.5pt
   }]
     %% Add a grid
-    \draw[step = 1, gray, very thin,opacity=0.85] (-6, -7) grid (6, 2);
+    \draw[step = 1, gray, dashed,opacity=0.85] (-6, -7) grid (6, 2);
  	%% Draw the axes
 	\draw[thick,<->] (-6.5,0) -- coordinate (x axis mid) (6.5,0) node[anchor = north west] {$x$};
     \draw[thick,<->] (0,-7.5) -- coordinate (y axis mid) (0,2.5) node[anchor = south west] {$y$};
@@ -72,9 +71,8 @@
 \vfill
 
 
-\newpage
+\clearpage
 \item Write an equation of the form $A\sin(Bx+C)+D$ for the given graph where $A>0$ and  $B>0$.
-
 \begin{center}
 \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily,
 	mydot/.style={
@@ -85,7 +83,7 @@
     inner sep=1.5pt
   }]
     %% Add a grid
-    \draw[step = 1, gray, very thin,opacity=0.85] (-7, -2) grid (9, 6);
+    \draw[step = 1, gray,dashed,opacity=0.85] (-7, -2) grid (9, 6);
  	%% Draw the axes
 	\draw[thick,<->] (-7.5,0) -- coordinate (x axis mid) (7.5,0) node[anchor = north west] {$x$};
     \draw[thick,<->] (0,-2.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
@@ -126,9 +124,8 @@
 
 \vfill
 
-\newpage
+\clearpage
 \item Write equations of the form $A\sin(Bx+C)+D$ \textbf{AND} $A\cos(Bx+C)+D$ and for the given graph where $A>0$ and  $B>0$.
-
 \begin{center}
 \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily,
 	mydot/.style={
@@ -139,7 +136,7 @@
     inner sep=1.5pt
   }]
     %% Add a grid
-    \draw[step = 1, gray, very thin,opacity=0.85] (-7, -2) grid (9, 6);
+    \draw[step = 1, gray,dashed,opacity=0.85] (-7, -2) grid (9, 6);
  	%% Draw the axes
 	\draw[thick,<->] (-7.5,0) -- coordinate (x axis mid) (7.5,0) node[anchor = north west] {$x$};
     \draw[thick,<->] (0,-2.5) -- coordinate (y axis mid) (0,6.5) node[anchor = south west] {$y$};
@@ -183,11 +180,22 @@
 
 
 
-\newpage
-\item The water level relative to the top of a boat dock varies with the tides.  One particular day, low tide occurs at midnight and the water level is 7ft below the dock.  The first high tide of the day occurs at approximately 6:00 AM, and the water level is 3ft below the dock.  The next low tide occurs at noon and the water level is again 7ft below the dock.\\
-Assuming that this pattern continues indefinitely and behaves like a cosine wave, write a function of the form $w(t)=A\cos(Bt+C)+D$.  The value $w(t)$ is the water level (in ft) relative to the top of the dock, $t$ hours after midnight.
+\clearpage
+\item The water level relative to the top of a boat dock varies with
+  the tides.  One particular day, low tide occurs at midnight and the
+  water level is 7ft below the dock.  The first high tide of the day
+  occurs at approximately 6:00 AM, and the water level is 3ft below
+  the dock.  The next low tide occurs at noon and the water level is
+  again 7ft below the dock.
+  
+  Assuming that this pattern continues indefinitely and behaves like a
+  cosine wave, write a function of the form $w(t)=A\cos(Bt+C)+D$.  The
+  value $w(t)$ is the water level (in ft) relative to the top of the
+  dock, $t$ hours after midnight.
 
-\newpage
+  \vfill
+
+\clearpage
 
 \item The function $f(x)=A\sin(Bx)+D$ has a period of $13\pi$.  If the graph of $f(x)$ oscillates between 2 and 20, determine the numeric values for A, B, and D.  (You may assume that A, B, and D are positive.)
 \vfill
@@ -198,31 +206,51 @@ Assuming that this pattern continues indefinitely and behaves like a cosine wave
 \item $y=\sin(x)$\\[0.2in]
 \item $y=\cos(x)$\\[0.2in]
 \item $y=8\cos(2x-\pi)+4$\vfill
-\item $y=-3\cos(x+\frac{\pi}{3})-5$\vfill
-\item $y=-6\sin(3x-\frac{\pi}{2})-2$\vfill
 \end{enumerate}
 
-\newpage
-\item Graph $f(x)=-6\sin(3x-\frac{\pi}{2})-2$.
+\clearpage
+
+
+\item The London Eye is a Ferris wheel with a diameter of 120
+  meters. The center of the wheel is 75 meters above the ground, and
+  the wheel makes one revolution every thirty minutes. If one of the
+  capsules is initially at the lowest level at the initial time,
+  determine a function that returns the height of the capsule above
+  the ground given the number of minutes after the initial time.
+
+  \vfill
+
+
+\end{enumerate}
+
+
+\hwTitle{Section 4.5B}
+
+\begin{enumerate}
+\item Write the range of the function in interval notation.
+\begin{enumerate}
+\item $y=-3\cos\left(x+\frac{\pi}{3}\right)-5$
+\item $y=-6\sin\left(3x-\frac{\pi}{2}\right)-2$
+\item $y=-\sin(x)$
+\item $y=-5\cos(2x+1)+ 10$
+\item $y=20\cos\left(5x-\frac{\pi}{5}\right)+20$
+\end{enumerate}
+
+\item Graph $f(x)=-6\sin\left(3x-\frac{\pi}{2}\right)-2$.
 
 \begin{tikzpicture}[y=.6cm, x=1.3cm,font=\sffamily]
     %% ticks
-    \draw[step = 1, gray] (-5,-10) grid (5,10);
+    \draw[step = 1, gray,dashed] (-5,-10) grid (5,10);
     %% axis
     \draw[thick,->] (-5.5,0) -- coordinate (x axis mid) (5.5,0) node[anchor = north west] {$x$};
     \draw[thick,->] (0,-10.5) -- coordinate (y axis mid) (0,10.5) node[anchor = north east] {$y$};
-    \foreach \y in {-10,-9,...,-1,1,2,...,10} {
-      \draw (2pt, \y) -- (-2pt, \y);
-    }
-    \foreach \x in {-6,-5,...,-1,1,2,...,6} {
-      \draw (\x,2pt) -- (\x,-2pt);
-    }
+    %\foreach \y in {-10,-9,...,-1,1,2,...,10} {
+    %  \draw (2pt, \y) -- (-2pt, \y);
+    %}
+    %\foreach \x in {-6,-5,...,-1,1,2,...,6} {
+    %  \draw (\x,2pt) -- (\x,-2pt);
+    %}
 
   \end{tikzpicture}
 
-
-
-
-
 \end{enumerate}
-
