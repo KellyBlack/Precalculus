@@ -39,6 +39,23 @@
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% trigonometry definitions
+\newcommand{\trigTriangle}[5]{%
+	\begin{tikzpicture}[scale=2.5]
+	\draw (0,0) -- (2,0) -- (2,1) -- (0,0);
+	\draw (1.9,0) -- (1.9,0.1) -- (2,0.1);
+	\draw (0.3,0) arc(0:40:0.2);
+	\draw (0.5,0.1) node { #1 };
+	\draw (1.8,0.7) node { #2 };
+	\draw (1,-0.1) node { #3 };
+	\draw (1,0.6) node { #4 };
+	\draw (2,0.8) arc(270:210:0.2);
+	\draw (2.1,0.5) node { #5 };
+	\end{tikzpicture}
+}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Basic linear algebra commands
 
 \newcommand{\arrayTwo}[4]{
