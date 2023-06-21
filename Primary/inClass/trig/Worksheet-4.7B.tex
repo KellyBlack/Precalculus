@@ -49,25 +49,24 @@
 
 \clearpage
 
-\item A group of campers hike down a straight, steep path.  One member
-  of the group has an altimeter on his watch to measure altitude.  If
-  the path is 1250 yd and the amount of altitude lost is 480 yd, what
-  is the angle of incline?  Round to the nearest tenth of a
-  \textbf{degree}.
+\item A toy car rolls down a straight ramp. The length of the ramp is
+  30m and the amount of altitude lost is 8m, what is the angle of
+  incline?  Round to the nearest tenth of a \textbf{degree}.
 
   \vfill
 
-\item A video camera located at ground level follows the liftoff of an
-  Atlas V Rocket from the Kennedy Space Center.  Suppose that the
-  camera is 1000 m from the launch pad.
+\item A video camera located at ground level follows the liftoff of a
+  rocket.  Suppose that the camera is 1500 m from the launch pad.
 \begin{enumerate}
-\item Write the angle of elevation $\theta$ from the camera to the
+\item Determine the angle of elevation $\theta$ from the camera to the
   rocket as a function of the rocket's height, $h$.
   
   \vfill
   
-\item Use a calculator to find $\theta$ to the nearest tenth of a
-  degree when the rocket's height is 400 m, 1500 m, and 3000 m.
+\item Use a calculator to approximate the angle of elevation to the
+  nearest tenth of a degree when the rocket's height is 1000 m, 2000
+  m, and 5000 m. What are the range of possible values of the angle of
+  elevation?
   
   \vfill
 \end{enumerate}
@@ -109,3 +108,53 @@
 
 \end{enumerate}
 
+\hwTitle{Section 4.7B}
+
+\begin{enumerate}
+\item Determine the domain of each function below.
+  \begin{enumerate}
+  \item ${\displaystyle \arccos\left(\frac{x+1}{5}\right) }$
+  \item ${\displaystyle \arcsin\left(e^x\right) + \frac{1}{x}}$
+  \item ${\displaystyle \sin^{-1}\left( \ln(x) \right) }$
+  \item ${\displaystyle \cos^{-1}\left( \frac{5}{x} \right)  }$
+  \end{enumerate}
+\item A surveyor will use the angle of elevation to determine the
+  height of a building. The height is estimated to be between 45m and
+  50m tall. The surveyor has limited room to work and will have to be
+  a distance between 70m and 85m from the base of the building. If you
+  only have two locations to use which ones should you use to
+  approximate the extremes in the angle of elevation? What is the
+  possible range of values for the angle of elevation?
+\item A weather radar system can discern clouds whose angle of
+  resolution is an angle $\theta$. The smallest cloud that can be
+  resolved at 30,000m is 70m wide. What is the angle of resolution for
+  the system? What is the smallest cloud that can be detected that is
+  40,000m away?
+
+  \begin{tikzpicture}[y=1.0cm, x=1.0cm,font=\sffamily]
+
+    \foreach \x in {0,1,2,...,11} %{30,120,210,300}
+    {
+      \draw[] (10,0)++(30*\x:1) arc (30*\x-15:30*\x+35:0.4);
+      \draw[] (10,0)++(30*\x+15:.9) arc (30*\x-5:30*\x+45:0.4);
+    }
+    \draw[thick,black,dashed] (0,0) -- (10,0) node[anchor=west] {$70$m};
+    \node[anchor=north] at (7,0) {$30,000$m};
+    \draw[black] (0,0) -- (10,1) -- (10,-1) -- cycle;
+
+    \draw[thin,black] (-5.7:2) arc (-5.7:5.7:2) node[pos=0.5,anchor=west] {$\theta$};
+  \end{tikzpicture}
+
+\item A helicopter will take off from a landing pad, and it will rise
+  straight up at a constant speed of three meters per second. A camera
+  will be placed 400 meters away from the pad and will be aimed at the
+  helicopter. What should the angle of elevation of the camera be 30
+  seconds after the helicopter takes off?
+
+\item A Ferris wheel has a radius of 25 meters, and the center of the
+  wheel is 28 meters off the ground. At the initial time a seat is at
+  the bottom of the wheel. At what time will the seat first be 12
+  meters above the ground? At what time will the seat be 12 meters
+  above the ground for the second time?
+
+\end{enumerate}
