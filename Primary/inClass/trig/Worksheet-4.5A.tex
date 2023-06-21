@@ -52,18 +52,19 @@ $$x_1= \quad \quad \quad \quad x_2= \quad \quad \quad \quad x_3= \quad \quad \qu
 
 \item Graph $f(x)=2\cos(x+\pi)-1$.
 
+  \noindent
 \begin{tikzpicture}[y=.6cm, x=1.3cm,font=\sffamily]
     %% ticks
-    \draw[step = 1, gray] (-5,-5) grid (5,5);
+    \draw[step = 1, gray, dashed] (-5,-5) grid (5,5);
     %% axis
     \draw[thick,->] (-5.5,0) -- coordinate (x axis mid) (5.5,0) node[anchor = north west] {$x$};
     \draw[thick,->] (0,-5.5) -- coordinate (y axis mid) (0,5.5) node[anchor = north east] {$y$};
-    \foreach \y in {-6,-5,...,-1,1,2,...,6} {
-      \draw (2pt, \y) -- (-2pt, \y);
-    }
-    \foreach \x in {-6,-5,...,-1,1,2,...,6} {
-      \draw (\x,2pt) -- (\x,-2pt);
-    }
+    %\foreach \y in {-6,-5,...,-1,1,2,...,6} {
+    %  \draw (2pt, \y) -- (-2pt, \y);
+    %}
+    %\foreach \x in {-6,-5,...,-1,1,2,...,6} {
+    %  \draw (\x,2pt) -- (\x,-2pt);
+    %}
 
   \end{tikzpicture}
 
@@ -108,10 +109,38 @@ $$x_1= \quad \quad \quad \quad x_2= \quad \quad \quad \quad x_3= \quad \quad \qu
 \hwTitle{Section 4.5A}
 
 \begin{enumerate}
+
+\item A sine function will oscillate between -3 and 7, and the period
+  of the oscillations will be twenty beats per second. Initially the
+  oscillation will be at a maximum. Determine a formula for the
+  function. What would the formula be if it is a cosine function instead?
+
+\item A cosine function will oscillate with an amplitude of
+  12. Initially the oscillation will be at its minimum of 2, and it
+  will complete one whole cycle in five seconds. Determine a formula
+  for the function. What would the formula be if it is a sine function
+  instead?
+
+\item A metronome is constructed to provide an audible and a visual
+  cue for the tempo in a piece of music. Part of the metronome's
+  construction includes a shaft with a weight on the shaft. The angle,
+  in degrees, the shaft forms with a vertical line changes in time and
+  is given by the formula
+  \begin{eqnarray*}
+    \mathrm{Angle}(t) & = & 28 \sin\left( \sqrt{\frac{9.8}{L}} \; \cdot \; t \right),
+  \end{eqnarray*}
+  where $L$ is the distance of the weight along the shaft and $t$ is
+  the time in seconds.
+  \begin{enumerate}
+  \item What is the minimum and maximum values for the angle?
+  \item The metronome will emit a click when it hits the minimal angle
+    as well as when it hits the maximum angle.  A musician wishes to
+    play a piece of music so that there are 72 clicks per minute, at
+    what length should she set the weight?
+  \end{enumerate}
+
 \item Let $\displaystyle f(x)=-5\sin\left(\frac{1}{3}x+\frac{\pi}{6}\right)$.
-
 \begin{enumerate}
-
 \item Determine the period, amplitude, and phase shift of
   $\displaystyle f(x)=-5\sin\left(\frac{1}{3}x+\frac{\pi}{6}\right)$.
 \item Find an interval containing exactly one cycle (period).
@@ -119,20 +148,47 @@ $$x_1= \quad \quad \quad \quad x_2= \quad \quad \quad \quad x_3= \quad \quad \qu
 $$x_1= \quad \quad \quad \quad x_2= \quad \quad \quad \quad x_3= \quad \quad \quad \quad x_4= \quad \quad \quad \quad x_5= \quad \quad \quad \quad$$
 \item Graph $\displaystyle f(x)=-5\sin\left(\frac{1}{3}x+\frac{\pi}{6}\right)$.
 
+  \noindent
 \begin{tikzpicture}[y=.6cm, x=.7cm,font=\sffamily]
     %% ticks
-    \draw[step = 1, gray] (-11,-5) grid (11,5);
+    \draw[step = 1, gray, dashed] (-11,-5) grid (11,5);
     %% axis
     \draw[thick,->] (-11.5,0) -- coordinate (x axis mid) (11.5,0) node[anchor = north west] {$x$};
     \draw[thick,->] (0,-5.5) -- coordinate (y axis mid) (0,5.5) node[anchor = north east] {$y$};
-    \foreach \y in {-6,-5,...,-1,1,2,...,6} {
-      \draw (2pt, \y) -- (-2pt, \y);
-    }
-    \foreach \x in {-6,-5,...,-1,1,2,...,6} {
-      \draw (\x,2pt) -- (\x,-2pt);
-    }
+    %\foreach \y in {-5,-4,...,-1,1,2,...,5} {
+    %  \draw (2pt, \y) -- (-2pt, \y) node [anchor=north east] {{\scriptsize $\y$}};
+    %}
+    %\foreach \x in {-11,-10,...,-1,1,2,...,11} {
+    %  \draw (\x,2pt) -- (\x,-2pt) node [anchor=north east,xshift=4,yshift=4] {{\scriptsize$\x$}};
+    %}
 
   \end{tikzpicture}
+
+\end{enumerate}
+
+\item Let $\displaystyle g(x)=3\cos\left(\frac{\pi}{3}x-\frac{\pi}{6}\right)+1$.
+\begin{enumerate}
+\item Determine the period, amplitude, and phase shift of
+  $\displaystyle g(x)=3\cos\left(\frac{\pi}{3}x-\frac{\pi}{6}\right)+1$.
+\item Find an interval containing exactly one cycle (period).
+\item Determine the $x$-values of the five key points in the cycle above.
+$$x_1= \quad \quad \quad \quad x_2= \quad \quad \quad \quad x_3= \quad \quad \quad \quad x_4= \quad \quad \quad \quad x_5= \quad \quad \quad \quad$$
+\item Graph $\displaystyle
+  g(x)=3\cos\left(\frac{\pi}{3}x-\frac{\pi}{6}\right)+1$. \\
+  \begin{tikzpicture}[y=.6cm, x=.7cm,font=\sffamily]
+    %% ticks
+    \draw[step = 1, gray, dashed] (-11,-5) grid (11,5);
+    %% axis
+    \draw[thick,->] (-11.5,0) -- coordinate (x axis mid) (11.5,0) node[anchor = north west] {$x$};
+    \draw[thick,->] (0,-5.5) -- coordinate (y axis mid) (0,5.5) node[anchor = north east] {$y$};
+    %\foreach \y in {-5,-4,...,-1,1,2,...,5} {
+    %  \draw (2pt, \y) -- (-2pt, \y) node [anchor=north east] {{\scriptsize $\y$}};
+    %}
+    %\foreach \x in {-11,-10,...,-1,1,2,...,11} {
+    %  \draw (\x,2pt) -- (\x,-2pt) node [anchor=north east,xshift=4,yshift=4] {{\scriptsize$\x$}};
+    %}
+  \end{tikzpicture}
+
 
 \end{enumerate}
 
