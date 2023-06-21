@@ -253,4 +253,64 @@
 
   \end{tikzpicture}
 
+\item Determine a formula for the sine wave that oscillates between
+  two and eight. It has a minimum at $x = 2$, and the wave repeats
+  every five units (i.e. the period is five).
+
+\item Determine a formula for the cosine wave that oscillates between
+  minus five and twenty. It has a maximum at $x=6$, and the wave repeats
+  every four units (i.e. the period is four).
+
+\item The water level at a beach oscillates between 0.4m
+  \textbf{below} the mean tidal level and 3.4m \textbf{above} the mean
+  tidal level. The time between low and high tides is 6.4 hours. If
+  low tide occurs at midnight, express the water level as a cosine
+  function where the time is the number of hours past midnight,
+  \begin{eqnarray*}
+    h(t) & = & A \cos(bt+c)+d.
+  \end{eqnarray*}
+
+\item The water level at Jeffries Creek varies between 2.4 meters and
+  0.2 meters due to the changes in the tide. The time between high
+  tides is 700 minutes. The next high tide will occur at 150 minutes
+  after midnight. Express the water level as a sine function assuming
+  that $t=0$ minutes is midnight.
+
+\item Determine the cosine function whose graph is shown below.
+
+\begin{tikzpicture}[y=.6cm, x=1.3cm,font=\sffamily]
+  %% ticks
+  \draw[step = 1, gray,dashed] (-5,-8) grid (5,2);
+  %% axis
+  \draw[very thick,->] (-5.5,0) -- coordinate (x axis mid) (5.5,0) node[anchor = north west] {$x$};
+  \draw[very thick,->] (0,-8.5) -- coordinate (y axis mid) (0,2.5) node[anchor = north east] {$y$};
+  \draw[ultra thick, blue, <->, domain=-5:5] plot[samples=1000] (\x, {2*cos(deg(pi/3*(\x+2)))-3});
+\end{tikzpicture}
+
+\item The wheel used in the game show Wheel Of Fortune is
+  approximately 2.6 meters in diameter. Suppose the Wheel is mounted
+  vertically on a wall for a special event so that its center is 4
+  meters above the floor. Initially, the 100\$ marker is to the right,
+  and the Wheel is spun clock-wise so that it takes four seconds to
+  make one revolution. Determine the height above the floor of the
+  outside edge of the 100\$ marker given the number of seconds after
+  the initial time.
+
+\item The clock face of the Rajabai Tower is approximately 65 meters
+  above the ground, and the length of the minute hand is approximately
+  7.3 meters. A bird lands on the end of the minute hand at 3:45PM and
+  remains on the minute for thirty minutes. Determine the bird's
+  height above the ground given the number of minutes after 3:45PM.
+
+\item The height above the ground (in meters) for the seats on a Ferris wheel is
+  given by
+  \begin{eqnarray*}
+    H(t) & = & 27 \cos\left(\frac{\pi}{3}t+\pi\right) + 32,
+  \end{eqnarray*}
+  where $t$ is the time in minutes from the start of the
+  ride. Determine how long it takes for one revolution to occur. How
+  tall is the loading platform which is located at the bottom of the
+  wheel? What is the maximum height of one of the seats?
+
+
 \end{enumerate}
