@@ -117,8 +117,69 @@ $$\frac{\cos^2(x)-\sin^2(x)}{1-\tan^2(x)}=$$
 \end{enumerate}
 
 
+\end{enumerate}
 
 
+\hwTitle{Section 5.1}
 
+\begin{enumerate}
+\item For each expression below make a substitution for $x$ where
+  $x=\sin(\theta)$, $x=\sec(\theta)$, or $x=\tan(\theta)$ so that when
+  the resulting expression is simplified there are no square roots.
+  \begin{enumerate}
+  \item ${\displaystyle \sqrt{1-x^2}}$
+  \item ${\displaystyle \sqrt{1+x^2}}$
+  \item ${\displaystyle \sqrt{x^2-1}}$
+  \end{enumerate}
+  How can you decide which substitution to use without trying each
+  one?
 
+\item For each expression below make a substitution for $x$ so that
+  when simplified there are no square roots in the final expression.
+  \begin{enumerate}
+  \item ${\displaystyle \frac{\sqrt{9-x^2}}{x} }$
+  \item ${\displaystyle x\sqrt{4+x^2}}$
+  \item ${\displaystyle \frac{\sqrt{4x^2-1}}{x}}$
+  \end{enumerate}
+
+\item Use the diagram below to answer the following questions.
+
+  \begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+    
+    \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily]
+      \draw[black] (0,0) circle (2);
+      \draw[thin,black,fill=black!10!white] (0,0) -- (0:2) arc (0:130:2) -- (0,0);
+      \draw[black,dashed] (0:2) -- (130:2);
+      \draw[black] (0:0.5) arc (0:130:.5) node[pos=0.4,anchor=south west] {\footnotesize $\alpha+\beta$};
+      \fill[black] (130:2) circle[radius=0.5ex] node[anchor=south east] {\footnotesize $ P(\cos(\alpha+\beta),\sin(\alpha+\beta))$};
+      \fill[black] (0:2) circle[radius=0.5ex] node[anchor=north west] {\footnotesize $Q(1,0)$};
+      \draw[thin,black,->] (-2.2,0.0) -- (2.2,0.0) node[anchor=south west] {\footnotesize $x$};
+      \draw[thin,black,->] (0.0,-2.2) -- (0.0,2.2) node[anchor=south east] {\footnotesize $y$};
+      % \node[black,anchor=south east] at (122:2) {$s$};
+    \end{tikzpicture}
+
+    &
+      
+    \begin{tikzpicture}[y=1cm, x=1cm,font=\sffamily]
+      \draw[black] (0,0) circle (2);
+      \draw[thin,black,fill=black!10!white] (0,0) -- (60:2) arc (60:-70:2) -- (0,0);
+      \draw[black,dashed] (60:2) -- (-70:2);
+      \draw[black] (0:0.5) arc (0:60:.5) node[pos=0.4,anchor=south west] {\footnotesize$\alpha$};
+      \draw[black] (0:0.5) arc (0:-70:.5) node[pos=0.4,anchor=north west] {\footnotesize$\beta$};
+      \fill[black] (60:2) circle[radius=0.5ex] node[anchor=south west] {\footnotesize $R(\cos(\alpha),\sin(\alpha))$};
+      \fill[black] (-70:2) circle[radius=0.5ex] node[anchor=north west] {\footnotesize $S(\cos(\beta),-\sin(\beta))$};
+      \draw[thin,black,->] (-2.2,0.0) -- (2.2,0.0) node[anchor=south west] {\footnotesize$x$};
+      \draw[thin,black,->] (0.0,-2.2) -- (0.0,2.2) node[anchor=south east] {\footnotesize$y$};
+      % \node[black,anchor=south east] at (122:2) {$s$};
+    \end{tikzpicture}
+
+  \end{tabular}
+
+  \begin{enumerate}
+  \item Verify that the distance squared between $P$ and $Q$ is $2-2\cos(\alpha+\beta)$.
+  \item Verify that the distance squared between $R$ and $S$ is $2-2\cos(\alpha)\cos(\beta)+2\sin(\alpha)\sin(\beta)$.
+  \item Why is the distance between $P$ and $Q$ the same as the distance between $R$ and $S$?
+  \item What does this imply about an alternate way to express the
+    value of $\cos(\alpha+\beta)$?
+  \end{enumerate}
 \end{enumerate}
