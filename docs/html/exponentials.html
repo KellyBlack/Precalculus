@@ -1,27 +1,21 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="English">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>Exponential and Logarithmic Functions &#8212; Precalculus a documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     'a',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Trigonometric Functions" href="trigonometric.html" />
@@ -32,88 +26,97 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
-  <div class="section" id="exponential-and-logarithmic-functions">
-<h1>Exponential and Logarithmic Functions<a class="headerlink" href="#exponential-and-logarithmic-functions" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="goals-for-activity-10-and-11-section-3-2-of-the-book">
-<h2>Goals for activity 10 and 11 (Section 3.2 of the book)<a class="headerlink" href="#goals-for-activity-10-and-11-section-3-2-of-the-book" title="Permalink to this headline">¶</a></h2>
+  <section id="exponential-and-logarithmic-functions">
+<h1>Exponential and Logarithmic Functions<a class="headerlink" href="#exponential-and-logarithmic-functions" title="Permalink to this heading">¶</a></h1>
+<section id="goals-for-activity-9-section-3-1-of-the-book">
+<h2>Goals for activity 9 (Section 3.1 of the book)<a class="headerlink" href="#goals-for-activity-9-section-3-1-of-the-book" title="Permalink to this heading">¶</a></h2>
 <p>Students should be able to do each of the following:</p>
 <ul class="simple">
-<li>Use the definition of an exponential function to define a function describing a situation given in written, verbal, or graphical form.</li>
-<li>Use the properties and operations of exponential functions to solve for any variable in an expression that has exponential functions.</li>
-<li>Be able to graph exponential functions. Be able to compare and identify different exponential functions whose parameters differ.</li>
-<li>Convert and write any exponential function using base <em>e</em>.</li>
-<li>Solve compound interest problems given a written description of the situation.</li>
-<li>Solve exponential growth/decay problems given a written description of the situation. Be able to identify if a situation results in either growth or decay.</li>
-<li>Given a written description determine if an exponential function or a logistic growth function is appropriate.</li>
+<li><p>Determine if a given function is one-to-one. The function can be given in graphical, tabular, or algebraic forms.</p></li>
+<li><p>Use the horizontal line test to determine if a function is one-to-one.</p></li>
+<li><p>Determine the inverse of a given function. The function can be given in tabular or algebraic forms.</p></li>
+<li><p>Determine the domain and range of the inverse of a function. The function can be given in graphical, tabular, or algebraic forms.</p></li>
 </ul>
-</div>
-<div class="section" id="goals-for-activity-12-section-3-3-of-the-book">
-<h2>Goals for activity 12 (Section 3.3 of the book)<a class="headerlink" href="#goals-for-activity-12-section-3-3-of-the-book" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="goals-for-activity-10-and-11-section-3-2-of-the-book">
+<h2>Goals for activity 10 and 11 (Section 3.2 of the book)<a class="headerlink" href="#goals-for-activity-10-and-11-section-3-2-of-the-book" title="Permalink to this heading">¶</a></h2>
 <p>Students should be able to do each of the following:</p>
 <ul class="simple">
-<li>Use the logarithm function to solve for a variable in an equation that has exponential terms.</li>
-<li>Determine the domain and range of a simple function that contains logarithmic terms.</li>
-<li>Determine the inverse of a simple exponential function.</li>
-<li>Determine the inverse of a function that contains logarithmic terms.</li>
-<li>Graph basic logarithmic functions.</li>
-<li>Solve for a variable in an equation that contains logarithmic terms.</li>
-<li>Recognize that <span class="math">\(\log(x)=\log_{10}(x)\)</span>.</li>
-<li>Recognize that <span class="math">\(\ln(x)=\log_e(x)\)</span>.</li>
+<li><p>Use the definition of an exponential function to define a function describing a situation given in written, verbal, or graphical form.</p></li>
+<li><p>Use the properties and operations of exponential functions to solve for any variable in an expression that has exponential functions.</p></li>
+<li><p>Be able to graph exponential functions. Be able to compare and identify different exponential functions whose parameters differ.</p></li>
+<li><p>Convert and write any exponential function using base <em>e</em>.</p></li>
+<li><p>Solve compound interest problems given a written description of the situation.</p></li>
+<li><p>Solve exponential growth/decay problems given a written description of the situation. Be able to identify if a situation results in either growth or decay.</p></li>
+<li><p>Given a written description determine if an exponential function or a logistic growth function is appropriate.</p></li>
 </ul>
-</div>
-<div class="section" id="goals-for-activity-13-section-3-4-of-the-book">
-<h2>Goals for activity 13 (Section 3.4 of the book)<a class="headerlink" href="#goals-for-activity-13-section-3-4-of-the-book" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="goals-for-activity-12-section-3-3-of-the-book">
+<h2>Goals for activity 12 (Section 3.3 of the book)<a class="headerlink" href="#goals-for-activity-12-section-3-3-of-the-book" title="Permalink to this heading">¶</a></h2>
+<p>Students should be able to do each of the following:</p>
+<ul class="simple">
+<li><p>Use the logarithm function to solve for a variable in an equation that has exponential terms.</p></li>
+<li><p>Determine the domain and range of a simple function that contains logarithmic terms.</p></li>
+<li><p>Determine the inverse of a simple exponential function.</p></li>
+<li><p>Determine the inverse of a function that contains logarithmic terms.</p></li>
+<li><p>Graph basic logarithmic functions.</p></li>
+<li><p>Solve for a variable in an equation that contains logarithmic terms.</p></li>
+<li><p>Recognize that <span class="math notranslate nohighlight">\(\log(x)=\log_{10}(x)\)</span>.</p></li>
+<li><p>Recognize that <span class="math notranslate nohighlight">\(\ln(x)=\log_e(x)\)</span>.</p></li>
+</ul>
+</section>
+<section id="goals-for-activity-13-section-3-4-of-the-book">
+<h2>Goals for activity 13 (Section 3.4 of the book)<a class="headerlink" href="#goals-for-activity-13-section-3-4-of-the-book" title="Permalink to this heading">¶</a></h2>
 <p>Students should be able to do each of the following:</p>
 <ul>
-<li><dl class="first docutils">
-<dt>Use the properties of logarithms to solve for a variable in a</dt>
-<dd><p class="first last">variety of more complex forms:</p>
+<li><dl class="simple">
+<dt>Use the properties of logarithms to solve for a variable in a</dt><dd><p>variety of more complex forms:</p>
 </dd>
 </dl>
-<p><span class="math">\(\log_a(u\cdot v)  =  \log_a(u) + \log_a(v),\)</span></p>
-<p><span class="math">\(\log_a\left(\frac{u}{v}\right)  =  \log_a(u) - \log_a(v),\)</span></p>
-<p><span class="math">\(\log_a\left(u^r\right) =  r\log_a(u).\)</span></p>
+<p><span class="math notranslate nohighlight">\(\log_a(u\cdot v)  =  \log_a(u) + \log_a(v),\)</span></p>
+<p><span class="math notranslate nohighlight">\(\log_a\left(\frac{u}{v}\right)  =  \log_a(u) - \log_a(v),\)</span></p>
+<p><span class="math notranslate nohighlight">\(\log_a\left(u^r\right) =  r\log_a(u).\)</span></p>
 </li>
-<li><p class="first">Solve for a variable when multiple logarithms with different bases are present in an expression. (Either using the substitution method or the change of base formula.)</p>
-</li>
-<li><p class="first">Change the base for a logarithm to either base <em>e</em> or base 10 so an approximation can be found using a calculator.</p>
-</li>
+<li><p>Solve for a variable when multiple logarithms with different bases are present in an expression. (Either using the substitution method or the change of base formula.)</p></li>
+<li><p>Change the base for a logarithm to either base <em>e</em> or base 10 so an approximation can be found using a calculator.</p></li>
 </ul>
-</div>
-<div class="section" id="goals-for-activity-14-section-3-5-of-the-book">
-<h2>Goals for activity 14 (Section 3.5 of the book)<a class="headerlink" href="#goals-for-activity-14-section-3-5-of-the-book" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="goals-for-activity-14-section-3-5-of-the-book">
+<h2>Goals for activity 14 (Section 3.5 of the book)<a class="headerlink" href="#goals-for-activity-14-section-3-5-of-the-book" title="Permalink to this heading">¶</a></h2>
 <p>Students should be able to do each of the following:</p>
 <ul class="simple">
-<li>Solve equations with multiple exponential terms.</li>
-<li>Determine inverses of complicated functions that have either exponential or logarithmic terms.</li>
-<li>Manipulate equations with exponentials and transform them into other forms. For example, transform an expression with exponential terms into a quadratic equation.</li>
-<li>Define relationships given written descriptions that include wither exponential or logarithmic terms.</li>
+<li><p>Solve equations with multiple exponential terms.</p></li>
+<li><p>Determine inverses of complicated functions that have either exponential or logarithmic terms.</p></li>
+<li><p>Manipulate equations with exponentials and transform them into other forms. For example, transform an expression with exponential terms into a quadratic equation.</p></li>
+<li><p>Define relationships given written descriptions that include wither exponential or logarithmic terms.</p></li>
 </ul>
-</div>
-<div class="section" id="goals-for-activity-15-section-3-6-of-the-book">
-<h2>Goals for activity 15 (Section 3.6 of the book)<a class="headerlink" href="#goals-for-activity-15-section-3-6-of-the-book" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="goals-for-activity-15-section-3-6-of-the-book">
+<h2>Goals for activity 15 (Section 3.6 of the book)<a class="headerlink" href="#goals-for-activity-15-section-3-6-of-the-book" title="Permalink to this heading">¶</a></h2>
 <p>Students should be able to do each of the following:</p>
 <ul class="simple">
-<li>Solve equations for various parameters.</li>
-<li>Solve equations for a variable.</li>
-<li>Construct equations from written descriptions.</li>
-<li>Determine logistic relationships given a written description.</li>
-<li>Identify growth vs decay given a verbal written description.</li>
+<li><p>Solve equations for various parameters.</p></li>
+<li><p>Solve equations for a variable.</p></li>
+<li><p>Construct equations from written descriptions.</p></li>
+<li><p>Determine logistic relationships given a written description.</p></li>
+<li><p>Identify growth vs decay given a verbal written description.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
+          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -127,15 +130,15 @@
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -144,8 +147,8 @@
       &copy;2018, Kelly Black.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
       <a href="_sources/exponentials.rst.txt"
