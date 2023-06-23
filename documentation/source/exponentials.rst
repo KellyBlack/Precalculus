@@ -3,7 +3,7 @@
 Exponential and Logarithmic Functions
 ---------------------------------------
 
-Goals for activity 9 (Section 3.1 of the book)
+Goals for Section 3.1 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
@@ -18,7 +18,7 @@ Students should be able to do each of the following:
 
 
 
-Goals for activity 10 and 11 (Section 3.2 of the book)
+Goals for Section 3.2 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
@@ -39,7 +39,7 @@ Students should be able to do each of the following:
 
 
   
-Goals for activity 12 (Section 3.3 of the book)
+Goals for Section 3.3 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
@@ -61,7 +61,7 @@ Students should be able to do each of the following:
 * Recognize that :math:`\ln(x)=\log_e(x)`.
 
 
-Goals for activity 13 (Section 3.4 of the book)
+Goals for Section 3.4 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
@@ -81,7 +81,7 @@ Students should be able to do each of the following:
 * Change the base for a logarithm to either base *e* or base 10 so an approximation can be found using a calculator.
 
 
-Goals for activity 14 (Section 3.5 of the book)
+Goals for Section 3.5 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:

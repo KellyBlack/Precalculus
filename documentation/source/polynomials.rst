@@ -3,7 +3,7 @@
 Preliminaries and Polynomials
 -------------------------------
 
-Goals for activity 1 (Section 1.1 of the book)
+Goals for Section 1.1 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
@@ -19,7 +19,7 @@ Students should be able to do each of the following:
 * Determine the *x* and *y* intercepts of a function analytically and graphically.
  
   
-Goals for activity 2 (Section 1.3 of the book)
+Goals for Section 1.3 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
@@ -45,7 +45,7 @@ Students should be able to do each of the following:
 * Determine intervals in the domain where a function is increasing/decreasing/constant
 
 
-Goals for activity 3 (Section 1.4 of the book)
+Goals for Section 1.4 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
@@ -66,7 +66,10 @@ Students should be able to do each of the following:
 
 * Determine if two lines are perpendicular.
 
-Goals for activity 4 (Section 1.5 of the book)
+* Determine the formula for a line that includes a given point and is
+      parallel or perpendicular to a given line.
+
+Goals for Section 1.5 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
@@ -80,31 +83,26 @@ Students should be able to do each of the following:
 * Construct a linear equation from a written description
 
 
-Goals for activity 5 (Section 1.6 of the book)
+Goals for Section 1.6 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
 
 * Determine the algebraic formula of a basic function given a written description or a graphical representation.
-
 * Determine the algebraic formula for a function after a vertical translation or scaling.
-
 * Determine the algebraic formula for a function after a horizontal translation or scaling.
-
 * Determine the algebraic formula for a function after a vertical reflection.
-
 * Determine the algebraic formula for a function after a combination of vertical and horizontal translations and scalings.
-
 * Graph a given function given a set of transformations.
+* Given the graph of a function, *g(x)*, make sketch of the graph of another function,
+  
+  .. math::  h(x) =  a g(bx+c)+d,
+             
+  where *a*, *b*, *c*, and *d* are all constants.
 
-* Given the graph of a function, $g(x)$, make sketch of the
-    graph of another function,
-    
-.. math::  h(x) =  a g(bx+c)+d,
-           
-    where *a*, *b*, *c*, and *d* are all constants.
 
-Goals for activity 6 (Section 1.7 of the book)
+
+Goals for Section 1.7 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
@@ -120,7 +118,7 @@ Students should be able to do each of the following:
 * Determine relative minima and maxima from a graphical representation or for the algebraic representation of simple functions.
 
 
-Goals for activity 7 (Section 1.8 of the book)
+Goals for Section 1.8 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
@@ -133,7 +131,7 @@ Students should be able to do each of the following:
   
 * Determine the difference quotient at a point given a function.
 
-Goals for activity 8 (Section 2.1 of the book)
+Goals for Section 2.1 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:

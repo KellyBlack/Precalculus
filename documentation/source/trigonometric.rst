@@ -3,7 +3,7 @@
 Trigonometric Functions
 ---------------------------
 
-Goals for activity 16 (Section 4.1 of the book)
+Goals for Section 4.1 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
@@ -30,7 +30,7 @@ Students should be able to do each of the following:
 
 
 
-Goals for activity 17 (Section 4.2 of the book)
+Goals for Section 4.2 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
@@ -55,7 +55,7 @@ Students should be able to do each of the following:
 
 
 
-Goals for activity 18 (Section 4.3 of the book)
+Goals for Section 4.3 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
