@@ -97,6 +97,13 @@ Students should be able to do each of the following:
 
 * Graph a given function given a set of transformations.
 
+* Given the graph of a function, $g(x)$, make sketch of the
+    graph of another function,
+    
+.. math::  h(x) =  a g(bx+c)+d,
+           
+    where *a*, *b*, *c*, and *d* are all constants.
+
 Goals for activity 6 (Section 1.7 of the book)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -145,17 +152,4 @@ Students should be able to do each of the following:
 * Determine an optimal solution to a written description of a  constrained optimization problem where the resulting cost function can be expressed as a quadratic function.
 
 
-
-Goals for activity 9 (Section 3.1 of the book)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Students should be able to do each of the following:
-  
-* Determine if a given function is one-to-one. The function can be given in graphical, tabular, or algebraic forms.
-
-* Use the horizontal line test to determine if a function is one-to-one.
-
-* Determine the inverse of a given function. The function can be given in tabular or algebraic forms.
-
-* Determine the domain and range of the inverse of a function. The function can be given in graphical, tabular, or algebraic forms.
 
