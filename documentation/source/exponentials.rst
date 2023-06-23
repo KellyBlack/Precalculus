@@ -10,12 +10,16 @@ Students should be able to do each of the following:
   
 * Determine if a given function is one-to-one. The function can be given in graphical, tabular, or algebraic forms.
 
+* Explicitly show that a function is one-to-one or demonstrate why a function is not one-to-one.
+
 * Use the horizontal line test to determine if a function is one-to-one.
 
 * Determine the inverse of a given function. The function can be given in tabular or algebraic forms.
 
 * Determine the domain and range of the inverse of a function. The function can be given in graphical, tabular, or algebraic forms.
 
+* Limit the domain of a function that is not one-to-one so that an
+    inverse can be defined on the resulting restricted domain.
 
 
 Goals for Section 3.2 of the book
@@ -94,8 +98,18 @@ Students should be able to do each of the following:
 
 * Define relationships given written descriptions that include wither exponential or logarithmic terms.
 
+* Determine the value of any or all parameters in a compound interest
+    problem given a written description of the situation.
+    
+* Determine the value of any or all parameters in an exponential
+    growth/decay problem given a written description of the
+    situation. Be able to identify if a situation results in either
+    growth or decay.
+    
+* Determine the value of any or all parameters given a written
+    description of a logistic growth function.
 
-Goals for activity 15 (Section 3.6 of the book)
+Goals for Section 3.6 of the book
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Students should be able to do each of the following:
